@@ -1,0 +1,25 @@
+// Gnome-shell extensions styling, especially for Dash-to-dock and Dash-to-panel
+// NEEDS HELP TO MAKE IT PERFECT
+
+#dashtodockContainer {
+	.app-well-app-running-dot {
+		width: 8px;
+  	height: 2px;
+		margin: -1px;
+	}
+
+	.app-well-app.focused .overview-icon {
+		background-color: rgba(white, 0.10);
+	}
+
+	.app-well-app .overview-icon,
+	.show-apps .overview-icon {
+		border: 0;
+	}
+}
+
+#panel.dashtopanelMainPanel {
+	.show-apps .overview-icon {
+		padding: 3px;
+	}
+}

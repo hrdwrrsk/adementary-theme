@@ -1,0 +1,38 @@
+// Nautilus fix
+
+.nautilus-window,
+.nautilus-window notebook,
+.nautilus-window notebook > stack {
+  background: $base_color;
+}
+
+.floating-bar {
+  padding: 1px;
+  background-color: $base_color;
+  border-width: 1px;
+  border-style: solid solid none;
+  border-color: $borders_color;
+  border-radius: 3px 3px 0 0;
+  
+  &.bottom.left {
+    border-left-style: none;
+	border-top-left-radius: 0;
+  }
+  
+  &.bottom.right {
+    border-right-style: none;
+	border-top-right-radius: 0;
+  }
+  
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    border-color: $backdrop_borders_color;
+  }
+}
+
+// gnome-control-center sidebar
+scrolledwindow.view > viewport.frame > stack > list { 
+	> row.activatable {
+		padding: 0;
+	}
+}
