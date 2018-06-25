@@ -1,5 +1,7 @@
 # Beaucoup theme
 
+![Screenshot](Screenshot.png)
+
 ### Beaucoup is a gtk+ theme based on Adwaita, with a clear goal to make your desktop professional-looking and nice.
 
 # Supported desktop environments
