@@ -6,6 +6,7 @@
 
 # Supported desktop environments
 - GNOME 3
+- Xfce
 
 ### maybe it's coming through, if I have a time (Currently not supported list) :
 - Budgie
