@@ -1,3 +1,7 @@
+// This is a place to add some fixes for GNOME apps
+// or adding some styling for GNOME/3rd-party GTK+ apps
+// and desktop environments (like Xfce, etc.)
+
 // Nautilus fix
 
 .nautilus-window,
@@ -30,9 +34,126 @@
   }
 }
 
-// gnome-control-center sidebar
+// gnome-control-center (3.26) sidebar
 scrolledwindow.view > viewport.frame > stack > list { 
 	> row.activatable {
 		padding: 0;
+	}
+}
+
+// gedit fixes
+statusbar {
+    border-top: 1px solid $borders_color;
+}
+
+.gedit-search-slider {
+    background-color: $base_color;
+    padding: 6px;
+    border-color: $borders_color;
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+}
+
+.gedit-search-entry-occurrences-tag {
+    background-color: transparent;
+    background-image: none;
+    color: $fg_color;
+    border: 0px;
+    margin: 2px;
+    padding: 2px;
+		box-shadow: none;
+}
+
+// Thunar
+.thunar {
+  :backdrop { color: $insensitive_fg_color; }
+  toolbar { 
+		border-bottom: none; 
+
+		// use non-symbolic icons
+		// wish i can resize that damn symbolic toolbar icon to 16px
+		-gtk-icon-style: regular;
+	}
+
+  .sidebar.frame { border-top: 1px solid $borders_color; }
+}
+
+// Xfce4-panel (gtk3)
+.xfce4-panel.background {
+	background-color: $dark_bg_color;
+	color: $dark_fg_color;
+
+	button {
+		padding: 0 1px;
+		color: $dark_fg_color;
+		border: none;
+		border-radius: 0;
+		-gtk-icon-shadow: none;
+
+		&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+			box-shadow: inset 0 -3px $selected_bg_color;
+			background-color: transparent;
+			border: none;
+			background-image: none;
+			transition: none;
+		}
+	}
+
+  menu {
+    -gtk-icon-effect: none;
+
+    // Theme pulseaudio-plugin's mpris buttons
+    .linked button {
+      @extend %linked;
+      @extend %button.osd;
+
+    	&:disabled {
+        @include button(osd-insensitive);
+      }
+    }
+  }
+}
+
+// Vala panel
+// Who use it for?? but styling is enough for us
+// as a alternative for xfce4-panel or some WM session e.g openbox
+window#ValaPanel.background {
+	background-color: $dark_bg_color;
+	color: $dark_fg_color;
+
+  widget.-vala-panel-background > separator {
+    background-color: $dark_base_color;
+  }
+}
+
+button.flat.-panel-button,
+button.flat.-panel-icon-button {
+	min-width: 16px;
+	min-height: 16px;
+	border-radius: 0;
+	color: $dark_fg_color;
+
+	&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+		box-shadow: inset 0 -3px $selected_bg_color;
+		background-color: transparent;
+		border: none;
+		background-image: none;
+		transition: none;
+	}
+}
+
+.unpinned button.flat.-panel-icon-button,
+.pinned button.flat.-panel-icon-button.running {
+		border: 0;
+		margin: 0;
+		box-shadow: inset 0 -3px lighten($dark_base_color, 8%);
+
+	&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+		box-shadow: inset 0 -3px $selected_bg_color;
+		background-color: transparent;
+		border: none;
+		background-image: none;
+		transition: none;
 	}
 }

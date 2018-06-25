@@ -199,6 +199,7 @@
 						 linear-gradient(to bottom, darken($c, 4%), darken($c, 8%)),
 						 linear-gradient(to bottom, lighten($c, 8%), lighten($c, 4%)));
     @include _shadows(inset 0 1px $_hilight_color, 0 1px $_hilight_color);
+		@include _button_text_shadow($tc, $c);
   }
 
   @else if $t==hover {
@@ -211,7 +212,8 @@
     background-image: if($variant == 'light', 
 						 linear-gradient(to bottom, $c, darken($c, 4%)),
 						 linear-gradient(to bottom, lighten($c, 12%), lighten($c, 8%)));
-	@include _shadows(inset 0 1px $_hilight_color, 0 1px $_hilight_color);
+		@include _shadows(inset 0 1px $_hilight_color, 0 1px $_hilight_color);
+		@include _button_text_shadow($tc, lighten($c, 6%));
   }
 
   @else if $t==active {
@@ -221,7 +223,7 @@
     color: $tc;
     outline-color: transparentize($tc, 0.7);
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
-	background-image: if($variant == 'light', 
+		background-image: if($variant == 'light', 
 						 linear-gradient(to bottom, darken($c, 14%), darken($c, 10%)),
 						 linear-gradient(to bottom, lighten($c, 2%), lighten($c, 6%)));
     @include _shadows(0 1px $_hilight_color);
@@ -280,6 +282,7 @@
 						 linear-gradient(to bottom, darken($c, 2%), darken($c, 6%)),
 						 linear-gradient(to bottom, lighten($c, 6%), lighten($c, 2%)));
     @include _shadows(inset 0 1px $_hilight_color, 0 1px $_hilight_color);
+		@include _button_text_shadow($tc, $c);
   }
 
   @else if $t==backdrop-active {

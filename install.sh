@@ -83,6 +83,9 @@ install() {
   cp -r "$SRC_DIR/gtk-3.0/gtk-contained$color.css"                              "$THEME_DIR/gtk-3.0/gtk.css"
   [[ "$color" != '-dark' ]] && \
   cp -r "$SRC_DIR/gtk-3.0/gtk-contained-dark.css"                               "$THEME_DIR/gtk-3.0/gtk-dark.css"
+
+	mkdir -p																																			"$THEME_DIR/xfwm4"
+	cp -r "$SRC_DIR/xfwm4$color/"{themerc,*.png,*.xpm}														"$THEME_DIR/xfwm4"											
 }
 
 install_gdm() {
