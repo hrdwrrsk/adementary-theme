@@ -85,7 +85,10 @@ install() {
   cp -r "$SRC_DIR/gtk-3.0/gtk-contained-dark.css"                               "$THEME_DIR/gtk-3.0/gtk-dark.css"
 
 	mkdir -p																																			"$THEME_DIR/xfwm4"
-	cp -r "$SRC_DIR/xfwm4$color/"{themerc,*.png,*.xpm}														"$THEME_DIR/xfwm4"											
+	cp -r "$SRC_DIR/xfwm4$color/"{themerc,*.png,*.xpm}														"$THEME_DIR/xfwm4"
+
+	mkdir -p 																																			"$THEME_DIR/plank"
+	cp -r "$SRC_DIR/plank/dock.theme"																							"$THEME_DIR/plank"										
 }
 
 install_gdm() {

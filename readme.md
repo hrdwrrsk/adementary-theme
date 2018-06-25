@@ -6,8 +6,8 @@
 - GNOME 3
 
 ### maybe it's coming through, if I have a time (Currently not supported list) :
-- Xfce 
 - Budgie
+- Cinnamon
 
 ## Not really supported
 - Pantheon (elementary OS)

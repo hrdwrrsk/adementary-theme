@@ -40,4 +40,3 @@ gtk-primary-button-warps-slider = 1
 include "main.rc"
 include "apps.rc"
 include "hacks.rc"
-include "hacks-dark.rc"
