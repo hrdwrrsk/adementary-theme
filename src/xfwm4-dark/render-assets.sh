@@ -4,7 +4,7 @@ INKSCAPE="/usr/bin/inkscape"
 ZOPFLIPNG="/usr/bin/zopflipng"
 
 SRC_FILE="assets.svg"
-ASSETS_DIR="../xfwm4"
+ASSETS_DIR="../xfwm4-dark"
 INDEX="assets.txt"
 
 for i in `cat $INDEX`

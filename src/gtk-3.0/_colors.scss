@@ -18,6 +18,8 @@ $dark_base_color: #333640;
 $dark_fg_color: #eeeeee;
 $dark_text_color: #ffffff;
 
+$dark_borders_color: darken($dark_bg_color, 10%);
+
 $selected_fg_color: #ffffff;
 $selected_bg_color: #3689e6;
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));

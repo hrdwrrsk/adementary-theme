@@ -9,21 +9,21 @@ BottomRoundness=0
 #The thickness (in pixels) of lines drawn.
 LineWidth=1
 #The color (RGBA) of the outer stroke.
-OuterStrokeColor=7;;7;;8;;255
+OuterStrokeColor=128;;128;;128;;220
 #The starting color (RGBA) of the fill gradient.
-FillStartColor=60;;62;;73;;255
+FillStartColor=23;;24;;28;;240
 #The ending color (RGBA) of the fill gradient.
-FillEndColor=51;;53;;62;;255
+FillEndColor=23;;24;;28;;240
 #The color (RGBA) of the inner stroke.
-InnerStrokeColor=255;;255;;255;;100
+InnerStrokeColor=23;;24;;28;;240
 
 [PlankDockTheme]
 #The padding on the left/right dock edges, in tenths of a percent of IconSize.
-HorizPadding=0.5
+HorizPadding=1
 #The padding on the top dock edge, in tenths of a percent of IconSize.
-TopPadding=-5
+TopPadding=1.5
 #The padding on the bottom dock edge, in tenths of a percent of IconSize.
-BottomPadding=1
+BottomPadding=1.5
 #The padding between items on the dock, in tenths of a percent of IconSize.
 ItemPadding=3
 #The size of item indicators, in tenths of a percent of IconSize.

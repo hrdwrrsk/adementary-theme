@@ -8,16 +8,12 @@ title-4-active
 title-4-inactive
 title-5-active
 title-5-inactive
-top-left-active
-top-left-inactive
 bottom-left-active
 bottom-left-inactive
 bottom-right-active
 bottom-right-inactive
 bottom-active
 bottom-inactive
-top-right-active
-top-right-inactive
 left-active
 left-inactive
 right-active

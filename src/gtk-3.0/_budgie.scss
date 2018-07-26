@@ -1,0 +1,477 @@
+// Help us styling budgie-desktop in this theme !
+// code are derived from Arc (NicoHood x fossfreedom version) theme and 
+// some bits from Adapta, some bits written by me
+
+.budgie-container { 
+	background-color: transparent; 
+	
+	&:backdrop { background-color: transparent; }
+}
+
+.budgie-panel {
+	background-color: rgba($dark_bg_color, 0.90);
+	color: $dark_fg_color;
+
+	.alert { color: $selected_bg_color; }
+
+	&:backdrop {
+		background-color: rgba($dark_bg_color, 0.90);
+		color: $dark_fg_color;
+	}
+
+	&.transparent {
+		border: 1px solid transparent;
+		background-color: transparent;
+		
+		&:backdrop {
+		border: 1px solid transparent;
+		}
+	}
+
+	button {
+		@include button(undecorated);
+		border-radius: 0;
+		border: none;
+		
+		.flat label {
+			color: $dark_fg_color;
+			
+			&:backdrop { color: $dark_fg_color; }
+		}
+		
+		label { 
+			color: $dark_fg_color; 
+			
+			&:backdrop { color: $dark_fg_color; }
+		}
+
+		&:backdrop { color: $dark_fg_color; }
+
+		&:hover {
+			box-shadow: inset 0 -3px $dark_fg_color;
+			background-color: transparent;
+			border: none;
+			background-image: none;
+			transition: none;
+		}
+
+		&:active {
+			box-shadow: inset 0 -3px $selected_bg_color;
+			background-color: transparent;
+			background-image: none;
+			color: $dark_fg_color;
+
+			&:backdrop { 
+				box-shadow: inset 0 -3px $selected_bg_color;
+				background-image: none; 
+				color: $dark_fg_color;
+			}
+			
+			label { 
+				color: $dark_fg_color;
+				
+				&:backdrop { color: $dark_fg_color; } 
+			}
+		}
+
+		&:checked {
+			box-shadow: inset 0 -3px $selected_bg_color;
+			background-color: transparent;
+			background-image: none;
+			color: $dark_fg_color;
+
+			&:backdrop { 
+				box-shadow: inset 0 -3px $selected_bg_color;
+				background-image: none; 
+				color: $dark_fg_color;
+			}
+			
+			label { 
+				color: $dark_fg_color;
+				
+				&:backdrop { color: $dark_fg_color; } 
+			}
+		}
+	}
+}
+
+.budgie-clock-applet {
+	label { color: $dark_fg_color;	
+		&:backdrop { color: $dark_fg_color; }
+	}
+}
+
+@each $panel_pos, $border_pos in (top, bottom),
+																 (bottom, top),
+																 (left, right),
+																 (right, left) {
+	.#{$panel_pos} .budgie-panel {
+		border-#{$border_pos}: 1px solid $dark_borders_color;
+	}
+}
+
+button.budgie-menu-launcher {
+  padding: 0 2px;
+}
+
+.budgie-panel {
+	button.flat.launcher {
+		padding: 0;
+    border-radius: 0;
+    border: none;
+
+    > image {
+      opacity: 0.87;
+    }
+
+    &:hover {
+      -gtk-icon-effect: highlight;
+
+      > image { opacity: 1.0; }
+    }
+    &:active {
+      > image { opacity: 1.0; }
+    }
+    &:checked {
+      background-color: transparent;
+			background-image: none;
+      &:hover { -gtk-icon-effect: highlight; }
+
+      > image { opacity: 1.0; }
+    }
+  }
+
+  .unpinned button.flat.launcher,
+  .pinned button.flat.launcher.running {
+    &:hover { -gtk-icon-effect: highlight; }
+
+    > image {
+      background-size: 2px 2px;
+      background-repeat: no-repeat;
+      opacity: 1.0;
+    }
+
+    &:hover,
+    &:active,
+    &:checked {
+			background-image: none;
+      > image { background-image: none; }
+    }
+  }
+}
+
+@each $position, $_line in (top, 0 3px),
+                           (bottom, 0 -3px),
+                           (left, 3px 0),
+                           (right, -3px 0) {
+  .#{$position} .budgie-panel {
+    button#tasklist-button,
+    button.flat.launcher {
+      &:hover {
+        box-shadow: inset #{$_line} lighten($dark_base_color, 12%);
+        background-color: transparent;
+        border: none;
+      }
+      &:active,
+      &:checked, {
+        box-shadow: inset #{$_line} $selected_bg_color;
+      }
+    }
+
+    .unpinned button.flat.launcher,
+    .pinned button.flat.launcher.running {
+      > image {
+        background-image: image($selected_bg_color);
+        background-position: #{$position} center;
+      }
+
+			&:hover,
+      &:active,
+      &:checked {
+        box-shadow: inset #{$_line} $selected_bg_color;
+      }
+    }
+  }
+}
+
+.budgie-popover {
+  border-radius: 5px;
+  background-color: $popover_bg_color;
+	box-shadow: 0 1px 2px transparentize(black, 0.7);
+	border: 1px solid $borders_color;
+
+	.container { padding: 0px; }
+
+	border { border: none; }
+	
+  list { background-color: transparent; }
+
+  row {
+    padding: 0;
+
+    &:hover { box-shadow: none; }
+  }
+
+  &:not(.budgie-menu) button.flat:not(.image-button) {
+    min-height: 24px;
+    padding: 0 8px;
+    color: $fg_color;
+    font-weight: normal;
+
+    &:disabled { color: $insensitive_fg_color; }
+  }
+
+  &.budgie-menu {
+    .container { padding: 0; }
+  }
+
+  &.user-menu {
+    .container { padding: 8px; }
+
+    separator { margin: 4px 0; }
+  }
+
+  &.sound-popover {
+    separator { margin: 3px 0; }
+  }
+
+  &.night-light-indicator {
+    .container { padding: 8px; }
+  }
+
+  &.workspace-popover {
+    .container { padding: 2px 8px 8px; }
+
+    separator { margin: 4px 0; }
+
+    flowboxchild { padding: 0; }
+  }
+}
+
+.budgie-menu {
+  &.background {
+    padding: 0;
+    background-color: $base_color;
+  }
+
+  scrollbar,
+  entry.search { background-color: transparent; }
+
+  entry.search {
+    border-style: none;
+    border-bottom: 1px solid $borders_color;
+    border-radius: 1px;
+    box-shadow: none;
+    font-size: 120%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  button {
+    @extend row.activatable;
+    min-height: 32px;
+    padding: 0 8px;
+    border-radius: 0;
+    color: $fg_color;
+		background-image: none;
+		border: 0;
+		box-shadow: none;
+
+		transition: none;
+
+		&:active, &:checked { 
+			background-color: $selected_bg_color;
+			color: $selected_fg_color;
+		}
+  }
+
+  row {
+    padding: 0;
+
+    &:hover { box-shadow: none; }
+  }
+}
+
+// Raven
+frame.raven-frame > border {
+  border-style: none;
+  box-shadow: none;
+}
+
+$raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
+
+@each $pos, $b_pos in $raven_borders {
+  // Raven borders
+  .#{$pos} frame.raven-frame > border {
+    margin-#{$b_pos}: 32px;
+    border-#{$b_pos}: 1px solid $borders_color;
+  }
+}
+
+// Raven
+.raven {
+  background-color: $bg_color;
+  color: $fg_color;
+  padding: 0;
+  border: none;
+
+  .raven-header {
+    min-height: 26px;
+    
+    &:not(.top) { 
+			margin-top: -6px;
+			padding-bottom: 2px; 
+		}
+
+		&.top {
+      padding: 4px 12px;
+      color: $fg_color;
+			border-bottom: 1px solid $borders_color;
+
+      @include headerbar_fill;
+		}
+
+		&.bottom { border-top: 1px solid $borders_color; }
+	}
+
+  .raven-background {
+    border-style: solid none;
+    border-width: 1px;
+    border-color: $borders_color;
+    background-color: $base_color;
+	}
+}
+
+calendar.raven-calendar {
+  // padding: 3px;
+  border-style: none;
+  background-color: transparent;
+
+  &:selected {
+    border-radius: 2px;
+    background-color: $selected_bg_color;
+  }
+}
+
+.raven-mpris {
+  background-color: rgba($dark_bg_color, 0.8);
+  color: $dark_fg_color;
+
+  label { min-height: 24px; }
+}
+
+// Notifications
+.budgie-notification-window {
+  background-color: transparent;
+  &:backdrop { background-color: transparent; }
+}
+
+.budgie-notification {
+  .notification-title { font-size: 110%; color: $fg_color; }
+  .notification-body { @extend .dim-label; color: $fg_color; }
+}
+
+.budgie-osd-window {
+  @extend .budgie-notification-window;
+}
+
+.budgie-osd {
+  @extend .budgie-notification;
+  .budgie-osd-text { font-size: 120%; }
+}
+
+.budgie-switcher-window {
+  @extend .budgie-notification-window;
+  
+  &:backdrop { @extend .budgie-notification-window; }
+}
+
+.budgie-switcher {
+  @extend .budgie-notification;
+}
+
+.drop-shadow {
+  margin: 5px 9px;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: 
+		0 3px 3px rgba(0, 0, 0, 0.16), 
+		0 3px 3px rgba(0, 0, 0, 0.23),
+		inset 0 0 0 1px $borders_color;
+  background-color: $bg_color;
+}
+
+%budgie_dialog {
+	border-radius: 4px;
+	background-color: $bg_color;
+
+  decoration { border-radius: 4px; }
+}
+
+.budgie-session-dialog {
+  @extend %budgie_dialog;
+
+  label:not(:last-child),
+  .dialog-title { font-size: 120%; }
+
+  .linked.horizontal > button {
+    padding: 4px;
+    border-top: 1px solid $borders_color;
+    border-radius: 0;
+
+		margin-bottom: 6px;
+
+    &:first-child {
+			border-top-left-radius: 5px; 
+			border-bottom-left-radius: 5px;
+			margin-left: 6px;
+		}
+
+    &:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			margin-right: 6px;
+		}
+  }
+}
+
+.budgie-polkit-dialog {
+  @extend %budgie_dialog;
+
+  .message { color: $fg_color; }
+
+  .failure { color: $destructive_color; }
+
+  .linked.horizontal > button {
+    padding: 4px;
+    border-top: 1px solid $borders_color;
+    border-radius: 0;
+
+		margin-bottom: 6px;
+
+    &:first-child {
+			border-top-left-radius: 5px; 
+			border-bottom-left-radius: 5px;
+			margin-left: 6px;
+		}
+
+    &:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			margin-right: 6px;
+		}
+  }
+}
+
+.budgie-run-dialog {
+  @extend %budgie_dialog;
+
+  background-color: $base_color;
+
+  entry.search {
+		margin: 10px;
+		border-radius: 3px;
+	}
+
+	scrolledwindow { border-top: 1px solid $borders_color; }
+}
