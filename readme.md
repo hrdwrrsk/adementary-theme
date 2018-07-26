@@ -7,10 +7,10 @@
 # Supported desktop environments
 - GNOME 3
 - Xfce
+- Budgie
 
 ### maybe it's coming through, if I have a time (Currently not supported list) :
-- Budgie
-- Cinnamon
+- Cinnamon/MATE
 
 ## Not really supported
 - Pantheon (elementary OS)
@@ -38,3 +38,4 @@ for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. supp
 # Credits
 - Adwaita gtk+ theme
 - install.sh script are from Materia gtk+ theme
+- some codes derived from Adapta, Arc, plane-gtk-theme, etc.
