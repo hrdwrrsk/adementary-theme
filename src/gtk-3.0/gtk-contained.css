@@ -6416,7 +6416,7 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel {
-  background-color: rgba(46, 48, 56, 0.9);
+  background-color: #2E3038;
   color: #eeeeee;
 }
 
@@ -6425,7 +6425,7 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel:backdrop {
-  background-color: rgba(46, 48, 56, 0.9);
+  background-color: #2E3038;
   color: #eeeeee;
 }
 
@@ -6545,6 +6545,14 @@ button.emoji-section:checked label {
 
 button.budgie-menu-launcher {
   padding: 0 2px;
+}
+
+button.budgie-menu-launcher image {
+  background-image: -gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg"));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: transparent;
 }
 
 .budgie-panel button.flat.launcher {

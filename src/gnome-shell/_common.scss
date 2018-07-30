@@ -55,23 +55,36 @@ stage {
 }
 
 .modal-dialog-linked-button {
-  border-right-width: 1px;
+  border-width: 1px;
+  margin: 6px;
+  
+  margin-left: 0;
+  margin-right: 0;
+  
   @include button(normal);
+  &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
   &:focus { @include button(focus); }
-  padding: 12px;
+  padding: 8px;
 
   &:first-child {
-    border-radius: 0px 0px 0px 6px;
+    border-right-width: 0;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 6px 0px 0px 6px;
   }
   &:last-child {
-    border-right-width: 0px;
-    border-radius: 0px 0px 6px 0px;
+		border-left-width: 0;
+    margin-left: 0;
+    margin-right: 6px;
+    border-radius: 0px 6px 6px 0px;
   }
   &:first-child:last-child {
-    border-right-width: 0px;
-    border-radius: 0px 0px 6px 6px;
+    border-width: 1px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 6px;
   }
 }
 
@@ -181,8 +194,9 @@ StScrollBar {
 .modal-dialog {
   border-radius: 9px;
   color: $osd_fg_color;
-  background-color: transparentize(darken($osd_bg_color,10%),0.05);
-  border: 1px solid $_bubble_borders_color;
+  background-color: $bg_color;
+  border: 1px solid $borders_color;
+  box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
   .modal-dialog-content-box {
     padding: 24px;
   }
@@ -234,7 +248,7 @@ StScrollBar {
 /* End Session Dialog */
 .end-session-dialog {
   spacing: 42px;
-  border: 1px solid $_bubble_borders_color;
+  border: 1px solid $borders_color;
 }
 
   .end-session-dialog-list {
@@ -372,7 +386,7 @@ StScrollBar {
 .prompt-dialog {
   //this is the width of the entire modal popup
   width: 34em;
-  border: 1px solid $_bubble_borders_color;
+  border: 1px solid $borders_color;
 
   .message-dialog-main-layout { spacing: 24px; padding: 10px; }
   .message-dialog-content { spacing: 16px; }
@@ -501,7 +515,7 @@ StScrollBar {
 /* Popovers/Menus */
 
 .popup-menu {
-  min-width: 15em;
+  min-width: 200px;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
@@ -545,13 +559,13 @@ StScrollBar {
   }
   .popup-menu-boxpointer,
   .candidate-popup-boxpointer {
-    -arrow-border-radius: 3px;
-    -arrow-background-color: transparentize(darken($osd_bg_color,10%),0.05);
+    -arrow-border-radius: 5px;
+    -arrow-background-color: $bg_color;
     -arrow-border-width: 1px;
-    -arrow-border-color: $_bubble_borders_color;
+    -arrow-border-color: $borders_color;
     -arrow-base: 24px;
     -arrow-rise: 11px;
-    -arrow-box-shadow: 0 1px 3px black; //dreaming. bug #689995
+    -arrow-box-shadow: none; //dreaming. bug #689995
   }
 
   .popup-separator-menu-item {
@@ -674,6 +688,9 @@ StScrollBar {
 
   .workspace-switcher-container {
     @extend %osd-panel;
+    
+    background-color: $bg_color;
+		border: 1px solid $borders_color;
   }
 
   .workspace-switcher {
@@ -729,11 +746,13 @@ StScrollBar {
 /* TOP BAR */
 
 #panel {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba($bg_color, 0.80);
   /* transition from solid to transparent */
   transition-duration: 500ms;
   font-weight: bold;
   height: 28px;
+  border-bottom: 1px solid;
+  border-color: $borders_color;
 
   &.unlock-screen,
   &.login-screen,
@@ -826,9 +845,11 @@ StScrollBar {
   .screencast-indicator { color: $warning_color; }
 
   &.solid {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: $bg_color;
     /* transition from transparent to solid */
     transition-duration: 300ms;
+    border-bottom: 1px solid;
+    border-color: $borders_color;
 
     .panel-corner {
       -panel-corner-background-color: black;
@@ -1157,9 +1178,9 @@ StScrollBar {
 
 .window-close {
   background-image: url("assets/close-window.svg");
-  background-size: 24px;
-  height: 24px;
-  width: 24px;
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
   -shell-close-overlap: 12px;
 
   &:hover { background-image: url("assets/close-window-hover.svg"); }
@@ -1297,9 +1318,9 @@ StScrollBar {
   #dash {
     font-size: 9pt;
     color: $_bubble_fg_color;
-    background-color: transparentize(darken($osd_bg_color,10%),0.05);
+    background-color: rgba($bg_color, 0.80);
     padding: 0;
-    border: 1px solid rgba(128, 128, 128, 0.4);
+    border: 1px solid $borders_color;
     border-left: 0px;
     border-radius: 0px 7px 7px 0px;
 
@@ -1464,7 +1485,8 @@ StScrollBar {
 
   // Workspace pager
   .workspace-thumbnails { //container ala dash
-    @extend %overview-panel;
+    background-color: $bg_color;
+		border: 1px solid $borders_color;
     visible-width: 32px; //amount visible before hover
     spacing: 11px;
     padding: 8px;

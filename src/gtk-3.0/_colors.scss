@@ -11,14 +11,15 @@ $fg_color: if($variant == 'light', #2e2e2e, #eeeeee);
 $inverse_bg_color: #fafafa;
 $inverse_base_color: #ffffff;
 
+// dark-only colors, prep for dark titlebar version
 $dark_bg_color: #2E3038;
 $dark_base_color: #333640;
 
-// required for panel widgets (?)
 $dark_fg_color: #eeeeee;
 $dark_text_color: #ffffff;
 
 $dark_borders_color: darken($dark_bg_color, 10%);
+$dark_headerbar_color: darken($dark_bg_color, 2%);
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: #3689e6;

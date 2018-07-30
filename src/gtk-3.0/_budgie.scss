@@ -9,13 +9,13 @@
 }
 
 .budgie-panel {
-	background-color: rgba($dark_bg_color, 0.90);
+	background-color: $dark_bg_color;
 	color: $dark_fg_color;
 
 	.alert { color: $selected_bg_color; }
 
 	&:backdrop {
-		background-color: rgba($dark_bg_color, 0.90);
+		background-color: $dark_bg_color;
 		color: $dark_fg_color;
 	}
 
@@ -112,6 +112,17 @@
 
 button.budgie-menu-launcher {
   padding: 0 2px;
+  
+  // i dislike how menu icons in budgie scaled
+  // so i use image assets for menu icons (you can disable it by add double slash (//) in image node.
+  image {
+		background-image: -gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg"));
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 16px;
+		
+		color: transparent;
+  }
 }
 
 .budgie-panel {
