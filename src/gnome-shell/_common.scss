@@ -559,13 +559,18 @@ StScrollBar {
   }
   .popup-menu-boxpointer,
   .candidate-popup-boxpointer {
-    -arrow-border-radius: 5px;
-    -arrow-background-color: $bg_color;
-    -arrow-border-width: 1px;
-    -arrow-border-color: $borders_color;
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
+    -arrow-border-radius: 0;
+    -arrow-background-color: transparent;
+    -arrow-border-width: 0;
+    -arrow-border-color: transparent;
+    -arrow-base: 0;
+    -arrow-rise: 0;
     -arrow-box-shadow: none; //dreaming. bug #689995
+    margin: 5px 8px 8px;
+    background-color: $bg_color;
+    border: 1px solid $borders_color;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px transparentize(black, 0.7);
   }
 
   .popup-separator-menu-item {
@@ -753,6 +758,11 @@ StScrollBar {
   height: 28px;
   border-bottom: 1px solid;
   border-color: $borders_color;
+  box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+  
+  &:overview {
+		box-shadow: none;
+	}
 
   &.unlock-screen,
   &.login-screen,
@@ -785,8 +795,8 @@ StScrollBar {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: #eee;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+    color: $fg_color;
+    text-shadow: none;
     transition-duration: 100ms;
 
     .app-menu-icon {
@@ -834,13 +844,10 @@ StScrollBar {
 
   .panel-status-indicators-box,
   .panel-status-menu-box {
-    spacing: 2px;
+    spacing: 0px;
   }
 
   // spacing between power icon and (optional) percentage label
-  .power-status.panel-status-indicators-box {
-    spacing: 0;
-  }
 
   .screencast-indicator { color: $warning_color; }
 
@@ -850,6 +857,8 @@ StScrollBar {
     transition-duration: 300ms;
     border-bottom: 1px solid;
     border-color: $borders_color;
+    
+    box-shadow: none;
 
     .panel-corner {
       -panel-corner-background-color: black;
@@ -1268,16 +1277,13 @@ StScrollBar {
     width: 320px;
     padding: 7px 9px;
     border-radius: 6px;
-    border-color: darken($osd_fg_color,50%);
-    color: $osd_fg_color;
-    background-color: $osd_bg_color;
+    
+    @include entry(normal);
     &:focus {
-      padding: 6px 8px;
-      border-width: 2px;
-      border-color: $selected_bg_color;
+      @include entry(focus);
     }
 
-    .search-entry-icon { icon-size: 1em; padding: 0 4px; color: transparentize($fg_color,.3); }
+    .search-entry-icon { icon-size: 16px; padding: 0 4px; color: transparentize($fg_color,.3); }
 
     &:hover, &:focus {
       .search-entry-icon { color: $fg_color; }
@@ -1338,7 +1344,24 @@ StScrollBar {
       width: 24px;
       height: 24px;
     }
-
+		
+		.app-well-app,
+		.show-apps {
+			.overview-icon {
+				border: 0;
+			}
+			
+			&:hover .overview-icon {
+				background-color: rgba(white, 0.2);
+				box-shadow: none;
+			}
+			
+			&:active .overview-icon,
+			&:checked .overview-icon,
+			&:checked:hover .overview-icon {
+				background-color: rgba(black, 0.4);
+			}
+		}
   }
 
   .dash-item-container > StWidget {
@@ -1405,19 +1428,16 @@ StScrollBar {
       @extend %icon_tile;
     }
     &:active .overview-icon,
-    &:checked .overview-icon {
-      background-color: transparentize(darken($osd_bg_color,10%),.1);
-      box-shadow: inset 0 1px 2px $osd_borders_color;
-    }
-    &:hover .overview-icon,
-    &:focus .overview-icon,
+    &:checked .overview-icon,
     &:selected .overview-icon {
-      background-color: transparentize($osd_fg_color,.9);
-      transition-duration: 0ms;
-      border-image: none;
-      background-image: none;
+      @include button(active);
     }
-
+    &:hover .overview-icon {
+			@include button(hover);
+    }
+    &:focus .overview-icon {
+			@include button(focus);
+    }
   }
 
   .app-well-app-running-dot { //running apps indicator
@@ -1436,7 +1456,8 @@ StScrollBar {
   }
 
   .app-well-app.app-folder > .overview-icon {
-    background-color: transparentize($osd_bg_color,.6);
+    @include button(normal);
+    text-shadow: none;
   }
 
   .show-apps:checked .show-apps-icon,
@@ -1449,11 +1470,18 @@ StScrollBar {
   // Collections
   .app-folder-popup { //expanded collection
     -arrow-border-radius: 8px;
-    -arrow-background-color: transparentize($osd_bg_color,0.7);
-    -arrow-base: 24px;
+    -arrow-background-color: transparent;
+    -arrow-base: 0px;
     -arrow-rise: 11px;
   }
-  .app-folder-popup-bin { padding: 5px; }
+  .app-folder-popup-bin { 
+		padding: 5px; 
+		background-color: $bg_color;
+		border: 1px solid $borders_color;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px transparentize(black, 0.7);
+	}
+	
   .app-folder-icon {
     padding: 5px;
     spacing-rows: 5px;

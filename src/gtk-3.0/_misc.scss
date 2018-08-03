@@ -67,16 +67,22 @@ statusbar {
 
 // Thunar
 .thunar {
-  :backdrop { color: $insensitive_fg_color; }
+  :backdrop { color: $backdrop_fg_color; }
   toolbar { 
-		border-bottom: none; 
+		border-bottom: 1px solid $borders_color;
 
 		// use non-symbolic icons
 		// wish i can resize that damn symbolic toolbar icon to 16px
 		-gtk-icon-style: regular;
 	}
+	
+	& notebook, & notebook > stack > scrolledwindow {
+		border: 0;
+	}
 
-  .sidebar.frame { border-top: 1px solid $borders_color; }
+	& notebook > stack > scrolledwindow { border-bottom: 1px solid $borders_color; }
+
+  .sidebar.frame { border-top: 0; }
 }
 
 // Xfce4-panel (gtk3)

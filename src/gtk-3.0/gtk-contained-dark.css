@@ -7031,12 +7031,20 @@ statusbar {
 }
 
 .thunar toolbar {
-  border-bottom: none;
+  border-bottom: 1px solid #17181c;
   -gtk-icon-style: regular;
 }
 
+.thunar notebook, .thunar notebook > stack > scrolledwindow {
+  border: 0;
+}
+
+.thunar notebook > stack > scrolledwindow {
+  border-bottom: 1px solid #17181c;
+}
+
 .thunar .sidebar.frame {
-  border-top: 1px solid #17181c;
+  border-top: 0;
 }
 
 .xfce4-panel.background {
