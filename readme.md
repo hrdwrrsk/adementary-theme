@@ -1,4 +1,5 @@
 # Beaucoup theme
+#### (not final name, see https://github.com/hrdwrrsk/beaucoup-gtk-theme/issues/1) and help me to choose a new name, there's a 2 candidate from me: Halcyon and Tetra but still need to decide before it became final. After name change, this theme will be published at GNOME-Look (deviantArt is dying and full of kids that submitting content in wrong category)
 
 ![Screenshot](Screenshot.png)
 
