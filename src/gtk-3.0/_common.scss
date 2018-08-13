@@ -2635,7 +2635,7 @@ switch {
   color: transparent;
   background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
   text-shadow: none;
-  box-shadow: inset 0 1px rgba(black, 0.05), 0 1px rgba(white, 0.2);
+  box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
   
   &:checked {
     color: transparent;
@@ -2643,7 +2643,7 @@ switch {
     background-image: linear-gradient(to bottom, darken($selected_bg_color, 6%),
 												 $selected_bg_color);
     text-shadow: none;
-	box-shadow: inset 0 1px rgba(black, 0.10), 0 1px rgba(white, 0.2);
+	box-shadow: inset 0 1px rgba(black, 0.10), 0 1px transparentize(white, 0.95);
 	
 	&:disabled {
 	background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
@@ -2656,7 +2656,7 @@ switch {
     color: transparent;
     background-color: $bg_color;
     text-shadow: none;
-    box-shadow: inset 0 1px rgba(black, 0.05), 0 1px rgba(white, 0.2);
+    box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
   }
 
   slider {
@@ -2670,7 +2670,7 @@ switch {
 											  linear-gradient(to bottom, lighten($bg_color, 8%), 
 																		 lighten($bg_color, 4%)));
     transition: $button_transition;
-    box-shadow: 0 0 0 1px $borders_color, inset 0 1px transparentize(white, 0.80);
+    box-shadow: 0 0 0 1px $borders_color, inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
   }
 
   &:hover slider { 
@@ -2725,7 +2725,8 @@ switch {
   .view.content-view.check#{$s}:not(list),
   .content-view .tile check#{$s}:not(list) {
     -gtk-icon-shadow: none;
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}.png"), url("assets/checkbox#{$as}@2.png"));
+    -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("assets/checkbox#{$as}.png"), url("assets/checkbox#{$as}@2.png")),
+																							-gtk-scaled(url("assets/checkbox#{$as}-dark.png"), url("assets/checkbox#{$as}-dark@2.png")));
     background-color: transparent;
     min-width: 40px;
     min-height: 40px;
@@ -2766,28 +2767,43 @@ radio {
     }
   }
 
-  min-height: 14px;
-  min-width: 14px;
+  min-height: 16px;
+  min-width: 16px;
   border: 1px solid;
   -gtk-icon-source: none;
 
   @include button(normal, $edge: $shadow_color);
+  
+  box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 
-  &:hover { @include button(hover, $edge: $shadow_color); }
-  &:active { @include button(active); }
-  &:disabled { @include button(insensitive); }
+  &:hover { 
+		@include button(hover, $edge: $shadow_color);
+		box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
+	}
+	
+  &:active { 
+		@include button(active);
+		box-shadow: inset 0 1px rgba(black, 0.07); 
+  }
+  
+  &:disabled { @include button(insensitive); box-shadow: none; }
+  
   &:backdrop {
     @include button(backdrop);
+    
+    box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 
     transition: $backdrop_transition;
 
-    &:disabled { @include button(backdrop-insensitive); }
+    &:disabled { @include button(backdrop-insensitive); box-shadow: none; }
   }
 
   @if $variant == 'light' {
     // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
     // color, hence we need special casing.
-    row:selected & { border-color: $selected_borders_color; }
+    row:selected & { 
+			border-color: $selected_borders_color;
+		}
   }
 
   .osd & {
@@ -2803,14 +2819,14 @@ radio {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
 
     &, &:hover, &:disabled { //FIXME use button reset mixin
-      min-height: 14px;
-      min-width: 14px;
+      min-height: 16px;
+      min-width: 16px;
       background-image: none;
       background-color: transparent;
       box-shadow: none;
       -gtk-icon-shadow: none;
       color: inherit;
-      border-color: currentColor;
+      border-color: transparent;
     }
   }
 }
@@ -2819,22 +2835,20 @@ radio {
 check {
   border-radius: 3px;
 
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
-                                      -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg"))); }
 
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg"))); }
 }
 
 %radio,
 radio {
   border-radius: 100%;
+  min-height: 16px;
+  min-width: 16px;
 
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/bullet-symbolic.svg")),
-                                      -gtk-recolor(url("assets/bullet-symbolic.symbolic.png"))); }
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/bullet-symbolic.svg"))); }
 
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg"))); }
 }
 
 // ANIMATION:

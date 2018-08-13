@@ -14,7 +14,7 @@ if [ -f $ASSETS_DIR/$i.png ]; then
 else
     echo
     echo Rendering $ASSETS_DIR/$i.png
-    $INKSCAPE --export-id=$i-dark \
+    $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-background-opacity=0 \
               --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null \

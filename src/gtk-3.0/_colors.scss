@@ -21,6 +21,13 @@ $dark_text_color: #ffffff;
 $dark_borders_color: darken($dark_bg_color, 10%);
 $dark_headerbar_color: darken($dark_bg_color, 2%);
 
+// WM colors
+$wm_bg_a: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 8%));
+$wm_bg_b: if($variant == 'light', darken($bg_color, 6%), lighten($bg_color, 4%));
+
+$wm_backdrop_bg_a: if($variant == 'light', $bg_color, lighten($bg_color, 4%));
+$wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 2%));
+
 $selected_fg_color: #ffffff;
 $selected_bg_color: #3689e6;
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));

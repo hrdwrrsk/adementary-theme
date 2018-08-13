@@ -408,7 +408,7 @@ calendar.raven-calendar {
   box-shadow: 
 		0 3px 3px rgba(0, 0, 0, 0.16), 
 		0 3px 3px rgba(0, 0, 0, 0.23),
-		inset 0 0 0 1px $borders_color;
+		inset 0 0 0 1px if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
   background-color: $bg_color;
 }
 
@@ -485,4 +485,8 @@ calendar.raven-calendar {
 	}
 
 	scrolledwindow { border-top: 1px solid $borders_color; }
+}
+
+.budgie-panel > box > widget > separator {
+  background-color: $dark_borders_color;
 }

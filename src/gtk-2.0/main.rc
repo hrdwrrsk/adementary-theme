@@ -1559,7 +1559,7 @@ style "menu_item" {
       function        = CHECK
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "assets/menu-checkbox.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1567,7 +1567,7 @@ style "menu_item" {
       function        = CHECK
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "assets/menu-checkbox-hover.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1575,7 +1575,7 @@ style "menu_item" {
       function        = CHECK
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "assets/menu-checkbox.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1583,7 +1583,7 @@ style "menu_item" {
       function        = CHECK
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "assets/menu-checkbox-insensitive.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1659,7 +1659,7 @@ style "menu_item" {
       function        = OPTION
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "assets/menu-radio.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1667,7 +1667,7 @@ style "menu_item" {
       function        = OPTION
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "assets/menu-radio-hover.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1675,7 +1675,7 @@ style "menu_item" {
       function        = OPTION
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "assets/menu-radio.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -1683,7 +1683,7 @@ style "menu_item" {
       function        = OPTION
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "assets/menu-radio-insensitive.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 

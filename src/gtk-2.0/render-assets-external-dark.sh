@@ -3,7 +3,7 @@
 INKSCAPE="/usr/bin/inkscape"
 ZOPFLIPNG="/usr/bin/zopflipng"
 
-SRC_FILE="assets-external-dark.svg"
+SRC_FILE="assets-external.svg"
 ASSETS_DIR="assets-dark"
 INDEX="assets-external-dark.txt"
 

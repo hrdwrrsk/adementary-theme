@@ -1,9 +1,9 @@
-# Beaucoup theme
-#### (not final name, see https://github.com/hrdwrrsk/beaucoup-gtk-theme/issues/1) and help me to choose a new name, there's a 2 candidate from me: Halcyon and Tetra but still need to decide before it became final. After name change, this theme will be published at GNOME-Look (deviantArt is dying and full of kids that submitting content in wrong category)
+# Tetra
 
 ![Screenshot](Screenshot.png)
 
-### Beaucoup is a gtk+ theme based on Adwaita, with a clear goal to make your desktop professional-looking and nice.
+### Tetra (formerly or codenamed "Project Beaucoup") is a gtk+ theme based on Adwaita.
+This theme aimed to recreate old design of Adwaita theme (from 3.14-3.18), but with add some design touches from elementary and Vertex Gtk+ theme
 
 # Supported desktop environments
 - GNOME 3
@@ -22,7 +22,7 @@
 # Installation
 
 ```
-git clone https://github.com/hrdwrrsk/beaucoup-gtk-theme.git
+git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
 cd beaucoup-gtk-theme
 
 # system wide install
