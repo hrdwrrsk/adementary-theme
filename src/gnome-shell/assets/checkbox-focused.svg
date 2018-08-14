@@ -22,11 +22,11 @@
        inkscape:collect="always"
        id="linearGradient2212">
       <stop
-         style="stop-color:#40434e;stop-opacity:1"
+         style="stop-color:#4a91e7;stop-opacity:1"
          offset="0"
          id="stop2208" />
       <stop
-         style="stop-color:#373a43;stop-opacity:1"
+         style="stop-color:#3886e5;stop-opacity:1"
          offset="1"
          id="stop2210" />
     </linearGradient>
@@ -202,8 +202,8 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.052834"
-     inkscape:cx="48.05275"
+     inkscape:zoom="15.966046"
+     inkscape:cx="16.332072"
      inkscape:cy="9.79341"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -235,7 +235,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -269,11 +269,11 @@
          inkscape:connector-curvature="0"
          id="path4574"
          d="m 2.5135417,290.65 c 0,-0.41161 0.3581753,-0.92604 1.0764687,-0.92604 h 2.8731744 c 0.5985781,0 1.0774402,0.41162 1.0774402,0.92604"
-         style="opacity:0.05;fill:none;stroke:#f2ffff;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="opacity:0.2;fill:none;stroke:#f2ffff;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          id="rect4561"
          d="M 3.5907742,289.45941 H 6.463393 c 0.5967866,0 1.0772321,0.48041 1.0772321,1.07722 v 2.87261 c 0,0.5968 -0.4804455,1.07722 -1.0772321,1.07722 H 3.5907742 c -0.5967874,0 -1.0772325,-0.48042 -1.0772325,-1.07722 v -2.87261 c 0,-0.59681 0.4804451,-1.07722 1.0772325,-1.07722 z"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#3689e6;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#00000a;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:connector-curvature="0" />
       <path
          sodipodi:nodetypes="ccccccc"

@@ -29,7 +29,7 @@ $wm_backdrop_bg_a: if($variant == 'light', $bg_color, lighten($bg_color, 4%));
 $wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 2%));
 
 $selected_fg_color: #ffffff;
-$selected_bg_color: #3689e6;
+$selected_bg_color: if($variant == 'light', #3584e4, #1c71d8);
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
 $borders_color: if($variant == 'light', darken($bg_color, 25%), darken($bg_color, 10%));
 $alt_borders_color: if($variant == 'light', darken($bg_color, 35%), darken($bg_color, 17%));
@@ -48,10 +48,10 @@ $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
 $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
 
-$warning_color: #f37329;
-$error_color: #c6262e;
-$success_color: #68b723;
-$destructive_color: if($variant == 'light', #ed5353, $error_color);
+$warning_color: #ff7800;
+$error_color: if($variant == 'light', #ed333b, #e01b24);
+$success_color: if($variant == 'light', #33d17a, #2ec27e);
+$destructive_color: $error_color;
 
 $osd_fg_color: #eeeeec;
 $osd_text_color: white;

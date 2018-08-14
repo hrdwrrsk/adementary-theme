@@ -2640,16 +2640,17 @@ switch {
   &:checked {
     color: transparent;
     border: 1px solid if($variant == 'light', lighten($selected_borders_color, 8%), $alt_borders_color);
-    background-image: linear-gradient(to bottom, darken($selected_bg_color, 6%),
-												 $selected_bg_color);
+    background-image: if($variant == 'light', 
+											linear-gradient(to bottom, darken($selected_bg_color, 8%), darken($selected_bg_color, 4%)),
+											linear-gradient(to bottom, lighten($selected_bg_color, 4%), lighten($selected_bg_color, 8%)));
     text-shadow: none;
-	box-shadow: inset 0 1px rgba(black, 0.10), 0 1px transparentize(white, 0.95);
+		box-shadow: inset 0 1px rgba(black, 0.10), 0 1px transparentize(white, 0.95);
 	
-	&:disabled {
-	background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
-	background-image: none;
-	border: 1px solid if($variant == 'light', $borders_color, $alt_borders_color);
-	}
+		&:disabled {
+			background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
+			background-image: none;
+			border: 1px solid if($variant == 'light', $borders_color, $alt_borders_color);
+		}
   }
 
   &:disabled {
@@ -2681,15 +2682,14 @@ switch {
   }
 
   &:checked slider { 
-	background-image: linear-gradient(to bottom, darken($inverse_bg_color, 2%), 
-											     darken($inverse_bg_color, 6%));
-	box-shadow: 0 0 0 1px rgba(black, 0.50);
+		background-image: linear-gradient(to bottom, darken($inverse_bg_color, 2%), darken($inverse_bg_color, 6%));
+		box-shadow: 0 0 0 1px rgba(black, 0.50);
   }
 
   &:disabled slider { 
-	background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 8%));
-	background-image: none;
-	box-shadow: 0 0 0 1px $borders_color;
+		background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 8%));
+		background-image: none;
+		box-shadow: 0 0 0 1px $borders_color;
   }
 
   row:selected & {
@@ -2697,8 +2697,8 @@ switch {
       box-shadow: none;
       border-color: $selected_borders_color;
 
-      slider:dir(rtl) { border-left-color: $borders_color; }
-      slider:dir(ltr) { border-right-color: $borders_color; }
+      slider:dir(rtl) { border-left-color: $selected_borders_color; }
+      slider:dir(ltr) { border-right-color: $selected_borders_color; }
 
       slider { &:checked, & { border-color: $selected_borders_color; } }
     }
@@ -2772,12 +2772,12 @@ radio {
   border: 1px solid;
   -gtk-icon-source: none;
 
-  @include button(normal, $edge: $shadow_color);
+  @include button(normal);
   
   box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 
   &:hover { 
-		@include button(hover, $edge: $shadow_color);
+		@include button(hover);
 		box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 	}
 	
@@ -2785,6 +2785,30 @@ radio {
 		@include button(active);
 		box-shadow: inset 0 1px rgba(black, 0.07); 
   }
+  
+  &:checked {
+		@include button(normal, $selected_bg_color, white);
+		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+		box-shadow: inset 0 1px transparentize(white, 0.8);
+		
+		&:hover {
+			@include button(hover, $selected_bg_color, white);
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			box-shadow: inset 0 1px transparentize(white, 0.8);
+		}
+		
+		&:active {
+			@include button(active, $selected_bg_color, white);
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			box-shadow: inset 0 1px rgba(black, 0.07); 
+		}
+		
+		&:backdrop {
+			@include button(backdrop, $selected_bg_color, white);
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			box-shadow: inset 0 1px transparentize(white, 0.8);
+		}
+	}
   
   &:disabled { @include button(insensitive); box-shadow: none; }
   
@@ -2828,6 +2852,19 @@ radio {
       color: inherit;
       border-color: transparent;
     }
+    
+    // override 
+    &:checked {
+			@include button(undecorated);
+			color: $fg_color;
+			
+			&:hover, &:active {
+				@include button(undecorated);
+				color: white;
+			}
+			
+			&:disabled { color: $insensitive_fg_color; }
+		}
   }
 }
 
@@ -2877,21 +2914,23 @@ menu menuitem {
 
 treeview.view check,
 treeview.view radio {
+	color: white;
+
   &:selected {
     &:focus, & {
-      color: $fg_color;
+      color: white;
 
       @if $variant == 'light' { border-color: $selected_borders_color; }
     }
 
     &:disabled {
-      color: $insensitive_fg_color;
+      color: mix(white, $selected_bg_color, 50%);
 
       &:backdrop { color: $backdrop_insensitive_color; }
     }
   }
 
-  &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
+  &:backdrop { &:selected, & { color: mix(white, $selected_bg_color, 80%); }}
 }
 
 treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround

@@ -14,8 +14,8 @@
    height="14"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="toggle-on-intl.svg">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="toggle-on.svg">
   <defs
      id="defs2859">
     <inkscape:perspective
@@ -78,11 +78,11 @@
       <stop
          id="stop835"
          offset="0"
-         style="stop-color:#1c79e1;stop-opacity:1" />
+         style="stop-color:#267be3;stop-opacity:1" />
       <stop
          id="stop837"
          offset="1"
-         style="stop-color:#3689e6;stop-opacity:1" />
+         style="stop-color:#3886e5;stop-opacity:1" />
     </linearGradient>
     <inkscape:perspective
        id="perspective2865-2"
@@ -136,15 +136,15 @@
      inkscape:pageopacity="0.18431373"
      inkscape:pageshadow="2"
      inkscape:zoom="15.937164"
-     inkscape:cx="20.074881"
+     inkscape:cx="8.0275682"
      inkscape:cy="11.499303"
      inkscape:document-units="px"
      inkscape:current-layer="g37994"
      showgrid="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="608"
+     inkscape:window-width="1366"
+     inkscape:window-height="671"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="29"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -171,7 +171,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -213,7 +213,7 @@
       <g
          id="scale-slider"
          inkscape:label="#g5227"
-         transform="matrix(1.5323214,0,0,1.2413968,323.39676,1661.8379)">
+         transform="matrix(1.5323214,0,0,1.2413968,344.84926,1661.8379)">
         <g
            transform="translate(135,86)"
            id="g5358-2">
