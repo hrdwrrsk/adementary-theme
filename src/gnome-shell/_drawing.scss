@@ -138,8 +138,6 @@
     background-color: lighten($c, 8%);
     border-color: $osd_borders_color;
     box-shadow: inset 0 1px transparentize(white, 0.95);
-    text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
   }
   @if $t==focus {
   //

@@ -12,7 +12,7 @@
 # order to not mess up the dark theme.
 
 # Text/base
-gtk-color-scheme = "text_color:white\nbase_color:#333640"
+gtk-color-scheme = "text_color:white\nbase_color:#30333D"
 # Foreground/background
 gtk-color-scheme = "fg_color:#eeeeee\nbg_color:#2e3038"
 # Selected foreground/background

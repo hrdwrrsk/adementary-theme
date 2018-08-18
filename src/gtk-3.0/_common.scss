@@ -704,7 +704,7 @@ button {
       @include button(normal, $b_color, white);
       border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
       
-      box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
+      // box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
 
       &.flat {
         @include button(undecorated);
@@ -713,37 +713,38 @@ button {
       }
 
       &:hover { 
-		@include button(hover, $b_color, white); 
-		border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-		box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
-	  }
+				@include button(hover, $b_color, white); 
+				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+				// box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
+			}
 
       &:active,
-      &:checked { @include button(active, $b_color, white); 
-		border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-		box-shadow: 0 1px transparentize(white, 0.95);
+      &:checked { 
+				@include button(active, $b_color, white); 
+				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+				// box-shadow: 0 1px transparentize(white, 0.95);
       }
 
       &:backdrop,
       &.flat:backdrop {
         @include button(backdrop, $b_color, white);
         border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-        box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
+        // box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
 
         &:active,
         &:checked { 
-			border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-			@include button(backdrop-active, $b_color, white); 
-		}
+					border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+					@include button(backdrop-active, $b_color, white); 
+				}
 
         &:disabled {
           @include button(backdrop-insensitive);
 
           &:active,
           &:checked { 
-			@include button(backdrop-insensitive-active, $b_color, white); 
-			border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-		  }
+						@include button(backdrop-insensitive-active, $b_color, white); 
+						border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+					}
         }
       }
 
@@ -1468,7 +1469,7 @@ headerbar {
   min-height: 42px;
   border-width: 0 0 1px;
   border-style: solid;
-  border-color: $alt_borders_color;
+  border-color: $borders_color;
   border-radius: 0;
 
   @include headerbar_fill;
@@ -2773,40 +2774,34 @@ radio {
   -gtk-icon-source: none;
 
   @include button(normal);
-  
-  box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 
   &:hover { 
 		@include button(hover);
-		box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 	}
 	
   &:active { 
 		@include button(active);
-		box-shadow: inset 0 1px rgba(black, 0.07); 
+		box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95); 
   }
   
   &:checked {
 		@include button(normal, $selected_bg_color, white);
 		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-		box-shadow: inset 0 1px transparentize(white, 0.8);
 		
 		&:hover {
 			@include button(hover, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-			box-shadow: inset 0 1px transparentize(white, 0.8);
 		}
 		
 		&:active {
 			@include button(active, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-			box-shadow: inset 0 1px rgba(black, 0.07); 
+			box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95); 
 		}
 		
 		&:backdrop {
 			@include button(backdrop, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-			box-shadow: inset 0 1px transparentize(white, 0.8);
 		}
 	}
   
@@ -4400,7 +4395,7 @@ button.titlebutton {
 
   @extend %button_basic.flat;
 
-  @include _button_text_shadow;
+	-gtk-icon-shadow: none;
 
   .selection-mode & {
     @extend %button.flat.suggested-action;

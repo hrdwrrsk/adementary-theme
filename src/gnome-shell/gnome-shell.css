@@ -35,8 +35,6 @@ stage {
   background-color: #40434e;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
 }
 
 .button:focus {
@@ -73,8 +71,6 @@ stage {
   background-color: #40434e;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
   padding: 8px;
 }
 
@@ -708,13 +704,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-  -arrow-border-radius: 5px;
-  -arrow-background-color: #2E3038;
-  -arrow-border-width: 1px;
-  -arrow-border-color: #121316;
-  -arrow-base: 24px;
-  -arrow-rise: 11px;
+  -arrow-border-radius: 0;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 0;
+  -arrow-rise: 0;
   -arrow-box-shadow: none;
+  margin: 5px 8px 8px;
+  background-color: #2E3038;
+  border-radius: 5px;
+  border: 1px solid #121316;
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 .popup-separator-menu-item {
@@ -875,10 +876,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .resize-popup,
 .switcher-list, .workspace-switcher-container {
   color: #eeeeec;
-  background-color: #2e3038;
-  border: 1px solid rgba(238, 238, 236, 0.2);
-  border-radius: 12px;
+  background-color: #2E3038;
+  border: 1px solid #121316;
+  border-radius: 9px;
   padding: 12px;
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* Tiled window previews */
@@ -1012,7 +1014,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid {
-  background-color: #2E3038;
+  background-color: rgba(46, 48, 56, 0.9);
   /* transition from transparent to solid */
   transition-duration: 300ms;
   border-bottom: 1px solid;
@@ -1024,7 +1026,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid .panel-button {
-  color: #ccc;
+  color: #eee;
   text-shadow: none;
 }
 
@@ -1545,21 +1547,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .search-entry {
   width: 320px;
-  padding: 7px 9px;
-  border-radius: 6px;
-  border-color: #747467;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border-color: #121316;
   color: #eeeeec;
   background-color: #2e3038;
 }
 
 .search-entry:focus {
   padding: 6px 8px;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #1c71d8;
 }
 
 .search-entry .search-entry-icon {
-  icon-size: 1em;
+  icon-size: 16px;
   padding: 0 4px;
   color: rgba(238, 238, 238, 0.7);
 }
@@ -1784,14 +1786,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-folder-popup {
-  -arrow-border-radius: 8px;
-  -arrow-background-color: rgba(46, 48, 56, 0.3);
-  -arrow-base: 24px;
-  -arrow-rise: 11px;
+  -arrow-border-radius: 0;
+  -arrow-background-color: transparent;
+  -arrow-base: 0;
+  -arrow-rise: 0;
 }
 
 .app-folder-popup-bin {
   padding: 5px;
+  border-radius: 5px;
+  background-color: #2E3038;
+  border: 1px solid #121316;
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 .app-folder-icon {
@@ -1871,13 +1877,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner {
-  font-size: 9pt;
   width: 34em;
   margin: 5px;
   border-radius: 6px;
   color: #eeeeec;
   background-color: #2e3038;
   border: 1px solid #121316;
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 .notification-banner:hover {
@@ -2070,8 +2076,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #40434e;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
   min-height: 2em;
   min-width: 2em;
   font-size: 16pt;
@@ -2236,8 +2240,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #3886e5;
   border-color: rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
 }
 
 .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {

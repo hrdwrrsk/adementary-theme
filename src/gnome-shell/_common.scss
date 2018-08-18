@@ -559,13 +559,18 @@ StScrollBar {
   }
   .popup-menu-boxpointer,
   .candidate-popup-boxpointer {
-    -arrow-border-radius: 5px;
-    -arrow-background-color: $bg_color;
-    -arrow-border-width: 1px;
-    -arrow-border-color: $borders_color;
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
+    -arrow-border-radius: 0;
+    -arrow-background-color: transparent;
+    -arrow-border-width: 0;
+    -arrow-border-color: transparent;
+    -arrow-base: 0;
+    -arrow-rise: 0;
     -arrow-box-shadow: none; //dreaming. bug #689995
+    margin: 5px 8px 8px;
+    background-color: $bg_color;
+    border-radius: 5px;
+    border: 1px solid $borders_color;
+    box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
   }
 
   .popup-separator-menu-item {
@@ -719,10 +724,11 @@ StScrollBar {
 
 %osd-panel {
   color: $_bubble_fg_color;
-  background-color: $_bubble_bg_color;
-  border: 1px solid $_bubble_borders_color;
-  border-radius: 12px;
+  background-color: $bg_color;
+  border: 1px solid $borders_color;
+  border-radius: 9px;
   padding: 12px;
+  box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
 }
 
 /* Tiled window previews */
@@ -845,7 +851,7 @@ StScrollBar {
   .screencast-indicator { color: $warning_color; }
 
   &.solid {
-    background-color: $bg_color;
+    background-color: rgba($bg_color, 0.90);
     /* transition from transparent to solid */
     transition-duration: 300ms;
     border-bottom: 1px solid;
@@ -856,7 +862,7 @@ StScrollBar {
     }
 
     .panel-button {
-      color: #ccc;
+      color: #eee;
       text-shadow: none;
 
       &:hover, &:active, &:overview, &:focus, &:checked {
@@ -1266,18 +1272,18 @@ StScrollBar {
   //search entry
   .search-entry {
     width: 320px;
-    padding: 7px 9px;
-    border-radius: 6px;
-    border-color: darken($osd_fg_color,50%);
+    padding: 6px 8px;
+    border-radius: 4px;
+    border-color: $borders_color;
     color: $osd_fg_color;
     background-color: $osd_bg_color;
     &:focus {
       padding: 6px 8px;
-      border-width: 2px;
+      border-width: 1px;
       border-color: $selected_bg_color;
     }
 
-    .search-entry-icon { icon-size: 1em; padding: 0 4px; color: transparentize($fg_color,.3); }
+    .search-entry-icon { icon-size: 16px; padding: 0 4px; color: transparentize($fg_color,.3); }
 
     &:hover, &:focus {
       .search-entry-icon { color: $fg_color; }
@@ -1448,12 +1454,19 @@ StScrollBar {
 
   // Collections
   .app-folder-popup { //expanded collection
-    -arrow-border-radius: 8px;
-    -arrow-background-color: transparentize($osd_bg_color,0.7);
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
+    -arrow-border-radius: 0;
+    -arrow-background-color: transparent;
+    -arrow-base: 0;
+    -arrow-rise: 0;
   }
-  .app-folder-popup-bin { padding: 5px; }
+  .app-folder-popup-bin { 
+		padding: 5px; 
+		border-radius: 5px;
+		background-color: $bg_color;
+		border: 1px solid $borders_color;
+		box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+	}
+	
   .app-folder-icon {
     padding: 5px;
     spacing-rows: 5px;
@@ -1532,14 +1545,14 @@ StScrollBar {
 
   // Banners
   .notification-banner {
-    font-size: 9pt;
+    // font-size: 9pt;
     width: 34em;
     margin: 5px;
     border-radius: 6px;
     color: $_bubble_fg_color;
     background-color: $_bubble_bg_color;
     border: 1px solid $borders_color;
-    //box-shadow: 0 1px 4px black;
+    box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
     &:hover { background-color: $_bubble_bg_color; }
     &:focus { background-color: $_bubble_bg_color; }
 
