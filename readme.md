@@ -20,7 +20,7 @@
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
 # Typography
-*Inter UI* is used as default primary font for this theme, you can get Inter UI at ![here](https://rsms.me/inter/). Alternatively, you can use Roboto (it's available at your distribution's package manager)
+*Inter UI* is used as default primary font for this theme, you can get Inter UI at [here](https://rsms.me/inter/). Alternatively, you can use Roboto (it's available at your distribution's package manager)
 
 # Installation
 
