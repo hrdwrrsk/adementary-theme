@@ -19,8 +19,8 @@
  */
 /* GLOBALS */
 stage {
-  font-family: Overpass, Noto Sans, Roboto, Sans-Serif;
-  font-size: 10pt;
+  font-family: "Inter UI", Roboto, Sans-Serif;
+  font-size: 9pt;
   color: #eeeeee;
 }
 
@@ -303,7 +303,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .run-dialog-label {
-  font-size: 11pt;
+  font-size: 10pt;
   font-weight: bold;
   color: #d6d6d1;
   padding-bottom: .4em;
@@ -311,7 +311,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .mount-dialog-subject,
 .end-session-dialog-subject {
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 /* Message Dialog */

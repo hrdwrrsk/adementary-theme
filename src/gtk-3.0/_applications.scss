@@ -162,3 +162,35 @@ button.flat.-panel-icon-button {
 		transition: none;
 	}
 }
+
+
+// LightDM gtk+ greeter (untested/experimental)
+.lightdm-gtk-greeter {
+	#login_window,
+	#shutdown_dialog,
+	#restart_dialog {
+		border: 1px solid $borders_color;
+		border-radius: 5px;
+		background-color: $bg_color;
+		color: $fg_color;
+		box-shadow: none; // FIXME using shadows it doesn't work :\
+		
+		button {
+			&#login_button,
+			&#restart_button {
+				@extend %button.suggested-action;
+			}
+			
+			&#shutdown_button {
+				@extend %button.destructive-action;
+			}
+		}
+	}
+	
+	#login_window {
+		combobox button.combo {
+			@include button(undecorated);
+		}
+	}
+}
+		

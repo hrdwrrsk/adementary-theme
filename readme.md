@@ -2,8 +2,8 @@
 
 ![Screenshot](Screenshot.png)
 
-### Tetra (formerly or codenamed "Project Beaucoup") is a gtk+ theme based on Adwaita.
-This theme aimed to recreate old design of Adwaita theme (from 3.14-3.18), but with add some design touches from elementary and Vertex Gtk+ theme
+### Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme with design influence from elementary OS and Vertex gtk+ theme.
+
 
 # Supported desktop environments
 - GNOME 3
@@ -11,13 +11,16 @@ This theme aimed to recreate old design of Adwaita theme (from 3.14-3.18), but w
 - Budgie
 
 ### maybe it's coming through, if I have a time (Currently not supported list) :
-- Cinnamon/MATE
+- Cinnamon/MATE (As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+)
 
 ## Not really supported
-- Pantheon (elementary OS)
+- Pantheon (elementary OS) (maybe reconsidered, but it will be a 'completely different' version)
 - LXDE
 - Window Managers (Openbox, enlightenment...)
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
+
+# Typography
+*Inter UI* is used as default primary font for this theme, you can get Inter UI at ![here](https://rsms.me/inter/). Alternatively, you can use Roboto (it's available at your distribution's package manager)
 
 # Installation
 

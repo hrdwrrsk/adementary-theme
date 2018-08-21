@@ -1083,7 +1083,11 @@ button.flat:checked {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button, .lightdm-gtk-greeter #login_window button#restart_button,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button,
+.lightdm-gtk-greeter #restart_dialog button#login_button,
+.lightdm-gtk-greeter #restart_dialog button#restart_button,
 button.suggested-action {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
@@ -1093,7 +1097,11 @@ button.suggested-action {
   border-color: #15539e;
 }
 
-.selection-mode button.titlebutton,
+.selection-mode button.titlebutton, .lightdm-gtk-greeter #login_window button.flat#login_button, .lightdm-gtk-greeter #login_window button.flat#restart_button,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button,
 button.suggested-action.flat {
   border-color: transparent;
   background-color: transparent;
@@ -1104,7 +1112,11 @@ button.suggested-action.flat {
   color: #3584e4;
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:hover, .lightdm-gtk-greeter #login_window button#restart_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:hover,
+.lightdm-gtk-greeter #restart_dialog button#login_button:hover,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:hover,
 button.suggested-action:hover {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
@@ -1114,7 +1126,15 @@ button.suggested-action:hover {
   border-color: #15539e;
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:active, .lightdm-gtk-greeter #login_window button#restart_button:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:active, .lightdm-gtk-greeter #login_window button#login_button:checked, .lightdm-gtk-greeter #login_window button#restart_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:checked,
 button.suggested-action:active,
 button.suggested-action:checked {
   color: white;
@@ -1127,7 +1147,15 @@ button.suggested-action:checked {
   border-color: #15539e;
 }
 
-.selection-mode button.titlebutton:backdrop,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window button#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop,
 button.suggested-action:backdrop,
 button.suggested-action.flat:backdrop {
   border-color: #3584e4;
@@ -1136,7 +1164,23 @@ button.suggested-action.flat:backdrop {
   border-color: #15539e;
 }
 
-.selection-mode button.titlebutton:backdrop label, .selection-mode button.titlebutton:backdrop,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop label, .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window button#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .selection-mode button.titlebutton:backdrop label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop label, .selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop,
 button.suggested-action:backdrop label,
 button.suggested-action:backdrop,
 button.suggested-action.flat:backdrop label,
@@ -1144,7 +1188,23 @@ button.suggested-action.flat:backdrop {
   color: #d7e6fa;
 }
 
-.selection-mode button.titlebutton:backdrop:active, .selection-mode button.titlebutton:backdrop:checked,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:active, .lightdm-gtk-greeter #login_window button#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .selection-mode button.titlebutton:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .selection-mode button.titlebutton:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:checked,
 button.suggested-action:backdrop:active,
 button.suggested-action:backdrop:checked,
 button.suggested-action.flat:backdrop:active,
@@ -1155,7 +1215,39 @@ button.suggested-action.flat:backdrop:checked {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
 }
 
-.selection-mode button.titlebutton:backdrop:active label, .selection-mode button.titlebutton:backdrop:active, .selection-mode button.titlebutton:backdrop:checked label, .selection-mode button.titlebutton:backdrop:checked,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:active, .lightdm-gtk-greeter #login_window button#login_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .selection-mode button.titlebutton:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active label, .selection-mode button.titlebutton:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .selection-mode button.titlebutton:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:checked label, .selection-mode button.titlebutton:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:checked,
 button.suggested-action:backdrop:active label,
 button.suggested-action:backdrop:active,
 button.suggested-action:backdrop:checked label,
@@ -1167,7 +1259,15 @@ button.suggested-action.flat:backdrop:checked {
   color: #d5e6f9;
 }
 
-.selection-mode button.titlebutton:backdrop:disabled,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled,
 button.suggested-action:backdrop:disabled,
 button.suggested-action.flat:backdrop:disabled {
   border-color: #bababa;
@@ -1178,7 +1278,23 @@ button.suggested-action.flat:backdrop:disabled {
   box-shadow: 0 1px rgba(0, 0, 0, 0.05);
 }
 
-.selection-mode button.titlebutton:backdrop:disabled label, .selection-mode button.titlebutton:backdrop:disabled,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .selection-mode button.titlebutton:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled label, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled,
 button.suggested-action:backdrop:disabled label,
 button.suggested-action:backdrop:disabled,
 button.suggested-action.flat:backdrop:disabled label,
@@ -1186,7 +1302,23 @@ button.suggested-action.flat:backdrop:disabled {
   color: #d4d4d4;
 }
 
-.selection-mode button.titlebutton:backdrop:disabled:active, .selection-mode button.titlebutton:backdrop:disabled:checked,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked, .selection-mode button.titlebutton:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active, .selection-mode button.titlebutton:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:checked,
 button.suggested-action:backdrop:disabled:active,
 button.suggested-action:backdrop:disabled:checked,
 button.suggested-action.flat:backdrop:disabled:active,
@@ -1198,7 +1330,23 @@ button.suggested-action.flat:backdrop:disabled:checked {
   border-color: #15539e;
 }
 
-.selection-mode button.titlebutton:backdrop:disabled:active label, .selection-mode button.titlebutton:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked label, .selection-mode button.titlebutton:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active label, .selection-mode button.titlebutton:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:checked label,
 button.suggested-action:backdrop:disabled:active label,
 button.suggested-action:backdrop:disabled:checked label,
 button.suggested-action.flat:backdrop:disabled:active label,
@@ -1206,7 +1354,19 @@ button.suggested-action.flat:backdrop:disabled:checked label {
   color: #78aced;
 }
 
-.selection-mode button.titlebutton:backdrop, .selection-mode button.titlebutton:disabled, .selection-mode button.titlebutton:backdrop:disabled,
+.selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop, .selection-mode button.titlebutton:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:disabled, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled,
 button.suggested-action.flat:backdrop,
 button.suggested-action.flat:disabled,
 button.suggested-action.flat:backdrop:disabled {
@@ -1219,7 +1379,11 @@ button.suggested-action.flat:backdrop:disabled {
   color: rgba(53, 132, 228, 0.8);
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window button#restart_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
 button.suggested-action:disabled {
   border-color: #bababa;
   background-image: none;
@@ -1229,13 +1393,29 @@ button.suggested-action:disabled {
   box-shadow: 0 1px rgba(0, 0, 0, 0.05);
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window button#restart_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
 button.suggested-action:disabled label,
 button.suggested-action:disabled {
   color: #949494;
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:active, .lightdm-gtk-greeter #login_window button#login_button:disabled:checked, .lightdm-gtk-greeter #login_window button#restart_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:checked,
 button.suggested-action:disabled:active,
 button.suggested-action:disabled:checked {
   border-color: #15539e;
@@ -1244,7 +1424,23 @@ button.suggested-action:disabled:checked {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
 }
 
-
+.lightdm-gtk-greeter #login_window button#login_button:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:active, .lightdm-gtk-greeter #login_window button#login_button:disabled:checked label, .lightdm-gtk-greeter #login_window button#restart_button:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:checked label, .lightdm-gtk-greeter #login_window button#login_button:disabled:checked, .lightdm-gtk-greeter #login_window button#restart_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:checked,
 button.suggested-action:disabled:active label,
 button.suggested-action:disabled:active,
 button.suggested-action:disabled:checked label,
@@ -1252,7 +1448,15 @@ button.suggested-action:disabled:checked {
   color: #949494;
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#login_button, .lightdm-gtk-greeter #login_window .osd button#login_button, .osd .lightdm-gtk-greeter #login_window button#restart_button, .lightdm-gtk-greeter #login_window .osd button#restart_button, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button, .osd
 button.suggested-action {
   color: #eeeeec;
   border-color: rgba(0, 0, 0, 0.85);
@@ -1264,7 +1468,15 @@ button.suggested-action {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#login_button:hover, .lightdm-gtk-greeter #login_window .osd button#login_button:hover, .osd .lightdm-gtk-greeter #login_window button#restart_button:hover, .lightdm-gtk-greeter #login_window .osd button#restart_button:hover, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:hover, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:hover, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:hover,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:hover, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:hover,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:hover, .osd
 button.suggested-action:hover {
   color: white;
   border-color: rgba(0, 0, 0, 0.85);
@@ -1276,7 +1488,39 @@ button.suggested-action:hover {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#login_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:active:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:active:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:active:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:active:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:active:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:active:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:active:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:active:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:active:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:active:backdrop, .osd .lightdm-gtk-greeter #login_window button#login_button:active, .lightdm-gtk-greeter #login_window .osd button#login_button:active, .osd .lightdm-gtk-greeter #login_window button#restart_button:active, .lightdm-gtk-greeter #login_window .osd button#restart_button:active, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:active,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:active, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:active,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:active, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:active,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:active, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:active,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:active, .osd .lightdm-gtk-greeter #login_window button#login_button:checked:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:checked:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:checked:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:checked:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:checked:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:checked:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:checked:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:checked:backdrop, .osd .lightdm-gtk-greeter #login_window button#login_button:checked, .lightdm-gtk-greeter #login_window .osd button#login_button:checked, .osd .lightdm-gtk-greeter #login_window button#restart_button:checked, .lightdm-gtk-greeter #login_window .osd button#restart_button:checked, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:checked, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:checked, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:checked,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:checked, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:checked,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:checked, .osd
 button.suggested-action:active:backdrop, .osd
 button.suggested-action:active, .osd
 button.suggested-action:checked:backdrop, .osd
@@ -1291,7 +1535,23 @@ button.suggested-action:checked {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#login_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:disabled:backdrop, .osd .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:disabled, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:disabled, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:disabled,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:disabled, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:disabled, .osd
 button.suggested-action:disabled:backdrop, .osd
 button.suggested-action:disabled {
   color: #838384;
@@ -1304,7 +1564,15 @@ button.suggested-action:disabled {
   -gtk-icon-shadow: none;
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#login_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#login_button:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#restart_button:backdrop, .osd
 button.suggested-action:backdrop {
   color: #eeeeec;
   border-color: rgba(0, 0, 0, 0.85);
@@ -1315,7 +1583,9 @@ button.suggested-action:backdrop {
   -gtk-icon-shadow: none;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button,
 button.destructive-action {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
@@ -1325,7 +1595,9 @@ button.destructive-action {
   border-color: #ab0f16;
 }
 
-
+.lightdm-gtk-greeter #login_window button.flat#shutdown_button,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button,
 button.destructive-action.flat {
   border-color: transparent;
   background-color: transparent;
@@ -1336,7 +1608,9 @@ button.destructive-action.flat {
   color: #ed333b;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:hover,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:hover,
 button.destructive-action:hover {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
@@ -1346,7 +1620,11 @@ button.destructive-action:hover {
   border-color: #ab0f16;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:active, .lightdm-gtk-greeter #login_window button#shutdown_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:checked,
 button.destructive-action:active,
 button.destructive-action:checked {
   color: white;
@@ -1359,7 +1637,11 @@ button.destructive-action:checked {
   border-color: #ab0f16;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop,
 button.destructive-action:backdrop,
 button.destructive-action.flat:backdrop {
   border-color: #ed333b;
@@ -1368,7 +1650,15 @@ button.destructive-action.flat:backdrop {
   border-color: #ab0f16;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop,
 button.destructive-action:backdrop label,
 button.destructive-action:backdrop,
 button.destructive-action.flat:backdrop label,
@@ -1376,7 +1666,15 @@ button.destructive-action.flat:backdrop {
   color: #fbd6d8;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:active, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:checked,
 button.destructive-action:backdrop:active,
 button.destructive-action:backdrop:checked,
 button.destructive-action.flat:backdrop:active,
@@ -1387,7 +1685,23 @@ button.destructive-action.flat:backdrop:checked {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:active, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:checked,
 button.destructive-action:backdrop:active label,
 button.destructive-action:backdrop:active,
 button.destructive-action:backdrop:checked label,
@@ -1399,7 +1713,11 @@ button.destructive-action.flat:backdrop:checked {
   color: #fbd5d6;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled,
 button.destructive-action:backdrop:disabled,
 button.destructive-action.flat:backdrop:disabled {
   border-color: #bababa;
@@ -1410,7 +1728,15 @@ button.destructive-action.flat:backdrop:disabled {
   box-shadow: 0 1px rgba(0, 0, 0, 0.05);
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled,
 button.destructive-action:backdrop:disabled label,
 button.destructive-action:backdrop:disabled,
 button.destructive-action.flat:backdrop:disabled label,
@@ -1418,7 +1744,15 @@ button.destructive-action.flat:backdrop:disabled {
   color: #d4d4d4;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:checked,
 button.destructive-action:backdrop:disabled:active,
 button.destructive-action:backdrop:disabled:checked,
 button.destructive-action.flat:backdrop:disabled:active,
@@ -1430,7 +1764,15 @@ button.destructive-action.flat:backdrop:disabled:checked {
   border-color: #ab0f16;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:checked label,
 button.destructive-action:backdrop:disabled:active label,
 button.destructive-action:backdrop:disabled:checked label,
 button.destructive-action.flat:backdrop:disabled:active label,
@@ -1438,7 +1780,13 @@ button.destructive-action.flat:backdrop:disabled:checked label {
   color: #f3767b;
 }
 
-
+.lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:disabled, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled,
 button.destructive-action.flat:backdrop,
 button.destructive-action.flat:disabled,
 button.destructive-action.flat:backdrop:disabled {
@@ -1451,7 +1799,9 @@ button.destructive-action.flat:backdrop:disabled {
   color: rgba(237, 51, 59, 0.8);
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled,
 button.destructive-action:disabled {
   border-color: #bababa;
   background-image: none;
@@ -1461,13 +1811,21 @@ button.destructive-action:disabled {
   box-shadow: 0 1px rgba(0, 0, 0, 0.05);
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:disabled label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled,
 button.destructive-action:disabled label,
 button.destructive-action:disabled {
   color: #949494;
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:active, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:checked,
 button.destructive-action:disabled:active,
 button.destructive-action:disabled:checked {
   border-color: #ab0f16;
@@ -1476,7 +1834,15 @@ button.destructive-action:disabled:checked {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
 }
 
-
+.lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:active label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:active, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:checked label,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:checked label,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:checked label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:checked,
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:checked,
 button.destructive-action:disabled:active label,
 button.destructive-action:disabled:active,
 button.destructive-action:disabled:checked label,
@@ -1484,7 +1850,11 @@ button.destructive-action:disabled:checked {
   color: #949494;
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#shutdown_button, .lightdm-gtk-greeter #login_window .osd button#shutdown_button, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button, .osd
 button.destructive-action {
   color: #eeeeec;
   border-color: rgba(0, 0, 0, 0.85);
@@ -1496,7 +1866,11 @@ button.destructive-action {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#shutdown_button:hover, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:hover, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:hover,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:hover, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:hover,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:hover, .osd
 button.destructive-action:hover {
   color: white;
   border-color: rgba(0, 0, 0, 0.85);
@@ -1508,7 +1882,23 @@ button.destructive-action:hover {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#shutdown_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:active:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:active:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:active:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:active:backdrop, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:active, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:active, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:active, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:active,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:active, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:checked:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:checked:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:checked:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:checked:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:checked:backdrop, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:checked, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:checked, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:checked,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:checked, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:checked,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:checked, .osd
 button.destructive-action:active:backdrop, .osd
 button.destructive-action:active, .osd
 button.destructive-action:checked:backdrop, .osd
@@ -1523,7 +1913,15 @@ button.destructive-action:checked {
   outline-color: rgba(238, 238, 236, 0.3);
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:disabled:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:disabled:backdrop, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:disabled, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:disabled, .osd
 button.destructive-action:disabled:backdrop, .osd
 button.destructive-action:disabled {
   color: #838384;
@@ -1536,7 +1934,11 @@ button.destructive-action:disabled {
   -gtk-icon-shadow: none;
 }
 
-.osd
+.osd .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:backdrop, .osd
+.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:backdrop, .osd
+.lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:backdrop, .osd
 button.destructive-action:backdrop {
   color: #eeeeec;
   border-color: rgba(0, 0, 0, 0.85);
@@ -7288,6 +7690,25 @@ button.flat.-panel-icon-button:checked:hover {
   border: none;
   background-image: none;
   transition: none;
+}
+
+.lightdm-gtk-greeter #login_window,
+.lightdm-gtk-greeter #shutdown_dialog,
+.lightdm-gtk-greeter #restart_dialog {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #2e2e2e;
+  box-shadow: none;
+}
+
+.lightdm-gtk-greeter #login_window combobox button.combo {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  text-shadow: none;
+  -gtk-icon-shadow: none;
 }
 
 /* GTK NAMED COLORS
