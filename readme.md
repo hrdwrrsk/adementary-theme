@@ -26,7 +26,7 @@
 
 ```
 git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
-cd beaucoup-gtk-theme
+cd tetra-gtk-theme
 
 # system wide install
 sudo ./install.sh
