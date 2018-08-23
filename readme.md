@@ -28,11 +28,8 @@
 git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
 cd tetra-gtk-theme
 
-# system wide install
-sudo ./install.sh
-
-# local install
-./install.sh -d ~/.themes
+meson build --prefix=/usr
+sudo ninja -C build install
 ```
 
 # Reporting bugs

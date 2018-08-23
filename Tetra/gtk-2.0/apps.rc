@@ -1,0 +1,171 @@
+# vim:set ft=gtkrc ts=2 sw=2 sts=2 ai et:
+#
+# This file, unlike hacks.rc, contains legitimate cases we need to handle, e.g.
+# custom widgets, programs giving us a chance to alter their UI to fit more with
+# the theme or stuff that is supposed to look different, like panels.
+
+# TODO: This could really look nicer
+style "gimp_spin_scale" {
+
+  # Spin background
+  bg[NORMAL] = @base_color
+
+  engine "pixmap" {
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_up"
+      overlay_file    = "assets/spin-up.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_up"
+      overlay_file    = "assets/spin-up.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_up"
+      overlay_file    = "assets/spin-up.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_up"
+      overlay_file    = "assets/spin-up-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = NORMAL
+      detail          = "spinbutton_down"
+      overlay_file    = "assets/spin-down.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = PRELIGHT
+      detail          = "spinbutton_down"
+      overlay_file    = "assets/spin-down.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_down"
+      overlay_file    = "assets/spin-down.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = BOX
+      state           = INSENSITIVE
+      detail          = "spinbutton_down"
+      overlay_file    = "assets/spin-down-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
+ }
+
+}
+
+style "chrome_gtk_frame" {
+
+  ChromeGtkFrame::frame-color          = @window_color
+  ChromeGtkFrame::frame-gradient-color = @window_color
+  ChromeGtkFrame::inactive-frame-color = @bg_color
+
+  ChromeGtkFrame::incognito-frame-color          = "#cbd2d9"
+  ChromeGtkFrame::incognito-frame-gradient-color = "#cbd2d9"
+  ChromeGtkFrame::incognito-inactive-frame-color = mix (0.5, @bg_color, "#cbd2d9")
+
+}
+
+style "theme-panel" {
+
+  ythickness      = 0
+  
+  bg[NORMAL]      = @panel_bg_color
+  bg[ACTIVE]      = @panel_bg_color
+  bg[PRELIGHT]    = @panel_bg_color
+  bg[SELECTED]    = @panel_bg_color
+
+  fg[NORMAL]      = @panel_fg_color
+  fg[ACTIVE]      = @selected_fg_color
+  fg[PRELIGHT]    = @selected_fg_color
+  fg[SELECTED]    = @selected_fg_color
+
+  text[NORMAL]    = @panel_fg_color
+  text[ACTIVE]    = @selected_fg_color
+  text[PRELIGHT]  = @selected_fg_color
+  text[SELECTED]  = @selected_fg_color
+
+}
+
+style "panel-buttons" {
+
+  xthickness      = 2
+  ythickness      = 2
+
+  engine "pixmap" {
+
+    image {
+      function = BOX
+      state    = NORMAL
+      file     = "assets/null.png"
+      border   = {0, 0, 0, 3}
+      stretch  = TRUE
+    }
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      file     = "assets/menubar-item-active.png"
+      border   = {0, 0, 0, 3}
+      stretch  = TRUE
+    }
+    
+    image {
+      function = BOX
+      state    = ACTIVE
+      file     = "assets/menubar-item-active.png"
+      border   = {0, 0, 0, 3}
+      stretch  = TRUE
+    }
+  }
+}
+
+# XFCE panel theming.
+widget "*Xfce*Panel*"                                 style "theme-panel"
+class "*Xfce*Panel*"                                  style "theme-panel"
+
+# Ugh these panelbutton styling !
+widget "*tasklist*"                                   style "panel-buttons"
+widget_class "*Xfce*Panel*.GtkToggleButton"           style "panel-buttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panel-buttons"
+widget_class "*PanelToplevel*Button"                  style "panel-buttons"
+widget_class "*Panel*GtkToggleButton"                 style "panel-buttons"
+widget_class "*Xfce*Panel*Button*"                    style "panel-buttons"
+widget_class "*<XfceArrowButton>"                     style "panel-buttons"
+widget_class "*<XfceActionsPlugin>*"                  style "panel-buttons"
+widget_class "*XfcePanelPlugin.GtkButton"             style "panel-buttons"
+widget "*dict*Applet*"                                style "panel-buttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton"     style "panel-buttons"
+widget_class "*Tasklist*"                             style:highest "panel-buttons"
+
+# Disable spin button assets for GimpSpinScale
+class "GimpSpinScale" style "gimp_spin_scale"
+
+# Chromium lets us define some colours and settings for better integration
+class "ChromeGtkFrame" style "chrome_gtk_frame"

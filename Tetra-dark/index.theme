@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Tetra Dark
+Type=X-GNOME-Metatheme
+Comment=Adwaita-based theme with design influence from elementary OS & Vertex gtk+ theme - dark variant
+Encoding=UTF-8
+GtkTheme=Tetra-dark
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
