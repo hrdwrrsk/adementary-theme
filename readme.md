@@ -23,6 +23,14 @@
 *Inter UI* is used as default primary font for this theme, you can get Inter UI at [here](https://rsms.me/inter/). Alternatively, you can use Roboto (it's available at your distribution's package manager)
 
 # Installation
+### Dependencies
+before you installing this theme, you need this package installed on your system:
+- `meson` build system
+- `sassc` for compiling sass css sources
+- `inkscape` for rendering png assets
+- `optipng`
+
+Then run this command:
 
 ```
 git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
