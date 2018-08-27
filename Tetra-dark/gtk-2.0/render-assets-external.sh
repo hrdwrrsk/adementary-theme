@@ -16,6 +16,7 @@ else
     echo Rendering $ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i-dark \
               --export-id-only \
+	      --export-dpi=192 \
               --export-background-opacity=0 \
               --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null \
     && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png

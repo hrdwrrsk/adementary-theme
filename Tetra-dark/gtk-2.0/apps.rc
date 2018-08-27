@@ -115,8 +115,8 @@ style "theme-panel" {
 
 style "panel-buttons" {
 
-  xthickness      = 2
-  ythickness      = 2
+  xthickness      = 4
+  ythickness      = 4
 
   engine "pixmap" {
 
@@ -124,7 +124,7 @@ style "panel-buttons" {
       function = BOX
       state    = NORMAL
       file     = "assets/null.png"
-      border   = {0, 0, 0, 3}
+      border   = {0, 0, 0, 6}
       stretch  = TRUE
     }
 
@@ -132,7 +132,7 @@ style "panel-buttons" {
       function = BOX
       state    = PRELIGHT
       file     = "assets/menubar-item-active.png"
-      border   = {0, 0, 0, 3}
+      border   = {0, 0, 0, 6}
       stretch  = TRUE
     }
     
@@ -140,7 +140,7 @@ style "panel-buttons" {
       function = BOX
       state    = ACTIVE
       file     = "assets/menubar-item-active.png"
-      border   = {0, 0, 0, 3}
+      border   = {0, 0, 0, 6}
       stretch  = TRUE
     }
   }
