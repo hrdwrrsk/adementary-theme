@@ -20,12 +20,7 @@
 	}
 
 	&.transparent {
-		border: 1px solid transparent;
-		background-color: transparent;
-		
-		&:backdrop {
-		border: 1px solid transparent;
-		}
+		background-color: rgba($dark_bg_color, 0.80); // same as gnome-shell adaptive panel transparency
 	}
 
 	button {

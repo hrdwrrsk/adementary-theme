@@ -27,7 +27,10 @@
 before you installing this theme, you need this package installed on your system:
 - `meson` build system
 - `sassc` for compiling sass css sources
-- `inkscape` for rendering png assets
+- `gtk` 3.22 (however, it can run on Ubuntu 16.04 LTS if you using gnome3-staging ppa)
+
+#### Required for rendering assets
+- `inkscape`
 - `optipng`
 
 Then run this command:
