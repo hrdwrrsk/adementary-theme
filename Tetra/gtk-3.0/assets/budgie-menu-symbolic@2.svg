@@ -15,7 +15,7 @@
    height="32"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="budgie-menu-symbolic@2.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -29,16 +29,16 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.31769"
-     inkscape:cx="6.8093209"
-     inkscape:cy="20.273475"
+     inkscape:zoom="8"
+     inkscape:cx="23.267983"
+     inkscape:cy="14.534394"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
      inkscape:window-width="1366"
-     inkscape:window-height="673"
+     inkscape:window-height="705"
      inkscape:window-x="0"
      inkscape:window-y="0"
      width="400px"
@@ -91,7 +91,7 @@
         <dc:source />
         <cc:license
            rdf:resource="" />
-        <dc:title></dc:title>
+        <dc:title />
         <dc:subject>
           <rdf:Bag />
         </dc:subject>
@@ -131,11 +131,29 @@
      inkscape:label="Base"
      id="layer1"
      transform="translate(0,-268)">
-    <path
-       style="fill:#ffffff;fill-opacity:1;stroke-width:1"
-       d="m 2,274 v 4 h 4 v -4 z m 8,0 v 4 h 20 v -4 z m -8,8 v 4 h 4 v -4 z m 8,0 v 4 h 14 v -4 z m -8,8 v 4 h 4 v -4 z m 8,0 v 4 h 18 v -4 z"
-       id="rect3357"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccccccccccccccccccccc" />
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path814"
+       cx="10"
+       cy="278"
+       r="4" />
+    <circle
+       style="display:inline;opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       id="path814-3"
+       cx="10"
+       cy="290"
+       r="4" />
+    <circle
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       id="path814-6"
+       cx="22"
+       cy="290"
+       r="4" />
+    <circle
+       style="display:inline;opacity:0.5;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       id="path814-7"
+       cx="22"
+       cy="278"
+       r="4" />
   </g>
 </svg>
