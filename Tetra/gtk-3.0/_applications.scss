@@ -74,11 +74,6 @@ statusbar {
 		// use non-symbolic icons
 		// wish i can resize that damn symbolic toolbar icon to 16px
 		-gtk-icon-style: regular;
-		
-		&.horizontal button image {
-			// Not tested. but it can reduce damn new Thunar toolbar icon size.
-			-gtk-icon-transform: scale(0.5);
-		}
 	}
 
   .sidebar.frame { border-top: 1px solid $borders_color; }
@@ -194,3 +189,78 @@ button.flat.-panel-icon-button {
 	}
 }
 		
+// MATE panel
+PanelToplevel.background {
+	background-color: $dark_bg_color;
+	border: 1px solid $dark_borders_color;
+}
+
+#PanelWidget, #PanelPlug, #PanelApplet {
+	color: $dark_fg_color;
+	background-color: $dark_bg_color;
+}
+
+PanelSeparator {
+	color: $dark_bg_color;
+	border-width: 0;
+  	background: none;
+  	background-image: none;
+}
+
+.mate-panel-menu-bar {
+	menubar,
+  	#PanelApplet-window-menu-applet-button {
+		color: $dark_fg_color;
+
+		> menuitem {
+			padding: 0 6px;
+			&:hover { box-shadow: inset 0 -3px $selected_bg_color; }
+		}
+	}
+
+	#tasklist-button,
+  	#clock-applet-button,
+  	#showdesktop-button {
+		background-color: $dark_bg_color;
+		color: $dark_fg_color;
+		border-radius: 0;
+		border: none;
+
+		&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+			box-shadow: inset 0 -3px $selected_bg_color;
+			background-color: transparent;
+			border: none;
+			background-image: none;
+			transition: none;
+		}
+	}
+}
+
+// Caja / MATE file manager
+.caja-navigation-window {
+	.caja-side-pane {
+		scrolledwindow {
+			border: 0;
+		}
+
+		notebook {
+      		border-top: 1px solid $borders_color;
+
+      		.frame { border: none; }
+    	}
+	}
+
+	toolbar.primary-toolbar {
+    	border-bottom: 1px solid $borders_color;
+  	}
+
+  	.caja-notebook { // remove lateral borders
+    	&, .frame {
+      		border-width: 1px 0 1px;
+    	}
+
+    	> header.top { // revive top-border when tabs are shown
+      		border-top: 1px solid $borders_color;
+    	}
+  	}
+}
