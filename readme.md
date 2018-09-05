@@ -9,9 +9,10 @@
 - GNOME 3
 - Xfce
 - Budgie
+- MATE (status: beta)
 
-### maybe it's coming through, if I have a time (Currently not supported list) :
-- Cinnamon/MATE (As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+)
+### Currently not supported desktop :
+- Cinnamon (As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+)
 
 ## Not really supported
 - Pantheon (elementary OS) (maybe reconsidered, but it will be a 'completely different' version)
