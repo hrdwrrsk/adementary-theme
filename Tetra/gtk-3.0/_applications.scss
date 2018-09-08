@@ -1,8 +1,6 @@
-// This is a place to add some fixes for GNOME apps
-// or adding some styling for GNOME/3rd-party GTK+ apps
-// and desktop environments (like Xfce, etc.)
+// 3rd-party apps, DE apps, etc.
 
-// Nautilus fix
+// Nautilus
 
 .nautilus-window,
 .nautilus-window notebook,
@@ -32,6 +30,45 @@
     background-color: $backdrop_base_color;
     border-color: $backdrop_borders_color;
   }
+}
+
+// Nautilus 3.30
+// import code from upstream
+.nautilus-window {
+	.path-bar button {
+ 		border-color: transparent;
+		background-color: transparent;
+		background-image: none;
+		box-shadow: none;
+		border-radius: 0;
+		text-shadow: none;
+        -gtk-icon-shadow: none;
+  		padding: 4px;
+		border-width: 0px;
+  		margin: 0px;
+	}
+
+	.path-bar button:not(:checked) image { opacity: 0.8; } /* dim the icon when not checked */
+
+	.path-bar button:not(:backdrop):hover { box-shadow: inset 0 -3px $selected_bg_color; }
+
+	.path-bar button:checked:backdrop {
+		background: none;
+		background-color: transparent;
+		border-color: $borders_color;
+		box-shadow: none;
+	}
+
+	.path-bar-box { 
+		@include entry(normal); 
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 3px;
+
+		&:backdrop {
+			@include entry(backdrop);
+		}
+	}
 }
 
 // gnome-control-center (3.26) sidebar
