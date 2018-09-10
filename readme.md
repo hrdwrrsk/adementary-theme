@@ -52,5 +52,5 @@ for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. supp
 
 # Credits
 - Adwaita gtk+ theme
-- meson install script + license from gnome-theme-starter by godlyranchdressing
+- install.sh, parse-sass.sh and render-assets.sh script adapted from materia-theme by nana-4
 - some codes derived from Adapta, Arc, plane-gtk-theme, etc.
