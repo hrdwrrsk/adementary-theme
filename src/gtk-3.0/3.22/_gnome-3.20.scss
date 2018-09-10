@@ -1,0 +1,64 @@
+// gnome stuff only
+
+// Nautilus
+
+.nautilus-window,
+.nautilus-window notebook,
+.nautilus-window notebook > stack {
+  background: $base_color;
+}
+
+.floating-bar {
+  padding: 1px;
+  background-color: $base_color;
+  border-width: 1px;
+  border-style: solid solid none;
+  border-color: $borders_color;
+  border-radius: 3px 3px 0 0;
+  
+  &.bottom.left {
+    border-left-style: none;
+	border-top-left-radius: 0;
+  }
+  
+  &.bottom.right {
+    border-right-style: none;
+	border-top-right-radius: 0;
+  }
+  
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    border-color: $backdrop_borders_color;
+  }
+}
+
+// gnome-control-center (3.26) sidebar
+scrolledwindow.view > viewport.frame > stack > list { 
+  > row.activatable {
+    padding: 0;
+  }
+}
+
+// gedit fixes
+statusbar {
+    border-top: 1px solid $borders_color;
+}
+
+.gedit-search-slider {
+    background-color: $base_color;
+    padding: 6px;
+    border-color: $borders_color;
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+}
+
+.gedit-search-entry-occurrences-tag {
+    background-color: transparent;
+    background-image: none;
+    color: $fg_color;
+    border: 0px;
+    margin: 2px;
+    padding: 2px;
+    box-shadow: none;
+}

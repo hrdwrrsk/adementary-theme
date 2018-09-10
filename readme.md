@@ -26,7 +26,6 @@
 # Installation
 ### Dependencies
 before you installing this theme, you need this package installed on your system:
-- `meson` build system
 - `sassc` for compiling sass css sources
 - `gtk` 3.22 (however, it can run on Ubuntu 16.04 LTS if you using gnome3-staging ppa)
 
@@ -40,8 +39,11 @@ Then run this command:
 git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
 cd tetra-gtk-theme
 
-meson build --prefix=/usr
-sudo ninja -C build install
+# System-wide install
+sudo ./install sh
+
+# Local install
+./install.sh -d ~/.themes
 ```
 
 # Reporting bugs
