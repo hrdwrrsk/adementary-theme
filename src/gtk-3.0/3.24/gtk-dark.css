@@ -7481,6 +7481,14 @@ statusbar {
   box-shadow: none;
 }
 
+headerbar.titlebar.incognito-mode {
+  background-color: #202227;
+}
+
+headerbar.titlebar.incognito-mode:backdrop {
+  background-color: #25262d;
+}
+
 .thunar :backdrop {
   color: #8e8f93;
 }

@@ -101,3 +101,11 @@ statusbar {
     padding: 2px;
     box-shadow: none;
 }
+
+// Epiphany browser: Incognito mode
+headerbar.titlebar.incognito-mode {
+    // FIXME: background-image can't be used, so use background-color instead.
+    background-color: darken($headerbar_color, 4%);
+
+    &:backdrop { background-color: darken($headerbar_color, 2%); }
+}
