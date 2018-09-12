@@ -27,7 +27,8 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 ### Dependencies
 before you installing this theme, you need this package installed on your system:
 - `sassc` for compiling sass css sources
-- `gtk` 3.22 (however, it can run on Ubuntu 16.04 LTS if you using gnome3-staging ppa)
+- `gtk` 3.22
+- [Ubuntu 16.04 users read this](https://github.com/hrdwrrsk/tetra-gtk-theme/wiki/Ubuntu-16.04-users-read-this)
 
 #### Required for rendering assets
 - `inkscape`
