@@ -7528,11 +7528,15 @@ statusbar {
 }
 
 headerbar.titlebar.incognito-mode {
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
+}
+
+headerbar.titlebar.incognito-mode entry {
+  box-shadow: 0 1px rgba(255, 255, 255, 0.4);
 }
 
 headerbar.titlebar.incognito-mode:backdrop {
-  background-color: #fafafa;
+  background-color: whitesmoke;
 }
 
 .thunar :backdrop {

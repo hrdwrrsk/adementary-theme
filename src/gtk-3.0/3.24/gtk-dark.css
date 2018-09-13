@@ -7482,11 +7482,11 @@ statusbar {
 }
 
 headerbar.titlebar.incognito-mode {
-  background-color: #202227;
+  background-color: #1c1d22;
 }
 
 headerbar.titlebar.incognito-mode:backdrop {
-  background-color: #25262d;
+  background-color: #202227;
 }
 
 .thunar :backdrop {

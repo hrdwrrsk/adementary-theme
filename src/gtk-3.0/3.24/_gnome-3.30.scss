@@ -103,9 +103,15 @@ statusbar {
 }
 
 // Epiphany browser: Incognito mode
+// In epiphany 3.28/older, I can't override incognito-mode titlebar
+// because it's hardcoded, but now it's changed since 3.30 release
 headerbar.titlebar.incognito-mode {
     // FIXME: background-image can't be used, so use background-color instead.
-    background-color: darken($headerbar_color, 4%);
+    background-color: darken($headerbar_color, 6%);
 
-    &:backdrop { background-color: darken($headerbar_color, 2%); }
+	@if $variant == 'light' {
+		entry { box-shadow: 0 1px transparentize(white, 0.6); }
+	}
+
+    &:backdrop { background-color: darken($headerbar_color, 4%); }
 }
