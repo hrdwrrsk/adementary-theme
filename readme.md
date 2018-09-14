@@ -20,8 +20,8 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 - Window Managers (Openbox, enlightenment...)
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
-# Typography
-*Inter UI* is used as default primary font for this theme, you can get Inter UI at [here](https://rsms.me/inter/). Alternatively, you can use Roboto (it's available at your distribution's package manager)
+# (GNOME Shell) Typography
+*Plex Sans* is used as default primary font for GNOME shell theme, you can get Plex Sans at [here](https://github.com/IBM/plex/releases). Alternatively, you can use Roboto (it's used as default fallback font and it's available at your distribution's package manager)
 
 # Installation
 ### Dependencies

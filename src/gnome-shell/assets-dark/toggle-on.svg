@@ -14,7 +14,7 @@
    height="14"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="toggle-on.svg">
   <defs
      id="defs2859">
@@ -78,11 +78,11 @@
       <stop
          id="stop835"
          offset="0"
-         style="stop-color:#1c6fd4;stop-opacity:1" />
+         style="stop-color:#267be3;stop-opacity:1" />
       <stop
          id="stop837"
          offset="1"
-         style="stop-color:#2379e2;stop-opacity:1" />
+         style="stop-color:#3886e5;stop-opacity:1" />
     </linearGradient>
     <inkscape:perspective
        id="perspective2865-2"
@@ -136,13 +136,13 @@
      inkscape:pageopacity="0.18431373"
      inkscape:pageshadow="2"
      inkscape:zoom="15.937164"
-     inkscape:cx="-11.21524"
+     inkscape:cx="8.0275682"
      inkscape:cy="11.499303"
      inkscape:document-units="px"
      inkscape:current-layer="g37994"
      showgrid="true"
      inkscape:window-width="1366"
-     inkscape:window-height="655"
+     inkscape:window-height="671"
      inkscape:window-x="0"
      inkscape:window-y="29"
      inkscape:window-maximized="1"
@@ -184,7 +184,7 @@
        transform="matrix(0.6526046,0,0,0.80554422,99.592644,-636.32172)"
        id="g37994">
       <rect
-         style="opacity:0.05;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:0.1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect867"
          width="39.840378"
          height="14.896791"
@@ -193,7 +193,7 @@
          rx="9.1939421"
          ry="7.4483957" />
       <rect
-         style="opacity:1;fill:#144e95;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#17181c;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect835"
          width="39.840317"
          height="14.896727"
@@ -233,7 +233,7 @@
              inkscape:connector-curvature="0"
              sodipodi:nodetypes="csc" />
           <rect
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.31441048;marker:none;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#17181c;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
              id="rect5365-1"
              width="11"
              height="11"

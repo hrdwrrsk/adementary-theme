@@ -14,22 +14,10 @@
    height="22"
    id="svg3199"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="checkbox-off.svg">
   <defs
      id="defs3201">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient2212">
-      <stop
-         style="stop-color:#40434e;stop-opacity:1"
-         offset="0"
-         id="stop2208" />
-      <stop
-         style="stop-color:#373a43;stop-opacity:1"
-         offset="1"
-         id="stop2210" />
-    </linearGradient>
     <linearGradient
        id="linearGradient15404"
        inkscape:collect="always">
@@ -165,7 +153,7 @@
        y1="289.0625"
        x1="5.291667"
        id="linearGradient4673"
-       xlink:href="#linearGradient2212"
+       xlink:href="#linearGradient4534"
        inkscape:collect="always"
        gradientTransform="matrix(0.90476162,0,0,0.90476173,0.23938551,28.046386)" />
     <inkscape:perspective
@@ -194,6 +182,18 @@
        is_visible="true"
        id="path-effect5884-4-7-3"
        effect="spiro" />
+    <linearGradient
+       id="linearGradient4534"
+       inkscape:collect="always">
+      <stop
+         id="stop4530"
+         offset="0"
+         style="stop-color:#f0f0f0;stop-opacity:1" />
+      <stop
+         id="stop4532"
+         offset="1"
+         style="stop-color:#e6e6e6;stop-opacity:1" />
+    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -202,14 +202,14 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.052834"
-     inkscape:cx="48.05275"
+     inkscape:zoom="9.828254"
+     inkscape:cx="15.671224"
      inkscape:cy="9.5455922"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="671"
+     inkscape:window-height="655"
      inkscape:window-x="0"
      inkscape:window-y="29"
      inkscape:window-maximized="1"
@@ -235,7 +235,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -263,17 +263,17 @@
          height="5.0270834"
          width="5.0270834"
          id="rect4592"
-         style="opacity:1;fill:url(#linearGradient4673);fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:url(#linearGradient4673);fill-opacity:1.0;stroke:none;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path4574"
          d="m 2.5135417,290.65 c 0,-0.41161 0.3581753,-0.92604 1.0764687,-0.92604 h 2.8731744 c 0.5985781,0 1.0774402,0.41162 1.0774402,0.92604"
-         style="opacity:0.05;fill:none;stroke:#f2ffff;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="opacity:1;fill:none;stroke:#ffffff;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          id="rect4561"
          d="M 3.5907742,289.45941 H 6.463393 c 0.5967866,0 1.0772321,0.48041 1.0772321,1.07722 v 2.87261 c 0,0.5968 -0.4804455,1.07722 -1.0772321,1.07722 H 3.5907742 c -0.5967874,0 -1.0772325,-0.48042 -1.0772325,-1.07722 v -2.87261 c 0,-0.59681 0.4804451,-1.07722 1.0772325,-1.07722 z"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#17181c;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#bababa;stroke-width:0.26458335;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:connector-curvature="0" />
     </g>
   </g>

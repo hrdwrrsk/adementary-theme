@@ -13,8 +13,8 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="filter-selected-ltr.svg">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="calendar-arrow-right.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,7 +25,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="21.067128"
-     inkscape:cx="3.2149063"
+     inkscape:cx="12.5185"
      inkscape:cy="8.955521"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -33,7 +33,7 @@
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1366"
-     inkscape:window-height="655"
+     inkscape:window-height="671"
      inkscape:window-x="0"
      inkscape:window-y="29"
      inkscape:window-maximized="1">
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,8 +63,8 @@
      id="layer1"
      transform="translate(0,-1036.3622)">
     <path
-       style="fill:#2e2e2e;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 10,1039.3622 1,1 -4,4 4,4 -1,1 -5,-5 z"
+       style="fill:#eeeeee;fill-opacity:0.99545456;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 6,1039.3622 -1,1 4,4 -4,4 1,1 5,-5 z"
        id="path820"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
