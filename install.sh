@@ -10,7 +10,7 @@ THEME_NAME="Tetra"
 COLOR_VARIANTS=('' '-dark')
 
 GTK_VERSIONS=('3.22' '3.24')
-GS_VERSIONS=('3.22' '3.24' '3.26' '3.28' '3.30')
+GS_VERSIONS=('3.20' '3.22' '3.24' '3.26' '3.28' '3.30')
 LATEST_GS_VERSION="${GS_VERSIONS[-1]}"
 
 # Set a proper gnome-shell theme version
@@ -82,11 +82,19 @@ install() {
 	cp -r "$SRC_DIR/gtk-3.0/gtk-common"								"$THEME_DIR/gtk-common"
 	
 	for version in "${GTK_VERSIONS[@]}"; do
-	mkdir -p														"$THEME_DIR/gtk-$version"
-	cp -r "$SRC_DIR/gtk-3.0/$version/assets"						"$THEME_DIR/gtk-$version/assets"
-	cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"					"$THEME_DIR/gtk-$version/gtk.css"
-	[[ "$color" != '-dark' ]] && \
-	cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"					"$THEME_DIR/gtk-$version/gtk-dark.css"
+		if [[ "$version" == "3.22" ]]; then
+			mkdir -p														"$THEME_DIR/gtk-3.0"
+			cp -r "$SRC_DIR/gtk-3.0/$version/assets"						"$THEME_DIR/gtk-3.0/assets"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"					"$THEME_DIR/gtk-3.0/gtk.css"
+			[[ "$color" != '-dark' ]] && \
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"					"$THEME_DIR/gtk-3.0/gtk-dark.css"
+		else
+			mkdir -p														"$THEME_DIR/gtk-$version"
+			cp -r "$SRC_DIR/gtk-3.0/$version/assets"						"$THEME_DIR/gtk-$version/assets"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"					"$THEME_DIR/gtk-$version/gtk.css"
+			[[ "$color" != '-dark' ]] && \
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"					"$THEME_DIR/gtk-$version/gtk-dark.css"
+		fi
 	done
 
 	mkdir -p														"$THEME_DIR/plank"
