@@ -1760,7 +1760,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grid-search-result:hover .overview-icon,
 .grid-search-result:focus .overview-icon,
 .grid-search-result:selected .overview-icon {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   transition-duration: 0ms;
   border-image: none;
   background-image: none;
@@ -1806,13 +1806,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .app-folder-popup-bin {
   padding: 5px;
   border-radius: 5px;
-  background-color: #fafafa;
-  border: 1px solid #bababa;
+  background-color: #2E3038;
+  border: 1px solid #17181c;
   box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 .app-folder-popup-bin .overview-icon {
-  color: #2e2e2e;
+  color: #eeeeee;
 }
 
 .app-folder-icon {
@@ -1883,7 +1883,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .search-statustext, .no-frequent-applications-label {
   font-size: 2em;
   font-weight: bold;
-  color: #2e2e2e;
+  color: #eeeeee;
 }
 
 /* NOTIFICATIONS & MESSAGE TRAY */

@@ -4700,7 +4700,7 @@ row:selected scale highlight:disabled, scale row:selected highlight:disabled, ro
 scale {
   min-height: 10px;
   min-width: 10px;
-  padding: 12px;
+  padding: 8px;
 }
 
 scale fill,
@@ -4711,7 +4711,7 @@ scale highlight {
 scale slider {
   min-height: 16px;
   min-width: 16px;
-  margin: -7px;
+  margin: -8px;
 }
 
 scale.fine-tune.horizontal {
@@ -4727,7 +4727,7 @@ scale.fine-tune.vertical {
 }
 
 scale.fine-tune slider {
-  margin: -6px;
+  margin: -8px;
 }
 
 scale.fine-tune fill,
@@ -4766,11 +4766,11 @@ scale slider {
   border-color: #bababa;
   background-image: linear-gradient(to bottom, #f0f0f0, #e6e6e6);
   box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 100%;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background, border, box-shadow;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.05);
 }
 
 scale slider:hover {
@@ -4779,7 +4779,8 @@ scale slider:hover {
   border-color: #bababa;
   background-image: linear-gradient(to bottom, #fafafa, #f0f0f0);
   box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.05);
 }
 
 scale slider:active {
@@ -4946,7 +4947,7 @@ scale.horizontal.marks-before:not(.marks-after) slider {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -4958,7 +4959,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:hover {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -4970,7 +4971,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -4982,7 +4983,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:disabled {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -4994,7 +4995,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:backdrop {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5006,7 +5007,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:backdrop:disabled {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5018,7 +5019,7 @@ scale.horizontal.marks-after:not(.marks-before) slider {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5030,7 +5031,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:hover {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5042,7 +5043,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5054,7 +5055,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:disabled {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5066,7 +5067,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:backdrop {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5078,7 +5079,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:backdrop:disabled {
   margin: -11px -4px;
   padding: 0px;
   border-radius: 6px;
-  min-height: 24px;
+  min-height: 22px;
   min-width: 9px;
 }
 
@@ -5092,7 +5093,7 @@ scale.vertical.marks-before:not(.marks-after) slider {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5106,7 +5107,7 @@ scale.vertical.marks-before:not(.marks-after) slider:hover {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5120,7 +5121,7 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5134,7 +5135,7 @@ scale.vertical.marks-before:not(.marks-after) slider:disabled {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5148,7 +5149,7 @@ scale.vertical.marks-before:not(.marks-after) slider:backdrop {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5162,7 +5163,7 @@ scale.vertical.marks-before:not(.marks-after) slider:backdrop:disabled {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-before:not(.marks-after).fine-tune slider {
@@ -5176,7 +5177,7 @@ scale.vertical.marks-after:not(.marks-before) slider {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
@@ -5190,7 +5191,7 @@ scale.vertical.marks-after:not(.marks-before) slider:hover {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
@@ -5204,7 +5205,7 @@ scale.vertical.marks-after:not(.marks-before) slider:active {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
@@ -5218,7 +5219,7 @@ scale.vertical.marks-after:not(.marks-before) slider:disabled {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
@@ -5232,7 +5233,7 @@ scale.vertical.marks-after:not(.marks-before) slider:backdrop {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
@@ -5246,7 +5247,7 @@ scale.vertical.marks-after:not(.marks-before) slider:backdrop:disabled {
   border-radius: 6px;
   margin: -4px -11px;
   min-height: 9px;
-  min-width: 24px;
+  min-width: 22px;
 }
 
 scale.vertical.marks-after:not(.marks-before).fine-tune slider {
