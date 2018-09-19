@@ -4114,7 +4114,7 @@ switch:hover slider {
 }
 
 switch:checked slider {
-  background-image: linear-gradient(to bottom, whitesmoke, #ebebeb);
+  background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 

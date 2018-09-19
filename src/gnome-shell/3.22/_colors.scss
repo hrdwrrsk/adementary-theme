@@ -2,8 +2,8 @@
 // it gets @if ed depending on $variant
 
 
-$base_color: if($variant == 'light', #ffffff, #333640);
-$bg_color: if($variant == 'light', #fafafa, #2E3038);
+$base_color: if($variant == 'light', #f8f8f8, #333640);
+$bg_color: if($variant == 'light', #f3f3f3, #2E3038);
 $fg_color: if($variant == 'light', #2e2e2e, #eeeeee);
 
 // prepare for shell theme light version

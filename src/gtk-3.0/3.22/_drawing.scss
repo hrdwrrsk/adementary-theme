@@ -435,8 +435,8 @@
 // $ov: a background layer for background shorthand (hence no commas!)
 //
   background-image: if($variant == 'light', 
-											linear-gradient(to bottom, darken($c, 2%), 
-																	   darken($c, 6%)),
+											linear-gradient(to bottom, darken($c, 4%), 
+																	   darken($c, 8%)),
 											linear-gradient(to bottom, lighten($c, 4%), 
 																	   $c));
 
@@ -453,8 +453,8 @@
 // $ov: a background layer for background shorthand (hence no commas!)
 //
   background-image: if($variant == 'light', 
-											linear-gradient(to bottom, $c, 
-																	   darken($c, 4%)),
+											linear-gradient(to bottom, darken($c, 2%), 
+																	   darken($c, 6%)),
 											linear-gradient(to bottom, lighten($c, 6%), 
 																	   lighten($c, 2%)));
 

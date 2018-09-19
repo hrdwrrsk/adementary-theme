@@ -28,11 +28,23 @@ gtk2_dark() (
   ./render-assets-external-dark.sh
 )
 
+xfwm4() (
+  cd src/xfwm4
+  ./render-assets.sh
+)
+
+xfwm4_dark () (
+  cd src/xfwm4-dark
+  ./render-assets.sh
+)
+
 case "${1:-}" in
   "")
     gtk
     gtk2_light
     gtk2_dark
+    xfwm4
+    xfwm4_dark
     ;;
   gtk)
     gtk
@@ -42,6 +54,12 @@ case "${1:-}" in
     ;;
   gtk2-dark)
     gtk2_dark
+    ;;
+  xfwm4)
+    xfwm4
+    ;;
+  xfwm4_dark)
+    xfwm4_dark
     ;;
   *)
     echo "Unknown argument '$1'"

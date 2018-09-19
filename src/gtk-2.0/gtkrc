@@ -12,15 +12,15 @@
 # order to not mess up the dark theme.
 
 # Text/base
-gtk-color-scheme = "text_color:black\nbase_color:white"
+gtk-color-scheme = "text_color:black\nbase_color:#f8f8f8"
 # Foreground/background
-gtk-color-scheme = "fg_color:#2e2e2e\nbg_color:#fafafa"
+gtk-color-scheme = "fg_color:#2e2e2e\nbg_color:#f3f3f3"
 # Selected foreground/background
 gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#3584e4"
 # Insensitive foreground/background
-gtk-color-scheme = "insensitive_fg_color:#d4d4d4\ninsensitive_bg_color:#fafafa"
+gtk-color-scheme = "insensitive_fg_color:#d4d4d4\ninsensitive_bg_color:#f3f3f3"
 # Menus
-gtk-color-scheme = "menu_color:white"
+gtk-color-scheme = "menu_color:#f8f8f8"
 # Links
 gtk-color-scheme = "link_color:#3584e4\nvisited_link_color:#215d9c"
 # Treeview headers

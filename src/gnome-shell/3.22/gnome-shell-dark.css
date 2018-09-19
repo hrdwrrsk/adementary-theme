@@ -1014,6 +1014,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel.solid {
   background-color: rgba(46, 48, 56, 0.9);
+  background-gradient-start: rgba(46, 48, 56, 0.9);
+  background-gradient-end: rgba(46, 48, 56, 0.9);
   /* transition from transparent to solid */
   transition-duration: 300ms;
   border-bottom: 1px solid;

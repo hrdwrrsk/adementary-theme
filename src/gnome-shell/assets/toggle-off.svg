@@ -14,7 +14,7 @@
    height="14"
    id="svg2857"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="toggle-off.svg">
   <defs
      id="defs2859">
@@ -22,11 +22,11 @@
        inkscape:collect="always"
        id="linearGradient841">
       <stop
-         style="stop-color:#ebebeb;stop-opacity:1;"
+         style="stop-color:#e4e4e4;stop-opacity:1"
          offset="0"
          id="stop837" />
       <stop
-         style="stop-color:#f5f5f5;stop-opacity:1"
+         style="stop-color:#eeeeee;stop-opacity:1"
          offset="1"
          id="stop839" />
     </linearGradient>
@@ -93,8 +93,8 @@
      inkscape:pageopacity="0.18431373"
      inkscape:pageshadow="2"
      inkscape:zoom="15.937164"
-     inkscape:cx="-11.141463"
-     inkscape:cy="11.499303"
+     inkscape:cx="9.8186342"
+     inkscape:cy="11.248317"
      inkscape:document-units="px"
      inkscape:current-layer="g37994"
      showgrid="true"
@@ -150,7 +150,7 @@
          rx="9.1939421"
          ry="7.4483957" />
       <rect
-         style="opacity:1;fill:#bababa;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect835"
          width="39.840317"
          height="14.896727"
@@ -159,7 +159,7 @@
          ry="7.4483461"
          rx="9.1939421" />
       <rect
-         style="opacity:1;fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#d4d4d4;fill-opacity:1;stroke:none;stroke-width:1.37920952;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect837"
          width="36.775711"
          height="12.413997"
@@ -190,7 +190,7 @@
              inkscape:connector-curvature="0"
              sodipodi:nodetypes="csc" />
           <rect
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#bababa;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#b3b3b3;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
              id="rect5365-1"
              width="11"
              height="11"

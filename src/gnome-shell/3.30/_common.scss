@@ -854,6 +854,9 @@ StScrollBar {
 
   &.solid {
     background-color: rgba($dark_bg_color, 0.90);
+    // Ubuntu session compatibility
+    background-gradient-start: rgba($dark_bg_color, 0.90);
+    background-gradient-end: rgba($dark_bg_color, 0.90);
     /* transition from transparent to solid */
     transition-duration: 300ms;
     border-bottom: 1px solid;
