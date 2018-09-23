@@ -12,10 +12,12 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 - MATE (status: beta)
 
 ### Currently not supported desktop :
-- Cinnamon (As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+)
+- Cinnamon 
+> As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+
 
 ## Not really supported
-- Pantheon (elementary OS) (maybe reconsidered, but it will be a 'completely different' version)
+- Pantheon
+> Elementary OS is NOT compatible.
 - LXDE
 - Window Managers (Openbox, enlightenment...)
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)

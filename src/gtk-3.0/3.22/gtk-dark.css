@@ -5455,21 +5455,12 @@ levelbar block.low:backdrop {
   border-color: #ff7800;
 }
 
-levelbar block.high, levelbar block:not(.empty) {
-  border-color: #1c71d8;
-  background-color: #1c71d8;
-}
-
-levelbar block.high:backdrop, levelbar block:not(.empty):backdrop {
-  border-color: #1c71d8;
-}
-
-levelbar block.full {
+levelbar block.high, levelbar block:not(.empty), levelbar block.full {
   border-color: #2ec27e;
   background-color: #2ec27e;
 }
 
-levelbar block.full:backdrop {
+levelbar block.high:backdrop, levelbar block:not(.empty):backdrop, levelbar block.full:backdrop {
   border-color: #2ec27e;
 }
 
@@ -7393,6 +7384,15 @@ calendar.raven-calendar:selected {
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background: #30333D;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+  color: #eeeeee;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+  text-shadow: none;
 }
 
 .floating-bar {

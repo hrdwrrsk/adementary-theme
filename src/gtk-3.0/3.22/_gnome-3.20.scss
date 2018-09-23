@@ -8,6 +8,14 @@
   background: $base_color;
 }
 
+
+// Nautilus desktop icons
+.nautilus-desktop.nautilus-canvas-item {
+  color: $dark_fg_color;
+  text-shadow: 0 -1px rgba(black, 0.20); // non-sense for me
+  &:selected { text-shadow: none; }
+}
+
 .floating-bar {
   padding: 1px;
   background-color: $base_color;

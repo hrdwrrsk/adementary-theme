@@ -3548,13 +3548,7 @@ levelbar {
     }
 
     &.high,
-    &:not(.empty) {
-      border-color: if($variant == 'light', darken($selected_bg_color, 20%), $selected_bg_color);
-      background-color: $selected_bg_color;
-
-      &:backdrop { border-color: $selected_bg_color; }
-    }
-
+    &:not(.empty),
     &.full {
       border-color: if($variant == 'light', darken($success_color, 20%), $success_color);
       background-color: $success_color;
