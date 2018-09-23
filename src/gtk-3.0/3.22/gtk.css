@@ -2387,15 +2387,15 @@ spinbutton.vertical:drop(active) {
 }
 
 spinbutton.vertical entry {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 28px;
+  min-width: 28px;
   padding: 0;
   border-radius: 0;
 }
 
 spinbutton.vertical button {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 28px;
+  min-width: 28px;
   padding: 0;
 }
 
@@ -3561,6 +3561,7 @@ notebook > header {
   border-color: #b3b3b3;
   border-width: 1px;
   background-color: lightgray;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header:backdrop {
@@ -3577,11 +3578,19 @@ notebook > header.top {
 }
 
 notebook > header.top > tabs {
+  margin-top: -2px;
   margin-bottom: -2px;
 }
 
+notebook > header.top > tabs > tab {
+  border: 1px solid transparent;
+}
+
 notebook > header.top > tabs > tab:hover {
-  box-shadow: inset 0 -3px #b3b3b3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  border-radius: 5px 5px 0 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.top > tabs > tab:backdrop {
@@ -3589,7 +3598,11 @@ notebook > header.top > tabs > tab:backdrop {
 }
 
 notebook > header.top > tabs > tab:checked {
-  box-shadow: inset 0 -3px #3584e4;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  border-radius: 5px 5px 0 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.bottom {
@@ -3598,10 +3611,18 @@ notebook > header.bottom {
 
 notebook > header.bottom > tabs {
   margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+notebook > header.bottom > tabs > tab {
+  border: 1px solid transparent;
 }
 
 notebook > header.bottom > tabs > tab:hover {
-  box-shadow: inset 0 3px #b3b3b3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  border-radius: 0 0 5px 5px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.bottom > tabs > tab:backdrop {
@@ -3609,7 +3630,11 @@ notebook > header.bottom > tabs > tab:backdrop {
 }
 
 notebook > header.bottom > tabs > tab:checked {
-  box-shadow: inset 0 3px #3584e4;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  border-radius: 0 0 5px 5px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.left {
@@ -3617,11 +3642,18 @@ notebook > header.left {
 }
 
 notebook > header.left > tabs {
+  margin-left: -2px;
   margin-right: -2px;
 }
 
+notebook > header.left > tabs > tab {
+  border: 1px solid transparent;
+}
+
 notebook > header.left > tabs > tab:hover {
-  box-shadow: inset -3px 0 #b3b3b3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.left > tabs > tab:backdrop {
@@ -3629,7 +3661,10 @@ notebook > header.left > tabs > tab:backdrop {
 }
 
 notebook > header.left > tabs > tab:checked {
-  box-shadow: inset -3px 0 #3584e4;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.right {
@@ -3638,10 +3673,17 @@ notebook > header.right {
 
 notebook > header.right > tabs {
   margin-left: -2px;
+  margin-right: -2px;
+}
+
+notebook > header.right > tabs > tab {
+  border: 1px solid transparent;
 }
 
 notebook > header.right > tabs > tab:hover {
-  box-shadow: inset 3px 0 #b3b3b3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.right > tabs > tab:backdrop {
@@ -3649,7 +3691,10 @@ notebook > header.right > tabs > tab:backdrop {
 }
 
 notebook > header.right > tabs > tab:checked {
-  box-shadow: inset 3px 0 #3584e4;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
+  border-color: #b3b3b3;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 notebook > header.top > tabs > arrow {
@@ -3736,40 +3781,16 @@ notebook > header tab:hover {
   color: #606060;
 }
 
-notebook > header tab:hover.reorderable-page {
-  border-color: rgba(179, 179, 179, 0.3);
-  background-color: rgba(243, 243, 243, 0.2);
-}
-
 notebook > header tab:backdrop {
   color: #b8b8b8;
-}
-
-notebook > header tab:backdrop.reorderable-page {
-  border-color: transparent;
-  background-color: transparent;
 }
 
 notebook > header tab:checked {
   color: #2e2e2e;
 }
 
-notebook > header tab:checked.reorderable-page {
-  border-color: rgba(179, 179, 179, 0.5);
-  background-color: rgba(243, 243, 243, 0.5);
-}
-
-notebook > header tab:checked.reorderable-page:hover {
-  background-color: rgba(243, 243, 243, 0.7);
-}
-
 notebook > header tab:backdrop:checked {
   color: #919191;
-}
-
-notebook > header tab:backdrop:checked.reorderable-page {
-  border-color: silver;
-  background-color: #f3f3f3;
 }
 
 notebook > header tab button.flat {
@@ -3821,10 +3842,6 @@ notebook > header.top tabs tab, notebook > header.bottom tabs tab {
   margin-right: 4px;
 }
 
-notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page {
-  border-style: none solid;
-}
-
 notebook > header.left tabs, notebook > header.right tabs {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3846,10 +3863,6 @@ notebook > header.left tabs:not(:only-child):last-child, notebook > header.right
 notebook > header.left tabs tab, notebook > header.right tabs tab {
   margin-top: 4px;
   margin-bottom: 4px;
-}
-
-notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page {
-  border-style: solid none;
 }
 
 notebook > header.top tab {
