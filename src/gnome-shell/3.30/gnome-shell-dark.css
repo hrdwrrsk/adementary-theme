@@ -542,7 +542,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .hidden {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .prompt-dialog-null-label {
@@ -824,7 +824,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .switcher-arrow {
-  border-color: transparent;
+  border-color: rgba(0, 0, 0, 0);
   color: rgba(238, 238, 238, 0.8);
 }
 
@@ -1710,6 +1710,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .app-view-control {
   padding: 4px 24px;
+  color: #eeeeee;
+  background-color: #40434e;
+  border-color: #17181c;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  border-color: #17181c;
+}
+
+.app-view-control:hover {
+  color: #eeeeee;
+  border-color: #17181c;
+  background-color: #4a4d5a;
+  text-shadow: 0 1px black;
+  icon-shadow: 0 1px black;
+  border-color: #17181c;
 }
 
 .app-view-control:checked {
@@ -1719,6 +1733,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
+  border-color: #17181c;
 }
 
 .app-view-control:first-child {

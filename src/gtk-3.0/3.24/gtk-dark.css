@@ -5528,7 +5528,7 @@ scrolledwindow viewport.frame {
 }
 
 scrolledwindow overshoot.top {
-  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -5548,7 +5548,7 @@ scrolledwindow overshoot.top:backdrop {
 }
 
 scrolledwindow overshoot.bottom {
-  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -5568,7 +5568,7 @@ scrolledwindow overshoot.bottom:backdrop {
 }
 
 scrolledwindow overshoot.left {
-  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -5588,7 +5588,7 @@ scrolledwindow overshoot.left:backdrop {
 }
 
 scrolledwindow overshoot.right {
-  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
@@ -7761,7 +7761,7 @@ these colors are exported for the window manager and shouldn't be used in applic
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#eeeeee, 1.8);
 @define-color wm_unfocused_title #8e8f93;
-@define-color wm_highlight transparent;
+@define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(238, 238, 238, 0.07);
 @define-color wm_bg_a #40434e;
 @define-color wm_bg_b #373a43;

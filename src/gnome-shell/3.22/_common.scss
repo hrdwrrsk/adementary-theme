@@ -1399,7 +1399,19 @@ StScrollBar {
   }
   .app-view-control { //favorties | all toggle button
     padding: 4px 24px;
-    &:checked { @include button(active); }
+    @include button(normal);
+    border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+
+    &:hover { 
+      @include button(hover);
+      border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+    }
+
+    &:checked { 
+      @include button(active);
+      border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+    }
+    
     &:first-child {
       border-right-width: 0;
       border-radius: 3px 0 0 3px;
