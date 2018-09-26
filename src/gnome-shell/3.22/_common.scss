@@ -58,7 +58,7 @@ stage {
 
 .modal-dialog-linked-button {
   border-width: 1px;
-  margin: 6px;
+  margin: 14px;
   
   margin-left: 0;
   margin-right: 0;
@@ -71,22 +71,28 @@ stage {
   padding: 8px;
 
   &:first-child {
-    border-right-width: 0;
-    margin-left: 6px;
+    border-right-width: 1px;
+    margin-left: 14px;
     margin-right: 0;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 4px 0px 0px 4px;
   }
   &:last-child {
 	border-left-width: 0;
     margin-left: 0;
-    margin-right: 6px;
-    border-radius: 0px 6px 6px 0px;
+    margin-right: 14px;
+    border-radius: 0px 4px 4px 0px;
   }
   &:first-child:last-child {
     border-width: 1px;
-    margin-left: 6px;
-    margin-right: 6px;
-    border-radius: 6px;
+    margin-left: 14px;
+    margin-right: 14px;
+    border-radius: 4px;
+  }
+
+  .end-session-dialog & {
+    &:first-child { border-right-width: 0; }
+
+    &:last-child { border-left-width: 0; }
   }
 }
 
@@ -194,11 +200,12 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  border-radius: 9px;
+  border-radius: 4px;
   color: $fg_color;
-  background-color: $bg_color;
-  border: 1px solid $borders_color;
-  box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+  background-color: transparent;
+  border: 0;
+  border-image: url("assets/mpb-background.svg") 9;
+  //box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), $borders_color);
   .modal-dialog-content-box {
     padding: 24px;
   }
@@ -518,6 +525,8 @@ StScrollBar {
 
 .popup-menu {
   min-width: 200px;
+  padding: 5px;
+  border-image: url("assets/mpb-background.svg") 9;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
@@ -561,18 +570,18 @@ StScrollBar {
   }
   .popup-menu-boxpointer,
   .candidate-popup-boxpointer {
-    -arrow-border-radius: 0;
+    -arrow-border-radius: 4px;
     -arrow-background-color: transparent;
     -arrow-border-width: 0;
     -arrow-border-color: transparent;
-    -arrow-base: 0;
+    -arrow-base: 12px;
     -arrow-rise: 0;
     -arrow-box-shadow: none; //dreaming. bug #689995
-    margin: 5px 8px 8px;
-    background-color: $bg_color;
-    border-radius: 5px;
-    border: 1px solid $borders_color;
-    box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+    //margin: 5px 8px 8px;
+    //background-color: $bg_color;
+    //border-radius: 4px;
+    //border: 0;
+    //box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), rgba($borders_color, 0.90));
   }
 
   .popup-separator-menu-item {
@@ -1282,6 +1291,7 @@ StScrollBar {
     padding: 6px 8px;
     border-radius: 4px;
     @include entry(normal);
+    border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
 
     &:focus {
       padding: 6px 8px;
@@ -1468,8 +1478,8 @@ StScrollBar {
 		padding: 5px; 
 		border-radius: 5px;
 		background-color: $dark_bg_color;
-		border: 1px solid $dark_borders_color;
-		box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+		border: 0;
+		box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), rgba($borders_color, 0.90));
 
     & .overview-icon {
       color: $dark_fg_color;
@@ -1559,26 +1569,34 @@ StScrollBar {
     margin: 5px;
     border-radius: 6px;
     color: $fg_color;
-    background-color: $bg_color;
-    border: 1px solid $borders_color;
-    box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
-    &:hover { background-color: $bg_color; }
-    &:focus { background-color: $bg_color; }
+    background-color: transparent;
+    border: 0;
+    > StBoxLayout {
+      border-image: url("assets/mpb-background.svg") 9;
+      padding: 5px;
+    }
+    box-shadow: none;
+    &:hover { background-color: transparent; }
+    &:focus { background-color: transparent; }
 
     .notification-icon { padding: 5px; }
     .notification-content { padding: 5px; spacing: 5px; }
     .secondary-icon { icon-size: 16px; }
     .notification-actions {
-      background-color: $borders_color;
+      background-color: transparent;
       padding-top: 2px;
       spacing: 1px;
     }
     .notification-button {
+      @include button(normal);
+      border-top: 1px solid $borders_color;
       padding: 4px 4px 5px;
-      background-color: darken($bg_color,5%);
-      &:first-child { border-radius: 0 0 0 6px; }
-      &:last-child { border-radius: 0 0 6px 0; }
-      &:hover, &focus { background-color: darken($bg_color,2%); }
+      &:first-child { border-radius: 0 0 0 4px; }
+      &:last-child { border-radius: 0 0 4px 0; }
+      &:first-child:last-child { border-radius: 0 0 4px 4px; }
+
+      &:hover, &focus { @include button(hover); }
+      &:active { @include button(active); }
     }
   }
   .summary-source-counter {

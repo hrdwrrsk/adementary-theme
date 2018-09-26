@@ -2,41 +2,51 @@
 
 // Nautilus
 
-.nautilus-window,
-.nautilus-window notebook,
-.nautilus-window notebook > stack {
-  background: $base_color;
-}
-
-
-// Nautilus desktop icons
-.nautilus-desktop.nautilus-canvas-item {
-  color: $dark_fg_color;
-  text-shadow: 0 -1px rgba(black, 0.20); // non-sense for me
-  &:selected { text-shadow: none; }
-}
-
-.floating-bar {
-  padding: 1px;
-  background-color: $base_color;
-  border-width: 1px;
-  border-style: solid solid none;
-  border-color: $borders_color;
-  border-radius: 3px 3px 0 0;
-  
-  &.bottom.left {
-    border-left-style: none;
-	border-top-left-radius: 0;
+.nautilus-window {
+  & notebook,
+  & notebook > stack {
+    background: $base_color;
   }
-  
-  &.bottom.right {
-    border-right-style: none;
-	border-top-right-radius: 0;
+
+  // Nautilus desktop icons
+  .nautilus-desktop.nautilus-canvas-item {
+    color: $selected_fg_color;
+    text-shadow: 1px 1px black;
+
+    &:active,
+    &:hover,
+    &:selected {
+      color: $selected_fg_color;
+      text-shadow: none;
+    }
+
+    &:selected:backdrop {
+      color: $backdrop_fg_color;
+    }
   }
+
+  .floating-bar {
+    padding: 1px;
+    background-color: $base_color;
+    border-width: 1px;
+    border-style: solid solid none;
+    border-color: $borders_color;
+    border-radius: 3px 3px 0 0;
   
-  &:backdrop {
-    background-color: $backdrop_base_color;
-    border-color: $backdrop_borders_color;
+    &.bottom.left {
+      border-left-style: none;
+	    border-top-left-radius: 0;
+    }
+  
+    &.bottom.right {
+      border-right-style: none;
+	    border-top-right-radius: 0;
+    }
+  
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_borders_color;
+    }
   }
 }
 

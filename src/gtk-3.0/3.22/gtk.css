@@ -7426,22 +7426,26 @@ calendar.raven-calendar:selected {
   background-color: #17181c;
 }
 
-.nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background: #f8f8f8;
 }
 
-.nautilus-desktop.nautilus-canvas-item {
-  color: #eeeeee;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+.nautilus-window .nautilus-desktop.nautilus-canvas-item {
+  color: #ffffff;
+  text-shadow: 1px 1px black;
 }
 
-.nautilus-desktop.nautilus-canvas-item:selected {
+.nautilus-window .nautilus-desktop.nautilus-canvas-item:active, .nautilus-window .nautilus-desktop.nautilus-canvas-item:hover, .nautilus-window .nautilus-desktop.nautilus-canvas-item:selected {
+  color: #ffffff;
   text-shadow: none;
 }
 
-.floating-bar {
+.nautilus-window .nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+  color: #919191;
+}
+
+.nautilus-window .floating-bar {
   padding: 1px;
   background-color: #f8f8f8;
   border-width: 1px;
@@ -7450,17 +7454,17 @@ calendar.raven-calendar:selected {
   border-radius: 3px 3px 0 0;
 }
 
-.floating-bar.bottom.left {
+.nautilus-window .floating-bar.bottom.left {
   border-left-style: none;
   border-top-left-radius: 0;
 }
 
-.floating-bar.bottom.right {
+.nautilus-window .floating-bar.bottom.right {
   border-right-style: none;
   border-top-right-radius: 0;
 }
 
-.floating-bar:backdrop {
+.nautilus-window .floating-bar:backdrop {
   background-color: whitesmoke;
   border-color: silver;
 }
