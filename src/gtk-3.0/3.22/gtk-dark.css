@@ -323,7 +323,6 @@ entry:disabled {
   border-color: #17181c;
   background-color: #2f313a;
   background-image: none;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.05);
 }
 
 spinbutton:backdrop:not(.vertical),
@@ -341,7 +340,6 @@ entry:backdrop:disabled {
   border-color: #1c1d22;
   background-color: #2f313a;
   background-image: none;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.05);
 }
 
 spinbutton.error:not(.vertical),
@@ -727,7 +725,7 @@ button:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header > tabs > arrow:backdrop:disabled label, button.sidebar-button:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.sidebar-button:backdrop:disabled, button.titlebutton:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled,
@@ -776,7 +774,7 @@ button:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header > tabs > arrow:disabled label, button.titlebutton:disabled label, notebook > header > tabs > arrow:disabled, button.titlebutton:disabled,
@@ -1233,7 +1231,7 @@ button.suggested-action.flat:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
@@ -1324,7 +1322,7 @@ button.suggested-action:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window button#restart_button:disabled,
@@ -1599,7 +1597,7 @@ button.destructive-action.flat:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
@@ -1670,7 +1668,7 @@ button.destructive-action:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled,
@@ -1934,7 +1932,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:disabled label, .inline-toolbar toolbutton > button:disabled {
@@ -1978,7 +1976,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled label, .inline-toolbar toolbutton > button:backdrop:disabled {
@@ -2585,16 +2583,17 @@ headerbar .subtitle {
 headerbar.selection-mode {
   color: #ffffff;
   border-color: #10427e;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
   background-image: linear-gradient(to bottom, #267be3, #1c71d8);
   box-shadow: inset 0 1px rgba(35, 117, 217, 0.535), inset 0 -1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .selection-mode.titlebar:backdrop:not(headerbar),
 headerbar.selection-mode:backdrop {
-  background-color: #1c71d8;
-  background-image: none;
-  box-shadow: inset 0 1px rgba(39, 119, 217, 0.442);
+  background-image: linear-gradient(to bottom, #2f81e4, #1d76e1);
+  box-shadow: inset 0 1px rgba(35, 117, 217, 0.535), inset 0 -1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .selection-mode.titlebar:not(headerbar) button,
@@ -2686,7 +2685,7 @@ headerbar.selection-mode button:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #10427e;
 }
 
@@ -2737,7 +2736,7 @@ headerbar.selection-mode button:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .selection-mode.titlebar:not(headerbar) button:disabled label, .selection-mode.titlebar:not(headerbar) button:disabled,
@@ -2802,7 +2801,7 @@ headerbar.selection-mode button.suggested-action:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #10427e;
 }
 
@@ -2833,7 +2832,7 @@ headerbar.selection-mode button.suggested-action:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #10427e;
 }
 
@@ -4363,7 +4362,7 @@ radio:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
   box-shadow: none;
 }
 
@@ -4395,7 +4394,7 @@ radio:backdrop:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
   box-shadow: none;
 }
 
@@ -4768,8 +4767,7 @@ scale slider:disabled {
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
-  box-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 scale slider:disabled label, scale slider:disabled {
@@ -6165,7 +6163,7 @@ infobar.info button:disabled, infobar.question button:disabled, infobar.warning 
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 infobar.info button:disabled label, infobar.info button:disabled, infobar.question button:disabled label, infobar.question button:disabled, infobar.warning button:disabled label, infobar.warning button:disabled, infobar.error button:disabled label, infobar.error button:disabled {
@@ -6189,7 +6187,7 @@ infobar.info button:backdrop:disabled, infobar.question button:backdrop:disabled
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #10427e;
 }
 

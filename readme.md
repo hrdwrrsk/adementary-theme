@@ -4,6 +4,7 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 
 -------------------
 ![Screenshot](Screenshot.png)
+![Screenshot](Screenshot-dark.png)
 
 # Supported desktop environments
 - GNOME 3
@@ -20,6 +21,7 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 > Elementary OS is NOT compatible.
 - LXDE
 - Window Managers (Openbox, enlightenment...)
+> Openbox support is considered for future alongside LXDE/PIXEL desktop support.
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
 # (GNOME Shell) Typography

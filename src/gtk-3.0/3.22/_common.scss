@@ -1500,14 +1500,14 @@ headerbar {
 
     color: $selected_fg_color;
     border-color: $selected_borders_color;
-    text-shadow: 0 -1px transparentize(black, 0.5);
+    text-shadow: none;
 
     @include headerbar_fill($selected_bg_color, $_hc);
+    box-shadow: inset 0 1px transparentize(white, 0.8);
 
     &:backdrop {
-      background-color: $selected_bg_color;
-      background-image: none;
-      box-shadow: inset 0 1px mix($top_hilight, $selected_bg_color, 60%);
+      @include headerbar_fill_backdrop($selected_bg_color, $_hc);
+      box-shadow: inset 0 1px transparentize(white, 0.8);
     }
 
     .subtitle:link { @extend *:link:selected;  }
@@ -3147,7 +3147,7 @@ scale {
 	  box-shadow: inset 0 1px rgba(black, 0.07);
 	}
 
-    &:disabled { @include button(insensitive); box-shadow: none; }
+    &:disabled { @include button(insensitive); }
 
     // ...on selected list rows
     row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
