@@ -153,7 +153,7 @@ flowbox {
   background-color: if($variant=='light', transparent, black);
   border-radius: 0;
   padding: 0;
-  
+
   &:backdrop { background-color: if($variant=='light', transparent, darken($backdrop_base_color,5%)); }
   &:active, &:selected { background-color: if($variant=='light', transparent, $selected_bg_color); }
   &:disabled { background-color: if($variant=='light', transparent, $insensitive_bg_color); }
@@ -703,7 +703,7 @@ button {
     &.#{$b_type} {
       @include button(normal, $b_color, white);
       border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-      
+
       // box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
 
       &.flat {
@@ -712,15 +712,15 @@ button {
         color: $b_color; //FIXME: does it work on the dark variant?
       }
 
-      &:hover { 
-				@include button(hover, $b_color, white); 
+      &:hover {
+				@include button(hover, $b_color, white);
 				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
 				// box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
 			}
 
       &:active,
-      &:checked { 
-				@include button(active, $b_color, white); 
+      &:checked {
+				@include button(active, $b_color, white);
 				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
 				// box-shadow: 0 1px transparentize(white, 0.95);
       }
@@ -732,17 +732,17 @@ button {
         // box-shadow: 0 1px transparentize(white, 0.95), inset 0 1px transparentize(white, 0.8);
 
         &:active,
-        &:checked { 
+        &:checked {
 					border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-					@include button(backdrop-active, $b_color, white); 
+					@include button(backdrop-active, $b_color, white);
 				}
 
         &:disabled {
           @include button(backdrop-insensitive);
 
           &:active,
-          &:checked { 
-						@include button(backdrop-insensitive-active, $b_color, white); 
+          &:checked {
+						@include button(backdrop-insensitive-active, $b_color, white);
 						border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
 					}
         }
@@ -1410,7 +1410,7 @@ toolbar {
 //searchbar, location-bar & inline-toolbar
 .inline-toolbar {
 	@extend %toolbar;
-	
+
   @extend %darkbar;
 
   padding: 3px;
@@ -1421,7 +1421,7 @@ toolbar {
 searchbar > revealer > box,
 .location-bar {
   @extend %toolbar;
-  
+
   @extend %darkbar;
 
   border-width: 0 0 1px;
@@ -1437,9 +1437,9 @@ searchbar > revealer > box {
 %darkbar {
   border-style: solid;
   border-color: $borders_color;
-  $_bg: 
+  $_bg:
 		if(
-			$variant == 'light', 
+			$variant == 'light',
 			linear-gradient(to bottom, darken($bg_color, 12%), darken($bg_color, 8%)),
 			linear-gradient(to bottom, darken($bg_color, 4%), darken($bg_color, 2%))
 		);
@@ -1447,9 +1447,9 @@ searchbar > revealer > box {
 
   &:backdrop {
     border-color: $backdrop_borders_color;
-		$_bg_backdrop: 
+		$_bg_backdrop:
 			if(
-				$variant == 'light', 
+				$variant == 'light',
 				linear-gradient(to bottom, darken($bg_color, 10%), darken($bg_color, 6%)),
 				linear-gradient(to bottom, darken($bg_color, 2%), $bg_color)
 			);
@@ -2198,7 +2198,7 @@ notebook {
         margin-bottom: -2px;
         > tab {
           border: 1px solid transparent;
-          &:hover { 
+          &:hover {
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2209,7 +2209,7 @@ notebook {
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { 
+          &:checked {
             background-color: $bg_color;
             background-image: linear-gradient(to bottom,
                                               transparent,
@@ -2229,7 +2229,7 @@ notebook {
         margin-bottom: -2px;
         > tab {
           border: 1px solid transparent;
-          &:hover { 
+          &:hover {
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2240,7 +2240,7 @@ notebook {
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { 
+          &:checked {
             background-color: $bg_color;
             background-image: linear-gradient(to bottom,
                                               transparent,
@@ -2260,7 +2260,7 @@ notebook {
         margin-right: -2px;
         > tab {
           border: 1px solid transparent;
-          &:hover { 
+          &:hover {
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2271,7 +2271,7 @@ notebook {
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { 
+          &:checked {
             background-color: $bg_color;
             background-image: linear-gradient(to bottom,
                                               transparent,
@@ -2291,7 +2291,7 @@ notebook {
         margin-right: -2px;
         > tab {
           border: 1px solid transparent;
-          &:hover { 
+          &:hover {
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2302,7 +2302,7 @@ notebook {
 
           &:backdrop { box-shadow: none; }
 
-          &:checked { 
+          &:checked {
             background-color: $bg_color;
             background-image: linear-gradient(to bottom,
                                               transparent,
@@ -2408,7 +2408,7 @@ notebook {
 
       &:backdrop:checked {
         color: $backdrop_fg_color;
-      } 
+      }
 
       // colors the button like the label, overridden otherwise
       button.flat {
@@ -2685,16 +2685,16 @@ switch {
   background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
   text-shadow: none;
   box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
-  
+
   &:checked {
     color: transparent;
     border: 1px solid if($variant == 'light', lighten($selected_borders_color, 8%), $alt_borders_color);
-    background-image: if($variant == 'light', 
+    background-image: if($variant == 'light',
 											linear-gradient(to bottom, darken($selected_bg_color, 8%), darken($selected_bg_color, 4%)),
 											linear-gradient(to bottom, lighten($selected_bg_color, 4%), lighten($selected_bg_color, 8%)));
     text-shadow: none;
 		box-shadow: inset 0 1px rgba(black, 0.10), 0 1px transparentize(white, 0.95);
-	
+
 		&:disabled {
 			background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
 			background-image: none;
@@ -2715,30 +2715,30 @@ switch {
     min-height: 20px;
     border: 0px solid;
     border-radius: 99px;
-    background-image: if($variant == 'light', linear-gradient(to bottom, darken($bg_color, 2%), 
+    background-image: if($variant == 'light', linear-gradient(to bottom, darken($bg_color, 2%),
 																		 darken($bg_color, 6%)),
-											  linear-gradient(to bottom, lighten($bg_color, 8%), 
+											  linear-gradient(to bottom, lighten($bg_color, 8%),
 																		 lighten($bg_color, 4%)));
     transition: $button_transition;
-    box-shadow: 0 0 0 1px $borders_color, inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
+    box-shadow: 0 0 0 1px $borders_color, inset 0 1px if($variant == 'light', transparentize(white, 0.2), transparentize(white, 0.95));
   }
 
-  &:hover slider { 
-	background-image: if($variant == 'light', linear-gradient(to bottom, lighten($bg_color, 2%), 
+  &:hover slider {
+	background-image: if($variant == 'light', linear-gradient(to bottom, lighten($bg_color, 2%),
 																		 darken($bg_color, 2%)),
-											  linear-gradient(to bottom, lighten($bg_color, 12%), 
+											  linear-gradient(to bottom, lighten($bg_color, 12%),
 																		 lighten($bg_color, 6%)));
   }
 
-  &:checked slider { 
+  &:checked slider {
 		background-image: linear-gradient(to bottom, darken($inverse_bg_color, 2%), darken($inverse_bg_color, 6%));
 		box-shadow: 0 0 0 1px rgba(black, 0.50);
   }
 
-  &:disabled slider { 
+  &:disabled slider {
 		background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 8%));
 		background-image: none;
-		box-shadow: 0 0 0 1px $borders_color;
+		box-shadow: 0 0 0 1px $borders_color,  inset 0 1px if($variant == 'light', transparentize(white, 0.2), transparentize(white, 0.95));
   }
 
   row:selected & {
@@ -2823,41 +2823,41 @@ radio {
 
   @include button(normal);
 
-  &:hover { 
+  &:hover {
 		@include button(hover);
 	}
-	
-  &:active { 
+
+  &:active {
 		@include button(active);
-		box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95); 
+		box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95);
   }
-  
+
   &:checked {
 		@include button(normal, $selected_bg_color, white);
 		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-		
+
 		&:hover {
 			@include button(hover, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
 		}
-		
+
 		&:active {
 			@include button(active, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
-			box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95); 
+			box-shadow: inset 0 1px rgba(black, 0.07), 0 1px transparentize(black, 0.95);
 		}
-		
+
 		&:backdrop {
 			@include button(backdrop, $selected_bg_color, white);
 			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
 		}
 	}
-  
-  &:disabled { @include button(insensitive); box-shadow: none; }
-  
+
+  &:disabled { @include button(insensitive); }
+
   &:backdrop {
     @include button(backdrop);
-    
+
     box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95));
 
     transition: $backdrop_transition;
@@ -2868,7 +2868,7 @@ radio {
   @if $variant == 'light' {
     // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
     // color, hence we need special casing.
-    row:selected & { 
+    row:selected & {
 			border-color: $selected_borders_color;
 		}
   }
@@ -2895,17 +2895,17 @@ radio {
       color: inherit;
       border-color: transparent;
     }
-    
-    // override 
+
+    // override
     &:checked {
 			@include button(undecorated);
 			color: $fg_color;
-			
+
 			&:hover, &:active {
 				@include button(undecorated);
 				color: white;
 			}
-			
+
 			&:disabled { color: $insensitive_fg_color; }
 		}
   }
@@ -3130,18 +3130,18 @@ scale {
     border-radius: 100%;
     transition: $button_transition;
     transition-property: background, border, box-shadow;
-    
+
     box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95)),
                 0 1px rgba(black, 0.05);
 
-    &:hover { 
+    &:hover {
 	  @include button(hover);
     border-color: if($variant == 'light', rgba(black, 0.25), rgba(black, 0.65));
 	  box-shadow: inset 0 1px if($variant == 'light', white, transparentize(white, 0.95)),
                 0 1px rgba(black, 0.05);
 	}
 
-    &:active { 
+    &:active {
 	  @include button(active);
 	  border-color: $selected_bg_color;
 	  box-shadow: inset 0 1px rgba(black, 0.07);
@@ -3927,7 +3927,7 @@ stacksidebar {
 $_placesidebar_icons_opacity: 0.7;
 
 row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; } // dim the sidebar icons
-                                                                  // see bug #786613 for details 
+                                                                  // see bug #786613 for details
                                                                   // on this oddity
 
 placessidebar {

@@ -19,8 +19,8 @@
  */
 /* GLOBALS */
 stage {
-  font-family: "IBM Plex Sans", Roboto, Sans-Serif;
-  font-size: 9pt;
+  font-family: Source Sans Pro, Noto Sans, Sans-Serif;
+  font-size: 10pt;
   color: #eeeeee;
 }
 
@@ -206,7 +206,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 10px;
-  -slider-height: 4px;
+  -slider-height: 3px;
   -slider-background-color: #25262d;
   -slider-border-color: #17181c;
   -slider-active-background-color: #1c71d8;
@@ -310,7 +310,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .run-dialog-label {
-  font-size: 10pt;
+  font-size: 11pt;
   font-weight: bold;
   color: #d5d5d5;
   padding-bottom: .4em;
@@ -318,7 +318,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .mount-dialog-subject,
 .end-session-dialog-subject {
-  font-size: 12pt;
+  font-size: 13pt;
 }
 
 /* Message Dialog */
@@ -542,7 +542,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .hidden {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
 }
 
 .prompt-dialog-null-label {
@@ -824,7 +824,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .switcher-arrow {
-  border-color: rgba(0, 0, 0, 0);
+  border-color: transparent;
   color: rgba(238, 238, 238, 0.8);
 }
 
@@ -1915,7 +1915,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner {
-  font-size: 9pt;
+  font-size: 10pt;
   width: 34em;
   margin: 5px;
   border-radius: 6px;

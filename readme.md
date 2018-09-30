@@ -13,7 +13,7 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 - MATE (status: beta)
 
 ### Currently not supported desktop :
-- Cinnamon 
+- Cinnamon
 > As of 21 August, it's undecided since i'm waiting for Linux Mint/Cinnamon dev are dropping use of old Metacity XML WM theme and use gtk+ WM theme like GNOME shell/Mutter 3.16+ and Metacity since 3.20+
 
 ## Not really supported
@@ -25,7 +25,7 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
 # (GNOME Shell) Typography
-*Plex Sans* is used as default primary font for GNOME shell theme, you can get Plex Sans at [here](https://github.com/IBM/plex/releases). Alternatively, you can use Roboto (it's used as default fallback font and it's available at your distribution's package manager)
+[**Source Sans Pro**](https://github.com/adobe-fonts/source-sans-pro) is used as default primary font for GNOME shell theme, In some Linux distributions, Source Sans Pro is available in their repository, Noto Sans is used as fallback.
 
 # Installation
 ### Dependencies
