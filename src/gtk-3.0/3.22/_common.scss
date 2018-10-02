@@ -2210,7 +2210,7 @@ notebook {
           &:backdrop { box-shadow: none; }
 
           &:checked {
-            background-color: $bg_color;
+            background-color: if($variant == 'light', darken($bg_color, 6%), $bg_color);
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2241,7 +2241,7 @@ notebook {
           &:backdrop { box-shadow: none; }
 
           &:checked {
-            background-color: $bg_color;
+            background-color: if($variant == 'light', darken($bg_color, 6%), $bg_color);
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2272,7 +2272,7 @@ notebook {
           &:backdrop { box-shadow: none; }
 
           &:checked {
-            background-color: $bg_color;
+            background-color: if($variant == 'light', darken($bg_color, 6%), $bg_color);
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'
@@ -2303,7 +2303,7 @@ notebook {
           &:backdrop { box-shadow: none; }
 
           &:checked {
-            background-color: $bg_color;
+            background-color: if($variant == 'light', darken($bg_color, 6%), $bg_color);
             background-image: linear-gradient(to bottom,
                                               transparent,
                                               rgba(black, 0.04)); // use 'masks'

@@ -260,7 +260,7 @@ entry {
   color: black;
   border-color: #b3b3b3;
   background-color: #e9e9e9;
-  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.09), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.09), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 spinbutton:not(.vertical) image.left,
@@ -330,7 +330,7 @@ entry:backdrop {
   color: black;
   border-color: #b3b3b3;
   background-color: #eeeeee;
-  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   transition: 200ms ease-out;
 }
 
@@ -629,7 +629,7 @@ button {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header > tabs > arrow, button.sidebar-button, button.titlebutton,
@@ -660,7 +660,7 @@ button:hover {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   -gtk-icon-effect: highlight;
 }
 
@@ -670,8 +670,8 @@ button:checked {
   color: #2e2e2e;
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   text-shadow: none;
   -gtk-icon-shadow: none;
   transition-duration: 50ms;
@@ -682,7 +682,7 @@ button:backdrop.flat,
 button:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   transition: 200ms ease-out;
   -gtk-icon-effect: none;
 }
@@ -701,8 +701,8 @@ button:backdrop.flat:checked,
 button:backdrop:active,
 button:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dfdfdf, #dfdfdf);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 notebook > header > tabs > arrow:backdrop:active label, button.sidebar-button:backdrop:active label, button.titlebutton:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.sidebar-button:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.sidebar-button:backdrop:checked label, button.titlebutton:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.sidebar-button:backdrop:checked, button.titlebutton:backdrop:checked, notebook > header > tabs > arrow:backdrop:active label, button.titlebutton:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.titlebutton:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked,
@@ -725,7 +725,7 @@ button:backdrop:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header > tabs > arrow:backdrop:disabled label, button.sidebar-button:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.sidebar-button:backdrop:disabled, button.titlebutton:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled,
@@ -744,7 +744,7 @@ button:backdrop:disabled:checked {
   border-color: #b3b3b3;
   background-color: #eeeeee;
   background-image: none;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 notebook > header > tabs > arrow:backdrop:disabled:active label, button.sidebar-button:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.sidebar-button:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label, notebook > header > tabs > arrow:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label,
@@ -774,7 +774,7 @@ button:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 notebook > header > tabs > arrow:disabled label, button.titlebutton:disabled label, notebook > header > tabs > arrow:disabled, button.titlebutton:disabled,
@@ -789,7 +789,7 @@ button:disabled:checked {
   border-color: #b3b3b3;
   background-color: #eeeeee;
   background-image: none;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 notebook > header > tabs > arrow:disabled:active label, button.titlebutton:disabled:active label, notebook > header > tabs > arrow:disabled:active, button.titlebutton:disabled:active, notebook > header > tabs > arrow:disabled:checked label, button.titlebutton:disabled:checked label, notebook > header > tabs > arrow:disabled:checked, button.titlebutton:disabled:checked,
@@ -1125,7 +1125,7 @@ button.suggested-action:checked {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #15539e;
-  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
+  background-image: linear-gradient(to bottom, #1a66c2, #1a66c2);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -1188,7 +1188,7 @@ button.suggested-action.flat:backdrop:active,
 button.suggested-action.flat:backdrop:checked {
   border-color: #15539e;
   border-color: #2e7fe2;
-  background-image: linear-gradient(to bottom, #1c6fd4, #1c6fd4);
+  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
 }
 
@@ -1236,7 +1236,7 @@ button.suggested-action.flat:backdrop:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
@@ -1327,7 +1327,7 @@ button.suggested-action:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window button#restart_button:disabled,
@@ -1519,7 +1519,7 @@ button.destructive-action:checked {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #ab0f16;
-  background-image: linear-gradient(to bottom, #da131c, #da131c);
+  background-image: linear-gradient(to bottom, #d0121b, #d0121b);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -1566,7 +1566,7 @@ button.destructive-action.flat:backdrop:active,
 button.destructive-action.flat:backdrop:checked {
   border-color: #ab0f16;
   border-color: #ec2c33;
-  background-image: linear-gradient(to bottom, #e3141d, #e3141d);
+  background-image: linear-gradient(to bottom, #da131c, #da131c);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
 }
 
@@ -1602,7 +1602,7 @@ button.destructive-action.flat:backdrop:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
@@ -1673,7 +1673,7 @@ button.destructive-action:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled,
@@ -1874,7 +1874,7 @@ button.circular:not(.flat):not(:checked):not(:active):not(:disabled):not(:backdr
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -1883,7 +1883,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .stack-switcher > button.needs-attention > label,
@@ -1910,7 +1910,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:hover {
@@ -1918,15 +1918,15 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
   color: #2e2e2e;
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -1937,7 +1937,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:disabled label, .inline-toolbar toolbutton > button:disabled {
@@ -1948,7 +1948,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   border-color: #b3b3b3;
   background-color: #eeeeee;
   background-image: none;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .inline-toolbar toolbutton > button:disabled:active label, .inline-toolbar toolbutton > button:disabled:active, .inline-toolbar toolbutton > button:disabled:checked label, .inline-toolbar toolbutton > button:disabled:checked {
@@ -1958,7 +1958,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
 .inline-toolbar toolbutton > button:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:backdrop label, .inline-toolbar toolbutton > button:backdrop {
@@ -1967,8 +1967,8 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
 
 .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dfdfdf, #dfdfdf);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .inline-toolbar toolbutton > button:backdrop:active label, .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked label, .inline-toolbar toolbutton > button:backdrop:checked {
@@ -1981,7 +1981,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled label, .inline-toolbar toolbutton > button:backdrop:disabled {
@@ -1992,7 +1992,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
   border-color: #b3b3b3;
   background-color: #eeeeee;
   background-image: none;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled:active label, .inline-toolbar toolbutton > button:backdrop:disabled:checked label {
@@ -2647,7 +2647,7 @@ headerbar.selection-mode button:checked {
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #15539e;
-  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
+  background-image: linear-gradient(to bottom, #1a66c2, #1a66c2);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -2677,7 +2677,7 @@ headerbar.selection-mode button:backdrop.flat:checked,
 headerbar.selection-mode button:backdrop:active,
 headerbar.selection-mode button:backdrop:checked {
   border-color: #2e7fe2;
-  background-image: linear-gradient(to bottom, #1c6fd4, #1c6fd4);
+  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   border-color: #0f3b71;
 }
@@ -2785,7 +2785,7 @@ headerbar.selection-mode button.suggested-action {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #0f3b71;
 }
 
@@ -2795,7 +2795,7 @@ headerbar.selection-mode button.suggested-action:hover {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #0f3b71;
 }
 
@@ -2804,8 +2804,8 @@ headerbar.selection-mode button.suggested-action:active {
   color: #2e2e2e;
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   text-shadow: none;
   -gtk-icon-shadow: none;
   border-color: #0f3b71;
@@ -2818,7 +2818,7 @@ headerbar.selection-mode button.suggested-action:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #0f3b71;
 }
 
@@ -2832,7 +2832,7 @@ headerbar.selection-mode button.suggested-action:disabled {
 headerbar.selection-mode button.suggested-action:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #0f3b71;
 }
 
@@ -2849,7 +2849,7 @@ headerbar.selection-mode button.suggested-action:backdrop:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: #0f3b71;
 }
 
@@ -3597,7 +3597,7 @@ notebook > header.top > tabs > tab:backdrop {
 }
 
 notebook > header.top > tabs > tab:checked {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
   border-color: #b3b3b3;
   border-radius: 5px 5px 0 0;
@@ -3629,7 +3629,7 @@ notebook > header.bottom > tabs > tab:backdrop {
 }
 
 notebook > header.bottom > tabs > tab:checked {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
   border-color: #b3b3b3;
   border-radius: 0 0 5px 5px;
@@ -3660,7 +3660,7 @@ notebook > header.left > tabs > tab:backdrop {
 }
 
 notebook > header.left > tabs > tab:checked {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
   border-color: #b3b3b3;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
@@ -3690,7 +3690,7 @@ notebook > header.right > tabs > tab:backdrop {
 }
 
 notebook > header.right > tabs > tab:checked {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.04));
   border-color: #b3b3b3;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
@@ -4307,7 +4307,7 @@ radio {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 check:only-child,
@@ -4333,7 +4333,7 @@ radio:hover {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 check:active,
@@ -4341,8 +4341,8 @@ radio:active {
   color: #2e2e2e;
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(0, 0, 0, 0.05);
@@ -4373,7 +4373,7 @@ radio:checked:active {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #15539e;
-  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
+  background-image: linear-gradient(to bottom, #1a66c2, #1a66c2);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -4402,7 +4402,7 @@ radio:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 check:disabled label, check:disabled,
@@ -4415,7 +4415,7 @@ check:backdrop,
 radio:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px white;
   transition: 200ms ease-out;
 }
@@ -4433,7 +4433,7 @@ radio:backdrop:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   box-shadow: none;
 }
 
@@ -4776,7 +4776,7 @@ scale slider {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 100%;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -4789,7 +4789,7 @@ scale slider:hover {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
   border-color: rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 1px white, 0 1px rgba(0, 0, 0, 0.05);
 }
@@ -4798,8 +4798,8 @@ scale slider:active {
   color: #2e2e2e;
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
   text-shadow: none;
   -gtk-icon-shadow: none;
   border-color: #3584e4;
@@ -4812,7 +4812,7 @@ scale slider:disabled {
   background-color: #f3f3f3;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 scale slider:disabled label, scale slider:disabled {
@@ -5474,14 +5474,14 @@ levelbar trough {
   color: black;
   border-color: #b3b3b3;
   background-color: #e9e9e9;
-  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.09), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.09), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 levelbar trough:backdrop {
   color: black;
   border-color: #b3b3b3;
   background-color: #eeeeee;
-  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(53, 132, 228, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.6);
 }
 
 levelbar block {
@@ -6196,7 +6196,7 @@ infobar.info button:active, infobar.info button:checked, infobar.question button
   color: #ffffff;
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #15539e;
-  background-image: linear-gradient(to bottom, #1b6acb, #1b6acb);
+  background-image: linear-gradient(to bottom, #1a66c2, #1a66c2);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -6390,7 +6390,7 @@ colorswatch#add-color-button overlay {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 colorswatch#add-color-button overlay:hover {
@@ -6398,13 +6398,13 @@ colorswatch#add-color-button overlay:hover {
   outline-color: rgba(46, 46, 46, 0.3);
   border-color: #b3b3b3;
   background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 colorswatch#add-color-button overlay:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 colorswatch#add-color-button overlay:backdrop label, colorswatch#add-color-button overlay:backdrop {

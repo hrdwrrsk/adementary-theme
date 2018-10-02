@@ -3,8 +3,8 @@
 // Thunar
 .thunar {
   :backdrop { color: $insensitive_fg_color; }
-  toolbar { 
-		border-bottom: none; 
+  toolbar {
+		border-bottom: none;
 
 		// use non-symbolic icons
 		// wish i can resize that damn symbolic toolbar icon to 16px
@@ -104,26 +104,26 @@ button.flat.-panel-icon-button {
 		background-color: $bg_color;
 		color: $fg_color;
 		box-shadow: none; // FIXME using shadows it doesn't work :\
-		
+
 		button {
 			&#login_button,
 			&#restart_button {
 				@extend %button.suggested-action;
 			}
-			
+
 			&#shutdown_button {
 				@extend %button.destructive-action;
 			}
 		}
 	}
-	
+
 	#login_window {
 		combobox button.combo {
 			@include button(undecorated);
 		}
 	}
 }
-		
+
 // MATE panel
 PanelToplevel.background {
 	background-color: $dark_bg_color;

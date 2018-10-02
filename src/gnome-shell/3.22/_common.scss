@@ -48,7 +48,7 @@ stage {
   border-radius: 3px;
   color: $fg_color;
   border-width: 1px;
-  padding: 4px 32px;
+  padding: 4px 28px;
   @include button(normal);
   &:focus { @include button(focus); }
   &:insensitive { @include button(insensitive); }
@@ -68,7 +68,7 @@ stage {
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
   &:focus { @include button(focus); }
-  padding: 8px;
+  padding: 4px;
 
   &:first-child {
     border-right-width: 1px;
@@ -1400,16 +1400,16 @@ StScrollBar {
   .app-view-control { //favorties | all toggle button
     padding: 4px 24px;
     @include button(normal);
-    border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+    border-color: if($variant == 'light', transparentize(black, 0.77), $borders_color);
 
     &:hover {
       @include button(hover);
-      border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+      border-color: if($variant == 'light', transparentize(black, 0.77), $borders_color);
     }
 
     &:checked {
       @include button(active);
-      border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+      border-color: if($variant == 'light', transparentize(black, 0.77), $borders_color);
     }
 
     &:first-child {

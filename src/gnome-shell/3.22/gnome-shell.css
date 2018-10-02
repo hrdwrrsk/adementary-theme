@@ -30,7 +30,7 @@ stage {
   border-radius: 3px;
   color: #2e2e2e;
   border-width: 1px;
-  padding: 4px 32px;
+  padding: 4px 28px;
   color: #2e2e2e;
   background-color: #dfdfdf;
   border-color: #b3b3b3;
@@ -56,7 +56,7 @@ stage {
 .button:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
@@ -71,7 +71,7 @@ stage {
   background-color: #dfdfdf;
   border-color: #b3b3b3;
   box-shadow: inset 0 1px white;
-  padding: 8px;
+  padding: 4px;
 }
 
 .modal-dialog-linked-button:hover {
@@ -94,7 +94,7 @@ stage {
 .modal-dialog-linked-button:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
@@ -1266,7 +1266,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message-list-clear-button.button:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
@@ -1714,7 +1714,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #dfdfdf;
   border-color: #b3b3b3;
   box-shadow: inset 0 1px white;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.23);
 }
 
 .app-view-control:hover {
@@ -1723,17 +1723,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #e9e9e9;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.23);
 }
 
 .app-view-control:checked {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.23);
 }
 
 .app-view-control:first-child {
@@ -1989,7 +1989,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .notification-banner .notification-button:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
@@ -2167,7 +2167,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .keyboard-key:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #dadada;
+  background-color: #d4d4d4;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
@@ -2317,7 +2317,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .login-dialog .modal-dialog-button:default:active {
   color: #2e2e2e;
   border-color: #b3b3b3;
-  background-color: #1b6acb;
+  background-color: #1a66c2;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;

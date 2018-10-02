@@ -166,7 +166,7 @@
   //
     color: $fg_color;
     border-color: $borders_color;
-    background-color: if($variant == 'light', darken($c, 10%), darken($c, 4%));
+    background-color: if($variant == 'light', darken($c, 12%), darken($c, 4%));
     // This should be none, but it's creating some issues with borders, so to
     // workaround it for now, use inset wich goes through a different code path.
     // see https://bugzilla.gnome.org/show_bug.cgi?id=752934
@@ -202,4 +202,3 @@
     icon-shadow: none;
   }
 }
-

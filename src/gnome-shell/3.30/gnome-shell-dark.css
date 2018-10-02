@@ -19,8 +19,8 @@
  */
 /* GLOBALS */
 stage {
-  font-family: "IBM Plex Sans", Roboto, Sans-Serif;
-  font-size: 9pt;
+  font-family: Source Sans Pro, Noto Sans, Sans-Serif;
+  font-size: 10pt;
   color: #eeeeee;
 }
 
@@ -30,7 +30,7 @@ stage {
   border-radius: 3px;
   color: #eeeeee;
   border-width: 1px;
-  padding: 4px 32px;
+  padding: 4px 28px;
   color: #eeeeee;
   background-color: #40434e;
   border-color: #17181c;
@@ -71,7 +71,7 @@ stage {
   background-color: #40434e;
   border-color: #17181c;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-  padding: 8px;
+  padding: 4px;
 }
 
 .modal-dialog-linked-button:hover {
@@ -206,7 +206,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 10px;
-  -barlevel-height: 4px;
+  -barlevel-height: 3px;
   -barlevel-background-color: #25262d;
   -barlevel-border-color: #17181c;
   -barlevel-active-background-color: #1c71d8;
@@ -310,7 +310,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .run-dialog-label {
-  font-size: 10pt;
+  font-size: 11pt;
   font-weight: bold;
   color: #d5d5d5;
   padding-bottom: .4em;
@@ -318,7 +318,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .mount-dialog-subject,
 .end-session-dialog-subject {
-  font-size: 12pt;
+  font-size: 13pt;
 }
 
 /* Message Dialog */
@@ -1915,7 +1915,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner {
-  font-size: 9pt;
+  font-size: 10pt;
   width: 34em;
   margin: 5px;
   border-radius: 6px;
