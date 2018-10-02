@@ -203,8 +203,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="42.154385"
-     inkscape:cx="12.760699"
-     inkscape:cy="8.8431009"
+     inkscape:cx="13.721842"
+     inkscape:cy="9.6971046"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -264,8 +264,8 @@
        id="rect4592-5-3"
        style="opacity:1;fill:#000000;fill-opacity:0.05882353;stroke:none;stroke-width:0.97088456;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
-       ry="2.8964901"
-       rx="2.851593"
+       ry="2.7304485"
+       rx="2.8253074"
        y="524.36218"
        x="347.5"
        height="14"
@@ -283,7 +283,7 @@
        transform="matrix(2.9864402,0,0,2.9751356,339.49438,-337.30409)"
        id="layer1-6"
        inkscape:label="Layer 1"
-       style="stroke-width:1.2679646">
+       style="stroke-width:1.2679646;opacity:0.9">
       <rect
          ry="0.84278673"
          rx="0.84247595"
