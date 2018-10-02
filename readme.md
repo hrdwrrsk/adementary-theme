@@ -23,7 +23,7 @@ Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme wit
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
 
-#### Ubuntu 18.10
+### Ubuntu 18.10
 > Ubuntu 18.10 ships with GNOME 3.30 desktop, but Nautilus file manager is still version 3.26 because that goddamn desktop icons feature, Ubuntu 18.04 (and 16.04*) support will remain, but not for 18.10 since it will broke Nautilus pathbar styling (unless if Ubuntu Desktop/UG team/someone backport Nautilus 3.30 to 18.10 via PPA)
 
 # (GNOME Shell) Typography
