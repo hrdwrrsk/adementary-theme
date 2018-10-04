@@ -7595,11 +7595,42 @@ button.flat.-panel-icon-button:checked:hover {
 .lightdm-gtk-greeter #login_window,
 .lightdm-gtk-greeter #shutdown_dialog,
 .lightdm-gtk-greeter #restart_dialog {
-  border: 1px solid #b3b3b3;
-  border-radius: 5px;
-  background-color: #f3f3f3;
+  background-color: transparent;
   color: #2e2e2e;
+  border: none;
+  border-radius: 5px;
   box-shadow: none;
+  border-image: -gtk-scaled(url("assets/lightdm-background.svg")) 10/10px stretch;
+}
+
+.lightdm-gtk-greeter #login_window #content_frame,
+.lightdm-gtk-greeter #shutdown_dialog #content_frame,
+.lightdm-gtk-greeter #restart_dialog #content_frame {
+  background-color: #f3f3f3;
+  margin: 6px 6px 0 6px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+}
+
+.lightdm-gtk-greeter #login_window #buttonbox_frame,
+.lightdm-gtk-greeter #shutdown_dialog #buttonbox_frame,
+.lightdm-gtk-greeter #restart_dialog #buttonbox_frame {
+  background-color: #f3f3f3;
+  margin: 0 6px 6px 6px;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 16px;
+  padding-bottom: 0;
+}
+
+.lightdm-gtk-greeter #login_window #greeter_infobar,
+.lightdm-gtk-greeter #shutdown_dialog #greeter_infobar,
+.lightdm-gtk-greeter #restart_dialog #greeter_infobar {
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 3px;
 }
 
 .lightdm-gtk-greeter #login_window combobox button.combo {
@@ -7609,6 +7640,11 @@ button.flat.-panel-icon-button:checked:hover {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
   text-shadow: none;
   -gtk-icon-shadow: none;
+  border-radius: 0;
+}
+
+.lightdm-gtk-greeter #login_window combobox button.combo:hover {
+  box-shadow: inset 0 -3px #3584e4;
 }
 
 PanelToplevel.background {

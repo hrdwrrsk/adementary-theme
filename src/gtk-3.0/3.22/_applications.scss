@@ -99,11 +99,15 @@ button.flat.-panel-icon-button {
 	#login_window,
 	#shutdown_dialog,
 	#restart_dialog {
-		border: 1px solid $borders_color;
-		border-radius: 5px;
-		background-color: $bg_color;
+		background-color: transparent;
 		color: $fg_color;
-		box-shadow: none; // FIXME using shadows it doesn't work :\
+    // remove frame borders, it's ugly in light variant.
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    border-image: if($variant == 'light', -gtk-scaled(url("assets/lightdm-background.svg")),
+                                           -gtk-scaled(url("assets/lightdm-background-dark.svg")))
+                  10 / 10px stretch;
 
 		button {
 			&#login_button,
@@ -115,11 +119,40 @@ button.flat.-panel-icon-button {
 				@extend %button.destructive-action;
 			}
 		}
+
+    #content_frame {
+      background-color: $bg_color;
+      margin: 6px 6px 0 6px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: none;
+    }
+
+    #buttonbox_frame {
+      background-color: $bg_color;
+      margin: 0 6px 6px 6px;
+      border: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      padding-top: 16px;
+      padding-bottom: 0;
+    }
+
+    #greeter_infobar {
+      margin-left: 8px;
+      margin-right: 8px;
+      // cosmetic border-radius :)
+      border-radius: 3px;
+    }
 	}
 
 	#login_window {
 		combobox button.combo {
 			@include button(undecorated);
+      border-radius: 0;
+
+      &:hover { box-shadow: inset 0 -3px $selected_bg_color; }
 		}
 	}
 }
