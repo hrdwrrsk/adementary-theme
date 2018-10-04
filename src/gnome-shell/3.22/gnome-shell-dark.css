@@ -210,7 +210,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -slider-background-color: #25262d;
   -slider-border-color: #17181c;
   -slider-active-background-color: #1c71d8;
-  -slider-active-border-color: #10427e;
+  -slider-active-border-color: #17181c;
   -slider-border-width: 1px;
   -slider-handle-radius: 6px;
 }

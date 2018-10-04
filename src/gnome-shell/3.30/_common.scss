@@ -154,7 +154,7 @@ StScrollBar {
   -barlevel-background-color: darken($bg_color, 4%); //background of the trough
   -barlevel-border-color: $borders_color; //trough border color
   -barlevel-active-background-color: $selected_bg_color; //active trough fill
-  -barlevel-active-border-color: $selected_borders_color; //active trough border
+  -barlevel-active-border-color: if($variant == 'light', $selected_borders_color, $borders_color); //active trough border
   -barlevel-border-width: 1px;
   -slider-handle-radius: 6px;
 }
