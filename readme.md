@@ -35,7 +35,7 @@ before you installing this theme, you need this package installed on your system
 - `sassc` for compiling sass css sources
 - `gtk` 3.22
 - [Ubuntu 16.04 users read this](https://github.com/hrdwrrsk/tetra-gtk-theme/wiki/Ubuntu-16.04-users-read-this)
-- `bc` (required before installing)
+- `bc` (required before running `install.sh` script)
 
 #### Required for rendering assets
 - `inkscape`
