@@ -48,7 +48,7 @@ git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
 cd tetra-gtk-theme
 
 # System-wide install
-sudo ./install sh
+sudo ./install.sh
 
 # Local install
 ./install.sh -d ~/.themes
