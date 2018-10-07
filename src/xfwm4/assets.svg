@@ -16,7 +16,7 @@
    viewBox="0 0 63.499996 52.916668"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="assets.svg">
   <defs
      id="defs2">
@@ -168,7 +168,7 @@
        gradientTransform="matrix(5.3388865,0,0,1.0077871,-51.659867,-1.9130649)" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1540"
+       xlink:href="#linearGradient1537"
        id="linearGradient11936"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(5.3388865,0,0,1.0077871,-51.659867,-1.9130649)"
@@ -563,8 +563,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="148.00156"
+     inkscape:zoom="2.4543612"
+     inkscape:cx="65.291649"
      inkscape:cy="79.750629"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -577,9 +577,9 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="655"
+     inkscape:window-height="678"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="25"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
