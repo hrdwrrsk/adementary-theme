@@ -1,10 +1,10 @@
 // Help us styling budgie-desktop in this theme !
-// code are derived from Arc (NicoHood x fossfreedom version) theme and 
+// code are derived from Arc (NicoHood x fossfreedom version) theme and
 // some bits from Adapta, some bits written by me
 
-.budgie-container { 
-	background-color: transparent; 
-	
+.budgie-container {
+	background-color: transparent;
+
 	&:backdrop { background-color: transparent; }
 }
 
@@ -27,16 +27,16 @@
 		@include button(undecorated);
 		border-radius: 0;
 		border: none;
-		
+
 		.flat label {
 			color: $dark_fg_color;
-			
+
 			&:backdrop { color: $dark_fg_color; }
 		}
-		
-		label { 
-			color: $dark_fg_color; 
-			
+
+		label {
+			color: $dark_fg_color;
+
 			&:backdrop { color: $dark_fg_color; }
 		}
 
@@ -56,16 +56,16 @@
 			background-image: none;
 			color: $dark_fg_color;
 
-			&:backdrop { 
+			&:backdrop {
 				box-shadow: inset 0 -3px $selected_bg_color;
-				background-image: none; 
+				background-image: none;
 				color: $dark_fg_color;
 			}
-			
-			label { 
+
+			label {
 				color: $dark_fg_color;
-				
-				&:backdrop { color: $dark_fg_color; } 
+
+				&:backdrop { color: $dark_fg_color; }
 			}
 		}
 
@@ -75,23 +75,23 @@
 			background-image: none;
 			color: $dark_fg_color;
 
-			&:backdrop { 
+			&:backdrop {
 				box-shadow: inset 0 -3px $selected_bg_color;
-				background-image: none; 
+				background-image: none;
 				color: $dark_fg_color;
 			}
-			
-			label { 
+
+			label {
 				color: $dark_fg_color;
-				
-				&:backdrop { color: $dark_fg_color; } 
+
+				&:backdrop { color: $dark_fg_color; }
 			}
 		}
 	}
 }
 
 .budgie-clock-applet {
-	label { color: $dark_fg_color;	
+	label { color: $dark_fg_color;
 		&:backdrop { color: $dark_fg_color; }
 	}
 }
@@ -107,7 +107,7 @@
 
 button.budgie-menu-launcher {
   padding: 0 2px;
-  
+
   // i dislike how menu icons in budgie scaled
   // so i use image assets for menu icons (you can disable it by add double slash (//) in image node.
   image {
@@ -115,7 +115,7 @@ button.budgie-menu-launcher {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 16px;
-		
+
 		color: transparent;
   }
 }
@@ -236,7 +236,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
 	.container { padding: 0px; }
 
 	border { border: none; }
-	
+
   list { background-color: transparent; }
 
   row {
@@ -312,7 +312,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
 
 		transition: none;
 
-		&:active, &:checked { 
+		&:active, &:checked {
 			background-color: $selected_bg_color;
 			color: $selected_fg_color;
 		}
@@ -350,10 +350,10 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
 
   .raven-header {
     min-height: 26px;
-    
-    &:not(.top) { 
+
+    &:not(.top) {
 			margin-top: -6px;
-			padding-bottom: 2px; 
+			padding-bottom: 2px;
 		}
 
 		&.top {
@@ -375,6 +375,11 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
 	}
 }
 
+.powerstrip {
+	background-color: $dark_fill;
+	box-shadow: inset 0 1px rgba(black, 0.05);
+}
+
 calendar.raven-calendar {
   // padding: 3px;
   border-style: none;
@@ -391,14 +396,14 @@ calendar.raven-calendar {
   color: $dark_fg_color;
 
   label { min-height: 24px; }
-  
+
   button.image-button {
 		@include button(osd-normal);
 		color: $dark_fg_color;
-		
+
 		&:hover { @include button(osd-hover); }
 		&:active { @include button(osd-active); }
-		
+
 		&:disabled {
 			color: $osd_insensitive_fg_color;
 			@include button(osd-insensitive);
@@ -428,7 +433,7 @@ calendar.raven-calendar {
 
 .budgie-switcher-window {
   @extend .budgie-notification-window;
-  
+
   &:backdrop { @extend .budgie-notification-window; }
 }
 
@@ -440,10 +445,10 @@ calendar.raven-calendar {
   margin: 5px 9px;
   padding: 3px;
   border-radius: 3px;
-  box-shadow: 
-		0 3px 3px rgba(0, 0, 0, 0.16), 
+  box-shadow:
+		0 3px 3px rgba(0, 0, 0, 0.16),
 		0 3px 3px rgba(0, 0, 0, 0.23),
-		inset 0 0 0 1px if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1)); // dreaming..... 
+		inset 0 0 0 1px if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1)); // dreaming.....
   background-color: $bg_color;
 }
 
@@ -467,7 +472,7 @@ calendar.raven-calendar {
     padding: 4px;
     border-top: 1px solid $borders_color;
     border-radius: 0;
-    
+
     // Workaround for suggested and destructive action buttons
     // which is used in some areas
     @each $b_type, $b_color in (suggested-action, $selected_bg_color),
@@ -480,7 +485,7 @@ calendar.raven-calendar {
 		margin-bottom: 6px;
 
     &:first-child {
-			border-top-left-radius: 3px; 
+			border-top-left-radius: 3px;
 			border-bottom-left-radius: 3px;
 			margin-left: 6px;
 		}

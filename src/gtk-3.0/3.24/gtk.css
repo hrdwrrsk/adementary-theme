@@ -7289,6 +7289,11 @@ frame.raven-frame > border {
   background-color: #f8f8f8;
 }
 
+.powerstrip {
+  background-color: lightgray;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+
 calendar.raven-calendar {
   border-style: none;
   background-color: transparent;

@@ -7243,6 +7243,11 @@ frame.raven-frame > border {
   background-color: #30333D;
 }
 
+.powerstrip {
+  background-color: #23242a;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+
 calendar.raven-calendar {
   border-style: none;
   background-color: transparent;
