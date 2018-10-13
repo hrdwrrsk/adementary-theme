@@ -722,7 +722,10 @@ button {
       &:checked {
 				@include button(active, $b_color, white);
 				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-				// box-shadow: 0 1px transparentize(white, 0.95);
+				@if($variant == 'dark') {
+          box-shadow: 0 1px transparentize(white, 0.95),
+                      inset 0 1px rgba(black, 0.05);
+        }
       }
 
       &:backdrop,
@@ -2684,7 +2687,8 @@ switch {
   color: transparent;
   background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
   text-shadow: none;
-  box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
+  box-shadow: inset 0 1px rgba(black, 0.05),
+              0 1px if($variant == 'light', transparentize(white, 0.4), transparentize(white, 0.95));
 
   &:checked {
     color: transparent;
@@ -2715,23 +2719,23 @@ switch {
     min-height: 20px;
     border: 0px solid;
     border-radius: 99px;
-    background-image: if($variant == 'light', linear-gradient(to bottom, darken($bg_color, 2%),
-																		 darken($bg_color, 6%)),
-											  linear-gradient(to bottom, lighten($bg_color, 8%),
-																		 lighten($bg_color, 4%)));
+    background-image: if($variant == 'light', linear-gradient(to bottom, darken($bg_color, 4%),
+																		                                     darken($bg_color, 8%)),
+											                        linear-gradient(to bottom, lighten($bg_color, 14%),
+																		                                     lighten($bg_color, 8%)));
     transition: $button_transition;
     box-shadow: 0 0 0 1px $borders_color, inset 0 1px if($variant == 'light', transparentize(white, 0.2), transparentize(white, 0.95));
   }
 
   &:hover slider {
-	background-image: if($variant == 'light', linear-gradient(to bottom, lighten($bg_color, 2%),
-																		 darken($bg_color, 2%)),
-											  linear-gradient(to bottom, lighten($bg_color, 12%),
-																		 lighten($bg_color, 6%)));
+    background-image: if($variant == 'light', linear-gradient(to bottom, $bg_color,
+																		                                     darken($bg_color, 4%)),
+											                        linear-gradient(to bottom, lighten($bg_color, 18%),
+																		                                     lighten($bg_color, 12%)));
   }
 
   &:checked slider {
-		background-image: linear-gradient(to bottom, darken($inverse_bg_color, 2%), darken($inverse_bg_color, 6%));
+		background-image: linear-gradient(to bottom, darken($inverse_bg_color, 4%), darken($inverse_bg_color, 8%));
 		box-shadow: 0 0 0 1px rgba(black, 0.50);
   }
 
@@ -2742,15 +2746,24 @@ switch {
   }
 
   row:selected & {
-    @if $variant == 'light' {
-      box-shadow: none;
-      border-color: $selected_borders_color;
+    box-shadow: 0 1px transparentize(white, 0.8);
+    background-color: mix(darken($inverse_bg_color, 12%), $selected_bg_color);
+    border-color: lighten($selected_borders_color, 6%);
 
-      slider:dir(rtl) { border-left-color: $selected_borders_color; }
-      slider:dir(ltr) { border-right-color: $selected_borders_color; }
+      slider {
+        background-image: linear-gradient(to bottom, darken($inverse_bg_color, 4%),
+    																		             darken($inverse_bg_color, 8%));
+        box-shadow: 0 0 0 1px rgba(black, 0.30),
+                    inset 0 1px transparentize(white, 0.4);
 
-      slider { &:checked, & { border-color: $selected_borders_color; } }
-    }
+        &:hover, & {
+          background-image: linear-gradient(to bottom, $inverse_bg_color,
+      																		             darken($inverse_bg_color, 4%));
+        }
+
+        &:checked, & { border-color: $selected_borders_color; }
+      }
+
   }
 }
 

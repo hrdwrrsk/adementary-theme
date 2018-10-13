@@ -1125,6 +1125,7 @@ button.suggested-action:checked {
   text-shadow: none;
   -gtk-icon-shadow: none;
   border-color: black;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.05), inset 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window button#restart_button:backdrop,
@@ -1519,6 +1520,7 @@ button.destructive-action:checked {
   text-shadow: none;
   -gtk-icon-shadow: none;
   border-color: black;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.05), inset 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop,
@@ -4116,17 +4118,17 @@ switch slider {
   min-height: 20px;
   border: 0px solid;
   border-radius: 99px;
-  background-image: linear-gradient(to bottom, #40434e, #373a43);
+  background-image: linear-gradient(to bottom, #4e525f, #40434e);
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: 0 0 0 1px #17181c, inset 0 1px rgba(255, 255, 255, 0.05);
 }
 
 switch:hover slider {
-  background-image: linear-gradient(to bottom, #4a4d5a, #3c3e49);
+  background-image: linear-gradient(to bottom, #575b6a, #4a4d5a);
 }
 
 switch:checked slider {
-  background-image: linear-gradient(to bottom, #eeeeee, #e4e4e4);
+  background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -4134,6 +4136,25 @@ switch:disabled slider {
   background-color: #40434e;
   background-image: none;
   box-shadow: 0 0 0 1px #17181c, inset 0 1px rgba(255, 255, 255, 0.05);
+}
+
+row:selected switch {
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  background-color: #78a3d6;
+  border-color: #145099;
+}
+
+row:selected switch slider {
+  background-image: linear-gradient(to bottom, #e9e9e9, #dfdfdf);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.6);
+}
+
+row:selected switch slider:hover, row:selected switch slider {
+  background-image: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
+}
+
+row:selected switch slider:checked, row:selected switch slider {
+  border-color: #10427e;
 }
 
 /*************************
@@ -5548,7 +5569,7 @@ scrolledwindow viewport.frame {
 }
 
 scrolledwindow overshoot.top {
-  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center top, 0, center top, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
@@ -5568,7 +5589,7 @@ scrolledwindow overshoot.top:backdrop {
 }
 
 scrolledwindow overshoot.bottom {
-  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(transparent)), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 100% 5%, 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -5588,7 +5609,7 @@ scrolledwindow overshoot.bottom:backdrop {
 }
 
 scrolledwindow overshoot.left {
-  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -5608,7 +5629,7 @@ scrolledwindow overshoot.left:backdrop {
 }
 
 scrolledwindow overshoot.right {
-  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(transparent)), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
+  background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(black), to(rgba(0, 0, 0, 0))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(238, 238, 238, 0.07)), to(rgba(238, 238, 238, 0)));
   background-size: 5% 100%, 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
@@ -7822,7 +7843,7 @@ these colors are exported for the window manager and shouldn't be used in applic
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#eeeeee, 1.8);
 @define-color wm_unfocused_title #8e8f93;
-@define-color wm_highlight transparent;
+@define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(238, 238, 238, 0.07);
 @define-color wm_bg_a #40434e;
 @define-color wm_bg_b #373a43;

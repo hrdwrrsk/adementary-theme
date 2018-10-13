@@ -542,7 +542,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .hidden {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .prompt-dialog-null-label {
@@ -824,7 +824,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .switcher-arrow {
-  border-color: transparent;
+  border-color: rgba(0, 0, 0, 0);
   color: rgba(46, 46, 46, 0.8);
 }
 
@@ -1651,11 +1651,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 0;
   border: 1px solid #17181c;
   border-left: 0px;
-  border-radius: 0px 7px 7px 0px;
+  border-radius: 0px 5px 5px 0px;
 }
 
 #dash:rtl {
-  border-radius: 7px 0 0 7px;
+  border-radius: 5px 0 0 5px;
 }
 
 #dash .placeholder {
@@ -1670,7 +1670,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .dash-item-container > StWidget {
-  padding: 3px 4px;
+  padding: 4px 5px;
 }
 
 .dash-label {

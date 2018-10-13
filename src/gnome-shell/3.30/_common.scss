@@ -1344,10 +1344,10 @@ StScrollBar {
     padding: 0;
     border: 1px solid $dark_borders_color;
     border-left: 0px;
-    border-radius: 0px 7px 7px 0px;
+    border-radius: 0px 5px 5px 0px;
 
     &:rtl {
-      border-radius: 7px 0 0 7px;
+      border-radius: 5px 0 0 5px;
     }
 
     .placeholder {
@@ -1364,7 +1364,7 @@ StScrollBar {
   }
 
   .dash-item-container > StWidget {
-    padding: 3px 4px;
+    padding: 4px 5px;
   }
 
   .dash-label { //osd tooltip
