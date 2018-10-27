@@ -9,14 +9,33 @@
 	}
 
 	.app-well-app.focused .overview-icon {
-		background-color: rgba(white, 0.10);
+		background-color: rgba(white, 0.08);
 	}
 
-	.app-well-app .overview-icon,
-	.show-apps .overview-icon {
-		border: 0;
+	.show-apps .show-apps-icon {
+		background-color: transparentize(black, 0.5);
+		color: transparentize(white, 0.2);
+		border-radius: 3px;
 	}
 }
+
+@each $pos, $padding, $radius in ('.top', '0 4px', '0'),
+																 ('.bottom', '0 4px', '0'),
+																 ('.left', '4px', '3px'),
+																 ('.right', '4px', '3px') {
+	#dashtodockContainer#{$pos} {
+		.dash-item-container > StWidget {
+			padding:  #{$padding};
+		}
+
+		.app-well-app .overview-icon,
+		.show-apps .overview-icon {
+			border: 0;
+			border-radius: #{$radius};
+		}
+	}
+}
+
 
 #panel.dashtopanelMainPanel {
 	.show-apps .overview-icon {

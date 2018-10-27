@@ -15,17 +15,17 @@
     border-style: solid solid none;
     border-color: $borders_color;
     border-radius: 3px 3px 0 0;
-  
+
     &.bottom.left {
       border-left-style: none;
 	    border-top-left-radius: 0;
     }
-  
+
     &.bottom.right {
       border-right-style: none;
 	    border-top-right-radius: 0;
     }
-  
+
     &:backdrop {
       background-color: $backdrop_base_color;
       border-color: $backdrop_borders_color;
@@ -57,8 +57,8 @@
     box-shadow: none;
   }
 
-  .path-bar-box { 
-    @include entry(normal); 
+  .path-bar-box {
+    @include entry(normal);
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
@@ -70,7 +70,7 @@
 }
 
 // gnome-control-center (3.26) sidebar
-scrolledwindow.view > viewport.frame > stack > list { 
+scrolledwindow.view > viewport.frame > stack > list {
   > row.activatable {
     padding: 0;
   }
@@ -108,7 +108,11 @@ headerbar.titlebar.incognito-mode {
     background-color: darken($headerbar_color, 6%);
 
 	@if $variant == 'light' {
-		entry { box-shadow: 0 1px transparentize(white, 0.6); }
+    background-color: darken($headerbar_color, 10%);
+		entry {
+      box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.6);
+      border-color: transparentize(black, 0.77);
+    }
 	}
 
     &:backdrop { background-color: darken($headerbar_color, 4%); }
