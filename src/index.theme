@@ -1,7 +1,7 @@
 [X-GNOME-Metatheme]
 Name=Tetra
 Type=X-GNOME-Metatheme
-Comment=Adwaita-based theme with design influence from elementary OS & Vertex gtk+ theme
+Comment=Adwaita-based theme with design influence from elementary OS stylesheet/gtk+ theme
 Encoding=UTF-8
 GtkTheme=Tetra
 IconTheme=Adwaita

@@ -1231,19 +1231,25 @@ StScrollBar {
 
   .nm-dialog-airplane-text { color: $fg_color; }
   .nm-dialog-header-icon { icon-size: 32px; }
-  .nm-dialog-scroll-view { border: 1px solid $borders_color; }
+  .nm-dialog-scroll-view {
+    border: 1px solid $borders_color;
+    background-color: $base_color;
+    border-radius: 5px;
+  }
   .nm-dialog-header { font-weight: bold; }
 
   .nm-dialog-item {
-    font-size: 110%;
-    border-bottom: 1px solid $borders_color;
-    padding: 12px;
+    font-size: 100%;
+    border-bottom: 0;
+    padding: 8px;
     spacing: 20px;
+    margin: 4px;
   }
 
   .nm-dialog-item:selected {
     background-color: $selected_bg_color;
     color: $selected_fg_color;
+    border-radius: 3px;
   }
 
   .nm-dialog-icons { spacing: .5em; }

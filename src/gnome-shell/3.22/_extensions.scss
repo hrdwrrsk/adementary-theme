@@ -12,10 +12,27 @@
 		background-color: rgba(white, 0.08);
 	}
 
-	.show-apps .show-apps-icon {
-		background-color: transparentize(black, 0.5);
-		color: transparentize(white, 0.2);
-		border-radius: 3px;
+	.show-apps {
+		.show-apps-icon {
+			background-color: transparentize(black, 0.5);
+			color: transparentize(white, 0.2);
+			border-radius: 3px;
+		}
+
+		&:hover .show-apps-icon {
+			background-color: transparentize(black, 0.35);
+		}
+
+		&:checked .show-apps-icon {
+			background-color: $selected_bg_color;
+			color: white;
+		}
+
+		&:hover .overview-icon,
+		&:active .overview-icon,
+		&:checked .overview-icon {
+			background-color: transparent;
+		}
 	}
 }
 

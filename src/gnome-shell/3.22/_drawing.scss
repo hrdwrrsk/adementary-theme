@@ -170,7 +170,7 @@
     // This should be none, but it's creating some issues with borders, so to
     // workaround it for now, use inset wich goes through a different code path.
     // see https://bugzilla.gnome.org/show_bug.cgi?id=752934
-    box-shadow: inset 0 1px rgba(black, 0.10);
+    box-shadow: inset 0 0 0 1px rgba(black, 0.10);
     text-shadow: none;
     icon-shadow: none;
   }
