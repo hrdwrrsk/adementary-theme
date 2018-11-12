@@ -181,7 +181,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="13.91"
-     inkscape:cx="-10.852266"
+     inkscape:cx="-8.767793"
      inkscape:cy="6.6999678"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -261,18 +261,18 @@
            height="4.7624989"
            width="5.027082"
            id="rect1105"
-           style="opacity:0.06000001;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="opacity:0.1;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         <rect
-           style="opacity:0.13999999;fill:none;fill-opacity:1;stroke:#fffff7;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="opacity:0.05;fill:none;fill-opacity:1;stroke:#fffff7;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect1107"
            width="4.4979157"
            height="4.4979157"
-           x="2.778125"
+           x="2.7781243"
            y="289.19479"
            ry="0.92602885"
            rx="0.92604166" />
         <rect
-           style="opacity:0.2;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="opacity:0.25;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:0.26458329;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect1103"
            width="5.027082"
            height="4.7624989"
@@ -288,7 +288,7 @@
            height="5.027082"
            width="5.027082"
            id="rect1101"
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#000007;stroke-width:0.26458326;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#061a30;stroke-width:0.26458326;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </g>
       <path
          sodipodi:nodetypes="ccccccc"

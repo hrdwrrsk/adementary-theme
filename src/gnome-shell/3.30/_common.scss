@@ -1327,7 +1327,7 @@ StScrollBar {
   .search-section { spacing: 16px; } // This should be equal to #searchResultsContent spacing
   .search-section-content { spacing: 32px; } // This is the space between the provider icon and the results container
   .search-statustext { // "no results"
-    @extend %status_text;
+    color: $dark_fg_color;
   }
   .list-search-results { spacing: 3px; }
 
@@ -1349,7 +1349,7 @@ StScrollBar {
     background-color: rgba($dark_bg_color, 0.80);
     padding: 0;
     border: 1px solid $dark_borders_color;
-    border-left: 0px;
+    //border-left: 0px;
     border-radius: 0px 5px 5px 0px;
 
     &:rtl {
@@ -1495,12 +1495,12 @@ StScrollBar {
   .app-folder-popup-bin {
 		padding: 5px;
 		border-radius: 5px;
-		background-color: $dark_bg_color;
+		background-color: transparentize($bg_color, 0.05);
 		border: 0;
 		box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), rgba($borders_color, 0.90));
 
     & .overview-icon {
-      color: $dark_fg_color;
+      color: $fg_color;
     }
 	}
 
@@ -1535,14 +1535,14 @@ StScrollBar {
 
   // Workspace pager
   .workspace-thumbnails { //container ala dash
-    background-color: $dark_bg_color;
-		border: 1px solid $dark_borders_color;
+    background-color: transparentize(white, 0.85);
+		border: 0;
     visible-width: 32px; //amount visible before hover
     spacing: 11px;
     padding: 8px;
     border-radius: 7px 0 0 7px;
     //border-width: 1px 0 1px 1px; //fixme: can't have non unoform borders :(
-    &:rtl { border-radius: 0 9px 9px 0;}
+    &:rtl { border-radius: 0 7px 7px 0;}
 
     .placeholder {
       background-image: url("assets/dash-placeholder.svg");

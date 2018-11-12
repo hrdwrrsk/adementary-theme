@@ -478,7 +478,7 @@ calendar.raven-calendar {
     @each $b_type, $b_color in (suggested-action, $selected_bg_color),
                              (destructive-action, $destructive_color) {
 			&.#{$b_type} {
-				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 			}
 		}
 

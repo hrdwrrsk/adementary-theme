@@ -1611,6 +1611,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing: 32px;
 }
 
+.search-statustext {
+  color: #eeeeee;
+}
+
 .list-search-results {
   spacing: 3px;
 }
@@ -1654,7 +1658,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(46, 48, 56, 0.8);
   padding: 0;
   border: 1px solid #17181c;
-  border-left: 0px;
   border-radius: 0px 5px 5px 0px;
 }
 
@@ -1833,13 +1836,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .app-folder-popup-bin {
   padding: 5px;
   border-radius: 5px;
-  background-color: #2E3038;
+  background-color: rgba(243, 243, 243, 0.95);
   border: 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .app-folder-popup-bin .overview-icon {
-  color: #eeeeee;
+  color: #2e2e2e;
 }
 
 .app-folder-icon {
@@ -1877,8 +1880,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .workspace-thumbnails {
-  background-color: #2E3038;
-  border: 1px solid #17181c;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 0;
   visible-width: 32px;
   spacing: 11px;
   padding: 8px;
@@ -1886,7 +1889,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .workspace-thumbnails:rtl {
-  border-radius: 0 9px 9px 0;
+  border-radius: 0 7px 7px 0;
 }
 
 .workspace-thumbnails .placeholder {
@@ -1907,7 +1910,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 0px 88px 10px 88px;
 }
 
-.search-statustext, .no-frequent-applications-label {
+.no-frequent-applications-label {
   font-size: 2em;
   font-weight: bold;
   color: #eeeeee;

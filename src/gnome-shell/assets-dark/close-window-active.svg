@@ -286,11 +286,11 @@
      id="base"
      showgrid="true"
      inkscape:zoom="10.533942"
-     inkscape:cx="0.8891041"
+     inkscape:cx="8.0659267"
      inkscape:cy="17.092766"
      inkscape:window-x="0"
      inkscape:window-y="29"
-     inkscape:current-layer="g5358-2"
+     inkscape:current-layer="Foreground"
      showguides="true"
      inkscape:guide-bbox="true"
      borderlayer="true"
@@ -335,7 +335,7 @@
        height="20"
        width="20"
        id="rect5360-6"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#eb4141;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" /><rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#d62a33;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" /><rect
        ry="19.000002"
        rx="19.000002"
        y="0.50000012"

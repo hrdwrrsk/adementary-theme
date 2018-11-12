@@ -54,9 +54,9 @@ $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
 $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
 
 $warning_color: $BANANA_500;
-$error_color: $STRAWBERRY_300;
+$error_color: $STRAWBERRY_500;
 $success_color: $LIME_500;
-$destructive_color: $error_color;
+$destructive_color: lighten($error_color, 8%);
 
 $osd_fg_color: #eeeeec;
 $osd_text_color: white;

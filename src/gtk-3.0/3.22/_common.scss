@@ -703,14 +703,7 @@ button {
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button(colored, $b_color, white);
-      border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-
-      @if $variant == 'dark' {
-        box-shadow: inset 0 1px transparentize(white, 0.8),
-                    0 1px transparentize(white, 0.95),
-                    inset 0 0 0 1px rgba(white, 0.14),
-                    inset 0 -1px rgba(white, 0.06);
-      }
+      border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 
       &.flat {
         @include button(undecorated);
@@ -720,40 +713,23 @@ button {
 
       &:hover {
 				@include button(colored-hover, $b_color, white);
-				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-
-        @if $variant == 'dark' {
-          box-shadow: inset 0 1px transparentize(white, 0.8),
-                      0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(white, 0.14),
-                      inset 0 -1px rgba(white, 0.06);
-        }
+				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 			}
 
       &:active,
       &:checked {
 				@include button(colored-active, $b_color, white);
-				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-				@if($variant == 'dark') {
-          box-shadow: 0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(black, 0.10);
-        }
+				border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
       }
 
       &:backdrop,
       &.flat:backdrop {
         @include button(colored-backdrop, $b_color, white);
-        border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
-        @if $variant == 'dark' {
-          box-shadow: inset 0 1px transparentize(white, 0.8),
-                      0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(white, 0.14),
-                      inset 0 -1px rgba(white, 0.06);
-        }
+        border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 
         &:active,
         &:checked {
-					border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+					border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 					@include button(colored-backdrop-active, $b_color, white);
 				}
 
@@ -763,7 +739,7 @@ button {
           &:active,
           &:checked {
 						@include button(backdrop-insensitive-active, $b_color, white);
-						border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 60%));
+						border-color: if($variant == 'light', darken($b_color, 20%), darken($b_color, 45%));
 					}
         }
       }
@@ -1505,6 +1481,8 @@ headerbar {
     padding-left: 12px;
     padding-right: 12px;
     font-weight: bold;
+
+    @include button(undecorated); // actually add text-shadow
   }
 
   .subtitle {
@@ -1522,11 +1500,11 @@ headerbar {
     border-color: $selected_borders_color;
     text-shadow: none;
 
-    @include headerbar_fill_colored($selected_bg_color, $_hc);
+    @include headerbar_fill_colored(lighten($selected_bg_color, 6%), $_hc);
     //box-shadow: inset 0 1px transparentize(white, 0.8);
 
     &:backdrop {
-      @include headerbar_fill_colored_backdrop($selected_bg_color, $_hc);
+      @include headerbar_fill_colored_backdrop(lighten($selected_bg_color, 6%), $_hc);
       //box-shadow: inset 0 1px transparentize(white, 0.8);
     }
 
@@ -1535,20 +1513,10 @@ headerbar {
     button {
       @include button(colored, $selected_bg_color, $selected_fg_color);
 
-      box-shadow: inset 0 1px transparentize(white, 0.8),
-                  0 1px transparentize(white, 0.95),
-                  inset 0 0 0 1px rgba(white, 0.14),
-                  inset 0 -1px rgba(white, 0.06);
-
       &.flat { @include button(undecorated); }
 
       &:hover {
         @include button(colored-hover, $selected_bg_color, $selected_fg_color);
-
-        box-shadow: inset 0 1px transparentize(white, 0.8),
-                    0 1px transparentize(white, 0.95),
-                    inset 0 0 0 1px rgba(white, 0.14),
-                    inset 0 -1px rgba(white, 0.06);
       }
 
       &:active,
@@ -1561,12 +1529,7 @@ headerbar {
           @include button(colored-backdrop, $selected_bg_color, $selected_fg_color);
 
           // -gtk-icon-effect: none;
-          //border-color: $selected_borders_color;
-
-          box-shadow: inset 0 1px transparentize(white, 0.8),
-                      0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(white, 0.14),
-                      inset 0 -1px rgba(white, 0.06);
+          border-color: darken($selected_bg_color, 15%);
 
           &:active,
           &:checked {
@@ -1706,6 +1669,8 @@ headerbar {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  separator { background-color: transparent; }
 }
 
 .background .titlebar {
@@ -2748,14 +2713,14 @@ switch {
   background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
   text-shadow: none;
   box-shadow: inset 0 0 0 1px rgba(black, 0.05),
-              0 1px if($variant == 'light', transparentize(white, 0.4), transparentize(white, 0.95));
+              0 1px transparentize(white, 0.95);
 
   &:checked {
     color: transparent;
     border: 1px solid if($variant == 'light', lighten($selected_borders_color, 8%), $alt_borders_color);
     background-image: linear-gradient(to bottom, darken($selected_bg_color, 4%), $selected_bg_color);
     text-shadow: none;
-		box-shadow: 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95));
+		box-shadow: 0 1px transparentize(white, 0.95);
 
 		&:disabled {
 			background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
@@ -2768,7 +2733,7 @@ switch {
     color: transparent;
     background-color: $bg_color;
     text-shadow: none;
-    box-shadow: inset 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
+    box-shadow: inset 0 0 0 1px rgba(black, 0.05), 0 1px transparentize(white, 0.95);
   }
 
   slider {
@@ -2777,30 +2742,35 @@ switch {
     min-height: 20px;
     border: 0px solid;
     border-radius: 99px;
-    background-image: if($variant == 'light', linear-gradient(to bottom, darken($bg_color, 4%),
-																		                                     darken($bg_color, 8%)),
-											                        linear-gradient(to bottom, lighten($bg_color, 14%),
-																		                                     lighten($bg_color, 8%)));
-    transition: $button_transition;
-    box-shadow: 0 0 0 1px $borders_color, inset 0 1px if($variant == 'light', transparentize(white, 0.4), transparentize(white, 0.9));
-  }
-
-  &:hover slider {
     background-image: if($variant == 'light', linear-gradient(to bottom, $bg_color,
 																		                                     darken($bg_color, 4%)),
 											                        linear-gradient(to bottom, lighten($bg_color, 18%),
 																		                                     lighten($bg_color, 12%)));
+    transition: $button_transition;
+    box-shadow: 0 0 0 1px $borders_color,
+                inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                0 1px 2px 0 rgba(black, 0.35);
+  }
+
+  &:hover slider {
+    background-image: if($variant == 'light', linear-gradient(to bottom, lighten($bg_color, 4%),
+																		                                     $bg_color),
+											                        linear-gradient(to bottom, lighten($bg_color, 22%),
+																		                                     lighten($bg_color, 16%)));
   }
 
   &:checked slider {
-		background-image: linear-gradient(to bottom, darken($inverse_bg_color, 4%), darken($inverse_bg_color, 8%));
-		box-shadow: 0 0 0 1px rgba(black, 0.50);
+		background-image: linear-gradient(to bottom, $inverse_bg_color, darken($inverse_bg_color, 4%));
+		box-shadow: 0 0 0 1px rgba(black, 0.50),
+                inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                0 1px 2px 0 rgba(black, 0.35);
   }
 
   &:disabled slider {
 		background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 8%));
 		background-image: none;
-		box-shadow: 0 0 0 1px $borders_color,  inset 0 1px if($variant == 'light', transparentize(white, 0.4), transparentize(white, 0.9));
+		box-shadow: 0 0 0 1px $borders_color,
+                inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08));
   }
 
   row:selected & {
@@ -2810,14 +2780,15 @@ switch {
     border-color: darken($selected_bg_color, 20%);
 
       slider {
-        background-image: linear-gradient(to bottom, darken($inverse_bg_color, 4%),
-    																		             darken($inverse_bg_color, 8%));
+        background-image: linear-gradient(to bottom, $inverse_bg_color,
+    																		             darken($inverse_bg_color, 4%));
         box-shadow: 0 0 0 1px rgba(black, 0.30),
-                    inset 0 1px transparentize(white, 0.4);
+                    inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                    0 1px 2px 0 rgba(black, 0.35);
 
         &:hover, & {
-          background-image: linear-gradient(to bottom, $inverse_bg_color,
-      																		             darken($inverse_bg_color, 4%));
+          background-image: linear-gradient(to bottom, lighten($inverse_bg_color, 4%),
+      																		             $inverse_bg_color);
         }
 
         &:checked, & { border-color: $selected_borders_color; }
@@ -2895,66 +2866,66 @@ radio {
 
   @include button(normal);
 
-  box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)),
-              0 1px transparentize(black, 0.95),
-              inset 0 0 0 1px if($variant == 'light', rgba(white, 0.14), rgba(white, 0.03)),
-              inset 0 -1px if($variant == 'light', rgba(white, 0.06), rgba(white, 0.02));
+  box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+              0 1px rgba(black, 0.05),
+              inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+              inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03));
 
   -gtk-icon-shadow: none;
 
   &:hover {
 		@include button(hover);
 
-    box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)),
-                0 1px transparentize(black, 0.95),
-                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.14), rgba(white, 0.03)),
-                inset 0 -1px if($variant == 'light', rgba(white, 0.06), rgba(white, 0.02));
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                0 1px rgba(black, 0.05),
+                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03));
 
     -gtk-icon-shadow: none;
 	}
 
   &:active {
 		@include button(active);
-		box-shadow: inset 0 0 0 1px rgba(black, 0.07);
+		box-shadow: inset 0 0 0 1px rgba(black, 0.05);
   }
 
   &:checked {
 		@include button(colored, $selected_bg_color, white);
-		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
 
-    box-shadow: inset 0 1px transparentize(white, 0.8),
-                0 1px transparentize(black, 0.85),
-                inset 0 0 0 1px rgba(white, 0.14),
-                inset 0 -1px rgba(white, 0.06);
+    box-shadow: inset 0 1px rgba(white, 0.25),
+                0 1px rgba(black, 0.1),
+                inset 0 0 0 1px rgba(white, 0.05),
+                inset 0 -1px rgba(white, 0.1);
 
     -gtk-icon-shadow: none;
 
 		&:hover {
 			@include button(colored-hover, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
 
-      box-shadow: inset 0 1px transparentize(white, 0.8),
-                  0 1px transparentize(black, 0.85),
-                  inset 0 0 0 1px rgba(white, 0.14),
-                  inset 0 -1px rgba(white, 0.06);
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  0 1px rgba(black, 0.1),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1);
 
       -gtk-icon-shadow: none;
 		}
 
 		&:active {
 			@include button(colored-active, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
 			box-shadow: inset 0 1px rgba(black, 0.05);
 		}
 
 		&:backdrop {
 			@include button(colored-backdrop, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 60%));
+			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
 
-      box-shadow: inset 0 1px transparentize(white, 0.8),
-                  0 1px transparentize(black, 0.85),
-                  inset 0 0 0 1px rgba(white, 0.14),
-                  inset 0 -1px rgba(white, 0.06);
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  0 1px rgba(black, 0.1),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1);
 
       -gtk-icon-shadow: none;
 		}
@@ -2962,16 +2933,16 @@ radio {
 
   &:disabled {
     @include button(insensitive);
-    box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95));
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08));
   }
 
   &:backdrop {
     @include button(backdrop);
 
-    box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)),
-                0 1px transparentize(black, 0.95),
-                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.14), rgba(white, 0.03)),
-                inset 0 -1px if($variant == 'light', rgba(white, 0.06), rgba(white, 0.02));
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                0 1px rgba(black, 0.05),
+                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03));
 
     transition: $backdrop_transition;
 
@@ -3243,15 +3214,17 @@ scale {
     transition: $button_transition;
     transition-property: background, border, box-shadow;
 
-    box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)),
-                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.14), rgba(white, 0.03)),
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03)),
                 0 1px rgba(black, 0.10);
 
     &:hover {
 	     @include button(hover);
        border-color: if($variant == 'light', rgba(black, 0.25), rgba(black, 0.65));
-       box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)),
-                   inset 0 0 0 1px if($variant == 'light', rgba(white, 0.14), rgba(white, 0.03)),
+       box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                   inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                   inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03)),
                    0 1px rgba(black, 0.10);
 	  }
 
@@ -4239,12 +4212,12 @@ infobar {
                                                 ('info', $GRAPE_300, $GRAPE_100, $inverse_fg_color),
                                                 ('question', $BLUEBERRY_300, $BLUEBERRY_100, $inverse_fg_color),
                                                 ('warning', $BANANA_300, $BANANA_100, $inverse_fg_color),
-                                                ('error', lighten($STRAWBERRY_500, 8%), $error_color, $selected_fg_color) {
+                                                ('error', $STRAWBERRY_300, $destructive_color, $selected_fg_color) {
 
     &.#{$info_state} {
       box-shadow: inset 0 1px transparentize(white, 0.6),
                   0 1px if($variant == 'light', rgba(black, 0.33), rgba(black, 0.8)),
-                  0 0 0 1px if($variant == 'light', rgba(black, 0.33), rgba(black, 0.6));
+                  0 0 0 1px if($variant == 'light', darken($info_color, 20%), darken($info_color, 60%));
 
       &:backdrop, & {
         label, & { color: $info_text; }
@@ -4261,25 +4234,28 @@ infobar {
         @include button(colored, $info_btn, $info_text, none);
         border-color: _border_color($info_color);
 
-        box-shadow: inset 0 1px transparentize(white, 0.8),
-                    0 1px transparentize(white, 0.95),
-                    inset 0 0 0 1px rgba(white, 0.14),
-                    inset 0 -1px rgba(white, 0.06);
+        box-shadow: inset 0 1px rgba(white, 0.25),
+                    0 1px rgba(black, 0.1),
+                    inset 0 0 0 1px rgba(white, 0.05),
+                    inset 0 -1px rgba(white, 0.1);
 
         &:hover {
           @include button(colored-hover, $info_btn, $info_text, none);
           border-color: _border_color($info_color);
 
-          box-shadow: inset 0 1px transparentize(white, 0.8),
-                      0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(white, 0.14),
-                      inset 0 -1px rgba(white, 0.06);
+          box-shadow: inset 0 1px rgba(white, 0.25),
+                      0 1px rgba(black, 0.1),
+                      inset 0 0 0 1px rgba(white, 0.05),
+                      inset 0 -1px rgba(white, 0.1);
         }
 
         &:active,
         &:checked {
           @include button(colored-active, $info_btn, $info_text, none);
           border-color: _border_color($info_color);
+
+          box-shadow: inset 0 0 0 1px rgba(black, 0.05),
+                      0 1px rgba(white, 0.05);
         }
 
         &:disabled {
@@ -4293,10 +4269,10 @@ infobar {
           border-color: _border_color($info_color);
           -gtk-icon-shadow: none;
 
-          box-shadow: inset 0 1px transparentize(white, 0.8),
-                      0 1px transparentize(white, 0.95),
-                      inset 0 0 0 1px rgba(white, 0.14),
-                      inset 0 -1px rgba(white, 0.06);
+          box-shadow: inset 0 1px rgba(white, 0.25),
+                      0 1px rgba(black, 0.1),
+                      inset 0 0 0 1px rgba(white, 0.05),
+                      inset 0 -1px rgba(white, 0.1);
 
           &:disabled {
             @include button(backdrop-insensitive, $info_color,
