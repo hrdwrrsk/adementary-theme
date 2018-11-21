@@ -563,7 +563,7 @@
 																	   darken($c, 2%)));
 
   box-shadow: inset 0 1px $hc,
-							inset 0 -1px if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.97));
+							inset 0 0 0 1px if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.97));
 }
 
 @mixin headerbar_fill_colored($c:$headerbar_color, $hc:$top_hilight, $ov: none) {
@@ -578,7 +578,7 @@
 																	  darken($c, 6%));
 
   box-shadow: inset 0 1px transparentize(white, 0.8),
-              inset 0 -1px transparentize(white, 0.95);
+              inset 0 0 0 1px transparentize(white, 0.95);
 }
 
 @mixin headerbar_fill_backdrop($c:$headerbar_color, $hc:$top_hilight, $ov: none) {

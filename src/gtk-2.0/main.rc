@@ -67,8 +67,8 @@ style "default" {
   GtkScale::slider_width        = 26
   GtkScale::trough-side-details = 1
 
-  GtkProgressBar::min-horizontal-bar-height = 6
-  GtkProgressBar::min-vertical-bar-width    = 6
+  GtkProgressBar::min-horizontal-bar-height = 8
+  GtkProgressBar::min-vertical-bar-width    = 8
   # Making this bigger than the min[height,width]-2*[y,x]spacing makes the
   # whole progressbar thicker, so by setting it to the exact above value
   # we get the maximum spacing between the text and the edges without

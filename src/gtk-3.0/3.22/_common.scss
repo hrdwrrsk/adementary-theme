@@ -218,17 +218,11 @@ assistant {
 
 %osd,
 .osd {
-  color: $osd_fg_color;
-  border: none;
-  background-color: $osd_bg_color;
+  color: $fg_color;
+  border: 1px solid if($variant == 'light', rgba(black, 0.22), $borders_color);
+  background-color: $bg_color;
   background-clip: padding-box;
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
-
-  &:backdrop {
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-  }
+  // box-shadow: 0 3px 9px 1px transparentize(black, 0.5); // FIXME shadow cut out
 }
 
 
@@ -332,16 +326,6 @@ entry {
         box-shadow: inset 0 0 0 1px $drop_target_color;
       }
     }
-
-    .osd & {
-      @include entry(osd);
-
-      &:focus { @include entry(osd-focus); }
-
-      &:backdrop { @include entry(osd-backdrop); }
-
-      &:disabled { @include entry(osd-insensitive); }
-    }
   }
 
   progress {
@@ -361,7 +345,7 @@ entry {
   .linked:not(.vertical) > & { @extend %linked; }
   .linked:not(.vertical) > &:focus + &,
   .linked:not(.vertical) > &:focus + button,
-  .linked:not(.vertical) > &:focus + combobox > box > button.combo { border-left-color: entry_focus_border(); }
+  .linked:not(.vertical) > &:focus + combobox > box > button.combo { border-left-color: $borders_color; }
 
   .linked:not(.vertical) > &:drop(active) + &,
   .linked:not(.vertical) > &:drop(active) + button,
@@ -618,83 +602,82 @@ button {
 
   // big standalone buttons like in Documents pager
   &.osd {
-    min-width: 24px;
-    min-height: 32px;
+    min-width: 20px;
+    min-height: 28px;
 
-    &.image-button { min-width: 32px; }
+    &.image-button { min-width: 28px; }
 
-    color: $osd_fg_color;
-    border-radius: 5px;
+    color: $fg_color;
+    border-radius: 3px;
 
-    @include button(osd);
+    @include button(normal);
 
-    border: none;
-    box-shadow: none;
+    border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
+    //box-shadow: none;
 
     &:hover {
-      @include button(osd-hover);
+      @include button(hover);
 
-      border: none;
-      box-shadow: none;
+      border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
+      //box-shadow: none;
     }
 
     &:active,
     &:checked {
-      @include button(osd-active);
+      @include button(active);
 
-      border: none;
-      box-shadow: none;
+      border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
+      //box-shadow: none;
     }
 
     &:disabled {
       &:backdrop, & {
-        @include button(osd-insensitive);
+        @include button(insensitive);
 
-        border: none;
+        border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
       }
     }
 
     &:backdrop {
-      @include button(osd-backdrop);
+      @include button(backdrop);
 
-      border: none;
+      border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
     }
   }
 
   //overlay / OSD style
   @at-root %osd_button,
   .osd & {
-    @include button(osd);
+    @include button(normal);
 
-    &:hover { @include button(osd-hover); }
+    &:hover { @include button(hover); }
 
     &:active,
-    &:checked { &:backdrop, & { @include button(osd-active); }}
+    &:checked {
+      @include button(active);
+      &:backdrop, & { @include button(backdrop-active); }
+    }
 
-    &:disabled { &:backdrop, & { @include button(osd-insensitive); }}
+    &:disabled {
+      @include button(insensitive);
+      &:backdrop, & { @include button(backdrop-insensitive); }
+    }
 
-    &:backdrop { @include button(osd-backdrop); }
+    &:backdrop { @include button(backdrop); }
 
     &.flat {
       @include button(undecorated);
 
-      box-shadow: none; //FIXME respect no edge on the button mixin
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-
-      &:hover { @include button(osd-hover); }
+      &:hover { @include button(hover); }
 
       &:disabled {
-        @include button(osd-insensitive);
-        background-image: none;
-        border-color: transparent;
-        box-shadow: none;
+        @include button(insensitive);
       }
 
       &:backdrop { @include button(undecorated); }
 
       &:active,
-      &:checked { @include button(osd-active); }
+      &:checked { @include button(active); }
     }
   }
 
@@ -760,16 +743,22 @@ button {
       }
 
       .osd & {
-        @include button(osd, $b_color);
+        @include button(colored, $b_color);
 
-        &:hover { @include button(osd-hover, $b_color); }
+        &:hover { @include button(colored-hover, $b_color); }
 
         &:active,
-        &:checked { &:backdrop, & { @include button(osd-active, $b_color); }}
+        &:checked {
+          @include button(colored-active, $b_color);
+          &:backdrop, & { @include button(colored-backdrop-active, $b_color); }
+        }
 
-        &:disabled { &:backdrop, & { @include button(osd-insensitive, $b_color); }}
+        &:disabled {
+          @include button(insensitive, $b_color);
+          &:backdrop, & { @include button(backdrop-insensitive, $b_color); }
+        }
 
-        &:backdrop { @include button(osd-backdrop, $b_color); }
+        &:backdrop { @include button(colored-backdrop, $b_color); }
       }
     }
   }
@@ -1195,54 +1184,6 @@ spinbutton {
     }
   }
 
-  // OSD horizontal
-  .osd &:not(.vertical) {
-    button {
-      @include button(undecorated);
-
-      color: $osd_fg_color;
-      border-style: none none none solid;
-      border-color: transparentize($osd_borders_color, 0.3);
-      border-radius: 0;
-      box-shadow: none;
-      -gtk-icon-shadow: 0 1px black;
-
-      &:dir(rtl) { border-style: none solid none none; }
-
-      &:hover {
-        @include button(undecorated);
-
-        color: $osd_fg_color;
-        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        background-color: transparentize($osd_fg_color, 0.9);
-        -gtk-icon-shadow: 0 1px black;
-        box-shadow: none;
-      }
-
-      &:backdrop {
-        @include button(undecorated);
-
-        color: $osd_fg_color;
-        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        -gtk-icon-shadow: none;
-        box-shadow: none;
-      }
-
-      &:disabled {
-        @include button(undecorated);
-
-        color: $osd_insensitive_fg_color;
-        border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        -gtk-icon-shadow: none;
-        box-shadow: none;
-      }
-
-      &:dir(ltr):last-child { border-radius: 0 3px 3px 0; }
-
-      &:dir(rtl):first-child { border-radius: 3px 0 0 3px; }
-    }
-  }
-
   // Vertical
   &.vertical {
     // in the vertical configuration, we treat the spinbutton
@@ -1286,19 +1227,6 @@ spinbutton {
       border-radius: 0 0 3px 3px;
       border-style: none solid solid solid;
     }
-  }
-
-  // OSD vertical
-  .osd &.vertical button:first-child {
-    @include button(osd);
-
-    &:hover { @include button(osd-hover);}
-
-    &:active { @include button(osd-active); }
-
-    &:disabled { @include button(osd-insensitive); }
-
-    &:backdrop { @include button(osd-backdrop); }
   }
 
   // Misc
@@ -1378,14 +1306,19 @@ toolbar {
   // stand-alone OSD toolbars
   &.osd {
     padding: 13px;
-    border: none;
+    border: 1px solid if($variant == 'light', rgba(black, 0.44), $borders_color);
     border-radius: 5px;
-    background-color: $osd_bg_color;
+    background-color: $bg_color;
+
+    box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
 
     &.left,
     &.right,
     &.top,
-    &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
+    &.bottom {
+      border-radius: 0;
+      border: 0;
+    } // positional classes for `attached` osd toolbars
   }
 
   // toolbar separators
@@ -1499,6 +1432,13 @@ headerbar {
     color: $selected_fg_color;
     border-color: $selected_borders_color;
     text-shadow: none;
+
+    .title {
+      color: $selected_fg_color;
+      @include _button_text_shadow(white, $selected_bg_color);
+
+      &:backdrop { color: mix($dark_fg_color, $selected_bg_color, 80%); }
+    }
 
     @include headerbar_fill_colored(lighten($selected_bg_color, 6%), $_hc);
     //box-shadow: inset 0 1px transparentize(white, 0.8);
@@ -1633,13 +1573,17 @@ headerbar {
 
   &.default-decoration {
     min-height: 24px;
-    padding: 4px;
+
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     button.titlebutton {
-      min-height: 22px;
-      min-width: 22px;
+      min-height: 16px;
+      min-width: 16px;
       margin: 0;
-      padding: 0;
+      padding: 2px;
     }
   }
 
@@ -1863,67 +1807,75 @@ treeview.view {
   &.progressbar { // progress bar in treeviews
     @if $variant == light { color: $base_color; }
 
-    border: 1px solid $selected_borders_color;
-    border-radius: 4px;
+    border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
+    border-radius: 0;
     background-color: $selected_bg_color;
     background-image: linear-gradient(to bottom,
                                       $selected_bg_color,
-                                      darken($selected_bg_color, 10%));
-    box-shadow: inset 0 1px if($variant=='light', transparentize(white, 0.7), transparentize(white, 0.85)),
-                      0 1px if($variant=='light', transparentize(black, 0.8), transparentize(black, 0.9));
+                                      darken($selected_bg_color, 1%),
+                                      darken($selected_bg_color, 4%));
+    box-shadow: inset 0 1px rgba(white, 0.25),
+                inset 0 0 0 1px rgba(white, 0.05),
+                inset 0 -1px rgba(white, 0.1),
+                0 1px rgba(black, 0.1);
 
     &:selected {
       &:focus, & {
-        border-radius: 4px;
-
-        @if $variant == 'light' {
-          color: $selected_bg_color;
-          box-shadow: none;
-        }
-
-        @else { box-shadow: inset 0 1px transparentize(white, 0.95); }
-
-        background-image: linear-gradient(to bottom, $base_color, darken($base_color,10%));
+        border-radius: 0;
 
         &:backdrop {
-          @if $variant == 'light' {
-            color: $selected_bg_color;
-            border-color: $selected_borders_color; // otherwise it gets inherited by .view(?!?)
-          }
+          color: mix($selected_fg_color, $selected_bg_color, 80%);
+          border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
 
-          @else { border-color: $backdrop_base_color; }
+          background-image: linear-gradient(to bottom,
+                                            lighten($selected_bg_color, 2%),
+                                            lighten($selected_bg_color, 1%),
+                                            darken($selected_bg_color, 2%));
 
-          background-color: $backdrop_base_color;
+          box-shadow: inset 0 1px rgba(white, 0.25),
+                      inset 0 0 0 1px rgba(white, 0.05),
+                      inset 0 -1px rgba(white, 0.1),
+                      0 1px rgba(black, 0.1);
         }
       }
     }
 
     &:backdrop {
-      @if $variant == 'light' { color: $backdrop_base_color; }
+      border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
 
-      @else { border-color: $backdrop_base_color; }
+      background-image: linear-gradient(to bottom,
+                                        lighten($selected_bg_color, 2%),
+                                        lighten($selected_bg_color, 1%),
+                                        darken($selected_bg_color, 2%));
 
-      background-image: none;
-      box-shadow: none;
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1),
+                  0 1px rgba(black, 0.1);
     }
   }
 
   &.trough { // progress bar trough in treeviews
-    background-color: transparentize($fg_color,0.9);
-    border-radius: 4px;
+    border: 1px solid $borders_color;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent,
+                                                 rgba(black, 0.01),
+                                                 rgba(black, 0.04));
+    border-radius: 0;
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03)),
+                0 1px rgba(black, 0.1);
 
     &:selected {
       &:focus, & {
-        background-color: if($variant == 'light',
-                             transparentize($selected_fg_color, 0.7),
-                             darken($selected_bg_color, 10%));
-        border-radius: 4px;
-
-        @if $variant == 'light' {
-          border-width: 1px 0;
-          border-style: solid;
-          border-color: $selected_bg_color;
-        }
+        color: $fg_color;
+        border: 1px solid if($variant == 'light', rgba(black, 0.22), $borders_color);
+        background-color: rgba(white, 0.2);
+        background-image: linear-gradient(to bottom, $base_color,
+                                                     darken($base_color, 1%),
+                                                     darken($base_color, 4%));
+        border-radius: 0;
       }
     }
   }
@@ -2043,6 +1995,8 @@ menu,
   .csd & { border: none; }  // axes borders in a composited env
 
   &:backdrop { background-color: $backdrop_menu_color; }
+
+  separator { background-color: rgba(black, 0.1); }
 
   menuitem {
     min-height: 16px;
@@ -2164,7 +2118,7 @@ popover.background {
     &.magnifier {
       @extend %osd;
 
-      border: 1px solid transparentize(white, 0.9);
+      border: 1px solid transparentize(black, 0.77);
 
       button { @extend %osd_button };
     }
@@ -2957,14 +2911,14 @@ radio {
 		}
   }
 
-  .osd & {
-    @include button(osd);
+  // .osd & {
+  //  @include button(osd);
 
-    &:hover { @include button(osd); }
-    &:active { @include button(osd-active); }
-    &:backdrop { @include button(osd-backdrop); }
-    &:disabled { @include button(osd-insensitive); }
-  }
+  //  &:hover { @include button(osd); }
+  //  &:active { @include button(osd-active); }
+  //  &:backdrop { @include button(osd-backdrop); }
+  //  &:disabled { @include button(osd-insensitive); }
+  // }
 
   menu menuitem & {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
@@ -3085,12 +3039,12 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
   row:selected & { &:disabled, & { border-color: $borders_color; }}
 
   // OSD
-  .osd & {
-    border-color: $osd_borders_color;
-    background-color: transparentize($osd_borders_color, 0.2);
+  // .osd & {
+  //   border-color: $osd_borders_color;
+  //   background-color: transparentize($osd_borders_color, 0.2);
 
-    &:disabled { background-color: $osd_insensitive_bg_color; }
-  }
+  //   &:disabled { background-color: $osd_insensitive_bg_color; }
+  // }
 }
 
 %scale_highlight {
@@ -3115,11 +3069,11 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
   row:selected & { &:disabled, & { border-color: $selected_borders_color; }}
 
   // OSD
-  .osd & {
-    border-color: $osd_borders_color;
+  // .osd & {
+  //   border-color: $osd_borders_color;
 
-    &:disabled { border-color: transparent; }
-  }
+  //   &:disabled { border-color: transparent; }
+  // }
 }
 
 scale {
@@ -3194,16 +3148,16 @@ scale {
     }
 
     // OSD
-    .osd & {
-      background-color: mix($osd_fg_color, $osd_borders_color, 25%);
+    // .osd & {
+    //   background-color: mix($osd_fg_color, $osd_borders_color, 25%);
 
-      &:disabled {
-        &:backdrop, & {
-          border-color: transparent;
-          background-color: transparent;
-        }
-      }
-    }
+    //   &:disabled {
+    //     &:backdrop, & {
+    //       border-color: transparent;
+    //       background-color: transparent;
+    //     }
+    //   }
+    // }
   }
 
   slider {
@@ -3256,36 +3210,36 @@ scale {
     row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
 
     // OSD
-    .osd & {
-      @include button(osd);
-      border-color: darken($osd_borders_color, 3%);
-      background-color: opacify($osd_bg_color, 1); // solid background needed here
+    // .osd & {
+    //   @include button(osd);
+    //   border-color: darken($osd_borders_color, 3%);
+    //   background-color: opacify($osd_bg_color, 1); // solid background needed here
 
-      &:hover {
-        @include button(osd-hover);
-        background-color: opacify($osd_bg_color, 1); // solid background needed here
-      }
+    //   &:hover {
+    //    @include button(osd-hover);
+    //    background-color: opacify($osd_bg_color, 1); // solid background needed here
+    //  }
 
-      &:active {
-        @include button(osd-active);
-        background-color: opacify($osd_bg_color, 1); // solid background needed here
-      }
+    //  &:active {
+    //    @include button(osd-active);
+    //    background-color: opacify($osd_bg_color, 1); // solid background needed here
+    //  }
 
-      &:disabled {
-        @include button(osd-insensitive);
-        background-color: opacify($osd_bg_color, 1); // solid background needed here
-      }
+    //  &:disabled {
+    //    @include button(osd-insensitive);
+    //    background-color: opacify($osd_bg_color, 1); // solid background needed here
+    //  }
 
-      &:backdrop {
-        @include button(osd-backdrop);
-        background-color: opacify($osd_bg_color, 1); // solid background needed here
+    //  &:backdrop {
+    //    @include button(osd-backdrop);
+    //    background-color: opacify($osd_bg_color, 1); // solid background needed here
 
-        &:disabled {
-          @include button(osd-backdrop-insensitive);
-          background-color: opacify($osd_bg_color, 1); // solid background needed here
-        }
-      }
-    }
+    //    &:disabled {
+    //      @include button(osd-backdrop-insensitive);
+    //      background-color: opacify($osd_bg_color, 1); // solid background needed here
+    //    }
+    //  }
+    // }
   }
 
   value { color: gtkalpha(currentColor, 0.55); }
@@ -3527,12 +3481,12 @@ progressbar {
   // sizing
   &.horizontal {
     trough,
-    progress { min-height: 2px; }
+    progress { min-height: 5px; }
   }
 
   &.vertical {
     trough,
-    progress { min-width: 2px; }
+    progress { min-width: 5px; }
   }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
@@ -3547,37 +3501,59 @@ progressbar {
     transition: $backdrop_transition;
   }
 
-  trough { @extend %scale_trough; }
+  trough {
+    border: 1px solid $borders_color;
+    background-image: linear-gradient(to bottom,
+                                      transparent,
+                                      rgba(black, 0.01),
+                                      rgba(black, 0.04));
+    border-radius: 0;
+    box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
+                inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03));
+  }
 
-  &:backdrop trough { @extend %scale_trough:backdrop; } // looks like states are not passed to the trough component here
-
-  progress {
-    @extend %scale_highlight;
-
-    border-radius: 1.5px;
-
-    &.left {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
-    }
-
-    &.right {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
-    }
-
-    &.top {
-      border-top-right-radius: 2px;
-      border-top-left-radius: 2px;
-    }
-
-    &.bottom {
-      border-bottom-right-radius: 2px;
-      border-bottom-left-radius: 2px;
+  &.vertical {
+    trough {
+      background-image: linear-gradient(to right,
+                                        transparent,
+                                        rgba(black, 0.01),
+                                        rgba(black, 0.04));
     }
   }
 
-  &:backdrop progress { @extend %scale_highlight:backdrop; } // states not passed here as well
+  // &:backdrop trough { @extend %scale_trough:backdrop; } // looks like states are not passed to the trough component here
+
+  progress {
+    border: 1px solid if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+    background-image: linear-gradient(to bottom,
+                                      $selected_bg_color,
+                                      darken($selected_bg_color, 1%),
+                                      darken($selected_bg_color, 4%));
+    border-radius: 0;
+    box-shadow: inset 0 1px rgba(white, 0.25),
+                0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
+                inset 0 0 0 1px rgba(white, 0.05),
+                inset 0 -1px rgba(white, 0.1);
+  }
+
+  &.vertical {
+    progress {
+      background-image: linear-gradient(to right,
+                                        $selected_bg_color,
+                                        darken($selected_bg_color, 1%),
+                                        darken($selected_bg_color, 4%));
+    }
+  }
+
+  &:backdrop progress {
+    border: 1px solid if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+    background-image: linear-gradient(to bottom,
+                                      lighten($selected_bg_color, 2%),
+                                      lighten($selected_bg_color, 1%),
+                                      darken($selected_bg_color, 2%));
+  }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     min-width: 3px;
@@ -3607,7 +3583,7 @@ progressbar {
 levelbar {
   &.horizontal {
     block {
-      min-height: 1px;
+      min-height: 5px;
     }
 
     &.discrete block {
@@ -3618,7 +3594,7 @@ levelbar {
 
   &.vertical {
     block {
-      min-width: 1px;
+      min-width: 5px;
     }
 
     &.discrete block {
@@ -3630,39 +3606,70 @@ levelbar {
   &:backdrop { transition: $backdrop_transition; }
 
   trough {
-    border: 1px solid;
-    padding: 2px;
-    border-radius: 3px;
-    @include entry(normal);
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    // @include entry(normal);
 
-    &:backdrop { @include entry(backdrop); }
+    // &:backdrop { @include entry(backdrop); }
   }
 
   block {
     border: 1px solid;
-    border-radius: 1px;
+    border-radius: 3px;
 
     &.low {
-      border-color: if($variant == 'light', darken($warning_color, 20%), $warning_color);
-      background-color: $warning_color;
+      border-color: if($variant == 'light', darken($warning_color, 20%), $borders_color);
+      background-image: linear-gradient(to bottom,
+                                        $warning_color,
+                                        darken($warning_color, 1%),
+                                        darken($warning_color, 4%));
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1);
 
-      &:backdrop { border-color: $warning_color; };
+      &:backdrop {
+        background-image: linear-gradient(to bottom,
+                                          lighten($warning_color, 2%),
+                                          lighten($warning_color, 1%),
+                                          darken($warning_color, 2%));
+      };
     }
 
     &.high,
     &:not(.empty),
     &.full {
-      border-color: if($variant == 'light', darken($success_color, 20%), $success_color);
-      background-color: $success_color;
+      border-color: if($variant == 'light', darken($success_color, 20%), $borders_color);
+      background-image: linear-gradient(to bottom,
+                                        $success_color,
+                                        darken($success_color, 1%),
+                                        darken($success_color, 4%));
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1);
 
-      &:backdrop { border-color: $success_color; };
+      &:backdrop {
+        background-image: linear-gradient(to bottom,
+                                          lighten($success_color, 2%),
+                                          lighten($success_color, 1%),
+                                          darken($success_color, 2%));
+      };
     }
 
     &.empty {
-      background-color: transparent;
-      border-color: if($variant == 'light', transparentize($fg_color,0.8), transparentize($fg_color,0.9));
+      background-image: linear-gradient(to bottom,
+                                        transparent,
+                                        rgba(black, 0.01),
+                                        rgba(black, 0.04));
+      border-color: $borders_color;
+      box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08)),
+                  0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
+                  inset 0 0 0 1px if($variant == 'light', rgba(white, 0.05), rgba(white, 0.03)),
+                  inset 0 -1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.03));
 
-      &:backdrop { border-color: transparentize($backdrop_fg_color,0.85); }
+      // &:backdrop { border-color: transparentize($backdrop_fg_color,0.85); }
     }
   }
 }
@@ -3773,7 +3780,7 @@ scrolledwindow {
 
 //vbox and hbox separators
 separator {
-  background: transparentize(black, 0.9);
+  background: $borders_color;
   min-width: 1px;
   min-height: 1px;
 }
@@ -3791,6 +3798,8 @@ list {
     background-color: $backdrop_base_color;
     border-color: $backdrop_borders_color;
   }
+
+  separator { background-color: rgba(black, 0.1); }
 
   row { padding: 2px; }
 }
@@ -3834,10 +3843,12 @@ row {
 
   padding: 10px;
   border-radius: 0 0 5px 5px;
-  background-color: $osd_bg_color;
-  background-image: linear-gradient(to bottom, transparentize(black, 0.8),
-                                               transparent 2px);
+  background-color: $bg_color;
+  background-image: none;
   background-clip: padding-box;
+  border-width: 0 1px 1px 1px;
+  border-color: if($variant == 'light', rgba(black, 0.4), $borders_color);
+  border-style: solid;
 
   &:backdrop {
     background-image: none;
@@ -3970,7 +3981,7 @@ filechooserbutton:drop(active) {
  ***********/
 .sidebar {
   border-style: none;
-  background-color: mix($bg_color, $base_color, 50%);
+  background-color: $sidebar_bg_color;
 
   @at-root %sidebar_left,
   &:dir(ltr),
@@ -3987,13 +3998,54 @@ filechooserbutton:drop(active) {
     border-right-style: none;
   }
 
+  .frame, list { background-color: transparent; }
+
+  separator { background-color: transparent; }
+
   &:backdrop {
     background-color: $backdrop_sidebar_bg_color;
     border-color: $backdrop_borders_color;
     transition: $backdrop_transition;
   }
 
-  list { background-color: transparent; }
+  list,
+  row,
+  treeview {
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    &:selected {
+      background-image: linear-gradient(to bottom,
+                                        $selected_bg_color,
+                                        darken($selected_bg_color, 1%),
+                                        darken($selected_bg_color, 4%));
+      border-color: if($variant == 'light', rgba(black, 0.22), $borders_color);
+      box-shadow: inset 0 1px rgba(white, 0.25),
+                  inset 0 0 0 1px rgba(white, 0.05),
+                  inset 0 -1px rgba(white, 0.1);
+
+      &:hover {
+        background-image: linear-gradient(to bottom,
+                                          lighten($selected_bg_color, 4%),
+                                          lighten($selected_bg_color, 3%),
+                                          $selected_bg_color);
+      }
+
+      &:active {
+        background-color: darken($selected_bg_color, 4%);
+        background-image: none;
+        box-shadow: inset 0 0 0 1px rgba(black, 0.05);
+      }
+
+      &:backdrop {
+        background-image: linear-gradient(to bottom,
+                                          lighten($selected_bg_color, 2%),
+                                          lighten($selected_bg_color, 1%),
+                                          darken($selected_bg_color, 2%));
+      }
+    }
+  }
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
@@ -4467,7 +4519,10 @@ colorswatch {
 }
 
 // colorscale popup
-colorchooser .popover.osd { border-radius: 5px; }
+colorchooser .popover.osd {
+  border-radius: 5px;
+  @extend %osd;
+}
 
 /********
  * Misc *
@@ -4583,6 +4638,11 @@ button.titlebutton {
 
   @extend %button_basic.flat;
 
+  min-width: 16px;
+  min-height: 16px;
+
+  padding: 2px;
+
 	// -gtk-icon-shadow: none;
 
   .selection-mode & {
@@ -4596,7 +4656,7 @@ headerbar.selection-mode button.titlebutton,
 .titlebar.selection-mode button.titlebutton {
   @include _button_text_shadow(white, $selected_bg_color);
 
-  &:backdrop { -gtk-icon-shadow: none; }
+  &:backdrop { color: mix($dark_fg_color, $selected_bg_color, 80%); }
 }
 
 

@@ -50,16 +50,11 @@
   }
 }
 
-// gnome-control-center (3.26) sidebar
-scrolledwindow.view > viewport.frame > stack > list {
-  > row.activatable {
-    padding: 0;
-  }
-}
-
 // gedit fixes
-statusbar {
+overlay > box.vertical > paned.horizontal > box.vertical {
+  statusbar {
     border-top: 1px solid $borders_color;
+  }
 }
 
 .gedit-search-slider {
