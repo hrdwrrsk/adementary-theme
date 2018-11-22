@@ -5891,7 +5891,7 @@ filechooserbutton:drop(active) {
  ***********/
 .sidebar {
   border-style: none;
-  background-color: #303b4c;
+  background-color: #282930;
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
@@ -5913,7 +5913,7 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:dir(rtl), stacksidebar.sidebar.right
 }
 
 .sidebar:backdrop {
-  background-color: #303745;
+  background-color: #2c2e35;
   border-color: #1c1d22;
   transition: 200ms ease-out;
 }
@@ -8105,11 +8105,11 @@ PanelSeparator {
 }
 
 scrolledwindow.view > viewport.frame > stack > list {
-  background-color: #2f3644;
+  background-color: #282930;
 }
 
 scrolledwindow.view > viewport.frame > stack > list:backdrop {
-  background-color: #2f3540;
+  background-color: #2c2e35;
 }
 
 scrolledwindow.view > viewport.frame > stack > list > row.activatable, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button {
@@ -8139,11 +8139,11 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 }
 
 .tweak-categories {
-  background-color: #2f3644;
+  background-color: #282930;
 }
 
 .tweak-categories:backdrop {
-  background-color: #2f3540;
+  background-color: #2c2e35;
 }
 
 .tweak-categories separator.horizontal {

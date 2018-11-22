@@ -50,7 +50,7 @@ stage {
   border-width: 1px;
   padding: 4px 28px;
   @include button(normal);
-  &:focus { @include button(focus); }
+  &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
 
@@ -67,7 +67,6 @@ stage {
   &:hover { @include button(hover); }
   &:insensitive { @include button(insensitive); }
   &:active { @include button(active); }
-  &:focus { @include button(focus); }
   padding: 4px;
 
   &:first-child {
@@ -1731,9 +1730,8 @@ StScrollBar {
     border-radius: 3px;
     border: 1px solid;
     color: $fg_color;
-    &:focus { @include button(focus); }
-    &:hover,&:checked { @include button(hover); }
-    &:active { @include button(active);}
+    &:hover { @include button(hover); }
+    &:active, &:checked { @include button(active);}
     &:grayed { //FIXME
       background-color: $osd_bg_color;
       color: $osd_fg_color;

@@ -37,11 +37,12 @@ stage {
   box-shadow: inset 0 1px white;
 }
 
-.button:focus {
+.button:hover {
   color: #2e2e2e;
+  border-color: #b3b3b3;
+  background-color: #e9e9e9;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
-  box-shadow: inset 0px 0px 0px 1px #3689e6;
 }
 
 .button:insensitive {
@@ -98,13 +99,6 @@ stage {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   text-shadow: none;
   icon-shadow: none;
-}
-
-.modal-dialog-linked-button:focus {
-  color: #2e2e2e;
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  box-shadow: inset 0px 0px 0px 1px #3689e6;
 }
 
 .modal-dialog-linked-button:first-child {
@@ -2156,14 +2150,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #2e2e2e;
 }
 
-.keyboard-key:focus {
-  color: #2e2e2e;
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  box-shadow: inset 0px 0px 0px 1px #3689e6;
-}
-
-.keyboard-key:hover, .keyboard-key:checked {
+.keyboard-key:hover {
   color: #2e2e2e;
   border-color: #b3b3b3;
   background-color: #e9e9e9;
@@ -2171,7 +2158,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   icon-shadow: 0 1px black;
 }
 
-.keyboard-key:active {
+.keyboard-key:active, .keyboard-key:checked {
   color: #2e2e2e;
   border-color: #b3b3b3;
   background-color: #d4d4d4;
