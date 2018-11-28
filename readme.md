@@ -1,4 +1,4 @@
-<img src="https://github.com/hrdwrrsk/tetra-gtk-theme/raw/master/data/logo.svg" alt="Logo" align="left" height="48" width="48"/> Tetra
+<img src="https://github.com/hrdwrrsk/tetra-gtk-theme/blob/master/data/logo.svg" alt="Logo" align="left" height="48" width="48"/> Tetra
 ======
 Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme with design influence from elementary OS stylesheet/theme.
 
