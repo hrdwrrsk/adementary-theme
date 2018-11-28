@@ -53,11 +53,11 @@ install() {
 	local dest="$1"
 	local name="$2"
 	local color="$3"
-	
+
 	[[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
 
 	local THEME_DIR="$dest/$name$color"
-	
+
 	# FIXME: install shell theme only in light variant
 	# local SHELL_THEME_DIR="$dest/$name"
 
@@ -80,7 +80,7 @@ install() {
 	cp -r "$SRC_DIR/gtk-2.0/gtkrc$color"						"$THEME_DIR/gtk-2.0/gtkrc"
 
 	cp -r "$SRC_DIR/gtk-3.0/gtk-common"						"$THEME_DIR/gtk-common"
-	
+
 	for version in "${GTK_VERSIONS[@]}"; do
 		if [[ "$version" == "3.22" ]]; then
 			mkdir -p							"$THEME_DIR/gtk-3.0"
@@ -98,7 +98,7 @@ install() {
 	done
 
 	mkdir -p									"$THEME_DIR/plank"
-	cp -r "$SRC_DIR/plank/dock.theme"						"$THEME_DIR/plank"
+	cp -r "$SRC_DIR/plank/dock$color.theme"						"$THEME_DIR/plank"
 
 	mkdir -p									"$THEME_DIR/xfwm4"
 	cp -r "$SRC_DIR/xfwm4${ELSE_DARK:-}/"{*.png,*.xpm,themerc}			"$THEME_DIR/xfwm4"
@@ -120,7 +120,7 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     -g|--gdm)
       gdm='true'
-      shift 1 
+      shift 1
       ;;
     -c|--color)
       shift

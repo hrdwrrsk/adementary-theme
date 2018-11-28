@@ -9,14 +9,14 @@
 }
 
 .budgie-panel {
-	background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
+	background-color: if($light-panel == 'false', rgba($dark_bg_color, 0.8), rgba($bg_color, 0.8));
 	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 
 	.alert { color: $selected_bg_color; }
 
 	&:backdrop {
-		background-color: $dark_bg_color;
-		color: $dark_fg_color;
+		background-color: if($light-panel == 'false', rgba($dark_bg_color, 0.8), rgba($bg_color, 0.8));
+		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 	}
 
 	&.transparent {

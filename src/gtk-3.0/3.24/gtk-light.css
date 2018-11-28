@@ -7090,7 +7090,7 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel {
-  background-color: #f3f3f3;
+  background-color: rgba(243, 243, 243, 0.8);
   color: #2e2e2e;
 }
 
@@ -7099,8 +7099,8 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel:backdrop {
-  background-color: #2E3038;
-  color: #eeeeee;
+  background-color: rgba(243, 243, 243, 0.8);
+  color: #2e2e2e;
 }
 
 .budgie-panel.transparent {
