@@ -1,13 +1,3 @@
-/* Strawberry */
-/* Orange */
-/* Banana */
-/* Lime */
-/* Blueberry */
-/* Grape */
-/* Cocoa */
-/* Silver */
-/* Slate */
-/* Black */
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
@@ -7907,56 +7897,6 @@ headerbar.titlebar.incognito-mode:backdrop {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: none;
   -gtk-icon-shadow: none;
-}
-
-window#ValaPanel.background {
-  background-color: #2E3038;
-  color: #eeeeee;
-}
-
-window#ValaPanel.background widget.-vala-panel-background > separator {
-  background-color: #333640;
-}
-
-button.flat.-panel-button,
-button.flat.-panel-icon-button {
-  min-width: 16px;
-  min-height: 16px;
-  border-radius: 0;
-  color: #eeeeee;
-}
-
-button.flat.-panel-button:hover, button.flat.-panel-button:active, button.flat.-panel-button:checked, button.flat.-panel-button:active:hover, button.flat.-panel-button:checked:hover,
-button.flat.-panel-icon-button:hover,
-button.flat.-panel-icon-button:active,
-button.flat.-panel-icon-button:checked,
-button.flat.-panel-icon-button:active:hover,
-button.flat.-panel-icon-button:checked:hover {
-  box-shadow: inset 0 -3px #3689e6;
-  background-color: transparent;
-  border: none;
-  background-image: none;
-  transition: none;
-}
-
-.unpinned button.flat.-panel-icon-button,
-.pinned button.flat.-panel-icon-button.running {
-  border: 0;
-  margin: 0;
-  box-shadow: inset 0 -3px #454957;
-}
-
-.unpinned button.flat.-panel-icon-button:hover, .unpinned button.flat.-panel-icon-button:active, .unpinned button.flat.-panel-icon-button:checked, .unpinned button.flat.-panel-icon-button:active:hover, .unpinned button.flat.-panel-icon-button:checked:hover,
-.pinned button.flat.-panel-icon-button.running:hover,
-.pinned button.flat.-panel-icon-button.running:active,
-.pinned button.flat.-panel-icon-button.running:checked,
-.pinned button.flat.-panel-icon-button.running:active:hover,
-.pinned button.flat.-panel-icon-button.running:checked:hover {
-  box-shadow: inset 0 -3px #3689e6;
-  background-color: transparent;
-  border: none;
-  background-image: none;
-  transition: none;
 }
 
 .lightdm-gtk-greeter #panel_window menubar {

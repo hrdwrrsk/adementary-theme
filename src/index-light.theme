@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Tetra
+Type=X-GNOME-Metatheme
+Comment=Adwaita-based theme with design influence from elementary OS stylesheet/gtk+ theme (light panel variant)
+Encoding=UTF-8
+GtkTheme=Tetra
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

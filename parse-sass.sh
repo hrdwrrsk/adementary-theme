@@ -8,7 +8,7 @@ fi
 
 SASSC_OPT=('-M' '-t' 'expanded')
 
-_COLOR_VARIANTS=('' '-dark')
+_COLOR_VARIANTS=('' '-dark' '-light')
 _SIZE_VARIANTS=('' '-compact')
 
 GS_VERSIONS=('3.20' '3.22' '3.24' '3.26' '3.28' '3.30')

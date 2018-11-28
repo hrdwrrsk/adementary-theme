@@ -7,7 +7,7 @@ SRC_DIR="$REPO_DIR/src"
 
 DEST_DIR="/usr/share/themes"
 THEME_NAME="Tetra"
-COLOR_VARIANTS=('' '-dark')
+COLOR_VARIANTS=('' '-dark' '-light')
 
 GTK_VERSIONS=('3.22' '3.24')
 GS_VERSIONS=('3.20' '3.22' '3.24' '3.26' '3.28' '3.30')
@@ -66,42 +66,42 @@ install() {
 
 	echo "Installing theme..."
 
-	mkdir -p														"$THEME_DIR"
-	cp -r "$SRC_DIR/index$color.theme"								"$THEME_DIR/index.theme"
+	mkdir -p									"$THEME_DIR"
+	cp -r "$SRC_DIR/index$color.theme"						"$THEME_DIR/index.theme"
 
-	mkdir -p														"$THEME_DIR/gnome-shell"
-	cp -r "$SRC_DIR/gnome-shell/assets${ELSE_DARK:-}"				"$THEME_DIR/gnome-shell/assets"
-	cp -r "$SRC_DIR/gnome-shell/pad-osd.css"						"$THEME_DIR/gnome-shell"
-	cp -r "$SRC_DIR/gnome-shell/$GS_VERSION/gnome-shell$color.css"	"$THEME_DIR/gnome-shell/gnome-shell.css"
+	mkdir -p									"$THEME_DIR/gnome-shell"
+	cp -r "$SRC_DIR/gnome-shell/assets$color"					"$THEME_DIR/gnome-shell/assets"
+	cp -r "$SRC_DIR/gnome-shell/pad-osd.css"					"$THEME_DIR/gnome-shell"
+	cp -r "$SRC_DIR/gnome-shell/$GS_VERSION/gnome-shell$color.css"			"$THEME_DIR/gnome-shell/gnome-shell.css"
 
-	mkdir -p														"$THEME_DIR/gtk-2.0"
+	mkdir -p									"$THEME_DIR/gtk-2.0"
 	cp -r "$SRC_DIR/gtk-2.0/"{apps.rc,hacks.rc,main.rc}				"$THEME_DIR/gtk-2.0"
 	cp -r "$SRC_DIR/gtk-2.0/assets${ELSE_DARK:-}"					"$THEME_DIR/gtk-2.0/assets"
-	cp -r "$SRC_DIR/gtk-2.0/gtkrc$color"							"$THEME_DIR/gtk-2.0/gtkrc"
+	cp -r "$SRC_DIR/gtk-2.0/gtkrc$color"						"$THEME_DIR/gtk-2.0/gtkrc"
 
-	cp -r "$SRC_DIR/gtk-3.0/gtk-common"								"$THEME_DIR/gtk-common"
+	cp -r "$SRC_DIR/gtk-3.0/gtk-common"						"$THEME_DIR/gtk-common"
 	
 	for version in "${GTK_VERSIONS[@]}"; do
 		if [[ "$version" == "3.22" ]]; then
-			mkdir -p														"$THEME_DIR/gtk-3.0"
-			cp -r "$SRC_DIR/gtk-3.0/$version/assets"						"$THEME_DIR/gtk-3.0/assets"
-			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"					"$THEME_DIR/gtk-3.0/gtk.css"
+			mkdir -p							"$THEME_DIR/gtk-3.0"
+			cp -r "$SRC_DIR/gtk-3.0/$version/assets"			"$THEME_DIR/gtk-3.0/assets"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"			"$THEME_DIR/gtk-3.0/gtk.css"
 			[[ "$color" != '-dark' ]] && \
-			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"					"$THEME_DIR/gtk-3.0/gtk-dark.css"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"			"$THEME_DIR/gtk-3.0/gtk-dark.css"
 		else
-			mkdir -p														"$THEME_DIR/gtk-$version"
-			cp -r "$SRC_DIR/gtk-3.0/$version/assets"						"$THEME_DIR/gtk-$version/assets"
-			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"					"$THEME_DIR/gtk-$version/gtk.css"
+			mkdir -p							"$THEME_DIR/gtk-$version"
+			cp -r "$SRC_DIR/gtk-3.0/$version/assets"			"$THEME_DIR/gtk-$version/assets"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"			"$THEME_DIR/gtk-$version/gtk.css"
 			[[ "$color" != '-dark' ]] && \
-			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"					"$THEME_DIR/gtk-$version/gtk-dark.css"
+			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"			"$THEME_DIR/gtk-$version/gtk-dark.css"
 		fi
 	done
 
-	mkdir -p														"$THEME_DIR/plank"
-	cp -r "$SRC_DIR/plank/dock.theme"								"$THEME_DIR/plank"
+	mkdir -p									"$THEME_DIR/plank"
+	cp -r "$SRC_DIR/plank/dock.theme"						"$THEME_DIR/plank"
 
-	mkdir -p														"$THEME_DIR/xfwm4"
-	cp -r "$SRC_DIR/xfwm4${ELSE_DARK:-}/"{*.png,*.xpm,themerc}		"$THEME_DIR/xfwm4"
+	mkdir -p									"$THEME_DIR/xfwm4"
+	cp -r "$SRC_DIR/xfwm4${ELSE_DARK:-}/"{*.png,*.xpm,themerc}			"$THEME_DIR/xfwm4"
 }
 
 while [[ "$#" -gt 0 ]]; do

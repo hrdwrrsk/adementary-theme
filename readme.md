@@ -1,10 +1,18 @@
-<img src="https://github.com/hrdwrrsk/tetra-gtk-theme/raw/master/logo.png" alt="Logo" align="left" height="48" width="48"/> Tetra
+<img src="https://github.com/hrdwrrsk/tetra-gtk-theme/raw/master/data/logo.svg" alt="Logo" align="left" height="48" width="48"/> Tetra
 ======
 Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme with design influence from elementary OS stylesheet/theme.
 
 -------------------
-![Screenshot](Screenshot.png)
-![Screenshot](Screenshot-dark.png)
+![Screenshot](/data/Screenshot.png)
+![Screenshot](/data/Screenshot-dark.png)
+-------------------
+This theme has come with **3 variants**
+
+**Variants** | **Description** | **Preview**
+:-: | :-: | :-:
+**Default** | Light variant with dark panel | ![Default](/data/variant-default.svg)
+**Dark** | Dark variant | ![Dark](/data/variant-dark.svg)
+**Light** | Light variant with light panel (and GNOME shell theme) | ![Light](/data/variant-light.svg)
 
 # Supported desktop environments
 - GNOME 3
