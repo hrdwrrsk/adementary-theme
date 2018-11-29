@@ -20,8 +20,20 @@
 	}
 
 	&.transparent {
-		background-color: if($light-panel == 'false', rgba($dark_bg_color, 0.8), rgba($bg_color, 0.8)); // same as gnome-shell adaptive panel transparency
-	}
+        background-color: transparent;
+        .top & {
+            border-bottom-color: transparent;
+        }
+        .bottom & {
+            border-top-color: transparent;
+        }
+        .left & {
+            border-right-color: transparent;
+        }
+        .right & {
+            border-left-color: transparent;
+        }
+    }
 
 	button {
 		@include button(undecorated);
