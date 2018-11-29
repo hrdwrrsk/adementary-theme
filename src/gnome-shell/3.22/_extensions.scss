@@ -14,7 +14,7 @@
 
 		> StWidget.focused .app-well-app-running-dot {
 			width: 12px;
-			background-color: if($variant == 'light', rgba(black, 0.8), rgba(white, 0.8));
+			background-color: $selected_bg_color;
 		}
 
 		.app-well-app .overview-icon,
@@ -41,6 +41,7 @@
 
 		&:hover .show-apps-icon {
 			background-color: if($variant == 'light', rgba(white, 0.7), rgba(black, 0.7));
+			color: if($variant == 'light', rgba(black, 0.77), rgba(white, 0.77));
 		}
 
 		&:checked .show-apps-icon {

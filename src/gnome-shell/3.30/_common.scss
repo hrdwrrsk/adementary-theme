@@ -833,7 +833,7 @@ StScrollBar {
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
       background-color: rgba(0, 0, 0, 0.01);
-      box-shadow: inset 0 2px 0px lighten($selected_bg_color,5%);
+      box-shadow: inset 0 2px 0px $selected_bg_color;
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
 
       & > .system-status-icon {
@@ -1418,9 +1418,9 @@ StScrollBar {
   .dash-label { //osd tooltip
     border-radius: 3px;
     padding: 7px 12px;
-    color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-    background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
-    box-shadow: 0 0 0 1px if($light-panel == 'false', $dark_borders_color, rgba(black, 0.22));
+    color: if($variant == 'dark', $dark_fg_color, $fg_color);
+    background-color: if($variant == 'dark', $dark_bg_color, $bg_color);
+    box-shadow: 0 0 0 1px if($variant == 'dark', $dark_borders_color, rgba(black, 0.22));
     text-align: center;
     -x-offset: 8px;
   }
