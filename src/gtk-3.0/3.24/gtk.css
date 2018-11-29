@@ -7104,7 +7104,23 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(46, 48, 56, 0.8);
+  background-color: transparent;
+}
+
+.top .budgie-panel.transparent {
+  border-bottom-color: transparent;
+}
+
+.bottom .budgie-panel.transparent {
+  border-top-color: transparent;
+}
+
+.left .budgie-panel.transparent {
+  border-right-color: transparent;
+}
+
+.right .budgie-panel.transparent {
+  border-left-color: transparent;
 }
 
 .budgie-panel button {
