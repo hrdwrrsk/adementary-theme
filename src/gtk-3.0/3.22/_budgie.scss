@@ -535,3 +535,21 @@ calendar.raven-calendar {
 .budgie-panel > box > widget > separator {
   background-color: $dark_borders_color;
 }
+
+.budgie-calendar-applet calendar {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 1px;
+}
+
+.budgie-calendar-applet calendar:selected {
+  background-color: #3689e6;
+}
+
+.budgie-calendar-applet .h1 {
+  font-size: 24px;
+}
+
+.budgie-calendar-applet .h2 {
+  font-size: 18px;
+}
