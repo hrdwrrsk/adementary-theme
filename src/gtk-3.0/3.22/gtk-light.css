@@ -5374,6 +5374,7 @@ progressbar:backdrop {
 
 progressbar trough {
   border: 1px solid #b3b3b3;
+  background-color: rgba(0, 0, 0, 0.02);
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
   border-radius: 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
@@ -5468,16 +5469,17 @@ levelbar block.low:backdrop {
 }
 
 levelbar block.high, levelbar block:not(.empty), levelbar block.full {
-  border-color: #376113;
-  background-image: linear-gradient(to bottom, #68b723, #66b322, #5ea620);
+  border-color: #67a121;
+  background-image: linear-gradient(to bottom, #9bdb4d, #99da49, #91d83c);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 levelbar block.high:backdrop, levelbar block:not(.empty):backdrop, levelbar block.full:backdrop {
-  background-image: linear-gradient(to bottom, #6dc025, #6abb24, #63ae21);
+  background-image: linear-gradient(to bottom, #a0dd55, #9ddc51, #96d945);
 }
 
 levelbar block.empty {
+  background-color: rgba(0, 0, 0, 0.02);
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
   border-color: #b3b3b3;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
@@ -7030,6 +7032,23 @@ popover.emoji-picker {
   padding-right: 0;
 }
 
+popover.emoji-picker entry {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  border-bottom: 1px solid #b3b3b3;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+popover.emoji-picker scrolledwindow {
+  border-bottom: 1px solid #b3b3b3;
+}
+
 button.emoji-section {
   border-color: transparent;
   border-width: 3px;
@@ -7083,6 +7102,7 @@ button.emoji-section:checked label {
 
 .budgie-container {
   background-color: transparent;
+  padding: 0;
 }
 
 .budgie-container:backdrop {
@@ -7090,8 +7110,9 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel {
-  background-color: rgba(243, 243, 243, 0.8);
+  background-color: rgba(243, 243, 243, 0.7);
   color: #2e2e2e;
+  text-shadow: none;
 }
 
 .budgie-panel .alert {
@@ -7099,28 +7120,13 @@ button.emoji-section:checked label {
 }
 
 .budgie-panel:backdrop {
-  background-color: rgba(243, 243, 243, 0.8);
+  background-color: rgba(243, 243, 243, 0.7);
   color: #2e2e2e;
 }
 
 .budgie-panel.transparent {
-  background-color: transparent;
-}
-
-.top .budgie-panel.transparent {
-  border-bottom-color: transparent;
-}
-
-.bottom .budgie-panel.transparent {
-  border-top-color: transparent;
-}
-
-.left .budgie-panel.transparent {
-  border-right-color: transparent;
-}
-
-.right .budgie-panel.transparent {
-  border-left-color: transparent;
+  background-color: rgba(243, 243, 243, 0.3);
+  text-shadow: none;
 }
 
 .budgie-panel button {
@@ -7132,30 +7138,38 @@ button.emoji-section:checked label {
   -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
   border-radius: 0;
   border: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
 }
 
 .budgie-panel button .flat label {
   color: #2e2e2e;
+  text-shadow: none;
 }
 
 .budgie-panel button .flat label:backdrop {
   color: #2e2e2e;
+  text-shadow: none;
 }
 
 .budgie-panel button label {
   color: #2e2e2e;
+  text-shadow: none;
 }
 
 .budgie-panel button label:backdrop {
   color: #2e2e2e;
+  text-shadow: none;
 }
 
 .budgie-panel button:backdrop {
   color: #2e2e2e;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
 }
 
 .budgie-panel button:hover {
-  box-shadow: inset 0 -3px #b3b3b3;
+  box-shadow: inset 0 -3px #2e2e2e;
   background-color: transparent;
   border: none;
   background-image: none;
@@ -7213,19 +7227,19 @@ button.emoji-section:checked label {
 }
 
 .top .budgie-panel {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid transparent;
 }
 
 .bottom .budgie-panel {
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid transparent;
 }
 
 .left .budgie-panel {
-  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid transparent;
 }
 
 .right .budgie-panel {
-  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid transparent;
 }
 
 button.budgie-menu-launcher {
@@ -7244,14 +7258,11 @@ button.budgie-menu-launcher image {
   padding: 0;
   border-radius: 0;
   border: none;
+  -gtk-icon-shadow: none;
 }
 
 .budgie-panel button.flat.launcher > image {
   opacity: 0.87;
-}
-
-.budgie-panel button.flat.launcher:hover {
-  -gtk-icon-effect: highlight;
 }
 
 .budgie-panel button.flat.launcher:hover > image {
@@ -7303,7 +7314,7 @@ button.budgie-menu-launcher image {
 
 .top .budgie-panel button#tasklist-button:hover,
 .top .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 0 3px #4e5362;
+  box-shadow: inset 0 3px #2e2e2e;
   background-color: transparent;
   border: none;
 }
@@ -7329,7 +7340,7 @@ button.budgie-menu-launcher image {
 
 .bottom .budgie-panel button#tasklist-button:hover,
 .bottom .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 0 -3px #4e5362;
+  box-shadow: inset 0 -3px #2e2e2e;
   background-color: transparent;
   border: none;
 }
@@ -7355,7 +7366,7 @@ button.budgie-menu-launcher image {
 
 .left .budgie-panel button#tasklist-button:hover,
 .left .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 3px 0 #4e5362;
+  box-shadow: inset 3px 0 #2e2e2e;
   background-color: transparent;
   border: none;
 }
@@ -7381,7 +7392,7 @@ button.budgie-menu-launcher image {
 
 .right .budgie-panel button#tasklist-button:hover,
 .right .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset -3px 0 #4e5362;
+  box-shadow: inset -3px 0 #2e2e2e;
   background-color: transparent;
   border: none;
 }
@@ -7414,7 +7425,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .top box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 0 3px #4e5362;
+  box-shadow: inset 0 3px #2e2e2e;
 }
 
 .top box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7422,7 +7433,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 0 -3px #4e5362;
+  box-shadow: inset 0 -3px #2e2e2e;
 }
 
 .bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7430,7 +7441,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .left box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 3px 0 #4e5362;
+  box-shadow: inset 3px 0 #2e2e2e;
 }
 
 .left box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7438,7 +7449,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .right box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset -3px 0 #4e5362;
+  box-shadow: inset -3px 0 #2e2e2e;
 }
 
 .right box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7477,6 +7488,10 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
   padding: 0 8px;
   color: #2e2e2e;
   font-weight: normal;
+}
+
+.budgie-popover:not(.budgie-menu) button.flat:not(.image-button):backdrop {
+  color: #2e2e2e;
 }
 
 .budgie-popover:not(.budgie-menu) button.flat:not(.image-button):disabled {
@@ -7543,6 +7558,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
   background-image: none;
   border: 0;
   box-shadow: none;
+  -gtk-icon-shadow: none;
   transition: none;
 }
 

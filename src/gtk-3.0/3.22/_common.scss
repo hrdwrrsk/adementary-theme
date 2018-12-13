@@ -3503,6 +3503,7 @@ progressbar {
 
   trough {
     border: 1px solid $borders_color;
+    background-color: if($variant == 'light', rgba(black, 0.02), rgba(white, 0.02));
     background-image: linear-gradient(to bottom,
                                       transparent,
                                       rgba(black, 0.01),
@@ -3640,11 +3641,11 @@ levelbar {
     &.high,
     &:not(.empty),
     &.full {
-      border-color: if($variant == 'light', darken($success_color, 20%), $borders_color);
+      border-color: if($variant == 'light', darken($LIME_300, 20%), $borders_color);
       background-image: linear-gradient(to bottom,
-                                        $success_color,
-                                        darken($success_color, 1%),
-                                        darken($success_color, 4%));
+                                        $LIME_300,
+                                        darken($LIME_300, 1%),
+                                        darken($LIME_300, 4%));
       box-shadow: inset 0 1px rgba(white, 0.25),
                   0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
                   inset 0 0 0 1px rgba(white, 0.05),
@@ -3652,13 +3653,14 @@ levelbar {
 
       &:backdrop {
         background-image: linear-gradient(to bottom,
-                                          lighten($success_color, 2%),
-                                          lighten($success_color, 1%),
-                                          darken($success_color, 2%));
+                                          lighten($LIME_300, 2%),
+                                          lighten($LIME_300, 1%),
+                                          darken($LIME_300, 2%));
       };
     }
 
     &.empty {
+    	background-color: if($variant == 'light', rgba(black, 0.02), rgba(white, 0.02));
       background-image: linear-gradient(to bottom,
                                         transparent,
                                         rgba(black, 0.01),
@@ -4763,7 +4765,19 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
  * Emoji *
  ********/
 
-popover.emoji-picker { padding-left: 0; padding-right: 0; }
+popover.emoji-picker { 
+	padding-left: 0; padding-right: 0; 
+	
+	entry {
+		@include button(undecorated);
+		border-bottom: 1px solid $borders_color;
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0;
+	}
+	
+	scrolledwindow { border-bottom: 1px solid $borders_color; }
+}
 
 button.emoji-section {
   border-color: transparent;

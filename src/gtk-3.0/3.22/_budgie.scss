@@ -4,58 +4,71 @@
 
 .budgie-container {
 	background-color: transparent;
+	padding: 0;
 
-	&:backdrop { background-color: transparent; }
+	&:backdrop {
+		background-color: transparent;
+	}
 }
 
 .budgie-panel {
-	background-color: if($light-panel == 'false', rgba($dark_bg_color, 0.8), rgba($bg_color, 0.8));
+	background-color: if($light-panel == 'false', rgba(black, 0.9), rgba($bg_color, 0.7));
 	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+
+	text-shadow: none;
 
 	.alert { color: $selected_bg_color; }
 
 	&:backdrop {
-		background-color: if($light-panel == 'false', rgba($dark_bg_color, 0.8), rgba($bg_color, 0.8));
+		background-color: if($light-panel == 'false', rgba(black, 0.9), rgba($bg_color, 0.7));
 		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 	}
 
 	&.transparent {
-        background-color: transparent;
-        .top & {
-            border-bottom-color: transparent;
-        }
-        .bottom & {
-            border-top-color: transparent;
-        }
-        .left & {
-            border-right-color: transparent;
-        }
-        .right & {
-            border-left-color: transparent;
-        }
-    }
+    background-color: if($light-panel == 'false', rgba(black, 0.3), rgba($bg_color, 0.3));
+
+		text-shadow: none;
+  }
 
 	button {
 		@include button(undecorated);
 		border-radius: 0;
 		border: none;
 
+		text-shadow: none;
+		-gtk-icon-shadow: none;
+
 		.flat label {
 			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 
-			&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
+			text-shadow: none;
+
+			&:backdrop {
+				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+
+				text-shadow: none;
+			}
 		}
 
 		label {
 			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 
-			&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
+			text-shadow: none;
+
+			&:backdrop {
+				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+				text-shadow: none;
+			}
 		}
 
-		&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
+		&:backdrop {
+			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+			text-shadow: none;
+			-gtk-icon-shadow: none;
+		}
 
 		&:hover {
-			box-shadow: inset 0 -3px if($light-panel == 'false', $dark_fg_color, $borders_color);
+			box-shadow: inset 0 -3px if($light-panel == 'false', $dark_fg_color, $fg_color);
 			background-color: transparent;
 			border: none;
 			background-image: none;
@@ -113,7 +126,7 @@
 																 (left, right),
 																 (right, left) {
 	.#{$panel_pos} .budgie-panel {
-		border-#{$border_pos}: 1px solid  if($light-panel == 'false', $dark_borders_color, rgba(black, 0.5));
+		border-#{$border_pos}: 1px solid transparent;
 	}
 }
 
@@ -138,12 +151,14 @@ button.budgie-menu-launcher {
     border-radius: 0;
     border: none;
 
+		-gtk-icon-shadow: none;
+
     > image {
       opacity: 0.87;
     }
 
     &:hover {
-      -gtk-icon-effect: highlight;
+      // -gtk-icon-effect: highlight;
 
       > image { opacity: 1.0; }
     }
@@ -186,7 +201,7 @@ button.budgie-menu-launcher {
     button#tasklist-button,
     button.flat.launcher {
       &:hover {
-        box-shadow: inset #{$_line} lighten($dark_base_color, 12%);
+        box-shadow: inset #{$_line} if($light-panel == 'false', lighten($dark_base_color, 12%), $fg_color);
         background-color: transparent;
         border: none;
       }
@@ -230,7 +245,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
   .#{$position} {
     box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
       &:not(:checked):hover {
-        box-shadow: inset #{$_line} lighten($dark_base_color, 12%);
+        box-shadow: inset #{$_line} if($light-panel == 'false', lighten($dark_base_color, 12%), $fg_color);
         &.running {
           box-shadow: inset #{$_line} $selected_bg_color;
         }
@@ -262,6 +277,8 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
     padding: 0 8px;
     color: $fg_color;
     font-weight: normal;
+
+		&:backdrop { color: $fg_color; }
 
     &:disabled { color: $insensitive_fg_color; }
   }
@@ -321,6 +338,8 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
 		background-image: none;
 		border: 0;
 		box-shadow: none;
+
+		-gtk-icon-shadow: none;
 
 		transition: none;
 
