@@ -96,6 +96,9 @@ install() {
 			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"			"$THEME_DIR/gtk-$version/gtk-dark.css"
 		fi
 	done
+	
+	mkdir -p									"$THEME_DIR/metacity-1"
+	cp -r "$SRC_DIR/metacity-1/metacity-theme-3.xml"	"$THEME_DIR/metacity-1"
 
 	mkdir -p									"$THEME_DIR/plank"
 	cp -r "$SRC_DIR/plank/dock$color.theme"						"$THEME_DIR/plank"

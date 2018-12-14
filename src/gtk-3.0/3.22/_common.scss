@@ -4765,9 +4765,9 @@ stackswitcher button.text-button.circular { // FIXME aggregate with buttons
  * Emoji *
  ********/
 
-popover.emoji-picker { 
-	padding-left: 0; padding-right: 0; 
-	
+popover.emoji-picker {
+	padding-left: 0; padding-right: 0;
+
 	entry {
 		@include button(undecorated);
 		border-bottom: 1px solid $borders_color;
@@ -4775,7 +4775,7 @@ popover.emoji-picker {
 		box-shadow: none;
 		margin: 0;
 	}
-	
+
 	scrolledwindow { border-bottom: 1px solid $borders_color; }
 }
 
