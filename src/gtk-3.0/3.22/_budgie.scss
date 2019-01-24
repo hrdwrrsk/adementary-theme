@@ -3,25 +3,20 @@
 // some bits from Adapta, some bits written by me
 
 .budgie-container {
-	background-color: transparent;
-	padding: 0;
-
-	&:backdrop {
+	&, &:backdrop {
 		background-color: transparent;
+		padding: 0;
 	}
 }
 
 .budgie-panel {
-	background-color: if($light-panel == 'false', rgba(black, 0.9), rgba($bg_color, 0.7));
-	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-	text-shadow: none;
-
-	.alert { color: $selected_bg_color; }
-
-	&:backdrop {
+	&, &:backdrop {
 		background-color: if($light-panel == 'false', rgba(black, 0.9), rgba($bg_color, 0.7));
 		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+
+		text-shadow: none;
+
+		.alert { color: $selected_bg_color; }
 	}
 
 	&.transparent {
@@ -31,19 +26,19 @@
   }
 
 	button {
-		@include button(undecorated);
-		border-radius: 0;
-		border: none;
-
-		text-shadow: none;
-		-gtk-icon-shadow: none;
-
-		.flat label {
-			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+		&, &:backdrop {
+			@include button(undecorated);
+			border-radius: 0;
+			border: none;
 
 			text-shadow: none;
+			-gtk-icon-shadow: none;
 
-			&:backdrop {
+			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+		}
+
+		.flat label {
+			&, &:backdrop {
 				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 
 				text-shadow: none;
@@ -51,20 +46,10 @@
 		}
 
 		label {
-			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-			text-shadow: none;
-
-			&:backdrop {
+			&, &:backdrop {
 				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 				text-shadow: none;
 			}
-		}
-
-		&:backdrop {
-			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-			text-shadow: none;
-			-gtk-icon-shadow: none;
 		}
 
 		&:hover {
@@ -75,49 +60,24 @@
 			transition: none;
 		}
 
-		&:active {
-			box-shadow: inset 0 -3px $selected_bg_color;
-			background-color: transparent;
-			background-image: none;
-			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-			&:backdrop {
+		&:active, &:checked {
+			&, &:backdrop {
 				box-shadow: inset 0 -3px $selected_bg_color;
+				background-color: transparent;
 				background-image: none;
 				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 			}
 
 			label {
-				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-				&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
-			}
-		}
-
-		&:checked {
-			box-shadow: inset 0 -3px $selected_bg_color;
-			background-color: transparent;
-			background-image: none;
-			color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-			&:backdrop {
-				box-shadow: inset 0 -3px $selected_bg_color;
-				background-image: none;
-				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-			}
-
-			label {
-				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-
-				&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
+				&, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
 			}
 		}
 	}
 }
 
 .budgie-clock-applet {
-	label { color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-		&:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
+	label {
+		&, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
 	}
 }
 
@@ -126,7 +86,7 @@
 																 (left, right),
 																 (right, left) {
 	.#{$panel_pos} .budgie-panel {
-		border-#{$border_pos}: 1px solid transparent;
+		border-#{$border_pos}: 1px solid if($light-panel == 'true', rgba(black, 0.4), rgba(black, 0.22));
 	}
 }
 
@@ -136,7 +96,10 @@ button.budgie-menu-launcher {
   // i dislike how menu icons in budgie scaled
   // so i use image assets for menu icons (you can disable it by add double slash (//) in image node.
   image {
-		background-image: -gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg"));
+		background-image:
+		if($light-panel == 'true',
+			-gtk-scaled(url("assets/budgie-menu-symbolic-light.svg"), url("assets/budgie-menu-symbolic-light@2.svg")),
+			-gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg")));
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 16px;
@@ -245,115 +208,166 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
   .#{$position} {
     box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
       &:not(:checked):hover {
-        box-shadow: inset #{$_line} if($light-panel == 'false', lighten($dark_base_color, 12%), $fg_color);
+				@if $light-panel == 'true' {
+					box-shadow: inset #{$_line} rgba(black, 0.4);
+				}
+				@else {
+					box-shadow: inset #{$_line} rgba(white, 0.4);
+				}
+
         &.running {
-          box-shadow: inset #{$_line} $selected_bg_color;
+	        box-shadow: inset #{$_line} $selected_bg_color;
         }
       }
     }
   }
 }
 
-.budgie-popover {
-  border-radius: 5px;
-  background-color: $popover_bg_color;
-	box-shadow: 0 1px 2px transparentize(black, 0.7);
-	border: 1px solid $borders_color;
+// Icon tasklist popover
+stack.icon-popover-stack {
+	box.horizontal > button.flat {
+		margin: 5px;
+		text-shadow: none;
+	}
 
-	.container { padding: 0px; }
+	grid.horizontal {
+		> button.flat.image-button {
+			margin: 5px;
+			-gtk-icon-shadow: none;
+		}
+	}
+}
 
-	border { border: none; }
+// Popovers
+window.budgie-popover:not(.csd) {
+  &.background {
+		padding: 2px;
+		border: 1px solid $borders_color;
+		border-radius: 5px;
+		background-color: $popover_bg_color;
+		background-clip: border-box;
 
-  list { background-color: transparent; }
+		box-shadow: 0 1px 2px transparentize(black, 0.7);
+	}
 
-  row {
-    padding: 0;
+	> frame.container {
+		&,
+		> border {
+			border-style: none;
+			background-color: transparent;
+		}
+	}
 
-    &:hover { box-shadow: none; }
-  }
+	button {
+		@include button(undecorated);
+		-gtk-icon-shadow: none;
+		text-shadow: none;
 
-  &:not(.budgie-menu) button.flat:not(.image-button) {
-    min-height: 24px;
-    padding: 0 8px;
-    color: $fg_color;
-    font-weight: normal;
+		&:hover, &:checked { background-color: $popover_hover_color; }
+	}
 
-		&:backdrop { color: $fg_color; }
-
-    &:disabled { color: $insensitive_fg_color; }
-  }
-
-  &.budgie-menu {
-    .container { padding: 0; }
-  }
-
-  &.user-menu {
-    .container { padding: 8px; }
-
-    separator { margin: 4px 0; }
-  }
-
-  &.sound-popover {
-    separator { margin: 3px 0; }
-  }
-
-  &.night-light-indicator {
-    .container { padding: 8px; }
-  }
-
-  &.workspace-popover {
-    .container { padding: 2px 8px 8px; }
-
-    separator { margin: 4px 0; }
-
-    flowboxchild { padding: 0; }
-  }
+	&.budgie-menu,
+	&.caffeine-popover,
+	&.night-light-indicator,
+	&.places-menu,
+	&.user-menu,
+	&.workspace-popover {
+		> frame.container { padding: 4px; }
+	}
 }
 
 .budgie-menu {
-  &.background {
-    padding: 0;
-    background-color: $base_color;
-  }
-
-  scrollbar,
-  entry.search { background-color: transparent; }
-
-  entry.search {
-    border-style: none;
-    border-bottom: 1px solid $borders_color;
-    border-radius: 1px;
+	scrolledwindow,
+  list,
+  row,
+  scrollbar { // reset styling
+    min-width: 0;
+    min-height: 0;
+    border: none;
+    background: none;
     box-shadow: none;
-    font-size: 120%;
-    padding-top: 6px;
-    padding-bottom: 6px;
   }
 
-  button {
-    @extend row.activatable;
-    min-height: 32px;
-    padding: 0 8px;
-    border-radius: 0;
-    color: $fg_color;
-		background-image: none;
-		border: 0;
-		box-shadow: none;
+	entry {
+		margin-bottom: 4px;
+	}
 
-		-gtk-icon-shadow: none;
+	scrolledwindow {
+		border: 1px solid $borders_color;
+		background-color: $base_color;
+	}
 
-		transition: none;
-
-		&:active, &:checked {
-			background-color: $selected_bg_color;
-			color: $selected_fg_color;
-		}
-  }
-
-  row {
+	row.activatable { // reset background
     padding: 0;
+    background-image: none;
+    background-color: $base_color;
+    color: $fg_color;
 
-    &:hover { box-shadow: none; }
-  }
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0;
+
+		&:hover { background-color: if(variant == light, transparentize($fg_color, 0.8), transparentize($fg_color, 0.85)); }
+
+		button { background: none; }
+	}
+
+	.categories {
+		border: 1px solid $borders_color;
+		background-color: $sidebar_bg_color; // use sidebar bg
+
+		&:dir(ltr) { border-right: 0; }
+		&:dir(rtl) { border-left: 0; }
+
+		button.flat.radio.category-button {
+			border-radius: 0;
+			border-left: 0;
+			border-right: 0;
+
+			text-shadow: none;
+
+			&:hover { background-color: if(variant == light, transparentize($fg_color, 0.9), transparentize($fg_color, 0.95)); }
+
+			&:checked {
+				color: $selected_fg_color;
+				background-image: linear-gradient(to bottom,
+	                                        $selected_bg_color,
+	                                        darken($selected_bg_color, 1%),
+	                                        darken($selected_bg_color, 4%));
+	      border-color: if($variant == 'light', darken($selected_bg_color, 10%), $borders_color);
+	      box-shadow: inset 0 1px rgba(white, 0.25),
+	                  inset 0 0 0 1px rgba(white, 0.05),
+	                  inset 0 -1px rgba(white, 0.1);
+
+				&:hover {
+					background-image: linear-gradient(to bottom,
+							              lighten($selected_bg_color, 4%),
+							              lighten($selected_bg_color, 3%),
+							              $selected_bg_color);
+				}
+
+				&:active {
+					background-color: darken($selected_bg_color, 4%);
+					background-image: none;
+					box-shadow: inset 0 0 0 1px rgba(black, 0.05);
+				}
+			}
+		}
+	}
+}
+
+// User menu
+.user-menu {
+	list,
+	row { // reset styling
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+
+	row.activatable {
+		&:hover, &:selected { background-color: $bg_color; }
+	}
 }
 
 // Raven
@@ -538,17 +552,23 @@ calendar.raven-calendar {
   .failure { color: $destructive_color; }
 }
 
-.budgie-run-dialog {
+.background.csd.budgie-run-dialog {
   @extend %budgie_dialog;
 
-  background-color: $base_color;
+  background-color: $bg_color;
 
   entry.search {
 		margin: 10px;
-		border-radius: 3px;
+		//border-radius: 3px;
 	}
 
-	scrolledwindow { border-top: 1px solid $borders_color; }
+	scrolledwindow {
+		background-color: $base_color;
+		border: 1px solid $borders_color;
+		border-radius: 3px;
+
+		margin: 0 10px 10px;
+	}
 }
 
 .budgie-panel > box > widget > separator {

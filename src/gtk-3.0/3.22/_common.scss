@@ -1984,13 +1984,22 @@ menubar,
   }
 }
 
+// Needed to make the border-radius of menus work
+// otherwise the background bleeds out of the menu edges
+.background.popup { background-color: transparent; }
+
 menu,
 .menu,
 .context-menu {
   margin: 4px; // see https://bugzilla.gnome.org/show_bug.cgi?id=591258
-  padding: 2px 0px;
+  padding: 6px 0px;
   background-color: $menu_color;
   border: 1px solid $borders_color; // adds borders in a non composited env
+
+  border-radius: 3px;
+
+  // add highlight effect
+  box-shadow: inset 0 1px rgba(white, 0.05);
 
   .csd & { border: none; }  // axes borders in a composited env
 
@@ -2054,12 +2063,14 @@ menu,
     &.top {
       margin-top: -6px;
       border-bottom: 1px solid mix($fg_color, $base_color, 10%);
+      border-radius: 3px 3px 0 0;
       -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
     }
 
     &.bottom {
       margin-bottom: -6px;
       border-top: 1px solid mix($fg_color, $base_color, 10%);
+      border-radius: 0 0 3px 3px;
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     }
 
@@ -4606,7 +4617,7 @@ decoration {
   .ssd & { box-shadow: 0 0 0 1px $_wm_border; } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: 0;
+    border-radius: 3px;
     box-shadow: 0 1px 2px transparentize(black, 0.8),
                 0 0 0 1px transparentize($_wm_border, 0.1);
   }
@@ -4769,14 +4780,16 @@ popover.emoji-picker {
 	padding-left: 0; padding-right: 0;
 
 	entry {
-		@include button(undecorated);
-		border-bottom: 1px solid $borders_color;
-		border-radius: 0;
-		box-shadow: none;
-		margin: 0;
+		margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 6px;
+    margin-bottom: 7px;
 	}
 
-	scrolledwindow { border-bottom: 1px solid $borders_color; }
+	scrolledwindow {
+    border-top: 1px solid $borders_color;
+    border-bottom: 1px solid $borders_color;
+  }
 }
 
 button.emoji-section {

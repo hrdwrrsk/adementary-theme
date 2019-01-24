@@ -3426,13 +3426,19 @@ menubar > menuitem:disabled,
   box-shadow: none;
 }
 
+.background.popup {
+  background-color: transparent;
+}
+
 menu,
 .menu,
 .context-menu {
   margin: 4px;
-  padding: 2px 0px;
+  padding: 6px 0px;
   background-color: #f8f8f8;
   border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .csd menu, .csd
@@ -3540,6 +3546,7 @@ menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -6px;
   border-bottom: 1px solid #e4e4e4;
+  border-radius: 3px 3px 0 0;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
@@ -3548,6 +3555,7 @@ menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -6px;
   border-top: 1px solid #e4e4e4;
+  border-radius: 0 0 3px 3px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
@@ -5723,27 +5731,27 @@ row:backdrop {
   transition: 200ms ease-out;
 }
 
-row.activatable.has-open-popup, .budgie-menu button.has-open-popup, row.activatable:hover, .budgie-menu button:hover {
+row.activatable.has-open-popup, row.activatable:hover {
   background-color: rgba(46, 46, 46, 0.05);
 }
 
-row.activatable:active, .budgie-menu button:active {
+row.activatable:active {
   box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-row.activatable:backdrop:hover, .budgie-menu button:backdrop:hover {
+row.activatable:backdrop:hover {
   background-color: transparent;
 }
 
-row.activatable:selected:active, .budgie-menu button:selected:active {
+row.activatable:selected:active {
   box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.5);
 }
 
-row.activatable:selected.has-open-popup, .budgie-menu button:selected.has-open-popup, row.activatable:selected:hover, .budgie-menu button:selected:hover {
+row.activatable:selected.has-open-popup, row.activatable:selected:hover {
   background-color: #3580d4;
 }
 
-row.activatable:selected:backdrop, .budgie-menu button:selected:backdrop {
+row.activatable:selected:backdrop {
   background-color: #3689e6;
 }
 
@@ -6092,7 +6100,7 @@ placesview .server-list-button:checked > image {
   -gtk-icon-transform: rotate(-0.5turn);
 }
 
-placesview row.activatable:hover, placesview .budgie-menu button:hover, .budgie-menu placesview button:hover {
+placesview row.activatable:hover {
   background-color: transparent;
 }
 
@@ -6836,7 +6844,7 @@ decoration:backdrop {
 }
 
 .csd.popup decoration {
-  border-radius: 0;
+  border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
 }
 
@@ -7033,19 +7041,14 @@ popover.emoji-picker {
 }
 
 popover.emoji-picker entry {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  border-bottom: 1px solid #b3b3b3;
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 6px;
+  margin-bottom: 7px;
 }
 
 popover.emoji-picker scrolledwindow {
+  border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #b3b3b3;
 }
 
@@ -7100,28 +7103,19 @@ button.emoji-section:checked label {
   background: #3689e6;
 }
 
-.budgie-container {
+.budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;
 }
 
-.budgie-container:backdrop {
-  background-color: transparent;
-}
-
-.budgie-panel {
+.budgie-panel, .budgie-panel:backdrop {
   background-color: rgba(243, 243, 243, 0.7);
   color: #2e2e2e;
   text-shadow: none;
 }
 
-.budgie-panel .alert {
+.budgie-panel .alert, .budgie-panel:backdrop .alert {
   color: #3689e6;
-}
-
-.budgie-panel:backdrop {
-  background-color: rgba(243, 243, 243, 0.7);
-  color: #2e2e2e;
 }
 
 .budgie-panel.transparent {
@@ -7129,7 +7123,7 @@ button.emoji-section:checked label {
   text-shadow: none;
 }
 
-.budgie-panel button {
+.budgie-panel button, .budgie-panel button:backdrop {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -7140,32 +7134,17 @@ button.emoji-section:checked label {
   border: none;
   text-shadow: none;
   -gtk-icon-shadow: none;
+  color: #2e2e2e;
 }
 
-.budgie-panel button .flat label {
+.budgie-panel button .flat label, .budgie-panel button .flat label:backdrop {
   color: #2e2e2e;
   text-shadow: none;
 }
 
-.budgie-panel button .flat label:backdrop {
+.budgie-panel button label, .budgie-panel button label:backdrop {
   color: #2e2e2e;
   text-shadow: none;
-}
-
-.budgie-panel button label {
-  color: #2e2e2e;
-  text-shadow: none;
-}
-
-.budgie-panel button label:backdrop {
-  color: #2e2e2e;
-  text-shadow: none;
-}
-
-.budgie-panel button:backdrop {
-  color: #2e2e2e;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
 }
 
 .budgie-panel button:hover {
@@ -7176,70 +7155,35 @@ button.emoji-section:checked label {
   transition: none;
 }
 
-.budgie-panel button:active {
+.budgie-panel button:active, .budgie-panel button:active:backdrop, .budgie-panel button:checked, .budgie-panel button:checked:backdrop {
   box-shadow: inset 0 -3px #3689e6;
   background-color: transparent;
   background-image: none;
   color: #2e2e2e;
 }
 
-.budgie-panel button:active:backdrop {
-  box-shadow: inset 0 -3px #3689e6;
-  background-image: none;
+.budgie-panel button:active label, .budgie-panel button:active label:backdrop, .budgie-panel button:checked label, .budgie-panel button:checked label:backdrop {
   color: #2e2e2e;
 }
 
-.budgie-panel button:active label {
-  color: #2e2e2e;
-}
-
-.budgie-panel button:active label:backdrop {
-  color: #2e2e2e;
-}
-
-.budgie-panel button:checked {
-  box-shadow: inset 0 -3px #3689e6;
-  background-color: transparent;
-  background-image: none;
-  color: #2e2e2e;
-}
-
-.budgie-panel button:checked:backdrop {
-  box-shadow: inset 0 -3px #3689e6;
-  background-image: none;
-  color: #2e2e2e;
-}
-
-.budgie-panel button:checked label {
-  color: #2e2e2e;
-}
-
-.budgie-panel button:checked label:backdrop {
-  color: #2e2e2e;
-}
-
-.budgie-clock-applet label {
-  color: #2e2e2e;
-}
-
-.budgie-clock-applet label:backdrop {
+.budgie-clock-applet label, .budgie-clock-applet label:backdrop {
   color: #2e2e2e;
 }
 
 .top .budgie-panel {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .bottom .budgie-panel {
-  border-top: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .left .budgie-panel {
-  border-right: 1px solid transparent;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .right .budgie-panel {
-  border-left: 1px solid transparent;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 button.budgie-menu-launcher {
@@ -7247,7 +7191,7 @@ button.budgie-menu-launcher {
 }
 
 button.budgie-menu-launcher image {
-  background-image: -gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg"));
+  background-image: -gtk-scaled(url("assets/budgie-menu-symbolic-light.svg"), url("assets/budgie-menu-symbolic-light@2.svg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -7425,7 +7369,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .top box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 0 3px #2e2e2e;
+  box-shadow: inset 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .top box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7433,7 +7377,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 0 -3px #2e2e2e;
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4);
 }
 
 .bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7441,7 +7385,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .left box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset 3px 0 #2e2e2e;
+  box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 .left box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
@@ -7449,130 +7393,145 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
 }
 
 .right box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
-  box-shadow: inset -3px 0 #2e2e2e;
+  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4);
 }
 
 .right box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover.running {
   box-shadow: inset -3px 0 #3689e6;
 }
 
-.budgie-popover {
+stack.icon-popover-stack box.horizontal > button.flat {
+  margin: 5px;
+  text-shadow: none;
+}
+
+stack.icon-popover-stack grid.horizontal > button.flat.image-button {
+  margin: 5px;
+  -gtk-icon-shadow: none;
+}
+
+window.budgie-popover:not(.csd).background {
+  padding: 2px;
+  border: 1px solid #b3b3b3;
   border-radius: 5px;
   background-color: #f3f3f3;
+  background-clip: border-box;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  border: 1px solid #b3b3b3;
 }
 
-.budgie-popover .container {
-  padding: 0px;
-}
-
-.budgie-popover border {
-  border: none;
-}
-
-.budgie-popover list {
+window.budgie-popover:not(.csd) > frame.container,
+window.budgie-popover:not(.csd) > frame.container > border {
+  border-style: none;
   background-color: transparent;
 }
 
-.budgie-popover row {
-  padding: 0;
+window.budgie-popover:not(.csd) button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  -gtk-icon-shadow: none;
+  text-shadow: none;
 }
 
-.budgie-popover row:hover {
+window.budgie-popover:not(.csd) button:hover, window.budgie-popover:not(.csd) button:checked {
+  background-color: #dfdfdf;
+}
+
+window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-popover:not(.csd).caffeine-popover > frame.container, window.budgie-popover:not(.csd).night-light-indicator > frame.container, window.budgie-popover:not(.csd).places-menu > frame.container, window.budgie-popover:not(.csd).user-menu > frame.container, window.budgie-popover:not(.csd).workspace-popover > frame.container {
+  padding: 4px;
+}
+
+.budgie-menu scrolledwindow,
+.budgie-menu list,
+.budgie-menu row,
+.budgie-menu scrollbar {
+  min-width: 0;
+  min-height: 0;
+  border: none;
+  background: none;
   box-shadow: none;
 }
 
-.budgie-popover:not(.budgie-menu) button.flat:not(.image-button) {
-  min-height: 24px;
-  padding: 0 8px;
-  color: #2e2e2e;
-  font-weight: normal;
+.budgie-menu entry {
+  margin-bottom: 4px;
 }
 
-.budgie-popover:not(.budgie-menu) button.flat:not(.image-button):backdrop {
-  color: #2e2e2e;
-}
-
-.budgie-popover:not(.budgie-menu) button.flat:not(.image-button):disabled {
-  color: #919191;
-}
-
-.budgie-popover.budgie-menu .container {
-  padding: 0;
-}
-
-.budgie-popover.user-menu .container {
-  padding: 8px;
-}
-
-.budgie-popover.user-menu separator {
-  margin: 4px 0;
-}
-
-.budgie-popover.sound-popover separator {
-  margin: 3px 0;
-}
-
-.budgie-popover.night-light-indicator .container {
-  padding: 8px;
-}
-
-.budgie-popover.workspace-popover .container {
-  padding: 2px 8px 8px;
-}
-
-.budgie-popover.workspace-popover separator {
-  margin: 4px 0;
-}
-
-.budgie-popover.workspace-popover flowboxchild {
-  padding: 0;
-}
-
-.budgie-menu.background {
-  padding: 0;
+.budgie-menu scrolledwindow {
+  border: 1px solid #b3b3b3;
   background-color: #f8f8f8;
 }
 
-.budgie-menu scrollbar,
-.budgie-menu entry.search {
-  background-color: transparent;
-}
-
-.budgie-menu entry.search {
-  border-style: none;
-  border-bottom: 1px solid #b3b3b3;
-  border-radius: 1px;
-  box-shadow: none;
-  font-size: 120%;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.budgie-menu button {
-  min-height: 32px;
-  padding: 0 8px;
-  border-radius: 0;
-  color: #2e2e2e;
-  background-image: none;
-  border: 0;
-  box-shadow: none;
-  -gtk-icon-shadow: none;
-  transition: none;
-}
-
-.budgie-menu button:active, .budgie-menu button:checked {
-  background-color: #3689e6;
-  color: #ffffff;
-}
-
-.budgie-menu row {
+.budgie-menu row.activatable {
   padding: 0;
+  background-image: none;
+  background-color: #f8f8f8;
+  color: #2e2e2e;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
 }
 
-.budgie-menu row:hover {
+.budgie-menu row.activatable:hover {
+  background-color: rgba(46, 46, 46, 0.15);
+}
+
+.budgie-menu row.activatable button {
+  background: none;
+}
+
+.budgie-menu .categories {
+  border: 1px solid #b3b3b3;
+  background-color: #e2e2e2;
+}
+
+.budgie-menu .categories:dir(ltr) {
+  border-right: 0;
+}
+
+.budgie-menu .categories:dir(rtl) {
+  border-left: 0;
+}
+
+.budgie-menu .categories button.flat.radio.category-button {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  text-shadow: none;
+}
+
+.budgie-menu .categories button.flat.radio.category-button:hover {
+  background-color: rgba(46, 46, 46, 0.05);
+}
+
+.budgie-menu .categories button.flat.radio.category-button:checked {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #3689e6, #3186e5, #247ee4);
+  border-color: #1a6fcf;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.budgie-menu .categories button.flat.radio.category-button:checked:hover {
+  background-image: linear-gradient(to bottom, #4894e8, #4491e8, #3689e6);
+}
+
+.budgie-menu .categories button.flat.radio.category-button:checked:active {
+  background-color: #247ee4;
+  background-image: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.user-menu list,
+.user-menu row {
+  border: none;
+  background: none;
   box-shadow: none;
+}
+
+.user-menu row.activatable:hover, .user-menu row.activatable:selected {
+  background-color: #f3f3f3;
 }
 
 frame.raven-frame > border {
@@ -7726,12 +7685,12 @@ calendar.raven-calendar:selected {
   background-color: #f3f3f3;
 }
 
-.budgie-session-dialog, .budgie-polkit-dialog, .budgie-run-dialog {
+.budgie-session-dialog, .budgie-polkit-dialog, .background.csd.budgie-run-dialog {
   border-radius: 5px;
   background-color: #f3f3f3;
 }
 
-.budgie-session-dialog decoration, .budgie-polkit-dialog decoration, .budgie-run-dialog decoration {
+.budgie-session-dialog decoration, .budgie-polkit-dialog decoration, .background.csd.budgie-run-dialog decoration {
   border-radius: 4px;
 }
 
@@ -7780,17 +7739,19 @@ calendar.raven-calendar:selected {
   color: #d93b43;
 }
 
-.budgie-run-dialog {
-  background-color: #f8f8f8;
+.background.csd.budgie-run-dialog {
+  background-color: #f3f3f3;
 }
 
-.budgie-run-dialog entry.search {
+.background.csd.budgie-run-dialog entry.search {
   margin: 10px;
-  border-radius: 3px;
 }
 
-.budgie-run-dialog scrolledwindow {
-  border-top: 1px solid #b3b3b3;
+.background.csd.budgie-run-dialog scrolledwindow {
+  background-color: #f8f8f8;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  margin: 0 10px 10px;
 }
 
 .budgie-panel > box > widget > separator {
@@ -8114,29 +8075,29 @@ scrolledwindow.view > viewport.frame > stack > list:backdrop {
   background-color: #e7e7e7;
 }
 
-scrolledwindow.view > viewport.frame > stack > list > row.activatable, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button {
+scrolledwindow.view > viewport.frame > stack > list > row.activatable {
   padding: 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
 
-scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button:selected {
+scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected {
   background-image: linear-gradient(to bottom, #3689e6, #3186e5, #247ee4);
   border-color: rgba(0, 0, 0, 0.22);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
-scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:hover, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button:selected:hover {
+scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:hover {
   background-image: linear-gradient(to bottom, #4894e8, #4491e8, #3689e6);
 }
 
-scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:active, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button:selected:active {
+scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:active {
   background-color: #247ee4;
   background-image: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
-scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:backdrop, .budgie-menu scrolledwindow.view > viewport.frame > stack > list > button:selected:backdrop {
+scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:backdrop {
   background-image: linear-gradient(to bottom, #3f8ee7, #3b8ce7, #2d84e5);
 }
 
