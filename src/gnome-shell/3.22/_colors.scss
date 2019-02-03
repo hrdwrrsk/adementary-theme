@@ -26,9 +26,9 @@ $link_visited_color: if($variant == 'light', darken($selected_bg_color,20%),
 $top_hilight: $borders_edge;
 
 $warning_color: #f9c440;
-$error_color: #ed5353;
+$error_color: #c6262e;
 $success_color: #9bdb4d;
-$destructive_color: $error_color;
+$destructive_color: lighten($error_color, 8%);
 
 $osd_fg_color: #eeeeec;
 $osd_bg_color: #2e3038;

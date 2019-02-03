@@ -40,10 +40,10 @@
     box-shadow: none;
     border-radius: 0;
     text-shadow: none;
-        -gtk-icon-shadow: none;
-      padding: 4px;
+    -gtk-icon-shadow: none;
+    // padding: 4px;
     border-width: 0px;
-      margin: 0px;
+    margin: 0px;
   }
 
   .path-bar button:not(:checked) image { opacity: 0.8; } /* dim the icon when not checked */
@@ -62,6 +62,7 @@
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
+    min-height: 24px;
 
     &:backdrop {
       @include entry(backdrop);
@@ -98,7 +99,8 @@ overlay > box.vertical > paned.horizontal > box.vertical {
 // Epiphany browser: Incognito mode
 // In epiphany 3.28/older, I can't override incognito-mode titlebar
 // because it's hardcoded, but now it's changed since 3.30 release
-headerbar.titlebar.incognito-mode {
+headerbar.titlebar.incognito-mode,
+.incognito-mode headerbar {
     // FIXME: background-image can't be used, so use background-color instead.
     background-color: darken($headerbar_color, 6%);
 

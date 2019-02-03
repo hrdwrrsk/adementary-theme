@@ -526,7 +526,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .prompt-dialog-error-label {
   font-size: 10pt;
-  color: #ed5353;
+  color: #c6262e;
   padding-bottom: 8px;
 }
 
@@ -904,7 +904,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-gradient-direction: none !important;
   background-color: transparent !important;
   border-bottom: 0 !important;
-  border-image: url("assets/panel-top.svg") 4;
+  border-image: url("assets/panel-top-adaptive.svg") 4;
   transition-duration: 500ms;
   font-weight: bold;
   height: 28px;
@@ -958,23 +958,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button:hover {
   color: white;
-  text-shadow: 0px 1px 6px black;
+  text-shadow: 0px 1px 2px black;
 }
 
 #panel .panel-button:hover .system-status-icon,
 #panel .panel-button:hover .app-menu-icon > StIcon,
 #panel .panel-button:hover .popup-menu-arrow {
-  icon-shadow: 0px 1px 6px black;
+  icon-shadow: 0px 1px 2px black;
 }
 
 #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0 2px 0px #3689e6;
   color: white;
+  text-shadow: 0px 1px 2px black;
 }
 
 #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
-  icon-shadow: black 0 2px 2px;
+  icon-shadow: 0px 1px 2px black;
 }
 
 #panel .panel-button .system-status-icon {
@@ -1027,17 +1028,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel.solid .panel-button {
   color: #eeeeee;
-  text-shadow: none;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 #panel.solid .panel-button:hover, #panel.solid .panel-button:active, #panel.solid .panel-button:overview, #panel.solid .panel-button:focus, #panel.solid .panel-button:checked {
   color: white;
+  text-shadow: 0px 1px 2px black;
 }
 
 #panel.solid .system-status-icon,
 #panel.solid .app-menu-icon > StIcon,
 #panel.solid .popup-menu-arrow {
-  icon-shadow: none;
+  icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 #calendarArea {
@@ -1441,10 +1443,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .window-close {
   background-image: url("assets/close-window.svg");
-  background-size: 32px;
-  height: 32px;
-  width: 32px;
-  -shell-close-overlap: 12px;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  -shell-close-overlap: 14px;
 }
 
 .window-close:hover {
@@ -1653,6 +1655,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
   padding: 0;
   border: 1px solid transparent;
+  border-left: 0;
   border-radius: 0px 5px 5px 0px;
 }
 
@@ -1723,7 +1726,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* App Vault/Grid */
 .icon-grid {
-  spacing: 30px;
+  spacing: 31px;
   -shell-grid-horizontal-item-size: 136px;
   -shell-grid-vertical-item-size: 136px;
 }
@@ -1933,7 +1936,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .workspace-thumbnail-indicator {
-  border: 4px solid #3689e6;
+  border: 2px solid #3689e6;
   padding: 1px;
   border-radius: 3px;
 }
@@ -1947,7 +1950,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .no-frequent-applications-label {
   font-size: 2em;
   font-weight: bold;
-  color: #eeeeee;
+  color: #2e2e2e;
 }
 
 /* NOTIFICATIONS & MESSAGE TRAY */
@@ -2726,7 +2729,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 0.6);
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 #dashtodockContainer .show-apps:hover .show-apps-icon {
@@ -2737,6 +2740,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer .show-apps:checked .show-apps-icon {
   background-color: #3689e6;
   color: white;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
 }
 
 #dashtodockContainer .show-apps:hover .overview-icon,
@@ -2747,10 +2751,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.top #dash {
   border-image: url("assets/dash/dash-top.svg") 7;
+  border: 1px solid transparent;
+  border-top: 0;
 }
 
 #dashtodockContainer.top.extended #dash {
   border-image: url("assets/dash/dash-top-extended.svg") 7;
+}
+
+#dashtodockContainer.top.transparent #dash {
+  border-image: url("assets/dash/dash-top-adaptive.svg") 7;
+}
+
+#dashtodockContainer.top.transparent.extended #dash {
+  border-image: url("assets/dash/dash-top-extended-adaptive.svg") 7;
 }
 
 #dashtodockContainer.top .dash-item-container > StWidget {
@@ -2765,10 +2779,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.bottom #dash {
   border-image: url("assets/dash/dash-bottom.svg") 7;
+  border: 1px solid transparent;
+  border-bottom: 0;
 }
 
 #dashtodockContainer.bottom.extended #dash {
   border-image: url("assets/dash/dash-bottom-extended.svg") 7;
+}
+
+#dashtodockContainer.bottom.transparent #dash {
+  border-image: url("assets/dash/dash-bottom-adaptive.svg") 7;
+}
+
+#dashtodockContainer.bottom.transparent.extended #dash {
+  border-image: url("assets/dash/dash-bottom-extended-adaptive.svg") 7;
 }
 
 #dashtodockContainer.bottom .dash-item-container > StWidget {
@@ -2783,10 +2807,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.left #dash {
   border-image: url("assets/dash/dash-left.svg") 7;
+  border: 1px solid transparent;
+  border-left: 0;
 }
 
 #dashtodockContainer.left.extended #dash {
   border-image: url("assets/dash/dash-left-extended.svg") 7;
+}
+
+#dashtodockContainer.left.transparent #dash {
+  border-image: url("assets/dash/dash-left-adaptive.svg") 7;
+}
+
+#dashtodockContainer.left.transparent.extended #dash {
+  border-image: url("assets/dash/dash-left-extended-adaptive.svg") 7;
 }
 
 #dashtodockContainer.left .dash-item-container > StWidget {
@@ -2801,10 +2835,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.right #dash {
   border-image: url("assets/dash/dash-right.svg") 7;
+  border: 1px solid transparent;
+  border-right: 0;
 }
 
 #dashtodockContainer.right.extended #dash {
   border-image: url("assets/dash/dash-right-extended.svg") 7;
+}
+
+#dashtodockContainer.right.transparent #dash {
+  border-image: url("assets/dash/dash-right-adaptive.svg") 7;
+}
+
+#dashtodockContainer.right.transparent.extended #dash {
+  border-image: url("assets/dash/dash-right-extended-adaptive.svg") 7;
 }
 
 #dashtodockContainer.right .dash-item-container > StWidget {

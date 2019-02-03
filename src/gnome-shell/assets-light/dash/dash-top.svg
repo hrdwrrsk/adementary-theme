@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90.000000"
@@ -15,7 +16,7 @@
    height="24"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="dash-top.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
@@ -30,15 +31,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="11.127728"
-     inkscape:cx="-17.961354"
+     inkscape:cx="8.1689698"
      inkscape:cy="18.604914"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
      inkscape:window-width="1366"
-     inkscape:window-height="660"
+     inkscape:window-height="659"
      inkscape:window-x="0"
      inkscape:window-y="28"
      width="400px"
@@ -92,7 +93,30 @@
        inkscape:color="rgb(255,11,0)" />
   </sodipodi:namedview>
   <defs
-     id="defs3" />
+     id="defs3">
+    <linearGradient
+       gradientTransform="rotate(180,12.000001,288)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4539"
+       id="linearGradient4541"
+       x1="12"
+       y1="277"
+       x2="12"
+       y2="284"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4539">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.05098039"
+         offset="0"
+         id="stop4535" />
+      <stop
+         style="stop-color:#fefefe;stop-opacity:0;"
+         offset="1"
+         id="stop4537" />
+    </linearGradient>
+  </defs>
   <metadata
      id="metadata4">
     <rdf:RDF>
@@ -161,5 +185,11 @@
        id="path814"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
+    <path
+       style="display:inline;opacity:1;fill:url(#linearGradient4541);fill-opacity:1;stroke:none;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       d="m 23,296 c 0,2.03647 -1.58729,3 -3,3 H 4 c -1.375,0 -3,-0.8908 -3,-3 V 276 H 1.91667 L 2,296 c 0,1 0.4609,2 2,2 h 16 c 1.58347,0 2,-1 2,-2 v -1 l 0.08333,-19 H 23 Z"
+       id="path815-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccc" />
   </g>
 </svg>

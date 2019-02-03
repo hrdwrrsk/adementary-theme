@@ -28,9 +28,7 @@ $panel-corner-radius: 6px;
 
 /* GLOBALS */
 $font-size: 9;
-
-// As of 30 September '18, Source Sans Pro is used as default font
-$font-family:  Noto Sans, Cantarell, Sans-Serif;
+$font-family: Noto Sans, Cantarell, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
 $_bubble_borders_color: transparentize($osd_fg_color,0.8);
@@ -149,12 +147,25 @@ StScrollBar {
 
 .slider {
   height: 10px;
-  -slider-height: 3px;
-  -slider-background-color: darken($bg_color, 4%); //background of the trough
-  -slider-border-color: $borders_color; //trough border color
-  -slider-active-background-color: $selected_bg_color; //active trough fill
-  -slider-active-border-color: if($variant == 'light', $selected_borders_color, $borders_color); //active trough border
-  -slider-border-width: 1px;
+  @if $version > 3.28 { // GNOME shell 3.30
+    -barlevel-height: 3px;
+    -barlevel-background-color: darken($bg_color, 4%); //background of the trough
+    -barlevel-border-color: $borders_color; //trough border color
+    -barlevel-active-background-color: $selected_bg_color; //active trough fill
+    -barlevel-active-border-color: if($variant == 'light', $selected_borders_color, $borders_color); //active trough border
+    -barlevel-overdrive-color: $destructive_color;
+    -barlevel-overdrive-border-color: if($variant == 'light', darken($destructive_color, 30%), $borders_color);
+    -barlevel-overdrive-separator-width: 1px;
+    -barlevel-border-width: 1px;
+  }
+  @else {
+    -slider-height: 3px;
+    -slider-background-color: darken($bg_color, 4%); //background of the trough
+    -slider-border-color: $borders_color; //trough border color
+    -slider-active-background-color: $selected_bg_color; //active trough fill
+    -slider-active-border-color: if($variant == 'light', $selected_borders_color, $borders_color); //active trough border
+    -slider-border-width: 1px;
+  }
   -slider-handle-radius: 6px;
 }
 
@@ -765,7 +776,7 @@ StScrollBar {
   background-gradient-direction: none !important;
   background-color: transparent !important;
   border-bottom: 0 !important;
-  border-image: url("assets/panel-top.svg") 4;
+  border-image: url("assets/panel-top-adaptive.svg") 4;
   transition-duration: 500ms;
   font-weight: bold;
   height: 28px;
@@ -802,7 +813,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-    text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), none);
+    text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
     transition-duration: 100ms;
 
     .app-menu-icon {
@@ -815,17 +826,17 @@ StScrollBar {
     .system-status-icon,
     .app-menu-icon > StIcon,
     .popup-menu-arrow {
-      icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), none);
+      icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
     }
 
     &:hover {
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
-      text-shadow: if($light-panel == 'false', 0px 1px 6px rgba(0, 0, 0, 1), none);
+      text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
 
       .system-status-icon,
       .app-menu-icon > StIcon,
       .popup-menu-arrow {
-        icon-shadow: if($light-panel == 'false', 0px 1px 6px rgba(0, 0, 0, 1), none);
+        icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
       }
     }
 
@@ -835,9 +846,10 @@ StScrollBar {
       background-color: rgba(0, 0, 0, 0.01);
       box-shadow: inset 0 2px 0px $selected_bg_color;
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
+      text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
 
       & > .system-status-icon {
-        icon-shadow: if($light-panel == 'false', black 0 2px 2px, none);
+        icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
       }
     }
 
@@ -879,17 +891,18 @@ StScrollBar {
 
     .panel-button {
       color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-      text-shadow: none;
+      text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
 
       &:hover, &:active, &:overview, &:focus, &:checked {
         color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
+        text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
       }
     }
 
     .system-status-icon,
     .app-menu-icon > StIcon,
     .popup-menu-arrow {
-      icon-shadow: none;
+      icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
     }
   }
 }
@@ -1202,10 +1215,10 @@ StScrollBar {
 
 .window-close {
   background-image: url("assets/close-window.svg");
-  background-size: 32px;
-  height: 32px;
-  width: 32px;
-  -shell-close-overlap: 12px;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  -shell-close-overlap: 14px;
 
   &:hover { background-image: url("assets/close-window-hover.svg"); }
   &:active { background-image: url("assets/close-window-active.svg"); }
@@ -1352,7 +1365,7 @@ StScrollBar {
     background-color: transparent;
     padding: 0;
     border: 1px solid transparent;
-    //border-left: 0px;
+    border-left: 0;
     border-radius: 0px 5px 5px 0px;
 
     &:rtl {
@@ -1427,7 +1440,7 @@ StScrollBar {
 
   /* App Vault/Grid */
   .icon-grid {
-    spacing: 30px;
+    spacing: 31px;
     -shell-grid-horizontal-item-size: 136px;
     -shell-grid-vertical-item-size: 136px;
 
@@ -1598,7 +1611,7 @@ StScrollBar {
     }
   }
   .workspace-thumbnail-indicator {
-    border: 4px solid $selected_bg_color;
+    border: 2px solid $selected_bg_color;
     padding: 1px;
     border-radius: 3px;
   }
@@ -1620,7 +1633,7 @@ StScrollBar {
 %status_text {
   font-size: 2em;
   font-weight: bold;
-  color: $dark_fg_color;
+  color: $fg_color;
 }
 
 /* NOTIFICATIONS & MESSAGE TRAY */

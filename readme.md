@@ -22,20 +22,20 @@ This theme has come with **3 variants**
 
 ### Not supported desktops
 - Cinnamon
-> Not happening. See you in 2019.
+> ~~Not happening. See you in 2019.~~ Canceled, no plans for Cinnamon support.
 - Pantheon
 > Elementary OS is NOT compatible.
 - LXDE
 - Window Managers (Openbox, enlightenment...)
-> Openbox support is considered for future alongside LXDE/PIXEL desktop support.
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
 
 
-### Ubuntu 18.10
+### Ubuntu 18.10 and later
 > ~~Ubuntu 18.10 ships with GNOME 3.30 desktop, but Nautilus file manager is still version 3.26 because that goddamn desktop icons feature, Ubuntu 18.04 (and 16.04*) support will remain, but not for 18.10 since it will broke Nautilus pathbar styling (unless if Ubuntu Desktop/UG team/someone backport Nautilus 3.30 to 18.10 via PPA)
 **Update: See ubuntu-1810 branch for special version for Ubuntu 18.10**
 **Update2: Deprecated. Ubuntu 18.10 is NOT REALLY, really supported.**~~
-> **Update (again) :** Nautilus 3.30 is available for Ubuntu 18.10 on [gnome3-team/gnome3-staging ppa](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=cosmic), so it's **important** to use Nautilus 3.30 to have a better experience on Ubuntu 18.10 **(it will lose desktop icons feature, but you can use desktop icons extension for GNOME shell to restore desktop icon feature)**
+
+**Update (again) :** Nautilus 3.30 is available for Ubuntu 18.10 on [gnome3-team/gnome3-staging ppa](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=cosmic), so it's **important** to use Nautilus 3.30 to have a better experience on Ubuntu 18.10 **(it will lose desktop icons feature, but you can use desktop icons extension for GNOME shell to restore desktop icon feature)**. Ubuntu 19.04 will use Nautilus 3.30 w/Desktop icon extension for GNOME shell.
 
 # (GNOME Shell) Typography
 **Noto Sans**is used as default primary font for GNOME shell theme, Cantarell is used as fallback.

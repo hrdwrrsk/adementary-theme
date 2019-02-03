@@ -40,10 +40,10 @@ style "default" {
 
   GtkButton::default-border         = {0, 0, 0, 0}
   GtkButton::default-outside-border = {0, 0, 0, 0}
-  GtkButton::inner-border           = {4, 4, 4, 4}
+  GtkButton::inner-border           = {0, 0, 0, 0}
 
   GtkEntry::state-hint = 1
-  GtkEntry::inner-border = {7, 7, 4, 5}
+  GtkEntry::inner-border = {2, 2, 2, 2}
 
   GtkPaned::handle-size = 9
   GtkHPaned::handle-size = 9
@@ -90,7 +90,7 @@ style "default" {
   GtkMenuItem::toggle-spacing  = 10
 
   GtkCheckButton::indicator_spacing = 3
-  GtkOptionMenu::indicator_spacing  = {13, 13, 5, 8}
+  GtkOptionMenu::indicator_spacing  = {13, 13, 0, 0}
 
   GtkTreeView::expander-size        = 16
   GtkTreeView::vertical-separator   = 0
@@ -1773,8 +1773,8 @@ style "separator_menu_item" {
 
 style "button" {
 
-  xthickness = 2
-  ythickness = 2
+  xthickness = 4
+  ythickness = 4
 
   # For the sake of sanity style buttons this way
   engine "pixmap" {
@@ -1850,8 +1850,8 @@ style "entry" {
 
 style "combobox" {
 
-  xthickness = 6
-  ythickness = 4
+  xthickness = 4
+  ythickness = 2
 
   # This affects only the button beside an entry
   GtkButton::inner-border = {0, 0, 0, 0}

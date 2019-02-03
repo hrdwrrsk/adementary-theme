@@ -96,15 +96,18 @@ button.budgie-menu-launcher {
   // i dislike how menu icons in budgie scaled
   // so i use image assets for menu icons (you can disable it by add double slash (//) in image node.
   image {
-		background-image:
-		if($light-panel == 'true',
-			-gtk-scaled(url("assets/budgie-menu-symbolic-light.svg"), url("assets/budgie-menu-symbolic-light@2.svg")),
-			-gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg")));
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 16px;
+		//background-image:
+		//if($light-panel == 'true',
+			//-gtk-scaled(url("assets/budgie-menu-symbolic-light.svg"), url("assets/budgie-menu-symbolic-light@2.svg")),
+			//-gtk-scaled(url("assets/budgie-menu-symbolic.svg"), url("assets/budgie-menu-symbolic@2.svg")));
+		//background-position: center;
+		//background-repeat: no-repeat;
+		//background-size: 16px;
 
-		color: transparent;
+		color: if($variant == 'light' and $light-panel == 'false', $dark_fg_color, $fg_color);
+
+		// note: it doesn't work with panel size < 37 !
+		-gtk-icon-transform: scale(0.5);
   }
 }
 
@@ -309,7 +312,7 @@ window.budgie-popover:not(.csd) {
 
 		&:hover { background-color: if(variant == light, transparentize($fg_color, 0.8), transparentize($fg_color, 0.85)); }
 
-		button { background: none; }
+		button.flat { background: none; }
 	}
 
 	.categories {
@@ -500,6 +503,7 @@ calendar.raven-calendar {
 %budgie_dialog {
 	border-radius: 5px;
 	background-color: $bg_color;
+	box-shadow: inset 0 1px $top_hilight;
 
   decoration { border-radius: 4px; }
 }
