@@ -579,20 +579,22 @@ calendar.raven-calendar {
   background-color: $dark_borders_color;
 }
 
-.budgie-calendar-applet calendar {
-  background-color: transparent;
-  border-color: transparent;
-  padding: 1px;
-}
+.budgie-calendar-applet {
+	calendar {
+  	background-color: transparent;
+  	border-color: transparent;
+  	padding: 1px;
 
-.budgie-calendar-applet calendar:selected {
-  background-color: $selected_bg_color;
-}
+		&:selected {
+			background-color: $selected_bg_color;
+		}
+	}
 
-.budgie-calendar-applet .h1 {
-  font-size: 24px;
-}
+	.h1 {
+		font-size: 24px;
+	}
 
-.budgie-calendar-applet .h2 {
-  font-size: 18px;
+	.h2 {
+		font-size: 18px;
+	}
 }

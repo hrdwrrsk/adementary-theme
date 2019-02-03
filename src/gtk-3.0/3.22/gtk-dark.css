@@ -7613,6 +7613,24 @@ calendar.raven-calendar:selected {
   background-color: #17181c;
 }
 
+.budgie-calendar-applet calendar {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 1px;
+}
+
+.budgie-calendar-applet calendar:selected {
+  background-color: #3689e6;
+}
+
+.budgie-calendar-applet .h1 {
+  font-size: 24px;
+}
+
+.budgie-calendar-applet .h2 {
+  font-size: 18px;
+}
+
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background: #30333D;
