@@ -586,7 +586,7 @@ calendar.raven-calendar {
 }
 
 .budgie-calendar-applet calendar:selected {
-  background-color: #3689e6;
+  background-color: $selected_bg_color;
 }
 
 .budgie-calendar-applet .h1 {
