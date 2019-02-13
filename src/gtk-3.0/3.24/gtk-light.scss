@@ -1,16 +1,12 @@
-// General guidelines:
-// - very unlikely you want to edit something else than _common.scss
-// - keep the number of defined colors to a minimum, use the color blending functions if
-//   you need a subtle shade
-// - if you need to inverse a color function use the @if directive to match for dark $variant
-
 $variant: 'light';
 $light-panel: 'true';
 
-@import 'colors';
-@import 'drawing';
-@import 'common';
-@import 'budgie';
-@import 'gnome-3.30';
-@import 'applications';
-@import 'colors-public';
+$nautilus_ver: 3.30;
+
+@import '../../gtk-3.0/sass/colors';
+@import '../../gtk-3.0/sass/drawing';
+@import '../../gtk-3.0/sass/common';
+@import '../../gtk-3.0/sass/budgie';
+@import '../../gtk-3.0/sass/gnome-applications';
+@import '../../gtk-3.0/sass/applications';
+@import '../../gtk-3.0/sass/colors-public';

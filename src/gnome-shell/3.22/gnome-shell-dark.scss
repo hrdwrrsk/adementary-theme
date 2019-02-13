@@ -1,8 +1,8 @@
-$version: 3.28;
+$version: 3.22;
 $variant: 'dark';
 $light-panel: 'false';
 
-@import "_colors"; //use gtk colors
-@import "_drawing";
-@import "_common";
-@import "_extensions";
+@import "../../gnome-shell/sass/_colors"; //use gtk colors
+@import "../../gnome-shell/sass/_drawing";
+@import "../../gnome-shell/sass/_common";
+@import "../../gnome-shell/sass/_extensions";

@@ -1,10 +1,12 @@
 $variant: 'dark';
 $light-panel: 'false';
 
-@import 'colors';
-@import 'drawing';
-@import 'common';
-@import 'budgie';
-@import 'gnome-3.30';
-@import 'applications';
-@import 'colors-public';
+$nautilus_ver: 3.30;
+
+@import '../../gtk-3.0/sass/colors';
+@import '../../gtk-3.0/sass/drawing';
+@import '../../gtk-3.0/sass/common';
+@import '../../gtk-3.0/sass/budgie';
+@import '../../gtk-3.0/sass/gnome-applications';
+@import '../../gtk-3.0/sass/applications';
+@import '../../gtk-3.0/sass/colors-public';
