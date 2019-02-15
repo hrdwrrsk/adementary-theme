@@ -1910,10 +1910,10 @@ button > label {
 
 .stack-switcher >
 button > image {
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .stack-switcher >
@@ -2333,7 +2333,7 @@ spinbutton:not(.vertical) {
 }
 
 spinbutton:not(.vertical) entry {
-  min-width: 28px;
+  min-width: 32px;
   margin: 0;
   background: none;
   background-color: transparent;
@@ -2347,7 +2347,6 @@ spinbutton:not(.vertical) entry:backdrop:disabled {
 }
 
 spinbutton:not(.vertical) button {
-  min-height: 16px;
   margin: 0;
   padding-bottom: 0;
   padding-top: 0;
@@ -2417,15 +2416,15 @@ spinbutton.vertical:drop(active) {
 }
 
 spinbutton.vertical entry {
-  min-height: 28px;
-  min-width: 28px;
+  min-height: 24px;
+  min-width: 24px;
   padding: 0;
   border-radius: 0;
 }
 
 spinbutton.vertical button {
-  min-height: 28px;
-  min-width: 28px;
+  min-height: 24px;
+  min-width: 24px;
   padding: 0;
 }
 
@@ -5872,7 +5871,7 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 }
 
 stacksidebar row {
-  padding: 10px 2px;
+  padding: 6px 2px;
 }
 
 stacksidebar row > label {

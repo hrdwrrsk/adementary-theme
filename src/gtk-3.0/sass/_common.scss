@@ -770,10 +770,10 @@ button {
     }
 
     > image {
-      padding-left: 6px;   // image padding
-      padding-right: 6px;  //
-      padding-top: 3px;    //
-      padding-bottom: 3px; //
+      padding-left: 2px;   // image padding
+      padding-right: 2px;  //
+      padding-top: 0px;    //
+      padding-bottom: 0px; //
     }
 
     &.text-button {
@@ -1116,7 +1116,7 @@ spinbutton {
     padding: 0;
 
     entry {
-      min-width: 28px;
+      min-width: 48px - 8px * 2;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
       background: none;
@@ -1129,7 +1129,7 @@ spinbutton {
     }
 
     button {
-      min-height: 16px;
+      //min-height: 14px;
       margin: 0;
       padding-bottom: 0;
       padding-top: 0;
@@ -1196,15 +1196,15 @@ spinbutton {
     }
 
     entry {
-      min-height: 28px;
-      min-width: 28px;
+      min-height: 24px;
+      min-width: 24px;
       padding: 0;
       border-radius: 0;
     }
 
     button {
-      min-height: 28px;
-      min-width: 28px;
+      min-height: 24px;
+      min-width: 24px;
       padding: 0;
 
       &.up { @extend %top_button; }
@@ -4141,7 +4141,7 @@ stacksidebar {
   }
 
   row {
-    padding: 10px 2px;
+    padding: 6px 2px;
 
     > label {
       padding-left: 6px;
