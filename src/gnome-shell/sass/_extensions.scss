@@ -3,6 +3,12 @@
 
 /* Dash to dock */
 #dashtodockContainer {
+	#dash {
+		StIcon {
+			icon-shadow: 0 0 0 1px rgba(black, 0.15);
+		}
+	}
+
 	.dash-item-container {
 		.app-well-app-running-dot {
 			width: 4px;

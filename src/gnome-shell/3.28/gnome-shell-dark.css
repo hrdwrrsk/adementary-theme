@@ -877,25 +877,26 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #3689e6;
   color: #ffffff;
   background-size: 32px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .ws-switcher-box {
   height: 50px;
-  border: 1px solid rgba(238, 238, 236, 0.1);
+  border: 1px solid #17181c;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .osd-window,
 .resize-popup,
 .switcher-list, .workspace-switcher-container {
-  color: #eeeeec;
-  background-color: #2E3038;
-  border: 1px solid #17181c;
-  border-radius: 9px;
+  color: #eeeeee;
+  background-color: transparent;
+  border: 0;
+  border-radius: 7px;
   padding: 12px;
-  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 /* Tiled window previews */
@@ -920,11 +921,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel {
   background-gradient-direction: none !important;
   background-color: transparent !important;
-  border-bottom: 0 !important;
+  border-bottom: 1px solid transparent !important;
   border-image: url("assets/panel-top-adaptive.svg") 4;
   transition-duration: 500ms;
   font-weight: bold;
-  height: 28px;
+  height: 30px;
 }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
@@ -932,7 +933,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel #panelLeft, #panel #panelCenter {
-  spacing: 4px;
+  spacing: 0;
 }
 
 #panel .panel-corner {
@@ -952,9 +953,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -panel-corner-border-color: transparent;
 }
 
+#panel .popup-menu-arrow {
+  width: 0;
+  padding: 0;
+  icon-shadow: none;
+}
+
 #panel .panel-button {
-  -natural-hpadding: 12px;
-  -minimum-hpadding: 6px;
+  -natural-hpadding: 4px;
+  -minimum-hpadding: 4px;
   font-weight: bold;
   color: #eeeeee;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
@@ -973,7 +980,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
+#panel .panel-button StLabel {
+  padding: 0 7px;
+}
+
 #panel .panel-button:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 2px 0px rgba(238, 238, 238, 0.75);
   color: white;
   text-shadow: 0px 1px 2px black;
 }
@@ -997,7 +1010,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-button .system-status-icon {
   icon-size: 16px;
-  padding: 0 5px;
+  padding: 0 6px;
 }
 
 .unlock-screen #panel .panel-button,
@@ -1018,7 +1031,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-status-indicators-box,
 #panel .panel-status-menu-box {
-  spacing: 2px;
+  spacing: 0;
 }
 
 #panel .power-status.panel-status-indicators-box {
@@ -1032,11 +1045,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel.solid {
   background-gradient-direction: none !important;
   background-color: transparent !important;
-  border-bottom: 0 !important;
+  border-bottom: 1px solid transparent !important;
   border-image: url("assets/panel-top.svg") 4;
   transition-duration: 300ms;
   font-weight: bold;
-  height: 28px;
+  height: 30px;
 }
 
 #panel.solid .panel-corner {
@@ -1694,13 +1707,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dash .show-apps .show-apps-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
 }
 
 #dash .show-apps:hover .show-apps-icon {
-  background-color: rgba(0, 0, 0, 0.65);
+  color: rgba(255, 255, 255, 0.77);
 }
 
 #dash .show-apps:checked .show-apps-icon {
@@ -1730,7 +1742,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* App Vault/Grid */
 .icon-grid {
-  spacing: 31px;
+  spacing: 30px;
   -shell-grid-horizontal-item-size: 136px;
   -shell-grid-vertical-item-size: 136px;
 }
@@ -2751,6 +2763,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Legacy tray icon support (GNOME 3.22-3.24) */
 /* Dash to dock */
+#dashtodockContainer #dash StIcon {
+  icon-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
 #dashtodockContainer .dash-item-container .app-well-app-running-dot {
   width: 4px;
   height: 4px;

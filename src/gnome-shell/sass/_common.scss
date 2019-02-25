@@ -769,23 +769,25 @@ StScrollBar {
     color: $selected_fg_color;
     //background-image: url("assets/ws-switch-arrow-up.png");
     background-size: 32px;
-    border-radius: 8px;
+    border-radius: 5px;
   }
 
   .ws-switcher-box {
     height: 50px;
-    border: 1px solid transparentize($osd_fg_color,0.9);
+    border: 1px solid $borders_color;
     background: transparent;
-    border-radius: 8px;
+    border-radius: 5px;
   }
 
 %osd-panel {
-  color: $_bubble_fg_color;
-  background-color: $dark_bg_color;
-  border: 1px solid $dark_borders_color;
-  border-radius: 9px;
+  color: $fg_color;
+  background-color: transparent;
+  border: 0;
+  border-radius: 7px;
   padding: 12px;
-  box-shadow: 0 3px 9px 1px transparentize(black, 0.5);
+  box-shadow: none;
+
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 /* Tiled window previews */
@@ -811,7 +813,7 @@ StScrollBar {
 #panel {
   background-gradient-direction: none !important;
   background-color: transparent !important;
-  border-bottom: 0 !important;
+  border-bottom: 1px solid transparent !important;
   @if ($version > 3.25) and ($version < 3.31) {
     border-image: url("assets/panel-top-adaptive.svg") 4;
   }
@@ -820,7 +822,7 @@ StScrollBar {
   }
   transition-duration: 500ms;
   font-weight: bold;
-  height: 28px;
+  height: 30px;
 
   &.unlock-screen,
   &.login-screen,
@@ -829,7 +831,7 @@ StScrollBar {
   }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
-    spacing: 4px;
+    spacing: 0;
   }
 
   .panel-corner {
@@ -849,9 +851,15 @@ StScrollBar {
     }
   }
 
+  .popup-menu-arrow {
+    width: 0;
+    padding: 0;
+    icon-shadow: none;
+  }
+
   .panel-button {
-    -natural-hpadding: 12px;
-    -minimum-hpadding: 6px;
+    -natural-hpadding: 4px;
+    -minimum-hpadding: 4px;
     font-weight: bold;
     color: if($light-panel == 'false', $dark_fg_color, $fg_color);
     text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9),
@@ -871,7 +879,13 @@ StScrollBar {
       icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
     }
 
+    StLabel {
+      padding: 0 7px;
+    }
+
     &:hover {
+      background-color: rgba(0, 0, 0, 0.01);
+      box-shadow: inset 0 2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
       text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
 
@@ -886,7 +900,7 @@ StScrollBar {
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
       background-color: rgba(0, 0, 0, 0.01);
-      box-shadow: inset 0 2px 0px $selected_bg_color;
+      box-shadow: inset 0 2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
       text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
 
@@ -895,7 +909,7 @@ StScrollBar {
       }
     }
 
-    .system-status-icon { icon-size: 16px; padding: 0 5px; }
+    .system-status-icon { icon-size: 16px; padding: 0 6px; }
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
@@ -907,9 +921,7 @@ StScrollBar {
   }
 
   .panel-status-indicators-box,
-  .panel-status-menu-box {
-    spacing: 2px;
-  }
+  .panel-status-menu-box { spacing: 0; }
 
   // spacing between power icon and (optional) percentage label
   .power-status.panel-status-indicators-box {
@@ -922,11 +934,11 @@ StScrollBar {
     &.solid {
       background-gradient-direction: none !important;
       background-color: transparent !important;
-      border-bottom: 0 !important;
+      border-bottom: 1px solid transparent !important;
       border-image: url("assets/panel-top.svg") 4;
       transition-duration: 300ms;
       font-weight: bold;
-      height: 28px;
+      height: 30px;
 
       .panel-corner {
         -panel-corner-background-color: black;
@@ -1461,13 +1473,12 @@ StScrollBar {
 
     .show-apps {
       .show-apps-icon {
-        background-color: transparentize(black, 0.5);
-        color: transparentize(white, 0.2);
+        color: if($variant == 'light', rgba(black, 0.6), rgba(white, 0.6));
         border-radius: 3px;
       }
 
       &:hover .show-apps-icon {
-        background-color: transparentize(black, 0.35);
+        color: if($variant == 'light', rgba(black, 0.77), rgba(white, 0.77));
       }
 
       &:checked .show-apps-icon {
@@ -1499,7 +1510,7 @@ StScrollBar {
 
   /* App Vault/Grid */
   .icon-grid {
-    spacing: 31px;
+    spacing: 30px;
     -shell-grid-horizontal-item-size: 136px;
     -shell-grid-vertical-item-size: 136px;
 
