@@ -2567,14 +2567,14 @@ headerbar {
   border-color: #b3b3b3;
   border-radius: 0;
   background-image: linear-gradient(to bottom, #e4e4e4, #d4d4d4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .titlebar:backdrop:not(headerbar),
 headerbar:backdrop {
   border-color: silver;
   background-image: linear-gradient(to bottom, #e9e9e9, #dadada);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 -1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), inset 0 -1px rgba(255, 255, 255, 0.2);
   transition: 200ms ease-out;
 }
 
@@ -5785,7 +5785,7 @@ messagedialog .titlebar {
   border-style: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
 }
 
 messagedialog .titlebar:backdrop {
@@ -6776,11 +6776,11 @@ messagedialog.csd decoration {
   background-color: #b3b3b3;
   border: solid 1px #b3b3b3;
   border-radius: 0;
-  box-shadow: inset 0 0 0 3px #eeeeee, inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 3px #eeeeee, inset 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .solid-csd decoration:backdrop {
-  box-shadow: inset 0 0 0 3px #f3f3f3, inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 3px #f3f3f3, inset 0 1px rgba(255, 255, 255, 0.6);
 }
 
 button.titlebutton {
@@ -7490,7 +7490,7 @@ frame.raven-frame > border {
   color: #2e2e2e;
   border-bottom: 1px solid #b3b3b3;
   background-image: linear-gradient(to bottom, #e4e4e4, #d4d4d4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .raven .raven-header.bottom {
@@ -7598,7 +7598,7 @@ calendar.raven-calendar:selected {
 .budgie-session-dialog, .budgie-polkit-dialog, .background.csd.budgie-run-dialog {
   border-radius: 5px;
   background-color: #f3f3f3;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .budgie-session-dialog decoration, .budgie-polkit-dialog decoration, .background.csd.budgie-run-dialog decoration {
@@ -8150,8 +8150,8 @@ these colors are exported for the window manager and shouldn't be used in applic
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#2e2e2e, 1.8);
 @define-color wm_unfocused_title #919191;
-@define-color wm_highlight rgba(255, 255, 255, 0.8);
-@define-color wm_borders_edge rgba(255, 255, 255, 0.8);
+@define-color wm_highlight rgba(255, 255, 255, 0.6);
+@define-color wm_borders_edge rgba(255, 255, 255, 0.6);
 @define-color wm_bg_a #e9e9e9;
 @define-color wm_bg_b #dadada;
 @define-color wm_backdrop_bg_a #eeeeee;

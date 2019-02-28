@@ -38,7 +38,7 @@ $selected_bg_color: $BLUEBERRY_500;
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
 $borders_color: if($variant == 'light', darken($bg_color, 25%), darken($bg_color, 10%));
 $alt_borders_color: if($variant == 'light', darken($bg_color, 35%), darken($bg_color, 17%));
-$borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+$borders_edge: if($variant == 'light', transparentize(white, 0.4), transparentize($fg_color, 0.93));
 $link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
 $link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
 $top_hilight: $borders_edge;
