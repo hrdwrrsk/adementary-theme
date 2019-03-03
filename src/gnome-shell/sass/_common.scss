@@ -184,7 +184,7 @@ StScrollBar {
 .slider {
   height: 10px;
   @if $version > 3.29 { // GNOME shell 3.30
-    -barlevel-height: 3px;
+    -barlevel-height: 4px;
     -barlevel-background-color: darken($bg_color, 4%); //background of the trough
     -barlevel-border-color: $borders_color; //trough border color
     -barlevel-active-background-color: $selected_bg_color; //active trough fill
@@ -195,7 +195,7 @@ StScrollBar {
     -barlevel-border-width: 1px;
   }
   @else {
-    -slider-height: 3px;
+    -slider-height: 4px;
     -slider-background-color: darken($bg_color, 4%); //background of the trough
     -slider-border-color: $borders_color; //trough border color
     -slider-active-background-color: $selected_bg_color; //active trough fill
@@ -582,10 +582,10 @@ StScrollBar {
 
   .popup-menu-content { padding: 1em 0em; }
   .popup-menu-item {
-    spacing: 12px;
+    spacing: 8px;
 
-    &:ltr { padding: .4em 1.75em .4em 0em; }
-    &:rtl { padding: .4em 0em .4em 1.75em; }
+    &:ltr { padding: 0.4em 24px 0.4em 0; }
+    &:rtl { padding: 0.4em 0 0.4em 24px; }
     &:checked {
       background-color: darken($bg_color,2%);
       box-shadow: inset 0 1px 0px lighten($borders_color,5%);
@@ -661,14 +661,23 @@ StScrollBar {
 
   .osd-monitor-label { font-size: 3em; }
   .level {
-    height: 0.6em;
-    border-radius: 0.3em;
-    background-color: transparentize(darken($osd_bg_color,15%),0.5);
-    color: $osd_fg_color;
+    height: 4px;
+    @if $version < 3.29 {
+      border-radius: 0.3em;
+      background-color: transparentize(darken($osd_bg_color,15%),0.5);
+      color: $osd_fg_color;
+    }
+    @else {
+      -barlevel-active-background-color: $selected_bg_color;
+      -barlevel-overdrive-color: $destructive_color;
+    }
   }
-  .level-bar {
-    background-color: $osd_fg_color;
-    border-radius: 0.3em;
+
+  @if $version < 3.29 {
+    .level-bar {
+      background-color: $selected_bg_color;
+      border-radius: 0.3em;
+    }
   }
 }
 
@@ -815,7 +824,7 @@ StScrollBar {
   background-color: transparent !important;
   border-bottom: 1px solid transparent !important;
   @if ($version > 3.25) and ($version < 3.31) {
-    border-image: url("assets/panel-top-adaptive.svg") 4;
+    border-image: url("assets/panel-top.svg") 4;
   }
   @else {
     border-image: url("assets/panel-top.svg") 4;
@@ -862,8 +871,7 @@ StScrollBar {
     -minimum-hpadding: 4px;
     font-weight: bold;
     color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-    text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9),
-                                             0px 1px 2px rgba(0, 0, 0, 0.15));
+    text-shadow: none;
     transition-duration: 100ms;
 
     .app-menu-icon {
@@ -876,7 +884,7 @@ StScrollBar {
     .system-status-icon,
     .app-menu-icon > StIcon,
     .popup-menu-arrow {
-      icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
+      icon-shadow: none;
     }
 
     StLabel {
@@ -887,12 +895,12 @@ StScrollBar {
       background-color: rgba(0, 0, 0, 0.01);
       box-shadow: inset 0 2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
-      text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
+      text-shadow: none;
 
       .system-status-icon,
       .app-menu-icon > StIcon,
       .popup-menu-arrow {
-        icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
+        icon-shadow: none;
       }
     }
 
@@ -902,10 +910,10 @@ StScrollBar {
       background-color: rgba(0, 0, 0, 0.01);
       box-shadow: inset 0 2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
       color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
-      text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
+      text-shadow: none;
 
       & > .system-status-icon {
-        icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
+        icon-shadow: none;
       }
     }
 
@@ -946,18 +954,18 @@ StScrollBar {
 
       .panel-button {
         color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-        text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
+        text-shadow: none;
 
         &:hover, &:active, &:overview, &:focus, &:checked {
           color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
-          text-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 1), 0px 1px 2px rgba(0, 0, 0, 0.2));
+          text-shadow: none;
         }
       }
 
       .system-status-icon,
       .app-menu-icon > StIcon,
       .popup-menu-arrow {
-        icon-shadow: if($light-panel == 'false', 0px 1px 2px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.15));
+        icon-shadow: none;
       }
     }
   }
@@ -965,44 +973,44 @@ StScrollBar {
 
   // calendar popover
   #calendarArea {
-    padding: 0.75em 1.0em;
+    padding: 2px 16px;
   }
 
   .calendar {
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 
     .calendar,
     .datemenu-today-button,
     .datemenu-displays-box,
     .message-list-sections {
-      margin: 0 1.5em;
+      margin: 0 8px;
     }
 
-    .datemenu-calendar-column { spacing: 0.5em; }
-    .datemenu-displays-section { padding-bottom: 3em; }
-    .datemenu-displays-box { spacing: 1em; }
+    .datemenu-calendar-column { spacing: 8px; }
+    .datemenu-displays-section { padding-bottom: 0; }
+    .datemenu-displays-box { spacing: 8px; }
 
     .datemenu-calendar-column {
       border: 0 solid lighten($bg_color,5%);
-      &:ltr { border-left-width: 1px; }
-      &:rtl { border-right-width: 1px; }
+      &:ltr { border-left-width: 0; }
+      &:rtl { border-right-width: 0; }
     }
 
     .datemenu-today-button,
     .world-clocks-button,
     .weather-button,
     .events-section-title {
-      border-radius: 4px;
-      padding: .4em;
+      border-radius: 3px;
+      padding: 4px;
     }
 
     .message-list-section-list:ltr {
-      padding-left: .4em;
+      padding-left: 0;
     }
 
     .message-list-section-list:rtl {
-      padding-right: .4em;
+      padding-right: 0;
     }
 
     .datemenu-today-button,
@@ -1020,7 +1028,7 @@ StScrollBar {
     }
 
     .datemenu-today-button .date-label {
-      font-size: 1.5em;
+      font-size: 14pt;
       font-weight: 300;
     }
 
@@ -1042,7 +1050,8 @@ StScrollBar {
     .calendar-month-label {
       color: darken($fg_color,5%);
       font-weight: bold;
-      padding: 8px 0;
+      margin: 2px;
+      padding: 6px 16px;
       &:focus {}
     }
 
@@ -1050,7 +1059,7 @@ StScrollBar {
       color: $fg_color;
       background-color: transparent;
       width: 32px;
-      border-radius: 4px;
+      border-radius: 2px;
       &:hover, &:focus { background-color: transparentize($fg_color,0.95); }
       &:active { background-color: transparentize($bg_color,0.95); }
     }
@@ -1077,22 +1086,27 @@ StScrollBar {
       }
 
     .calendar-day-base {
-      font-size: 80%;
+      font-size: 100%;
       text-align: center;
-      width: 2.4em; height: 2.4em;
-      padding: 0.1em;
+      width: 24px; height: 24px;
+      padding: 0px;
       margin: 2px;
-      border-radius: 1.4em;
+
+      @if $version > 3.29 {
+        font-feature-settings: "tnum";
+      }
+
+      border-radius: 100px;
       &:hover,&:focus { background-color: darken($bg_color, 8%); }
       &:active,&:selected {
-        color: lighten($selected_fg_color,5%);
+        color: $selected_fg_color;
         background-color: $selected_bg_color;
         border-color: transparent; //avoid jumparound due to today
       }
       &.calendar-day-heading {  //day of week heading
         color: darken($fg_color,40%);
-        margin-top: 1em;
-        font-size: 70%;
+        margin-top: 2px;
+        font-size: 100%;
       }
     }
       .calendar-day { //border collapse hack - see calendar.js
@@ -1108,26 +1122,32 @@ StScrollBar {
       }
       .calendar-today {
         font-weight: bold;
-        //color: lighten($fg_color,10%);
+        color: $selected_bg_color;
         //background-color: darken($bg_color,5%);
-        border: 1px solid transparentize($borders_color,0.5);
+        border: 0px solid transparent;
       }
       .calendar-day-with-events {
-        color: lighten($fg_color,10%);
+        color: $success_color;
         font-weight: bold;
         background-image: url("assets/calendar-today.svg");
+
+        &:active,&:selected {
+          color: $selected_fg_color;
+          background-color: $success_color;
+        }
       }
       .calendar-other-month-day {
         color: transparentize($fg_color,0.85);
         opacity: 0.5;
       }
       .calendar-week-number {
-        font-size: 70%;
+        font-size: 100%;
+        text-align: center;
         font-weight: bold;
-        width: 2.3em; height: 1.8em;
+        width: 26px; height: 26px;
         border-radius: 2px;
-        padding: 0.5em 0 0;
-        margin: 6px;
+        padding: 0;
+        margin: 4px;
         background-color: transparentize($fg_color,0.7);
         color: $bg_color;
       }
@@ -1142,7 +1162,7 @@ StScrollBar {
           //&:hover,&:focus { @include button(hover); }
           //&:active { @include button(active); }
 
-          margin: 1.5em 1.5em 0;
+          margin: 8px 8px 0;
           &:insensitive { color: $insensitive_fg_color; }
         }
 
@@ -1156,7 +1176,11 @@ StScrollBar {
         }
 
         .message {
-          &:hover,&:focus { background-color: darken($bg_color, 8%); }
+          border: 1px solid $borders_color;
+          border-radius: 3px;
+          box-shadow: inset 0 1px if($variant == 'light', rgba(white, 0.45), rgba(white, 0.08));
+
+          &:hover,&:focus { background-color: darken($bg_color, 4%); }
           border-radius: 3px;
         }
 
@@ -1209,9 +1233,9 @@ StScrollBar {
           .media-message-cover-icon {
             icon-size: 16px !important;
             &.fallback {
-              color: lighten($bg_color,10%);
-              background-color: $bg_color;
-              border: 2px solid $bg_color;
+              color: lighten($fg_color,10%);
+              background-color: transparent;
+              border: 0;
               border-radius: 2px;
               icon-size: 16px;
               padding: 8px; }

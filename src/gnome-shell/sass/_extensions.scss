@@ -3,12 +3,6 @@
 
 /* Dash to dock */
 #dashtodockContainer {
-	#dash {
-		StIcon {
-			icon-shadow: 0 0 0 1px rgba(black, 0.15);
-		}
-	}
-
 	.dash-item-container {
 		.app-well-app-running-dot {
 			width: 4px;
@@ -80,14 +74,6 @@
 			border-image: url("assets/dash/dash-#{$image}-extended.svg") 7;
 		}
 
-		&.transparent #dash {
-			border-image: url("assets/dash/dash-#{$image}-adaptive.svg") 7;
-		}
-
-		&.transparent.extended #dash {
-			border-image: url("assets/dash/dash-#{$image}-extended-adaptive.svg") 7;
-		}
-
 		.dash-item-container > StWidget {
 			padding:  #{$padding};
 		}
@@ -101,10 +87,12 @@
 }
 
 /* Dash to Panel */
+/* NOTE: new version of DtP seems ignores image asset, only works in old version */
+/* or version that before panel opacity customization feature introducted */
 #panel.dashtopanelMainPanel {
 	&.dashtopanelTop {
 		@if ($version > 3.25) and ($version < 3.31) {
-			border-image: url("assets/panel-top-adaptive.svg") 4;
+			border-image: url("assets/panel-top.svg") 4;
 		}
 		@else {
 			border-image: url("assets/panel-top.svg") 4;
@@ -119,7 +107,7 @@
 
 	&.dashtopanelBottom {
 		@if ($version > 3.25) and ($version < 3.31) {
-			border-image: url("assets/panel-bottom-adaptive.svg") 4;
+			border-image: url("assets/panel-bottom.svg") 4;
 		}
 		@else {
 			border-image: url("assets/panel-bottom.svg") 4;

@@ -217,7 +217,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 10px;
-  -barlevel-height: 3px;
+  -barlevel-height: 4px;
   -barlevel-background-color: #e9e9e9;
   -barlevel-border-color: #b3b3b3;
   -barlevel-active-background-color: #3689e6;
@@ -676,15 +676,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-menu-item {
-  spacing: 12px;
+  spacing: 8px;
 }
 
 .popup-menu .popup-menu-item:ltr {
-  padding: .4em 1.75em .4em 0em;
+  padding: 0.4em 24px 0.4em 0;
 }
 
 .popup-menu .popup-menu-item:rtl {
-  padding: .4em 0em .4em 1.75em;
+  padding: 0.4em 0 0.4em 24px;
 }
 
 .popup-menu .popup-menu-item:checked {
@@ -769,15 +769,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .osd-window .level {
-  height: 0.6em;
-  border-radius: 0.3em;
-  background-color: rgba(12, 12, 14, 0.5);
-  color: #eeeeec;
-}
-
-.osd-window .level-bar {
-  background-color: #eeeeec;
-  border-radius: 0.3em;
+  height: 4px;
+  -barlevel-active-background-color: #3689e6;
+  -barlevel-overdrive-color: #d93b43;
 }
 
 /* Pad OSD */
@@ -967,7 +961,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -minimum-hpadding: 4px;
   font-weight: bold;
   color: #2e2e2e;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: none;
   transition-duration: 100ms;
 }
 
@@ -980,7 +974,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button .system-status-icon,
 #panel .panel-button .app-menu-icon > StIcon,
 #panel .panel-button .popup-menu-arrow {
-  icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  icon-shadow: none;
 }
 
 #panel .panel-button StLabel {
@@ -991,24 +985,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0 2px 0px rgba(46, 46, 46, 0.5);
   color: #151515;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
 }
 
 #panel .panel-button:hover .system-status-icon,
 #panel .panel-button:hover .app-menu-icon > StIcon,
 #panel .panel-button:hover .popup-menu-arrow {
-  icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  icon-shadow: none;
 }
 
 #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0 2px 0px #2e2e2e;
   color: #151515;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
 }
 
 #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon {
-  icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  icon-shadow: none;
 }
 
 #panel .panel-button .system-status-icon {
@@ -1046,30 +1040,30 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #calendarArea {
-  padding: 0.75em 1.0em;
+  padding: 2px 16px;
 }
 
 .calendar {
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 .calendar,
 .datemenu-today-button,
 .datemenu-displays-box,
 .message-list-sections {
-  margin: 0 1.5em;
+  margin: 0 8px;
 }
 
 .datemenu-calendar-column {
-  spacing: 0.5em;
+  spacing: 8px;
 }
 
 .datemenu-displays-section {
-  padding-bottom: 3em;
+  padding-bottom: 0;
 }
 
 .datemenu-displays-box {
-  spacing: 1em;
+  spacing: 8px;
 }
 
 .datemenu-calendar-column {
@@ -1077,27 +1071,27 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-calendar-column:ltr {
-  border-left-width: 1px;
+  border-left-width: 0;
 }
 
 .datemenu-calendar-column:rtl {
-  border-right-width: 1px;
+  border-right-width: 0;
 }
 
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
 .events-section-title {
-  border-radius: 4px;
-  padding: .4em;
+  border-radius: 3px;
+  padding: 4px;
 }
 
 .message-list-section-list:ltr {
-  padding-left: .4em;
+  padding-left: 0;
 }
 
 .message-list-section-list:rtl {
-  padding-right: .4em;
+  padding-right: 0;
 }
 
 .datemenu-today-button:hover, .datemenu-today-button:focus,
@@ -1119,7 +1113,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .datemenu-today-button .date-label {
-  font-size: 1.5em;
+  font-size: 14pt;
   font-weight: 300;
 }
 
@@ -1141,14 +1135,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .calendar-month-label {
   color: #212121;
   font-weight: bold;
-  padding: 8px 0;
+  margin: 2px;
+  padding: 6px 16px;
 }
 
 .pager-button {
   color: #2e2e2e;
   background-color: transparent;
   width: 32px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .pager-button:hover, .pager-button:focus {
@@ -1176,13 +1171,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-day-base {
-  font-size: 80%;
+  font-size: 100%;
   text-align: center;
-  width: 2.4em;
-  height: 2.4em;
-  padding: 0.1em;
+  width: 24px;
+  height: 24px;
+  padding: 0px;
   margin: 2px;
-  border-radius: 1.4em;
+  font-feature-settings: "tnum";
+  border-radius: 100px;
 }
 
 .calendar-day-base:hover, .calendar-day-base:focus {
@@ -1190,15 +1186,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-day-base:active, .calendar-day-base:selected {
-  color: white;
+  color: #ffffff;
   background-color: #3689e6;
   border-color: transparent;
 }
 
 .calendar-day-base.calendar-day-heading {
   color: black;
-  margin-top: 1em;
-  font-size: 70%;
+  margin-top: 2px;
+  font-size: 100%;
 }
 
 .calendar-day {
@@ -1219,13 +1215,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar-today {
   font-weight: bold;
-  border: 1px solid rgba(179, 179, 179, 0.5);
+  color: #3689e6;
+  border: 0px solid transparent;
 }
 
 .calendar-day-with-events {
-  color: #484848;
+  color: #68b723;
   font-weight: bold;
   background-image: url("assets/calendar-today.svg");
+}
+
+.calendar-day-with-events:active, .calendar-day-with-events:selected {
+  color: #ffffff;
+  background-color: #68b723;
 }
 
 .calendar-other-month-day {
@@ -1234,13 +1236,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .calendar-week-number {
-  font-size: 70%;
+  font-size: 100%;
+  text-align: center;
   font-weight: bold;
-  width: 2.3em;
-  height: 1.8em;
+  width: 26px;
+  height: 26px;
   border-radius: 2px;
-  padding: 0.5em 0 0;
-  margin: 6px;
+  padding: 0;
+  margin: 4px;
   background-color: rgba(46, 46, 46, 0.3);
   color: #f3f3f3;
 }
@@ -1251,7 +1254,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-list-clear-button.button {
-  margin: 1.5em 1.5em 0;
+  margin: 8px 8px 0;
 }
 
 .message-list-clear-button.button:insensitive {
@@ -1268,11 +1271,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message {
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45);
   border-radius: 3px;
 }
 
 .message:hover, .message:focus {
-  background-color: #dfdfdf;
+  background-color: #e9e9e9;
 }
 
 .message-icon-bin {
@@ -1340,9 +1346,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .media-message-cover-icon.fallback {
-  color: white;
-  background-color: #f3f3f3;
-  border: 2px solid #f3f3f3;
+  color: #484848;
+  background-color: transparent;
+  border: 0;
   border-radius: 2px;
   icon-size: 16px;
   padding: 8px;
@@ -2737,10 +2743,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Legacy tray icon support (GNOME 3.22-3.24) */
 /* Dash to dock */
-#dashtodockContainer #dash StIcon {
-  icon-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-}
-
 #dashtodockContainer .dash-item-container .app-well-app-running-dot {
   width: 4px;
   height: 4px;
@@ -2800,14 +2802,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-image: url("assets/dash/dash-top-extended.svg") 7;
 }
 
-#dashtodockContainer.top.transparent #dash {
-  border-image: url("assets/dash/dash-top-adaptive.svg") 7;
-}
-
-#dashtodockContainer.top.transparent.extended #dash {
-  border-image: url("assets/dash/dash-top-extended-adaptive.svg") 7;
-}
-
 #dashtodockContainer.top .dash-item-container > StWidget {
   padding: 0 4px;
 }
@@ -2826,14 +2820,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.bottom.extended #dash {
   border-image: url("assets/dash/dash-bottom-extended.svg") 7;
-}
-
-#dashtodockContainer.bottom.transparent #dash {
-  border-image: url("assets/dash/dash-bottom-adaptive.svg") 7;
-}
-
-#dashtodockContainer.bottom.transparent.extended #dash {
-  border-image: url("assets/dash/dash-bottom-extended-adaptive.svg") 7;
 }
 
 #dashtodockContainer.bottom .dash-item-container > StWidget {
@@ -2856,14 +2842,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-image: url("assets/dash/dash-left-extended.svg") 7;
 }
 
-#dashtodockContainer.left.transparent #dash {
-  border-image: url("assets/dash/dash-left-adaptive.svg") 7;
-}
-
-#dashtodockContainer.left.transparent.extended #dash {
-  border-image: url("assets/dash/dash-left-extended-adaptive.svg") 7;
-}
-
 #dashtodockContainer.left .dash-item-container > StWidget {
   padding: 4px;
 }
@@ -2884,14 +2862,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-image: url("assets/dash/dash-right-extended.svg") 7;
 }
 
-#dashtodockContainer.right.transparent #dash {
-  border-image: url("assets/dash/dash-right-adaptive.svg") 7;
-}
-
-#dashtodockContainer.right.transparent.extended #dash {
-  border-image: url("assets/dash/dash-right-extended-adaptive.svg") 7;
-}
-
 #dashtodockContainer.right .dash-item-container > StWidget {
   padding: 4px;
 }
@@ -2903,6 +2873,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 /* Dash to Panel */
+/* NOTE: new version of DtP seems ignores image asset, only works in old version */
+/* or version that before panel opacity customization feature introducted */
 #panel.dashtopanelMainPanel.dashtopanelTop {
   border-image: url("assets/panel-top.svg") 4;
 }
