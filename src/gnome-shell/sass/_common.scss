@@ -1123,11 +1123,12 @@ StScrollBar {
       .calendar-today {
         font-weight: bold;
         color: $selected_bg_color;
-        //background-color: darken($bg_color,5%);
+        background-color: rgba($selected_bg_color, 0.15);
         border: 0px solid transparent;
       }
       .calendar-day-with-events {
         color: $success_color;
+        background-color: rgba($success_color, 0.15);
         font-weight: bold;
         background-image: url("assets/calendar-today.svg");
 

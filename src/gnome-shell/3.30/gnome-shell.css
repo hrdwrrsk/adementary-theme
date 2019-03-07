@@ -1246,11 +1246,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .calendar-today {
   font-weight: bold;
   color: #3689e6;
+  background-color: rgba(54, 137, 230, 0.15);
   border: 0px solid transparent;
 }
 
 .calendar-day-with-events {
   color: #68b723;
+  background-color: rgba(104, 183, 35, 0.15);
   font-weight: bold;
   background-image: url("assets/calendar-today.svg");
 }
