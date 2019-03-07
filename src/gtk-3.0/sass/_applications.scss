@@ -212,37 +212,45 @@ scrolledwindow.view > viewport.frame > stack > list {
 
   > row.activatable {
     padding: 0;
-
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    &:selected {
-      background-image: linear-gradient(to bottom,
-                                        $selected_bg_color,
-                                        darken($selected_bg_color, 1%),
-                                        darken($selected_bg_color, 4%));
-      border-color: if($variant == 'light', rgba(black, 0.22), $borders_color);
-      box-shadow: inset 0 1px rgba(white, 0.25),
-                  inset 0 0 0 1px rgba(white, 0.05),
-                  inset 0 -1px rgba(white, 0.1);
 
-      &:hover {
-        background-image: linear-gradient(to bottom,
-                                          lighten($selected_bg_color, 4%),
-                                          lighten($selected_bg_color, 3%),
-                                          $selected_bg_color);
+    &:selected {
+      &, &:focus {
+        color: $fg_color;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(black, 0.11), rgba(black, 0.07));
+        border-image: linear-gradient(to bottom,
+                                      rgba(black, 0.25),
+                                      if($variant == 'light', rgba(white, 0.3), rgba(white, 0.05)))
+                                      1 1 1 1;
+        border-style: solid;
+        border-width: 1px 0;
+
+        box-shadow: inset 0 1px 0 0 rgba(black, 0.03),
+                    inset 0 -1px 0 0 rgba(black, 0.1);
+
+        label { color: $fg_color; }
       }
 
-      &:active {
-        background-color: darken($selected_bg_color, 4%);
-        background-image: none;
-        box-shadow: inset 0 0 0 1px rgba(black, 0.05);
+      &:hover {
+        background-color: lighten($sidebar_bg_color, 1.1%);
       }
 
       &:backdrop {
-        background-image: linear-gradient(to bottom,
-                                          lighten($selected_bg_color, 2%),
-                                          lighten($selected_bg_color, 1%),
-                                          darken($selected_bg_color, 2%));
+        &, &:focus {
+          color: $backdrop_fg_color;
+          background-color: transparent;
+          background-image: linear-gradient(to bottom,
+                                            if($variant == 'light', rgba(black, 0.04), rgba(black, 0.08)),
+                                            rgba(black, 0.03));
+          border-image: linear-gradient(to bottom,
+                                        if($variant == 'light', rgba(black, 0.15), rgba(black, 0.19)),
+                                        if($variant == 'light', rgba(white, 0.25), rgba(white, 0.1)))
+                                        1 1 1 1;
+
+          label { color: $backdrop_fg_color; }
+        }
       }
     }
   }
@@ -264,30 +272,45 @@ scrolledwindow.view > viewport.frame > stack > list {
   background-color: transparent;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  &:selected {
-    background-image: linear-gradient(to bottom,
-                                      $selected_bg_color,
-                                      darken($selected_bg_color, 1%),
-                                      darken($selected_bg_color, 4%));
-    border-color: if($variant == 'light', rgba(black, 0.22), $borders_color);
-    box-shadow: inset 0 1px rgba(white, 0.25),
-                inset 0 0 0 1px rgba(white, 0.05),
-                inset 0 -1px rgba(white, 0.1);
 
-    &:hover {
-      background-image: linear-gradient(to bottom,
-                                        lighten($selected_bg_color, 4%),
-                                        lighten($selected_bg_color, 3%),
-                                        $selected_bg_color);
-    }
+  &.activatable {
+    &:selected {
+      &, &:focus {
+        color: $fg_color;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba(black, 0.11), rgba(black, 0.07));
+        border-image: linear-gradient(to bottom,
+                                      rgba(black, 0.25),
+                                      if($variant == 'light', rgba(white, 0.3), rgba(white, 0.05)))
+                                      1 1 1 1;
+        border-style: solid;
+        border-width: 1px 0;
 
-    //FIXME :active state doesn't work
+        box-shadow: inset 0 1px 0 0 rgba(black, 0.03),
+                    inset 0 -1px 0 0 rgba(black, 0.1);
 
-    &:backdrop {
-      background-image: linear-gradient(to bottom,
-                                        lighten($selected_bg_color, 2%),
-                                        lighten($selected_bg_color, 1%),
-                                        darken($selected_bg_color, 2%));
+        label { color: $fg_color; }
+      }
+
+      &:hover {
+        background-color: lighten($sidebar_bg_color, 1.1%);
+      }
+
+      &:backdrop {
+        &, &:focus {
+          color: $backdrop_fg_color;
+          background-color: transparent;
+          background-image: linear-gradient(to bottom,
+                                            if($variant == 'light', rgba(black, 0.04), rgba(black, 0.08)),
+                                            rgba(black, 0.03));
+          border-image: linear-gradient(to bottom,
+                                        if($variant == 'light', rgba(black, 0.15), rgba(black, 0.19)),
+                                        if($variant == 'light', rgba(white, 0.25), rgba(white, 0.1)))
+                                        1 1 1 1;
+
+          label { color: $backdrop_fg_color; }
+        }
+      }
     }
   }
 }
