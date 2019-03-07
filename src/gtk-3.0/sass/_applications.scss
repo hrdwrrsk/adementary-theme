@@ -314,3 +314,32 @@ scrolledwindow.view > viewport.frame > stack > list {
     }
   }
 }
+
+// Nemo file manager
+.nemo-desktop.nemo-canvas-item {
+  color: $selected_fg_color;
+  text-shadow: 1px 1px black;
+
+  &:active,
+  &:hover,
+  &:selected {
+    color: $selected_fg_color;
+    text-shadow: none;
+  }
+
+  &:selected:backdrop {
+    color: $backdrop_fg_color;
+  }
+}
+
+.nemo-window {
+  grid > box > box > toolbar.primary-toolbar {
+    border-bottom: 1px solid $borders_color;
+  }
+
+  grid.vertical > paned.horizontal > box.vertical {
+    > scrolledwindow.frame {
+      border-width: 0;
+    }
+  }
+}

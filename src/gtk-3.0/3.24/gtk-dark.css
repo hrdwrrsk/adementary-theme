@@ -7310,6 +7310,28 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
   color: #8e8f93;
 }
 
+.nemo-desktop.nemo-canvas-item {
+  color: #ffffff;
+  text-shadow: 1px 1px black;
+}
+
+.nemo-desktop.nemo-canvas-item:active, .nemo-desktop.nemo-canvas-item:hover, .nemo-desktop.nemo-canvas-item:selected {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.nemo-desktop.nemo-canvas-item:selected:backdrop {
+  color: #8e8f93;
+}
+
+.nemo-window grid > box > box > toolbar.primary-toolbar {
+  border-bottom: 1px solid #17181c;
+}
+
+.nemo-window grid.vertical > paned.horizontal > box.vertical > scrolledwindow.frame {
+  border-width: 0;
+}
+
 .budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;
