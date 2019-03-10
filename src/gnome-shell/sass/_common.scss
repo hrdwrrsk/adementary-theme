@@ -1125,6 +1125,14 @@ StScrollBar {
         color: $selected_bg_color;
         background-color: rgba($selected_bg_color, 0.15);
         border: 0px solid transparent;
+
+        &:hover,&:focus {
+          background-color: rgba($selected_bg_color, 0.3);
+        }
+        &:active,&:selected {
+          color: $selected_fg_color;
+          background-color: $selected_bg_color;
+        }
       }
       .calendar-day-with-events {
         color: $success_color;
@@ -1132,6 +1140,9 @@ StScrollBar {
         font-weight: bold;
         background-image: url("assets/calendar-today.svg");
 
+        &:hover,&:focus {
+          background-color: rgba($success_color, 0.3);
+        }
         &:active,&:selected {
           color: $selected_fg_color;
           background-color: $success_color;
@@ -1214,6 +1225,7 @@ StScrollBar {
 
           .message-title {
             color: darken($fg_color,5%);
+            font-weight: bold;
           }
 
           .message-content {
@@ -1232,14 +1244,18 @@ StScrollBar {
           }
 
           .media-message-cover-icon {
-            icon-size: 16px !important;
+            icon-size: 36px !important;
+            border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
+            border-radius: 2px;
             &.fallback {
               color: lighten($fg_color,10%);
-              background-color: transparent;
-              border: 0;
+              background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.1));
+              border: 1px solid if($variant == 'light', rgba(black, 0.4), $borders_color);
               border-radius: 2px;
-              icon-size: 16px;
-              padding: 8px; }
+              icon-size: 16px !important;
+              padding: 10px;
+              box-shadow: inset 0 0 0 1px rgba(white, 0.1);
+            }
           }
 
 

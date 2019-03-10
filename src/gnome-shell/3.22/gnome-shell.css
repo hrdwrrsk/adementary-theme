@@ -1222,11 +1222,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 0px solid transparent;
 }
 
+.calendar-today:hover, .calendar-today:focus {
+  background-color: rgba(54, 137, 230, 0.3);
+}
+
+.calendar-today:active, .calendar-today:selected {
+  color: #ffffff;
+  background-color: #3689e6;
+}
+
 .calendar-day-with-events {
   color: #68b723;
   background-color: rgba(104, 183, 35, 0.15);
   font-weight: bold;
   background-image: url("assets/calendar-today.svg");
+}
+
+.calendar-day-with-events:hover, .calendar-day-with-events:focus {
+  background-color: rgba(104, 183, 35, 0.3);
 }
 
 .calendar-day-with-events:active, .calendar-day-with-events:selected {
@@ -1317,6 +1330,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message-title {
   color: #212121;
+  font-weight: bold;
 }
 
 .message-content {
@@ -1346,16 +1360,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .media-message-cover-icon {
-  icon-size: 16px !important;
+  icon-size: 36px !important;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
 }
 
 .media-message-cover-icon.fallback {
   color: #484848;
-  background-color: transparent;
-  border: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 2px;
-  icon-size: 16px;
-  padding: 8px;
+  icon-size: 16px !important;
+  padding: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .system-switch-user-submenu-icon.user-icon {
