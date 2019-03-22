@@ -78,6 +78,11 @@
       &:first-child:dir(rtl) {
         @include button(active);
         box-shadow: inset 0 0 0 1px rgba(black, 0.05); //override box-shadow
+
+        &:backdrop {
+          @include button(backdrop-active);
+          box-shadow: inset 0 0 0 1px rgba(black, 0.05); //override box-shadow
+        }
       }
     }
 

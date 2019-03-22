@@ -8123,6 +8123,17 @@ calendar.raven-calendar:selected {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
+.nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop {
+  border-color: silver;
+  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop label, .nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop label, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop {
+  color: #919191;
+}
+
 .nautilus-window .path-bar-box {
   color: black;
   border-color: #b3b3b3;

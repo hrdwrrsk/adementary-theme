@@ -8099,6 +8099,17 @@ calendar.raven-calendar:selected {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
+.nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop {
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #292b32, #292b32);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop label, .nautilus-window .nautilus-path-bar button:last-child:dir(ltr):backdrop, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop label, .nautilus-window .nautilus-path-bar button:first-child:dir(rtl):backdrop {
+  color: #8e8f93;
+}
+
 .nautilus-window .path-bar-box {
   color: white;
   border-color: #17181c;
