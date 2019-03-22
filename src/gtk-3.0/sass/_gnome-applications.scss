@@ -71,6 +71,9 @@
 
       &.text-button.image-button image:not(:only-child) { margin: 0; }
 
+      &:hover { @include button(hover); }
+      &:active { @include button(active); }
+
       &:last-child:dir(ltr),
       &:first-child:dir(rtl) {
         @include button(active);

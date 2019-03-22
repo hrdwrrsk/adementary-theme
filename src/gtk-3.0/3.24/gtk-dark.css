@@ -8070,6 +8070,24 @@ calendar.raven-calendar:selected {
   margin: 0;
 }
 
+.nautilus-window .nautilus-path-bar button:hover {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+}
+
+.nautilus-window .nautilus-path-bar button:active {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
 .nautilus-window .nautilus-path-bar button:last-child:dir(ltr), .nautilus-window .nautilus-path-bar button:first-child:dir(rtl) {
   color: #eeeeee;
   outline-color: rgba(238, 238, 238, 0.3);
