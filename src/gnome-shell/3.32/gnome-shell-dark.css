@@ -662,17 +662,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Popovers/Menus */
 .popup-menu {
   min-width: 200px;
-  padding: 5px;
   border-image: url("assets/mpb-background.svg") 9;
 }
 
 .popup-menu .popup-sub-menu {
   background-color: #292b32;
   box-shadow: inset 0 -1px 0px #23242a;
-}
-
-.popup-menu .popup-menu-content {
-  padding: 1em 0em;
 }
 
 .popup-menu .popup-menu-item {
@@ -731,9 +726,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -arrow-background-color: transparent;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
-  -arrow-base: 12px;
+  -arrow-base: 0;
   -arrow-rise: 0;
   -arrow-box-shadow: none;
+}
+
+.popup-menu-boxpointer .popup-menu-content,
+.candidate-popup-boxpointer .popup-menu-content {
+  margin: 8px 5px 8px;
+  padding: 8px 0;
 }
 
 .popup-separator-menu-item {
@@ -1392,6 +1393,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: transparent;
 }
 
+.app-menu,
+.app-well-menu {
+  max-width: 28em;
+}
+
 .aggregate-menu {
   min-width: 21em;
 }
@@ -1463,6 +1469,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   width: 24px;
   -shell-close-overlap: 14px;
   color: transparent;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .window-close:hover {
@@ -1901,21 +1910,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .page-indicator .page-indicator-icon {
-  width: 18px;
+  width: 12px;
   height: 18px;
-  background-image: url(assets/page-indicator-inactive.svg);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 7px;
 }
 
 .page-indicator:hover .page-indicator-icon {
-  background-image: url(assets/page-indicator-hover.svg);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.page-indicator:active .page-indicator-icon {
-  background-image: url(assets/page-indicator-active.svg);
-}
-
+.page-indicator:active .page-indicator-icon,
 .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
-  background-image: url(assets/page-indicator-checked.svg);
+  border: none;
+  margin: 0;
+  background-color: white;
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
@@ -2785,30 +2795,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer .dash-item-container .app-well-app.focused .overview-icon {
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-#dashtodockContainer .show-apps .show-apps-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 3px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22);
-}
-
-#dashtodockContainer .show-apps:hover .show-apps-icon {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: rgba(255, 255, 255, 0.77);
-}
-
-#dashtodockContainer .show-apps:checked .show-apps-icon {
-  background-color: #3689e6;
-  color: white;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
-}
-
-#dashtodockContainer .show-apps:hover .overview-icon,
-#dashtodockContainer .show-apps:active .overview-icon,
-#dashtodockContainer .show-apps:checked .overview-icon {
-  background-color: transparent;
 }
 
 #dashtodockContainer.top #dash {

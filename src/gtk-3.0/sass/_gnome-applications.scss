@@ -63,6 +63,21 @@
       }
     }
 
+    // 3.32
+    .nautilus-path-bar button {
+      @include button(undecorated);
+      margin: 0px;
+      padding: 2px 8px;
+
+      &.text-button.image-button image:not(:only-child) { margin: 0; }
+
+      &:last-child:dir(ltr),
+      &:first-child:dir(rtl) {
+        @include button(active);
+        box-shadow: inset 0 0 0 1px rgba(black, 0.05); //override box-shadow
+      }
+    }
+
     .path-bar-box {
       @include entry(normal);
       border-width: 1px;
@@ -72,6 +87,17 @@
 
       &:backdrop {
         @include entry(backdrop);
+      }
+
+      // 3.32
+      button:first-child {
+        border-radius: 3px 0px 0px 3px;
+        border-width: 0px 1px 0px 0px;
+      }
+
+      button:not(:first-child) {
+        border-width: 0px 1px 0px 1px;
+        border-radius: 0px 0px 0px 0px;
       }
     }
   }
