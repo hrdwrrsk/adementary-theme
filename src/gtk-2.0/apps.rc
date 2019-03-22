@@ -95,21 +95,21 @@ style "chrome_gtk_frame" {
 style "theme-panel" {
 
   ythickness      = 0
-  
+
   bg[NORMAL]      = @panel_bg_color
   bg[ACTIVE]      = @panel_bg_color
   bg[PRELIGHT]    = @panel_bg_color
   bg[SELECTED]    = @panel_bg_color
 
   fg[NORMAL]      = @panel_fg_color
-  fg[ACTIVE]      = @selected_fg_color
-  fg[PRELIGHT]    = @selected_fg_color
-  fg[SELECTED]    = @selected_fg_color
+  fg[ACTIVE]      = @panel_fg_color
+  fg[PRELIGHT]    = @panel_fg_color
+  fg[SELECTED]    = @panel_fg_color
 
   text[NORMAL]    = @panel_fg_color
-  text[ACTIVE]    = @selected_fg_color
-  text[PRELIGHT]  = @selected_fg_color
-  text[SELECTED]  = @selected_fg_color
+  text[ACTIVE]    = @panel_fg_color
+  text[PRELIGHT]  = @panel_fg_color
+  text[SELECTED]  = @panel_fg_color
 
 }
 
@@ -135,7 +135,7 @@ style "panel-buttons" {
       border   = {0, 0, 0, 3}
       stretch  = TRUE
     }
-    
+
     image {
       function = BOX
       state    = ACTIVE

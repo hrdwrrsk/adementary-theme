@@ -25,6 +25,7 @@
 		border: none;
 		border-radius: 0;
 		-gtk-icon-shadow: none;
+    text-shadow: none;
 
 		&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
 			box-shadow: inset 0 -3px $selected_bg_color;

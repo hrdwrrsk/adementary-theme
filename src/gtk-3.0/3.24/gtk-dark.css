@@ -7029,6 +7029,7 @@ button.emoji-section:checked label {
   border: none;
   border-radius: 0;
   -gtk-icon-shadow: none;
+  text-shadow: none;
 }
 
 .xfce4-panel.background button:hover, .xfce4-panel.background button:active, .xfce4-panel.background button:checked, .xfce4-panel.background button:active:hover, .xfce4-panel.background button:checked:hover {
