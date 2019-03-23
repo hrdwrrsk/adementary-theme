@@ -103,6 +103,9 @@ install() {
 	mkdir -p									"$THEME_DIR/plank"
 	cp -r "$SRC_DIR/plank/dock$color.theme"						"$THEME_DIR/plank/dock.theme"
 
+  mkdir -p                  "$THEME_DIR/xfce-notify-4.0"
+  cp -r "$SRC_DIR/xfce-notify-4.0/gtk$color.css"    "$THEME_DIR/xfce-notify-4.0/gtk.css"
+
 	mkdir -p									"$THEME_DIR/xfwm4"
 	cp -r "$SRC_DIR/xfwm4${ELSE_DARK:-}/"{*.png,*.xpm,themerc}			"$THEME_DIR/xfwm4"
 }
