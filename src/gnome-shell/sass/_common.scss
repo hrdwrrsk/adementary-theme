@@ -1531,18 +1531,26 @@ StScrollBar {
     }
 
     .show-apps {
-      .show-apps-icon {
-        color: if($variant == 'light', rgba(black, 0.6), rgba(white, 0.6));
-        border-radius: 3px;
+      @if $version < 3.31 {
+        .show-apps-icon {
+          color: if($variant == 'light', rgba(black, 0.6), rgba(white, 0.6));
+          border-radius: 3px;
+        }
+
+        &:hover .show-apps-icon {
+          color: if($variant == 'light', rgba(black, 0.77), rgba(white, 0.77));
+        }
+
+        &:checked .show-apps-icon {
+          background-color: $selected_bg_color;
+          color: white;
+        }
       }
 
-      &:hover .show-apps-icon {
-        color: if($variant == 'light', rgba(black, 0.77), rgba(white, 0.77));
-      }
-
-      &:checked .show-apps-icon {
-        background-color: $selected_bg_color;
-        color: white;
+      @else {
+        .overview-icon {
+          color: $fg_color; // FIXME, in version 3.32+ using rgba doesn't work??
+        }
       }
 
       &:hover .overview-icon,

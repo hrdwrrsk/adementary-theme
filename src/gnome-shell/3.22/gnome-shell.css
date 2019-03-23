@@ -2832,7 +2832,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.top #dash {
   border-image: url("assets/dash/dash-top.svg") 7;
   border: 1px solid transparent;
-  border-top: 0;
+  border-top-width: 0;
 }
 
 #dashtodockContainer.top.extended #dash {
@@ -2852,7 +2852,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.bottom #dash {
   border-image: url("assets/dash/dash-bottom.svg") 7;
   border: 1px solid transparent;
-  border-bottom: 0;
+  border-bottom-width: 0;
 }
 
 #dashtodockContainer.bottom.extended #dash {
@@ -2872,7 +2872,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.left #dash {
   border-image: url("assets/dash/dash-left.svg") 7;
   border: 1px solid transparent;
-  border-left: 0;
+  border-left-width: 0;
 }
 
 #dashtodockContainer.left.extended #dash {
@@ -2892,7 +2892,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.right #dash {
   border-image: url("assets/dash/dash-right.svg") 7;
   border: 1px solid transparent;
-  border-right: 0;
+  border-right-width: 0;
 }
 
 #dashtodockContainer.right.extended #dash {

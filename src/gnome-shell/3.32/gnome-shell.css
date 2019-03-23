@@ -1714,18 +1714,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #3689e6;
 }
 
-#dash .show-apps .show-apps-icon {
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-}
-
-#dash .show-apps:hover .show-apps-icon {
-  color: rgba(0, 0, 0, 0.77);
-}
-
-#dash .show-apps:checked .show-apps-icon {
-  background-color: #3689e6;
-  color: white;
+#dash .show-apps .overview-icon {
+  color: #2e2e2e;
 }
 
 #dash .show-apps:hover .overview-icon,
@@ -2797,10 +2787,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+#dashtodockContainer .show-apps .overview-icon {
+  color: #2e2e2e;
+}
+
+#dashtodockContainer .show-apps:hover .overview-icon {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#dashtodockContainer .show-apps:active .overview-icon,
+#dashtodockContainer .show-apps:checked .overview-icon {
+  background-color: #3689e6;
+  color: #ffffff;
+}
+
 #dashtodockContainer.top #dash {
   border-image: url("assets/dash/dash-top.svg") 7;
   border: 1px solid transparent;
-  border-top: 0;
+  border-top-width: 0;
 }
 
 #dashtodockContainer.top.extended #dash {
@@ -2815,12 +2819,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.top .show-apps .overview-icon {
   border: 0;
   border-radius: 0;
+  margin-bottom: 1px;
 }
 
 #dashtodockContainer.bottom #dash {
   border-image: url("assets/dash/dash-bottom.svg") 7;
   border: 1px solid transparent;
-  border-bottom: 0;
+  border-bottom-width: 0;
 }
 
 #dashtodockContainer.bottom.extended #dash {
@@ -2835,12 +2840,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.bottom .show-apps .overview-icon {
   border: 0;
   border-radius: 0;
+  margin-top: 1px;
 }
 
 #dashtodockContainer.left #dash {
   border-image: url("assets/dash/dash-left.svg") 7;
   border: 1px solid transparent;
-  border-left: 0;
+  border-left-width: 0;
 }
 
 #dashtodockContainer.left.extended #dash {
@@ -2855,12 +2861,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.left .show-apps .overview-icon {
   border: 0;
   border-radius: 3px;
+  margin-right: 1px;
 }
 
 #dashtodockContainer.right #dash {
   border-image: url("assets/dash/dash-right.svg") 7;
   border: 1px solid transparent;
-  border-right: 0;
+  border-right-width: 0;
 }
 
 #dashtodockContainer.right.extended #dash {
@@ -2875,6 +2882,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dashtodockContainer.right .show-apps .overview-icon {
   border: 0;
   border-radius: 3px;
+  margin-left: 1px;
 }
 
 /* Dash to Panel */

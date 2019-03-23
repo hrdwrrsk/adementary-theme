@@ -59,17 +59,34 @@
 			}
 		}
 	}
+	@else {
+		.show-apps {
+			.overview-icon {
+				color: $fg_color // override
+			}
+			
+			&:hover .overview-icon {
+				background-color: if($variant == 'dark' and $light-panel == 'false', rgba(white, 0.05), rgba(black, 0.05));
+			}
+
+			&:active .overview-icon,
+			&:checked .overview-icon {
+				background-color: $selected_bg_color;
+				color: $selected_fg_color;
+			}
+		}
+	}
 }
 
-@each $pos, $padding, $radius, $image in ('.top', '0 4px', '0', 'top'),
-																 				 ('.bottom', '0 4px', '0', 'bottom'),
-																 			 	 ('.left', '4px', '3px', 'left'),
-																 			 	 ('.right', '4px', '3px', 'right') {
+@each $pos, $padding, $radius, $image, $margin_pos in ('.top', '0 4px', '0', 'top', 'bottom'),
+																 				 							('.bottom', '0 4px', '0', 'bottom', 'top'),
+																 			 	 							('.left', '4px', '3px', 'left', 'right'),
+																 			 	 							('.right', '4px', '3px', 'right', 'left') {
 	#dashtodockContainer#{$pos} {
 		#dash {
 			border-image: url("assets/dash/dash-#{$image}.svg") 7;
 			border: 1px solid transparent;
-			border-#{$image}: 0;
+			border-#{$image}-width: 0;
 		}
 
 		&.extended #dash {
@@ -84,6 +101,10 @@
 		.show-apps .overview-icon {
 			border: 0;
 			border-radius: #{$radius};
+
+			@if $version > 3.31 {
+				margin-#{$margin_pos}: 1px;
+			}
 		}
 	}
 }
