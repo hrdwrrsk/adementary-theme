@@ -35,7 +35,7 @@ This theme has come with **3 variants**
 **Update: See ubuntu-1810 branch for special version for Ubuntu 18.10**
 **Update2: Deprecated. Ubuntu 18.10 is NOT REALLY, really supported.**~~
 
-**Update (again) :** Nautilus 3.30 is available for Ubuntu 18.10 on [gnome3-team/gnome3-staging ppa](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=cosmic), so it's **important** to use Nautilus 3.30 to have a better experience on Ubuntu 18.10 **(it will lose desktop icons feature, but you can use desktop icons extension for GNOME shell to restore desktop icon feature)**. Ubuntu 19.04 will use Nautilus 3.30 w/Desktop icon extension for GNOME shell.
+**Update (again) :** Nautilus 3.30 is available for Ubuntu 18.10 on [gnome3-team/gnome3-staging ppa](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=cosmic), so it's **important** to use Nautilus 3.30 to have a better experience on Ubuntu 18.10 **(it will lose desktop icons feature, but you can use desktop icons extension for GNOME shell to restore desktop icon feature)**. Ubuntu 19.04 ships with Nautilus 3.32 w/Desktop icon extension for GNOME shell.
 
 # (GNOME Shell) Typography
 **Noto Sans**is used as default primary font for GNOME shell theme, Cantarell is used as fallback.
