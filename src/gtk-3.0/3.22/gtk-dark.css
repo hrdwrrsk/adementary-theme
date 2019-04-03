@@ -7341,6 +7341,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 .budgie-panel, .budgie-panel:backdrop {
   background-color: rgba(0, 0, 0, 0.9);
   color: #eeeeee;
+  font-weight: bold;
   text-shadow: none;
 }
 
@@ -7392,6 +7393,48 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 
 .budgie-panel button:active label, .budgie-panel button:active label:backdrop, .budgie-panel button:checked label, .budgie-panel button:checked label:backdrop {
   color: #eeeeee;
+}
+
+.end-region > widget > widget > box.horizontal > widget > widget > image:dir(ltr) {
+  margin: 0 2px 0 -1px;
+}
+
+.end-region > widget > widget > box.horizontal > widget > widget > image:dir(rtl) {
+  margin: 0 -1px 0 2px;
+}
+
+.end-region > widget > widget > box.horizontal > widget.sound-applet > widget > image {
+  min-width: 18px;
+  margin: 0;
+}
+
+.end-region > widget > widget > box.horizontal > widget > widget > box.horizontal > image,
+.end-region > widget > widget > box.horizontal box.battery-icon.horizontal > image {
+  min-width: 22px;
+}
+
+.end-region > widget > widget box.battery-icon.horizontal > label.percent-label:dir(ltr) {
+  margin: 0 -6px 0 3px;
+}
+
+.end-region > widget > widget box.battery-icon.horizontal > label.percent-label:dir(rtl) {
+  margin: 0 3px 0 -6px;
+}
+
+.end-region > widget > widget box.battery-icon.vertical > label.percent-label {
+  font-size: 75%;
+}
+
+.end-region > widget > widget box.battery-icon.vertical > label.percent-label:dir(ltr) {
+  margin-right: -2px;
+}
+
+.end-region > widget > widget box.battery-icon.vertical > label.percent-label:dir(rtl) {
+  margin-left: -2px;
+}
+
+.end-region > widget > widget > image {
+  min-width: 20px;
 }
 
 .budgie-clock-applet label, .budgie-clock-applet label:backdrop {
@@ -7632,7 +7675,44 @@ stack.icon-popover-stack box.horizontal > button.flat {
 
 stack.icon-popover-stack grid.horizontal > button.flat.image-button {
   margin: 5px;
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
+}
+
+stack.icon-popover-stack grid.horizontal > button.flat.image-button:hover {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+}
+
+stack.icon-popover-stack grid.horizontal > button.flat.image-button:active, stack.icon-popover-stack grid.horizontal > button.flat.image-button:checked {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  text-shadow: none;
   -gtk-icon-shadow: none;
+}
+
+stack.icon-popover-stack grid.horizontal > button.flat.image-button:disabled {
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
+  background-color: #2E3038;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
+}
+
+stack.icon-popover-stack grid.horizontal > button.flat.image-button:disabled label, stack.icon-popover-stack grid.horizontal > button.flat.image-button:disabled {
+  color: #8e8f93;
 }
 
 window.budgie-popover:not(.csd).background {
@@ -7730,20 +7810,17 @@ window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-pop
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked {
-  color: #ffffff;
-  background-image: linear-gradient(to bottom, #3689e6, #3186e5, #247ee4);
-  border-color: #17181c;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #eeeeee;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.07));
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.05)) 1 1 1 1;
+  border-style: solid;
+  border-width: 1px 0;
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.03), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked:hover {
-  background-image: linear-gradient(to bottom, #4894e8, #4491e8, #3689e6);
-}
-
-.budgie-menu .categories button.flat.radio.category-button:checked:active {
-  background-color: #247ee4;
-  background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background-color: #2b2d34;
 }
 
 .user-menu list,
@@ -7815,6 +7892,22 @@ frame.raven-frame > border {
   border-width: 1px;
   border-color: #17181c;
   background-color: #30333D;
+}
+
+.raven scrolledwindow > .frame > box.vertical > box.vertical {
+  box-shadow: inset 0 -1px 0 0 #17181c;
+}
+
+.raven scrolledwindow > .frame box.audio-widget stackswitcher.linked > button.text-button.radio:dir(ltr), .raven scrolledwindow > .frame box.audio-widget stackswitcher.linked > button.text-button.radio:dir(rtl) {
+  border-radius: 0;
+}
+
+.raven scrolledwindow > .frame box.audio-widget stackswitcher.linked > button.text-button.radio:first-child {
+  border-left-width: 0px;
+}
+
+.raven scrolledwindow > .frame box.audio-widget stackswitcher.linked > button.text-button.radio:last-child {
+  border-right-width: 0px;
 }
 
 .powerstrip {
@@ -7925,7 +8018,7 @@ calendar.raven-calendar:selected {
 
 .budgie-session-dialog .linked.horizontal > button,
 .budgie-polkit-dialog .linked.horizontal > button {
-  padding: 4px;
+  padding: 2px;
   border-top: 1px solid #17181c;
   border-radius: 0;
   margin-bottom: 6px;
@@ -7979,7 +8072,7 @@ calendar.raven-calendar:selected {
 }
 
 .budgie-panel > box > widget > separator {
-  background-color: #17181c;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .budgie-calendar-applet calendar {

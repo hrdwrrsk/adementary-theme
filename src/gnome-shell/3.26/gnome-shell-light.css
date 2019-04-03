@@ -1750,10 +1750,20 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: white;
 }
 
-#dash .show-apps:hover .overview-icon,
+#dash .show-apps .overview-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22);
+  border: 4px solid transparent;
+}
+
+#dash .show-apps:hover .overview-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 #dash .show-apps:active .overview-icon,
 #dash .show-apps:checked .overview-icon {
-  background-color: transparent;
+  background-color: #3689e6;
 }
 
 .dash-item-container > StWidget {
@@ -2795,20 +2805,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Legacy tray icon support (GNOME 3.22-3.24) */
 /* Dash to dock */
 #dashtodockContainer .dash-item-container .app-well-app-running-dot {
-  width: 4px;
-  height: 4px;
-  margin: 1px;
+  width: 6px;
+  height: 2px;
+  margin: 0px;
   border-radius: 32px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 #dashtodockContainer .dash-item-container > StWidget.focused .app-well-app-running-dot {
-  width: 14px;
+  width: 16px;
+  background-color: #2e2e2e;
 }
 
 #dashtodockContainer .dash-item-container .app-well-app .overview-icon,
 #dashtodockContainer .dash-item-container .show-apps .overview-icon {
-  padding: 6px;
+  padding: 4px;
 }
 
 #dashtodockContainer .dash-item-container .app-well-app:hover .overview-icon {
@@ -2817,30 +2828,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer .dash-item-container .app-well-app.focused .overview-icon {
   background-color: rgba(0, 0, 0, 0.15);
-}
-
-#dashtodockContainer .show-apps .show-apps-icon {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
-}
-
-#dashtodockContainer .show-apps:hover .show-apps-icon {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: rgba(0, 0, 0, 0.77);
-}
-
-#dashtodockContainer .show-apps:checked .show-apps-icon {
-  background-color: #3689e6;
-  color: white;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
-}
-
-#dashtodockContainer .show-apps:hover .overview-icon,
-#dashtodockContainer .show-apps:active .overview-icon,
-#dashtodockContainer .show-apps:checked .overview-icon {
-  background-color: transparent;
 }
 
 #dashtodockContainer.top #dash {
@@ -2854,13 +2841,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.top .dash-item-container > StWidget {
-  padding: 0 4px;
+  padding: 4px 6px;
 }
 
 #dashtodockContainer.top .app-well-app .overview-icon,
 #dashtodockContainer.top .show-apps .overview-icon {
   border: 0;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 #dashtodockContainer.bottom #dash {
@@ -2874,13 +2861,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.bottom .dash-item-container > StWidget {
-  padding: 0 4px;
+  padding: 4px 6px;
 }
 
 #dashtodockContainer.bottom .app-well-app .overview-icon,
 #dashtodockContainer.bottom .show-apps .overview-icon {
   border: 0;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 #dashtodockContainer.left #dash {
@@ -2894,7 +2881,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.left .dash-item-container > StWidget {
-  padding: 4px;
+  padding: 6px 4px;
 }
 
 #dashtodockContainer.left .app-well-app .overview-icon,
@@ -2914,7 +2901,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.right .dash-item-container > StWidget {
-  padding: 4px;
+  padding: 6px 4px;
 }
 
 #dashtodockContainer.right .app-well-app .overview-icon,

@@ -50,3 +50,7 @@ stick-toggled-active
 stick-toggled-inactive
 stick-toggled-prelight
 stick-toggled-pressed
+top-left-active
+top-left-inactive
+top-right-active
+top-right-inactive

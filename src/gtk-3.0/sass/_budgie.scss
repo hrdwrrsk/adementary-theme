@@ -13,6 +13,7 @@
 	&, &:backdrop {
 		background-color: if($light-panel == 'false', rgba(black, 0.9), rgba($bg_color, 0.7));
 		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+		font-weight: bold;
 
 		text-shadow: none;
 
@@ -72,6 +73,48 @@
 				&, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
 			}
 		}
+	}
+}
+
+// end region {
+.end-region > widget > widget {
+	> box.horizontal {
+		// bluetooth tray
+		> widget > widget > image {
+			&:dir(ltr) { margin: 0 2px 0 -1px; }
+			&:dir(rtl) { margin: 0 -1px 0 2px; }
+		}
+
+		// volume indicator/tray
+		> widget.sound-applet > widget > image {
+			min-width: 16px + 2px;
+			margin: 0;
+		}
+
+		// battery
+		> widget > widget > box.horizontal > image,
+		box.battery-icon.horizontal > image {
+			min-width: 16px + 6px;
+		}
+	}
+
+	// battery percent label
+	box.battery-icon {
+		&.horizontal > label.percent-label {
+			&:dir(ltr) { margin: 0 -6px 0 3px; }
+			&:dir(rtl) { margin: 0 3px 0 -6px; }
+		}
+
+		&.vertical > label.percent-label {
+			font-size: 75%;
+			&:dir(ltr) { margin-right: -2px; }
+			&:dir(rtl) { margin-left: -2px; }
+		}
+	}
+
+	// notification bell icons & user indicator
+	> image {
+		min-width: 16px + 4px;
 	}
 }
 
@@ -236,7 +279,19 @@ stack.icon-popover-stack {
 	grid.horizontal {
 		> button.flat.image-button {
 			margin: 5px;
-			-gtk-icon-shadow: none;
+			@include button(normal);
+
+			&:hover {
+				@include button(hover);
+			}
+
+			&:active, &:checked {
+				@include button(active);
+			}
+
+			&:disabled {
+				@include button(insensitive);
+			}
 		}
 	}
 }
@@ -332,28 +387,22 @@ window.budgie-popover:not(.csd) {
 			&:hover { background-color: if(variant == light, transparentize($fg_color, 0.9), transparentize($fg_color, 0.95)); }
 
 			&:checked {
-				color: $selected_fg_color;
-				background-image: linear-gradient(to bottom,
-	                                        $selected_bg_color,
-	                                        darken($selected_bg_color, 1%),
-	                                        darken($selected_bg_color, 4%));
-	      border-color: if($variant == 'light', darken($selected_bg_color, 10%), $borders_color);
-	      box-shadow: inset 0 1px rgba(white, 0.25),
-	                  inset 0 0 0 1px rgba(white, 0.05),
-	                  inset 0 -1px rgba(white, 0.1);
+				color: $fg_color;
+	      background-color: transparent;
+	      background-image: linear-gradient(to bottom, rgba(black, 0.11), rgba(black, 0.07));
+	      border-image: linear-gradient(to bottom,
+	                                    rgba(black, 0.25),
+	                                    if($variant == 'light', rgba(white, 0.3), rgba(white, 0.05)))
+	                                    1 1 1 1;
+	      border-style: solid;
+	      border-width: 1px 0;
+
+	      box-shadow: inset 0 1px 0 0 rgba(black, 0.03),
+	                  inset 0 -1px 0 0 rgba(black, 0.1);
 
 				&:hover {
-					background-image: linear-gradient(to bottom,
-							              lighten($selected_bg_color, 4%),
-							              lighten($selected_bg_color, 3%),
-							              $selected_bg_color);
-				}
-
-				&:active {
-					background-color: darken($selected_bg_color, 4%);
-					background-image: none;
-					box-shadow: inset 0 0 0 1px rgba(black, 0.05);
-				}
+		      background-color: lighten($sidebar_bg_color, 1.1%);
+		    }
 			}
 		}
 	}
@@ -420,6 +469,29 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
     border-width: 1px;
     border-color: $borders_color;
     background-color: $base_color;
+	}
+
+	scrolledwindow > .frame {
+		> box.vertical > box.vertical {
+			box-shadow: inset 0 -1px 0 0 if($variant == 'light', rgba(black, 0.22), $borders_color);
+		}
+
+		box.audio-widget {
+			stackswitcher.linked {
+				> button.text-button.radio {
+					&:dir(ltr),
+					&:dir(rtl) { border-radius: 0; }
+
+					&:first-child {
+						border-left-width: 0px;
+					}
+
+					&:last-child {
+						border-right-width: 0px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -518,7 +590,7 @@ calendar.raven-calendar {
 .budgie-session-dialog,
 .budgie-polkit-dialog {
   .linked.horizontal > button {
-    padding: 4px;
+    padding: 2px;
     border-top: 1px solid $borders_color;
     border-radius: 0;
 
@@ -576,7 +648,7 @@ calendar.raven-calendar {
 }
 
 .budgie-panel > box > widget > separator {
-  background-color: $dark_borders_color;
+  background-color: if($light-panel == 'false', rgba(white, 0.3), rgba(black, 0.22));
 }
 
 .budgie-calendar-applet {
