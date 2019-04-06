@@ -303,12 +303,15 @@ stack.icon-popover-stack {
 window.budgie-popover:not(.csd) {
   &.background {
 		padding: 2px;
-		border: 1px solid $borders_color;
+		border-color: if($variant == 'light', rgba(black, 0.22), $borders_color);
+		border-style: none;
+		border-width: 1px;
 		border-radius: 5px;
 		background-color: $popover_bg_color;
 		background-clip: border-box;
 
-		box-shadow: 0 1px 2px transparentize(black, 0.7);
+		box-shadow: 0 1px 2px transparentize(black, 0.7),
+								0 0 0 1px if($variant == 'light', rgba(black, 0.22), $borders_color);
 	}
 
 	> frame.container {

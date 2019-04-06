@@ -7719,11 +7719,13 @@ stack.icon-popover-stack grid.horizontal > button.flat.image-button:disabled lab
 
 window.budgie-popover:not(.csd).background {
   padding: 2px;
-  border: 1px solid #17181c;
+  border-color: #17181c;
+  border-style: none;
+  border-width: 1px;
   border-radius: 5px;
   background-color: #2E3038;
   background-clip: border-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px #17181c;
 }
 
 window.budgie-popover:not(.csd) > frame.container,
