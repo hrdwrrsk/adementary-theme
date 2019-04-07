@@ -11,23 +11,23 @@ LineWidth=1
 #The color (RGBA) of the outer stroke.
 OuterStrokeColor=0;;0;;0;;90
 #The starting color (RGBA) of the fill gradient.
-FillStartColor=243;;243;;243;;215
+FillStartColor=243;;243;;243;;180
 #The ending color (RGBA) of the fill gradient.
-FillEndColor=243;;243;;243;;215
+FillEndColor=243;;243;;243;;180
 #The color (RGBA) of the inner stroke.
 InnerStrokeColor=250;;250;;250;;120
 
 [PlankDockTheme]
 #The padding on the left/right dock edges, in tenths of a percent of IconSize.
-HorizPadding=0.5
+HorizPadding=0.75
 #The padding on the top dock edge, in tenths of a percent of IconSize.
-TopPadding=1.5
+TopPadding=2
 #The padding on the bottom dock edge, in tenths of a percent of IconSize.
-BottomPadding=1.5
+BottomPadding=2
 #The padding between items on the dock, in tenths of a percent of IconSize.
-ItemPadding=4
+ItemPadding=5
 #The size of item indicators, in tenths of a percent of IconSize.
-IndicatorSize=5
+IndicatorSize=9
 #The size of the icon-shadow behind every item, in tenths of a percent of IconSize.
 IconShadowSize=0.0
 #The height (in percent of IconSize) to bounce an icon when the application sets urgent.
