@@ -7088,19 +7088,26 @@ button.emoji-section:checked label {
 .lightdm-gtk-greeter #login_window,
 .lightdm-gtk-greeter #shutdown_dialog,
 .lightdm-gtk-greeter #restart_dialog {
-  background-color: transparent;
-  color: #2e2e2e;
   border: none;
-  border-radius: 5px;
+  background-color: transparent;
   box-shadow: none;
-  border-image: -gtk-scaled(url("assets/lightdm-background.svg")) 10/10px stretch;
+}
+
+.lightdm-gtk-greeter #login_window > box,
+.lightdm-gtk-greeter #shutdown_dialog > box,
+.lightdm-gtk-greeter #restart_dialog > box {
+  margin: 18px;
+  border-radius: 5px;
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.22);
+  background-color: #f3f3f3;
+  color: #2e2e2e;
 }
 
 .lightdm-gtk-greeter #login_window #content_frame,
 .lightdm-gtk-greeter #shutdown_dialog #content_frame,
 .lightdm-gtk-greeter #restart_dialog #content_frame {
   background-color: #f3f3f3;
-  margin: 6px 6px 0 6px;
+  margin: 4px 4px 0 4px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: none;
@@ -7110,7 +7117,7 @@ button.emoji-section:checked label {
 .lightdm-gtk-greeter #shutdown_dialog #buttonbox_frame,
 .lightdm-gtk-greeter #restart_dialog #buttonbox_frame {
   background-color: #f3f3f3;
-  margin: 0 6px 6px 6px;
+  margin: 0 4px 4px 4px;
   border: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -7131,15 +7138,7 @@ button.emoji-section:checked label {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.15);
-}
-
-.lightdm-gtk-greeter #login_window combobox button.combo #user_combobox {
-  font-weight: 700;
-}
-
-.lightdm-gtk-greeter #login_window combobox button.combo #user_combobox menu {
-  font-weight: 500;
+  border-color: transparent;
 }
 
 .lightdm-gtk-greeter #login_window combobox button.combo:hover {

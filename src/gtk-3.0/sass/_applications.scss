@@ -62,15 +62,20 @@
 	#login_window,
 	#shutdown_dialog,
 	#restart_dialog {
-		background-color: transparent;
-		color: $fg_color;
-    // remove frame borders, it's ugly in light variant.
-    border: none;
-    border-radius: 5px;
+		border: none;
+    background-color: transparent;
     box-shadow: none;
-    border-image: if($variant == 'light', -gtk-scaled(url("assets/lightdm-background.svg")),
-                                           -gtk-scaled(url("assets/lightdm-background-dark.svg")))
-                  10 / 10px stretch;
+
+    > box {
+      margin: 18px; // enlarge margins or shadow will cut off
+      border-radius: 5px;
+      box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
+                  inset 0 1px $top_hilight,
+                  0 0 0 1px if($variant == 'light', rgba(black, 0.22), $borders_color);
+
+      background-color: $bg_color;
+      color: $fg_color;
+    }
 
 		button {
 			&#login_button,
@@ -85,7 +90,7 @@
 
     #content_frame {
       background-color: $bg_color;
-      margin: 6px 6px 0 6px;
+      margin: 4px 4px 0 4px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       border: none;
@@ -93,7 +98,7 @@
 
     #buttonbox_frame {
       background-color: $bg_color;
-      margin: 0 6px 6px 6px;
+      margin: 0 4px 4px 4px;
       border: none;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
@@ -116,13 +121,7 @@
 			background-color: transparent;
       background-image: none;
       box-shadow: none;
-      border-color: transparentize(black, 0.85);
-
-      #user_combobox {
-        font-weight: 700;
-
-        menu { font-weight: 500; }
-      }
+      border-color: transparent;
 
       &:hover { @include button(hover); }
       &:active { @include button(active); }
