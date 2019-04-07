@@ -27,7 +27,7 @@ BottomPadding=2
 #The padding between items on the dock, in tenths of a percent of IconSize.
 ItemPadding=5
 #The size of item indicators, in tenths of a percent of IconSize.
-IndicatorSize=9
+IndicatorSize=10
 #The size of the icon-shadow behind every item, in tenths of a percent of IconSize.
 IconShadowSize=0.0
 #The height (in percent of IconSize) to bounce an icon when the application sets urgent.
