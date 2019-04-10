@@ -56,7 +56,17 @@
   #panel_window menubar {
     color: if($light-panel == 'false', $dark_fg_color, $fg_color);
     background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
-    border-bottom: 1px solid  if($light-panel == 'false', $dark_borders_color, rgba(black, 0.5));
+    // border-bottom: 1px solid  if($light-panel == 'false', $dark_borders_color, rgba(black, 0.5));
+    margin-bottom: 1px;
+    box-shadow: 0 1px if($variant == 'light', rgba(black, 0.22), $borders_color);
+
+    menuitem {
+      margin-bottom: 1px;
+    }
+
+    > box {
+      background-color: transparent;
+    }
   }
 
 	#login_window,
