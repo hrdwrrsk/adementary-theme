@@ -272,6 +272,51 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
   }
 }
 
+// Workspace switcher applet
+.workspace-switcher {
+	.workspace-layout {
+		border: 0 solid if($light-panel == 'true', rgba(black, 0.22), rgba(black, 0.4));
+
+
+    .top &,
+    .bottom & {
+      &:dir(ltr) { border-left-width: 1px; }
+
+      &:dir(rtl) { border-right-width: 1px; }
+    }
+
+    .left &,
+		.right & { border-top-width: 1px; }
+	}
+
+	.workspace-item,
+  .workspace-add-button {
+    border: 0 solid if($light-panel == 'true', rgba(black, 0.22), rgba(black, 0.4));
+
+    .top &,
+    .bottom & {
+      &:dir(ltr) { border-right-width: 1px; }
+
+      &:dir(rtl) { border-left-width: 1px; }
+    }
+
+    .left &,
+    .right & { border-bottom-width: 1px; }
+  }
+
+	.workspace-item {
+		background-color: if($light-panel == 'true', rgba($base_color, 0.3), rgba($dark_base_color, 0.3));
+    &.current-workspace {
+			background-color: if($light-panel == 'true', rgba($base_color, 0.85), rgba($dark_base_color, 0.85));
+			box-shadow: inset 0 -3px $selected_bg_color;
+		}
+
+		label.workspace-more-label {
+			color: if($light-panel == 'true', $fg_color, $dark_fg_color);
+		}
+	}
+}
+
 // Icon tasklist popover
 stack.icon-popover-stack {
 	box.horizontal > button.flat {

@@ -7702,6 +7702,67 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
   box-shadow: inset -3px 0 #3689e6;
 }
 
+.workspace-switcher .workspace-layout {
+  border: 0 solid rgba(0, 0, 0, 0.4);
+}
+
+.top .workspace-switcher .workspace-layout:dir(ltr),
+.bottom .workspace-switcher .workspace-layout:dir(ltr) {
+  border-left-width: 1px;
+}
+
+.top .workspace-switcher .workspace-layout:dir(rtl),
+.bottom .workspace-switcher .workspace-layout:dir(rtl) {
+  border-right-width: 1px;
+}
+
+.left .workspace-switcher .workspace-layout,
+.right .workspace-switcher .workspace-layout {
+  border-top-width: 1px;
+}
+
+.workspace-switcher .workspace-item,
+.workspace-switcher .workspace-add-button {
+  border: 0 solid rgba(0, 0, 0, 0.4);
+}
+
+.top .workspace-switcher .workspace-item:dir(ltr),
+.bottom .workspace-switcher .workspace-item:dir(ltr), .top
+.workspace-switcher .workspace-add-button:dir(ltr),
+.bottom
+.workspace-switcher .workspace-add-button:dir(ltr) {
+  border-right-width: 1px;
+}
+
+.top .workspace-switcher .workspace-item:dir(rtl),
+.bottom .workspace-switcher .workspace-item:dir(rtl), .top
+.workspace-switcher .workspace-add-button:dir(rtl),
+.bottom
+.workspace-switcher .workspace-add-button:dir(rtl) {
+  border-left-width: 1px;
+}
+
+.left .workspace-switcher .workspace-item,
+.right .workspace-switcher .workspace-item, .left
+.workspace-switcher .workspace-add-button,
+.right
+.workspace-switcher .workspace-add-button {
+  border-bottom-width: 1px;
+}
+
+.workspace-switcher .workspace-item {
+  background-color: rgba(51, 54, 64, 0.3);
+}
+
+.workspace-switcher .workspace-item.current-workspace {
+  background-color: rgba(51, 54, 64, 0.85);
+  box-shadow: inset 0 -3px #3689e6;
+}
+
+.workspace-switcher .workspace-item label.workspace-more-label {
+  color: #eeeeee;
+}
+
 stack.icon-popover-stack box.horizontal > button.flat {
   margin: 5px;
   text-shadow: none;
