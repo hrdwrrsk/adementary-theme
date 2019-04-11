@@ -7060,10 +7060,7 @@ button.emoji-section:checked label {
   background-color: #2E3038;
   margin-bottom: 1px;
   box-shadow: 0 1px #17181c;
-}
-
-.lightdm-gtk-greeter #panel_window menubar menuitem {
-  margin-bottom: 1px;
+  padding-bottom: 1px;
 }
 
 .lightdm-gtk-greeter #panel_window menubar > box {
