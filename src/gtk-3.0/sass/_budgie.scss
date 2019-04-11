@@ -574,21 +574,21 @@ calendar.raven-calendar {
 }
 
 .raven-mpris {
-  background-color: rgba($dark_bg_color, 0.8);
-  color: $dark_fg_color;
+  background-color: rgba($bg_color, 0.8);
+  color: $fg_color;
+	font-weight: bold;
 
   label { min-height: 24px; }
 
   button.image-button {
-		@include button(osd-normal);
-		color: $dark_fg_color;
+		@include button(undecorated);
 
-		&:hover { @include button(osd-hover); }
-		&:active { @include button(osd-active); }
+		&:hover { @include button(hover); }
+		&:active { @include button(active); }
 
 		&:disabled {
 			color: $osd_insensitive_fg_color;
-			@include button(osd-insensitive);
+			@include button(insensitive);
 		}
 	}
 }
