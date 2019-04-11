@@ -7095,6 +7095,10 @@ button.emoji-section:checked label {
   background-color: transparent;
 }
 
+.lightdm-gtk-greeter #panel_window menubar > menuitem {
+  border-radius: 0;
+}
+
 .lightdm-gtk-greeter #login_window,
 .lightdm-gtk-greeter #shutdown_dialog,
 .lightdm-gtk-greeter #restart_dialog {
