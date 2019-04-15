@@ -241,7 +241,7 @@ spinner:checked:disabled {
 /****************
  * Text Entries *
  ****************/
-spinbutton:not(.vertical),
+spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical),
 entry {
   min-height: 24px;
   padding-left: 6px;
@@ -255,17 +255,17 @@ entry {
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
 }
 
-spinbutton:not(.vertical) image.left,
+spinbutton:not(.vertical) image.left, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image.left,
 entry image.left {
   margin-right: 6px;
 }
 
-spinbutton:not(.vertical) image.right,
+spinbutton:not(.vertical) image.right, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image.right,
 entry image.right {
   margin-left: 6px;
 }
 
-spinbutton.flat:focus:not(.vertical), spinbutton.flat:backdrop:not(.vertical), spinbutton.flat:disabled:not(.vertical), spinbutton.flat:backdrop:disabled:not(.vertical), spinbutton.flat:not(.vertical),
+spinbutton.flat:focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.flat:focus:not(.vertical), spinbutton.flat:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.flat:backdrop:not(.vertical), spinbutton.flat:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.flat:disabled:not(.vertical), spinbutton.flat:backdrop:disabled:not(.vertical), spinbutton.flat:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.flat:not(.vertical),
 entry.flat:focus,
 entry.flat:backdrop,
 entry.flat:disabled,
@@ -278,12 +278,12 @@ entry.flat {
   border-radius: 0;
 }
 
-spinbutton:focus:not(.vertical),
+spinbutton:focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:focus:not(.vertical),
 entry:focus {
   border-color: #3689e6;
 }
 
-spinbutton:disabled:not(.vertical),
+spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:disabled:not(.vertical),
 entry:disabled {
   color: #919191;
   border-color: #b3b3b3;
@@ -291,7 +291,7 @@ entry:disabled {
   background-image: none;
 }
 
-spinbutton:backdrop:not(.vertical),
+spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:not(.vertical),
 entry:backdrop {
   color: black;
   border-color: #b3b3b3;
@@ -300,7 +300,7 @@ entry:backdrop {
   transition: 200ms ease-out;
 }
 
-spinbutton:backdrop:disabled:not(.vertical),
+spinbutton:backdrop:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:disabled:not(.vertical),
 entry:backdrop:disabled {
   color: #cdcdcd;
   border-color: silver;
@@ -308,66 +308,66 @@ entry:backdrop:disabled {
   background-image: none;
 }
 
-spinbutton.error:not(.vertical),
+spinbutton.error:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.error:not(.vertical),
 entry.error {
   color: #c6262e;
   border-color: #c6262e;
 }
 
-spinbutton.error:focus:not(.vertical),
+spinbutton.error:focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.error:focus:not(.vertical),
 entry.error:focus {
   border-color: #c6262e;
 }
 
-spinbutton.error:not(.vertical) selection,
+spinbutton.error:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton.error:not(.vertical) selection,
 entry.error selection {
   background-color: #c6262e;
 }
 
-spinbutton.warning:not(.vertical),
+spinbutton.warning:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.warning:not(.vertical),
 entry.warning {
   color: #f9c440;
   border-color: #f9c440;
 }
 
-spinbutton.warning:focus:not(.vertical),
+spinbutton.warning:focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton.warning:focus:not(.vertical),
 entry.warning:focus {
   border-color: #f9c440;
 }
 
-spinbutton.warning:not(.vertical) selection,
+spinbutton.warning:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton.warning:not(.vertical) selection,
 entry.warning selection {
   background-color: #f9c440;
 }
 
-spinbutton:not(.vertical) image,
+spinbutton:not(.vertical) image, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image,
 entry image {
   color: #565656;
 }
 
-spinbutton:not(.vertical) image:hover,
+spinbutton:not(.vertical) image:hover, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:hover,
 entry image:hover {
   color: #2e2e2e;
 }
 
-spinbutton:not(.vertical) image:active,
+spinbutton:not(.vertical) image:active, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:active,
 entry image:active {
   color: #3689e6;
 }
 
-spinbutton:not(.vertical) image:backdrop,
+spinbutton:not(.vertical) image:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:backdrop,
 entry image:backdrop {
   color: #a5a5a5;
 }
 
-spinbutton:drop(active):focus:not(.vertical), spinbutton:drop(active):not(.vertical),
+spinbutton:drop(active):focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:drop(active):focus:not(.vertical), spinbutton:drop(active):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:drop(active):not(.vertical),
 entry:drop(active):focus,
 entry:drop(active) {
   border-color: #4e9a06;
   box-shadow: inset 0 0 0 1px #4e9a06;
 }
 
-spinbutton:not(.vertical) progress,
+spinbutton:not(.vertical) progress, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) progress,
 entry progress {
   margin: 2px -6px;
   background-color: transparent;
@@ -379,74 +379,88 @@ entry progress {
   box-shadow: none;
 }
 
-spinbutton:not(.vertical) progress:backdrop,
+spinbutton:not(.vertical) progress:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) progress:backdrop,
 entry progress:backdrop {
   background-color: transparent;
 }
 
-.linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical),
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:focus:not(.vertical) + spinbutton:not(.vertical),
 .linked:not(.vertical) > spinbutton:focus:not(.vertical) + button,
-.linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:focus + spinbutton:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:focus:not(.vertical) + button,
+.linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo,
+window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:focus:not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:focus + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > entry:focus + spinbutton:not(.vertical),
 .linked:not(.vertical) >
 entry:focus + button,
 .linked:not(.vertical) >
-entry:focus + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, .linked:not(.vertical) >
+entry:focus + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, .linked:not(.vertical) >
 entry:focus +
 entry {
   border-left-color: #b3b3b3;
 }
 
-.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical),
+.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical),
 .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + button,
-.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:drop(active) + spinbutton:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + button,
+.linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo,
+window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + combobox > box > button.combo, .linked:not(.vertical) > entry:drop(active) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > entry:drop(active) + spinbutton:not(.vertical),
 .linked:not(.vertical) >
 entry:drop(active) + button,
 .linked:not(.vertical) >
-entry:drop(active) + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + entry, .linked:not(.vertical) >
+entry:drop(active) + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + entry, window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + entry, .linked:not(.vertical) >
 entry:drop(active) +
 entry {
   border-left-color: #4e9a06;
 }
 
-.linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled),
-.linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):not(.vertical), .linked.vertical >
+.linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled),
+.linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):not(.vertical), .linked.vertical >
 entry:not(:disabled) + entry:not(:disabled),
-.linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
+.linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
   border-top-color: #e3e3e3;
 }
 
-.linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop,
-.linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):backdrop:not(.vertical), .linked.vertical >
+.linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop, window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop,
+.linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):backdrop:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(:disabled):not(.vertical) + spinbutton:not(:disabled):backdrop:not(.vertical), .linked.vertical >
 entry:not(:disabled) + entry:not(:disabled):backdrop,
-.linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
+.linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
   border-top-color: #e5e5e5;
 }
 
-.linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical),
-.linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical),
+.linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical),
+.linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled,
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical),
 .linked.vertical >
 entry:disabled + entry:disabled {
   border-top-color: #e3e3e3;
 }
 
-.linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical),
-.linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child), .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child), .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical),
 .linked.vertical >
 entry + entry:focus:not(:only-child) {
   border-top-color: #3689e6;
 }
 
-.linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical),
-.linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child), .linked.vertical > entry + spinbutton:drop(active):not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical),
+.linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + entry:drop(active):not(:only-child), .linked.vertical > entry + spinbutton:drop(active):not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry + spinbutton:drop(active):not(:only-child):not(.vertical),
 .linked.vertical >
 entry + entry:drop(active):not(:only-child) {
   border-top-color: #4e9a06;
 }
 
-.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + spinbutton:not(.vertical),
+.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + spinbutton:not(.vertical),
 .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + entry,
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + entry,
 .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + button,
-.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:focus:not(:only-child) + spinbutton:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + button,
+.linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + combobox > box > button.combo,
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:focus:not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:focus:not(:only-child) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:focus:not(:only-child) + spinbutton:not(.vertical),
 .linked.vertical >
 entry:focus:not(:only-child) + entry,
 .linked.vertical >
@@ -456,10 +470,13 @@ entry:focus:not(:only-child) + combobox > box > button.combo {
   border-top-color: #3689e6;
 }
 
-.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical),
+.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical),
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + entry,
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + entry,
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + button,
-.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:drop(active):not(:only-child) + spinbutton:not(.vertical),
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + button,
+.linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + combobox > box > button.combo,
+window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + combobox > box > button.combo, .linked.vertical > entry:drop(active):not(:only-child) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:drop(active):not(:only-child) + spinbutton:not(.vertical),
 .linked.vertical >
 entry:drop(active):not(:only-child) + entry,
 .linked.vertical >
@@ -2116,7 +2133,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
 }
 
 toolbar.inline-toolbar toolbutton > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop > button.flat, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry, .inline-toolbar button, .inline-toolbar button:backdrop, .linked > button,
+toolbar.inline-toolbar toolbutton:backdrop > button.flat, .linked:not(.vertical) > spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry, .inline-toolbar button, .inline-toolbar button:backdrop, .linked > button,
 .linked > button:hover,
 .linked > button:active,
 .linked > button:checked,
@@ -2125,26 +2142,26 @@ toolbar.inline-toolbar toolbutton:backdrop > button.flat, .linked:not(.vertical)
   border-right-style: none;
 }
 
-.linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat,
+.linked:not(.vertical) > spinbutton:first-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat,
 toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .xfce4-panel.background menu .linked button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
-.linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat,
+.linked:not(.vertical) > spinbutton:last-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat,
 toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .xfce4-panel.background menu .linked button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid;
 }
 
-.linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .inline-toolbar button:only-child, .linked > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat,
+.linked:not(.vertical) > spinbutton:only-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .inline-toolbar button:only-child, .linked > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat,
 toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo, .xfce4-panel.background menu .linked button:only-child {
   border-radius: 3px;
   border-style: solid;
 }
 
-.linked.vertical > spinbutton:not(.vertical), .linked.vertical > entry, .linked.vertical > button,
+.linked.vertical > spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical), .linked.vertical > entry, .linked.vertical > button,
 .linked.vertical > button:hover,
 .linked.vertical > button:active,
 .linked.vertical > button:checked,
@@ -2153,18 +2170,18 @@ toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not
   border-radius: 0;
 }
 
-.linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical > entry:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo {
+.linked.vertical > spinbutton:first-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical > entry:first-child, .linked.vertical > button:first-child, .linked.vertical > combobox:first-child > box > button.combo {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
 
-.linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical > entry:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo {
+.linked.vertical > spinbutton:last-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical > entry:last-child, .linked.vertical > button:last-child, .linked.vertical > combobox:last-child > box > button.combo {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-style: solid;
 }
 
-.linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical > entry:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
+.linked.vertical > spinbutton:only-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical > entry:only-child, .linked.vertical > button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
   border-radius: 3px;
   border-style: solid;
 }
@@ -2345,11 +2362,11 @@ button:visited > label {
 /*****************
  * GtkSpinButton *
  *****************/
-spinbutton:not(.vertical) {
+spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) {
   padding: 0;
 }
 
-spinbutton:not(.vertical) entry {
+spinbutton:not(.vertical) entry, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) entry {
   min-width: 32px;
   margin: 0;
   background: none;
@@ -2363,7 +2380,7 @@ spinbutton:not(.vertical) entry:backdrop:disabled {
   background-color: transparent;
 }
 
-spinbutton:not(.vertical) button {
+spinbutton:not(.vertical) button, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button {
   margin: 0;
   padding-bottom: 0;
   padding-top: 0;
@@ -2375,26 +2392,26 @@ spinbutton:not(.vertical) button {
   box-shadow: none;
 }
 
-spinbutton:not(.vertical) button:dir(rtl) {
+spinbutton:not(.vertical) button:dir(rtl), window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:dir(rtl) {
   border-style: none solid none none;
 }
 
-spinbutton:not(.vertical) button:hover {
+spinbutton:not(.vertical) button:hover, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:hover {
   color: #2e2e2e;
   background-color: rgba(46, 46, 46, 0.05);
 }
 
-spinbutton:not(.vertical) button:disabled {
+spinbutton:not(.vertical) button:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:disabled {
   color: rgba(145, 145, 145, 0.3);
   background-color: transparent;
 }
 
-spinbutton:not(.vertical) button:active {
+spinbutton:not(.vertical) button:active, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:active {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
 }
 
-spinbutton:not(.vertical) button:backdrop {
+spinbutton:not(.vertical) button:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:backdrop {
   color: #9b9b9b;
   background-color: transparent;
   border-color: rgba(192, 192, 192, 0.3);
@@ -2411,57 +2428,57 @@ spinbutton:not(.vertical) button:backdrop:disabled:dir(rtl) {
   border-style: none solid none none;
 }
 
-spinbutton:not(.vertical) button:dir(ltr):last-child {
+spinbutton:not(.vertical) button:dir(ltr):last-child, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:dir(ltr):last-child {
   border-radius: 0 3px 3px 0;
 }
 
-spinbutton:not(.vertical) button:dir(rtl):first-child {
+spinbutton:not(.vertical) button:dir(rtl):first-child, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:dir(rtl):first-child {
   border-radius: 3px 0 0 3px;
 }
 
-spinbutton.vertical:disabled {
+spinbutton.vertical:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:disabled {
   color: #919191;
 }
 
-spinbutton.vertical:backdrop:disabled {
+spinbutton.vertical:backdrop:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:backdrop:disabled {
   color: #cdcdcd;
 }
 
-spinbutton.vertical:drop(active) {
+spinbutton.vertical:drop(active), window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:drop(active) {
   border-color: transparent;
   box-shadow: none;
 }
 
-spinbutton.vertical entry {
+spinbutton.vertical entry, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical entry {
   min-height: 24px;
   min-width: 24px;
   padding: 0;
   border-radius: 0;
 }
 
-spinbutton.vertical button {
+spinbutton.vertical button, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical button {
   min-height: 24px;
   min-width: 24px;
   padding: 0;
 }
 
-spinbutton.vertical button.up {
+spinbutton.vertical button.up, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical button.up {
   border-radius: 3px 3px 0 0;
   border-style: solid solid none solid;
 }
 
-spinbutton.vertical button.down {
+spinbutton.vertical button.down, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical button.down {
   border-radius: 0 0 3px 3px;
   border-style: none solid solid solid;
 }
 
-treeview spinbutton:not(.vertical) {
+treeview spinbutton:not(.vertical), treeview window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator treeview spinbutton:not(.vertical) {
   min-height: 0;
   border-style: none;
   border-radius: 0;
 }
 
-treeview spinbutton:not(.vertical) entry {
+treeview spinbutton:not(.vertical) entry, treeview window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) entry, window.budgie-popover:not(.csd).night-light-indicator treeview spinbutton:not(.vertical) entry {
   min-height: 0;
   padding: 1px 2px;
 }
@@ -2968,6 +2985,8 @@ headerbar:dir(ltr) {
 
 headerbar entry,
 headerbar spinbutton,
+headerbar window.budgie-popover:not(.csd).night-light-indicator spinbutton,
+window.budgie-popover:not(.csd).night-light-indicator headerbar spinbutton,
 headerbar separator,
 headerbar button {
   margin-top: 6px;
@@ -6817,7 +6836,7 @@ headerbar.selection-mode button.titlebutton:backdrop,
 .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,
 textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
 textview text selection:focus,
-textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
+textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
 .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
   background-color: #3689e6;
@@ -6826,7 +6845,7 @@ entry selection, modelbutton.flat:selected,
 row:selected label, label:selected, .selection-mode button.titlebutton, .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,
 textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
 textview text selection:focus,
-textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection,
+textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
 .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
   color: #ffffff;
@@ -6835,7 +6854,7 @@ entry selection, modelbutton.flat:selected,
 row:selected label:disabled, label:disabled:selected, .selection-mode button.titlebutton:disabled, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected, iconview text:disabled:selected:focus,
 textview text:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected,
 textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
-textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled,
+textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:disabled,
 entry selection:disabled, modelbutton.flat:disabled:selected,
 .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected {
   color: #9bc4f3;
@@ -6844,7 +6863,7 @@ entry selection:disabled, modelbutton.flat:disabled:selected,
 row:selected label:backdrop, label:backdrop:selected, .selection-mode button.titlebutton:backdrop, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus,
 textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected,
 textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
-textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop,
+textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:backdrop,
 entry selection:backdrop, modelbutton.flat:backdrop:selected,
 .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
   color: whitesmoke;
@@ -7430,6 +7449,10 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
   color: #2e2e2e;
 }
 
+.end-region > widget > widget > box.horizontal > widget > widget > image {
+  min-width: 24px;
+}
+
 .end-region > widget > widget > box.horizontal > widget > widget > image:dir(ltr) {
   margin: 0 2px 0 -1px;
 }
@@ -7439,13 +7462,13 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 }
 
 .end-region > widget > widget > box.horizontal > widget.sound-applet > widget > image {
-  min-width: 18px;
+  min-width: 24px;
   margin: 0;
 }
 
 .end-region > widget > widget > box.horizontal > widget > widget > box.horizontal > image,
 .end-region > widget > widget > box.horizontal box.battery-icon.horizontal > image {
-  min-width: 22px;
+  min-width: 24px;
 }
 
 .end-region > widget > widget box.battery-icon.horizontal > label.percent-label:dir(ltr) {
@@ -7469,7 +7492,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 }
 
 .end-region > widget > widget > image {
-  min-width: 20px;
+  min-width: 24px;
 }
 
 .budgie-clock-applet label, .budgie-clock-applet label:backdrop {
@@ -7498,7 +7521,6 @@ button.budgie-menu-launcher {
 
 button.budgie-menu-launcher image {
   color: #2e2e2e;
-  -gtk-icon-transform: scale(0.5);
 }
 
 .budgie-panel button.flat.launcher {
@@ -7703,64 +7725,54 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:active {
   box-shadow: inset -3px 0 #3689e6;
 }
 
-.workspace-switcher .workspace-layout {
+widget > box.workspace-switcher > box.workspace-layout {
   border: 0 solid rgba(0, 0, 0, 0.22);
 }
 
-.top .workspace-switcher .workspace-layout:dir(ltr),
-.bottom .workspace-switcher .workspace-layout:dir(ltr) {
+.top widget > box.workspace-switcher > box.workspace-layout:dir(ltr),
+.bottom widget > box.workspace-switcher > box.workspace-layout:dir(ltr) {
   border-left-width: 1px;
 }
 
-.top .workspace-switcher .workspace-layout:dir(rtl),
-.bottom .workspace-switcher .workspace-layout:dir(rtl) {
+.top widget > box.workspace-switcher > box.workspace-layout:dir(rtl),
+.bottom widget > box.workspace-switcher > box.workspace-layout:dir(rtl) {
   border-right-width: 1px;
 }
 
-.left .workspace-switcher .workspace-layout,
-.right .workspace-switcher .workspace-layout {
+.left widget > box.workspace-switcher > box.workspace-layout,
+.right widget > box.workspace-switcher > box.workspace-layout {
   border-top-width: 1px;
 }
 
-.workspace-switcher .workspace-item,
-.workspace-switcher .workspace-add-button {
+widget > box.workspace-switcher widget.workspace-item {
   border: 0 solid rgba(0, 0, 0, 0.22);
 }
 
-.top .workspace-switcher .workspace-item:dir(ltr),
-.bottom .workspace-switcher .workspace-item:dir(ltr), .top
-.workspace-switcher .workspace-add-button:dir(ltr),
-.bottom
-.workspace-switcher .workspace-add-button:dir(ltr) {
+.top widget > box.workspace-switcher widget.workspace-item:dir(ltr),
+.bottom widget > box.workspace-switcher widget.workspace-item:dir(ltr) {
   border-right-width: 1px;
 }
 
-.top .workspace-switcher .workspace-item:dir(rtl),
-.bottom .workspace-switcher .workspace-item:dir(rtl), .top
-.workspace-switcher .workspace-add-button:dir(rtl),
-.bottom
-.workspace-switcher .workspace-add-button:dir(rtl) {
+.top widget > box.workspace-switcher widget.workspace-item:dir(rtl),
+.bottom widget > box.workspace-switcher widget.workspace-item:dir(rtl) {
   border-left-width: 1px;
 }
 
-.left .workspace-switcher .workspace-item,
-.right .workspace-switcher .workspace-item, .left
-.workspace-switcher .workspace-add-button,
-.right
-.workspace-switcher .workspace-add-button {
+.left widget > box.workspace-switcher widget.workspace-item,
+.right widget > box.workspace-switcher widget.workspace-item {
   border-bottom-width: 1px;
 }
 
-.workspace-switcher .workspace-item {
+widget > box.workspace-switcher widget.workspace-item {
   background-color: rgba(248, 248, 248, 0.3);
 }
 
-.workspace-switcher .workspace-item.current-workspace {
+widget > box.workspace-switcher widget.workspace-item.current-workspace {
   background-color: rgba(248, 248, 248, 0.85);
   box-shadow: inset 0 -3px #3689e6;
 }
 
-.workspace-switcher .workspace-item label.workspace-more-label {
+widget > box.workspace-switcher widget.workspace-item label.workspace-more-label {
   color: #2e2e2e;
 }
 
@@ -7839,6 +7851,47 @@ window.budgie-popover:not(.csd) button {
 
 window.budgie-popover:not(.csd) button:hover, window.budgie-popover:not(.csd) button:checked {
   background-color: #dfdfdf;
+}
+
+window.budgie-popover:not(.csd).night-light-indicator button {
+  color: #2e2e2e;
+  outline-color: rgba(46, 46, 46, 0.3);
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+}
+
+window.budgie-popover:not(.csd).night-light-indicator button:hover {
+  color: #2e2e2e;
+  outline-color: rgba(46, 46, 46, 0.3);
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+}
+
+window.budgie-popover:not(.csd).night-light-indicator button:active {
+  color: #2e2e2e;
+  outline-color: rgba(46, 46, 46, 0.3);
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+window.budgie-popover:not(.csd).night-light-indicator button:disabled {
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
+  background-color: #f3f3f3;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+window.budgie-popover:not(.csd).night-light-indicator button:disabled label, window.budgie-popover:not(.csd).night-light-indicator button:disabled {
+  color: #919191;
 }
 
 window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-popover:not(.csd).caffeine-popover > frame.container, window.budgie-popover:not(.csd).night-light-indicator > frame.container, window.budgie-popover:not(.csd).places-menu > frame.container, window.budgie-popover:not(.csd).user-menu > frame.container, window.budgie-popover:not(.csd).workspace-popover > frame.container {
@@ -7930,6 +7983,34 @@ window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-pop
 
 .user-menu row.activatable:hover, .user-menu row.activatable:selected {
   background-color: #f3f3f3;
+}
+
+.user-menu > frame.container > box.vertical row.activatable:first-child button.indicator-item {
+  font-weight: bold;
+}
+
+.night-light-indicator .view-header {
+  padding-top: 2px;
+}
+
+.night-light-indicator .view-header:dir(ltr) {
+  padding-right: 4px;
+}
+
+.night-light-indicator .view-header:dir(rtl) {
+  padding-left: 4px;
+}
+
+.night-light-indicator .view-header label {
+  font-weight: bold;
+}
+
+.night-light-indicator .view-header label:dir(ltr) {
+  padding-left: 4px;
+}
+
+.night-light-indicator .view-header label:dir(rtl) {
+  padding-right: 4px;
 }
 
 frame.raven-frame > border {

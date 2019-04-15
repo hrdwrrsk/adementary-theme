@@ -85,18 +85,21 @@
 		> widget > widget > image {
 			&:dir(ltr) { margin: 0 2px 0 -1px; }
 			&:dir(rtl) { margin: 0 -1px 0 2px; }
+
+			// night light applet (?)
+			min-width: 16px + 8px;
 		}
 
 		// volume indicator/tray
 		> widget.sound-applet > widget > image {
-			min-width: 16px + 2px;
+			min-width: 16px + 8px;
 			margin: 0;
 		}
 
 		// battery
 		> widget > widget > box.horizontal > image,
 		box.battery-icon.horizontal > image {
-			min-width: 16px + 6px;
+			min-width: 16px + 8px;
 		}
 	}
 
@@ -116,7 +119,7 @@
 
 	// notification bell icons & user indicator
 	> image {
-		min-width: 16px + 4px;
+		min-width: 16px + 8px;
 	}
 }
 
@@ -153,7 +156,7 @@ button.budgie-menu-launcher {
 		color: if($variant == 'light' and $light-panel == 'false', $dark_fg_color, $fg_color);
 
 		// note: it doesn't work with panel size < 37 !
-		-gtk-icon-transform: scale(0.5);
+		//-gtk-icon-transform: scale(0.5);
   }
 }
 
@@ -273,10 +276,9 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
 }
 
 // Workspace switcher applet
-.workspace-switcher {
-	.workspace-layout {
+widget > box.workspace-switcher {
+	> box.workspace-layout {
 		border: 0 solid if($light-panel == 'true', rgba(black, 0.22), rgba(black, 0.4));
-
 
     .top &,
     .bottom & {
@@ -289,8 +291,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
 		.right & { border-top-width: 1px; }
 	}
 
-	.workspace-item,
-  .workspace-add-button {
+	widget.workspace-item {
     border: 0 solid if($light-panel == 'true', rgba(black, 0.22), rgba(black, 0.4));
 
     .top &,
@@ -304,7 +305,7 @@ box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
     .right & { border-bottom-width: 1px; }
   }
 
-	.workspace-item {
+	widget.workspace-item {
 		background-color: if($light-panel == 'true', rgba($base_color, 0.3), rgba($dark_base_color, 0.3));
     &.current-workspace {
 			background-color: if($light-panel == 'true', rgba($base_color, 0.85), rgba($dark_base_color, 0.85));
@@ -373,6 +374,22 @@ window.budgie-popover:not(.csd) {
 		text-shadow: none;
 
 		&:hover, &:checked { background-color: $popover_hover_color; }
+	}
+
+	// special case, use standard buttons instead flat buttons in some applets
+	// especially night light applet
+	&.night-light-indicator {
+		button {
+			@include button(normal);
+
+			&:hover { @include button(hover); }
+			&:active { @include button(active); }
+			&:disabled { @include button(insensitive); }
+		}
+
+		spinbutton {
+			@extend spinbutton;
+		}
 	}
 
 	&.budgie-menu,
@@ -470,6 +487,27 @@ window.budgie-popover:not(.csd) {
 
 	row.activatable {
 		&:hover, &:selected { background-color: $bg_color; }
+	}
+
+	> frame.container > box.vertical row.activatable:first-child {
+		button.indicator-item {
+			font-weight: bold;
+		}
+	}
+}
+
+// night light popover applet
+.night-light-indicator {
+	.view-header {
+		padding-top: 2px;
+		&:dir(ltr) { padding-right: 4px; }
+		&:dir(rtl) { padding-left: 4px; }
+
+		label {
+			font-weight: bold;
+			&:dir(ltr) { padding-left: 4px; }
+			&:dir(rtl) { padding-right: 4px; }
+		}
 	}
 }
 
