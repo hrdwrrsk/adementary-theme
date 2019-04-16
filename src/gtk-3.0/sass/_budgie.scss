@@ -378,7 +378,8 @@ window.budgie-popover:not(.csd) {
 
 	// special case, use standard buttons instead flat buttons in some applets
 	// especially night light applet
-	&.night-light-indicator {
+	&.night-light-indicator,
+	&.workspace-popover {
 		button {
 			@include button(normal);
 
@@ -389,6 +390,22 @@ window.budgie-popover:not(.csd) {
 
 		spinbutton {
 			@extend spinbutton;
+		}
+
+		box.workspace-popover-button-box {
+			> button.flat {
+				@include button(undecorated);
+				-gtk-icon-shadow: none;
+				text-shadow: none;
+
+				&:hover, &:checked { background-color: $popover_hover_color; }
+			}
+
+			> separator.horizontal {
+				min-height: 0;
+				margin: 0;
+				background-color: transparent;
+			}
 		}
 	}
 
