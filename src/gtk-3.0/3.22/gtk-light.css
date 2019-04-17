@@ -7932,6 +7932,19 @@ window.budgie-popover:not(.csd).night-light-indicator box.workspace-popover-butt
   background-color: transparent;
 }
 
+window.budgie-popover:not(.csd).night-light-indicator flowboxchild button.flat, window.budgie-popover:not(.csd).workspace-popover flowboxchild button.flat {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  -gtk-icon-shadow: none;
+  text-shadow: none;
+}
+
+window.budgie-popover:not(.csd).night-light-indicator flowboxchild button.flat:hover, window.budgie-popover:not(.csd).night-light-indicator flowboxchild button.flat:checked, window.budgie-popover:not(.csd).workspace-popover flowboxchild button.flat:hover, window.budgie-popover:not(.csd).workspace-popover flowboxchild button.flat:checked {
+  background-color: #dfdfdf;
+}
+
 window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-popover:not(.csd).caffeine-popover > frame.container, window.budgie-popover:not(.csd).night-light-indicator > frame.container, window.budgie-popover:not(.csd).places-menu > frame.container, window.budgie-popover:not(.csd).user-menu > frame.container, window.budgie-popover:not(.csd).workspace-popover > frame.container {
   padding: 4px;
 }

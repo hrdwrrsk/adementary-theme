@@ -407,6 +407,16 @@ window.budgie-popover:not(.csd) {
 				background-color: transparent;
 			}
 		}
+
+		flowboxchild {
+			button.flat {
+				@include button(undecorated);
+				-gtk-icon-shadow: none;
+				text-shadow: none;
+
+				&:hover, &:checked { background-color: $popover_hover_color; }
+			}
+		}
 	}
 
 	&.budgie-menu,
