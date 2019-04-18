@@ -2104,6 +2104,20 @@ popover.background {
 
   .csd &, & { border: 1px solid $borders_color; }
 
+  &.menu {
+    margin: 0;
+    padding: 0;
+
+    separator.horizontal {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    > stack {
+      margin: -4px;
+    }
+  }
+
   box-shadow: 0 1px 2px transparentize(black, 0.7),
               inset 0 -1px rgba(white, 0.05);
 
@@ -2132,9 +2146,8 @@ popover.background {
     &.osd { @extend %osd; }
   }
 
-  separator { margin: 3px; }
-
-  list separator { margin: 0px; }
+  separator,
+  list separator { margin: 0; }
 }
 
 /*************

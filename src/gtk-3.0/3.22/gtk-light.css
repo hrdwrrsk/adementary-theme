@@ -3596,6 +3596,20 @@ popover.background {
   border: 1px solid #b3b3b3;
 }
 
+popover.background.menu {
+  margin: 0;
+  padding: 0;
+}
+
+popover.background.menu separator.horizontal {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+popover.background.menu > stack {
+  margin: -4px;
+}
+
 popover.background:backdrop {
   background-color: #f3f3f3;
   box-shadow: none;
@@ -3613,12 +3627,9 @@ popover.background > toolbar {
   border: 1px solid rgba(0, 0, 0, 0.23);
 }
 
-popover.background separator {
-  margin: 3px;
-}
-
+popover.background separator,
 popover.background list separator {
-  margin: 0px;
+  margin: 0;
 }
 
 /*************
