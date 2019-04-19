@@ -1286,7 +1286,14 @@ combobox {
 %toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: $bg_color;
+  background-color: if($variant == 'light', darken($bg_color, 10%), darken($bg_color, 2%));
+  border-bottom: 1px solid $borders_color;
+
+  box-shadow: inset 0 0 0 1px if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.97));
+
+  &:backdrop {
+    background-color: if($variant == 'light', darken($bg_color, 4%), $bg_color);
+  }
 }
 
 toolbar {
@@ -1958,9 +1965,12 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  box-shadow: inset 0 -1px transparentize(black, 0.9);
+  background-color: if($variant == 'light', darken($bg_color, 10%), darken($bg_color, 2%));
+  box-shadow: inset 0 -1px transparentize(black, 0.77);
 
-  &:backdrop { background-color: $backdrop_bg_color; }
+  &:backdrop {
+    background-color: if($variant == 'light', darken($bg_color, 4%), $bg_color);
+  }
 
   > menuitem {
     min-height: 16px;

@@ -2503,6 +2503,13 @@ toolbar, .inline-toolbar, searchbar > revealer > box,
 .location-bar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
+  background-color: #292b32;
+  border-bottom: 1px solid #17181c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+toolbar:backdrop, .inline-toolbar:backdrop, searchbar > revealer > box:backdrop,
+.location-bar:backdrop {
   background-color: #2E3038;
 }
 
@@ -2583,14 +2590,14 @@ headerbar {
   border-style: solid;
   border-color: #17181c;
   border-radius: 0;
-  background-image: linear-gradient(to bottom, #33353e, #25262d);
+  background-image: linear-gradient(to bottom, #2e3038, #25262d);
   box-shadow: inset 0 1px rgba(238, 238, 238, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 .titlebar:backdrop:not(headerbar),
 headerbar:backdrop {
   border-color: #1c1d22;
-  background-image: linear-gradient(to bottom, #373a43, #292b32);
+  background-image: linear-gradient(to bottom, #33353e, #292b32);
   box-shadow: inset 0 1px rgba(238, 238, 238, 0.07), inset 0 -1px rgba(255, 255, 255, 0.03);
   transition: 200ms ease-out;
 }
@@ -2619,7 +2626,7 @@ headerbar.selection-mode {
   color: #ffffff;
   border-color: #1457a2;
   text-shadow: none;
-  background-image: linear-gradient(to bottom, #3689e6, #1c79e1);
+  background-image: linear-gradient(to bottom, #3689e6, #247ee4);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
@@ -2637,7 +2644,7 @@ headerbar.selection-mode .title:backdrop {
 
 .selection-mode.titlebar:backdrop:not(headerbar),
 headerbar.selection-mode:backdrop {
-  background-image: linear-gradient(to bottom, #3f8ee7, #247ee4);
+  background-image: linear-gradient(to bottom, #3f8ee7, #2d84e5);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px rgba(255, 255, 255, 0.05);
 }
 
@@ -3367,7 +3374,8 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
+  background-color: #292b32;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.23);
 }
 
 menubar:backdrop,
@@ -8096,7 +8104,7 @@ frame.raven-frame > border {
   padding: 4px 12px;
   color: #eeeeee;
   border-bottom: 1px solid #17181c;
-  background-image: linear-gradient(to bottom, #33353e, #25262d);
+  background-image: linear-gradient(to bottom, #2e3038, #25262d);
   box-shadow: inset 0 1px rgba(238, 238, 238, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
