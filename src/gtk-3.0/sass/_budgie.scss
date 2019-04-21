@@ -33,6 +33,8 @@
 			@include button(undecorated);
 			border-radius: 0;
 			border: none;
+			box-shadow: none;
+			background: none;
 
 			text-shadow: none;
 			-gtk-icon-shadow: none;
