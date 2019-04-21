@@ -417,3 +417,23 @@ scrolledwindow.view > viewport.frame > stack > list {
     }
   }
 }
+
+widget.-vala-panel-appmenu-core { // appmenu applets
+  menubar > menuitem {
+    font-weight: bold;
+
+    label {
+      &, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); } // utter-crap workaround
+
+      .accelerator { font-weight: bold; } // App title?
+    }
+
+    menu > menuitem {
+      font-weight: normal;
+
+      label { color: $fg_color; }
+      &:hover label { color: $selected_fg_color; }
+      &:disabled label { color: $insensitive_fg_color; }
+    }
+  }
+}

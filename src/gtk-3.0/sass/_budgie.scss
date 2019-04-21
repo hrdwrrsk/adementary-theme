@@ -790,11 +790,7 @@ calendar.raven-calendar {
 		}
 	}
 
-	.h1 {
-		font-size: 24px;
-	}
-
-	.h2 {
-		font-size: 18px;
+	label {
+		&, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
 	}
 }

@@ -7458,6 +7458,34 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
   border-width: 0;
 }
 
+widget.-vala-panel-appmenu-core menubar > menuitem {
+  font-weight: bold;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem label, widget.-vala-panel-appmenu-core menubar > menuitem label:backdrop {
+  color: #eeeeee;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem label .accelerator {
+  font-weight: bold;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem {
+  font-weight: normal;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem label {
+  color: #282828;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:hover label {
+  color: #ffffff;
+}
+
+widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled label {
+  color: #8e8e8e;
+}
+
 .budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;
@@ -8379,12 +8407,8 @@ calendar.raven-calendar:selected {
   background-color: #3689e6;
 }
 
-.budgie-calendar-applet .h1 {
-  font-size: 24px;
-}
-
-.budgie-calendar-applet .h2 {
-  font-size: 18px;
+.budgie-calendar-applet label, .budgie-calendar-applet label:backdrop {
+  color: #eeeeee;
 }
 
 .nautilus-window notebook,
