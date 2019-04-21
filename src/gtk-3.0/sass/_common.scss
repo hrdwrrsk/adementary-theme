@@ -255,8 +255,8 @@ spinner {
 entry {
   %entry_basic, & {
     min-height: 24px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 6px - 2;
+    padding-right: 6px - 2;
     border: 1px solid;
     border-radius: 3px;
     transition: all 200ms $ease-out-quad;
@@ -1287,12 +1287,26 @@ combobox {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   background-color: if($variant == 'light', darken($bg_color, 10%), darken($bg_color, 2%));
-  border-bottom: 1px solid $borders_color;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: $borders_color;
 
   box-shadow: inset 0 0 0 1px if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.97));
 
   &:backdrop {
     background-color: if($variant == 'light', darken($bg_color, 4%), $bg_color);
+    border-color: $backdrop_borders_color;
+  }
+
+  &.vertical {
+    border-bottom-width: 0;
+    border-color: $borders_color;
+    border-style: solid;
+
+    &:backdrop { border-color: $backdrop_borders_color; }
+
+    &:dir(ltr) { border-right-width: 1px; }
+    &:dir(rtl) { border-left-width: 1px; }
   }
 }
 
