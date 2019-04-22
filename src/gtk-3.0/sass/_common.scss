@@ -4435,11 +4435,11 @@ paned {
 infobar {
   border-style: none;
 
-  @each $info_state, $info_color, $info_btn, $info_text in
-                                                ('info', $GRAPE_300, $GRAPE_100, $inverse_fg_color),
-                                                ('question', $BLUEBERRY_300, $BLUEBERRY_100, $inverse_fg_color),
-                                                ('warning', $BANANA_300, $BANANA_100, $inverse_fg_color),
-                                                ('error', $STRAWBERRY_300, $destructive_color, $selected_fg_color) {
+  @each $info_state, $info_color, $info_btn in
+                                            ('info', $GRAPE_300, $GRAPE_100),
+                                            ('question', $BLUEBERRY_300, $BLUEBERRY_100),
+                                            ('warning', $BANANA_300, $BANANA_100),
+                                            ('error', lighten($STRAWBERRY_300, 5%), $STRAWBERRY_100) {
 
     &.#{$info_state} {
       box-shadow: inset 0 1px transparentize(white, 0.6),
@@ -4447,7 +4447,7 @@ infobar {
                   0 0 0 1px if($variant == 'light', darken($info_color, 20%), darken($info_color, 60%));
 
       &:backdrop, & {
-        label, & { color: $info_text; }
+        label, & { color: $inverse_fg_color; }
         background-color: $info_color;
         border-color: darken($selected_bg_color, 10%);
       }
@@ -4458,7 +4458,7 @@ infobar {
 
       button {
         // FIXME: extend selection mode buttons
-        @include button(colored, $info_btn, $info_text, none);
+        @include button(colored, $info_btn);
         border-color: _border_color($info_color);
 
         box-shadow: inset 0 1px rgba(white, 0.25),
@@ -4466,51 +4466,74 @@ infobar {
                     inset 0 0 0 1px rgba(white, 0.05),
                     inset 0 -1px rgba(white, 0.1);
 
+        color: $inverse_fg_color;
+        text-shadow: 0 1px rgba(white, 0.5);
+        -gtk-icon-shadow: 0 1px rgba(white, 0.5);
+
         &:hover {
-          @include button(colored-hover, $info_btn, $info_text, none);
+          @include button(colored-hover, $info_btn);
           border-color: _border_color($info_color);
 
           box-shadow: inset 0 1px rgba(white, 0.25),
                       0 1px rgba(black, 0.1),
                       inset 0 0 0 1px rgba(white, 0.05),
                       inset 0 -1px rgba(white, 0.1);
+
+          color: $inverse_fg_color;
+          text-shadow: 0 1px rgba(white, 0.5);
+          -gtk-icon-shadow: 0 1px rgba(white, 0.5);
         }
 
         &:active,
         &:checked {
-          @include button(colored-active, $info_btn, $info_text, none);
+          @include button(colored-active, $info_btn);
           border-color: _border_color($info_color);
 
           box-shadow: inset 0 0 0 1px rgba(black, 0.05),
                       0 1px rgba(white, 0.05);
+
+          color: $inverse_fg_color;
         }
 
         &:disabled {
-          @include button(insensitive,$info_color,$insensitive_fg_color,none);
+          @include button(insensitive, $info_color);
           background-color: $info_color;
-          color: mix($info_color, $info_text, 0.50);
+
+          box-shadow: inset 0 1px rgba(white, 0.25),
+                      0 1px rgba(white, 0.15),
+                      inset 0 -1px rgba(white, 0.1);
+
+          label, image { color: rgba($inverse_fg_color, 0.5); }
         }
 
         &:backdrop {
-          @include button(colored-backdrop, $info_btn, $info_text, none);
+          @include button(colored-backdrop, $info_btn);
           border-color: _border_color($info_color);
-          -gtk-icon-shadow: none;
+          -gtk-icon-shadow: 0 1px rgba(white, 0.25);
+          text-shadow: 0 1px rgba(white, 0.25);
 
           box-shadow: inset 0 1px rgba(white, 0.25),
                       0 1px rgba(black, 0.1),
                       inset 0 0 0 1px rgba(white, 0.05),
                       inset 0 -1px rgba(white, 0.1);
 
+          label, image { color: mix($inverse_fg_color, $info_color, 50%); }
+
           &:disabled {
-            @include button(backdrop-insensitive, $info_color,
-                            $info_text, none);
+            @include button(backdrop-insensitive, $info_color);
             background-color: $info_color;
             border-color: _border_color($info_color);
+
+            box-shadow: inset 0 1px rgba(white, 0.25),
+                        0 1px rgba(white, 0.15),
+                        inset 0 -1px rgba(white, 0.1);
+
+            label, image { color: rgba($inverse_fg_color, 0.3); }
           }
         }
       }
 
-      selection { background-color: darken($info_color, 10%); }
+      selection { background-color: darken($inverse_fg_color, 10%); }
 
       *:link { @extend %link_selected; }
     }

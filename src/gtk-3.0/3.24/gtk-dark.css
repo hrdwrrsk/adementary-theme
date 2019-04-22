@@ -6205,7 +6205,7 @@ infobar.info:backdrop, infobar.info {
 }
 
 infobar.info:backdrop label, infobar.info:backdrop, infobar.info label, infobar.info {
-  color: #2e2e2e;
+  color: #282828;
 }
 
 infobar.info:backdrop {
@@ -6213,32 +6213,38 @@ infobar.info:backdrop {
 }
 
 infobar.info button {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #b868f2;
   background-image: linear-gradient(to bottom, #e4c6fa, #e2c1fa, #dbb3f8);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.297255);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.297255);
   border-color: #9c40ef;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.info button:hover {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #b868f2;
   background-image: linear-gradient(to bottom, #edd9fc, #ebd4fb, #e4c6fa);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.297255);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.297255);
   border-color: #9c40ef;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.info button:active, infobar.info button:checked {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #b868f2;
   background-image: linear-gradient(to bottom, #dbb3f8, #dbb3f8);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
@@ -6246,6 +6252,7 @@ infobar.info button:active, infobar.info button:checked {
   -gtk-icon-shadow: none;
   border-color: #9c40ef;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  color: #282828;
 }
 
 infobar.info button:disabled {
@@ -6256,11 +6263,15 @@ infobar.info button:disabled {
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #cd9ef7;
-  color: #2f2f2f;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.info button:disabled label, infobar.info button:disabled {
-  color: #5f6067;
+  color: #8e8f93;
+}
+
+infobar.info button:disabled label, infobar.info button:disabled image {
+  color: rgba(40, 40, 40, 0.5);
 }
 
 infobar.info button:backdrop {
@@ -6268,12 +6279,17 @@ infobar.info button:backdrop {
   background-image: linear-gradient(to bottom, #e8cffb, #e6cbfa, #e0bdf9);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   border-color: #9c40ef;
-  -gtk-icon-shadow: none;
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.info button:backdrop label, infobar.info button:backdrop {
-  color: #524c57;
+  color: #8e8f93;
+}
+
+infobar.info button:backdrop label, infobar.info button:backdrop image {
+  color: #7b6390;
 }
 
 infobar.info button:backdrop:disabled {
@@ -6285,14 +6301,19 @@ infobar.info button:backdrop:disabled {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #cd9ef7;
   border-color: #9c40ef;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.info button:backdrop:disabled label, infobar.info button:backdrop:disabled {
-  color: #866c9e;
+  color: #c9b0e2;
+}
+
+infobar.info button:backdrop:disabled label, infobar.info button:backdrop:disabled image {
+  color: rgba(40, 40, 40, 0.3);
 }
 
 infobar.info selection {
-  background-color: #b56ff3;
+  background-color: #0f0f0f;
 }
 
 infobar.question {
@@ -6306,7 +6327,7 @@ infobar.question:backdrop, infobar.question {
 }
 
 infobar.question:backdrop label, infobar.question:backdrop, infobar.question label, infobar.question {
-  color: #2e2e2e;
+  color: #282828;
 }
 
 infobar.question:backdrop {
@@ -6314,32 +6335,38 @@ infobar.question:backdrop {
 }
 
 infobar.question button {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #26b0ff;
   background-image: linear-gradient(to bottom, #8cd5ff, #87d3ff, #78ceff);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.380392);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.380392);
   border-color: #008cfd;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.question button:hover {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #26b0ff;
   background-image: linear-gradient(to bottom, #a0dcff, #9bdbff, #8cd5ff);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.380392);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.380392);
   border-color: #008cfd;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.question button:active, infobar.question button:checked {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #26b0ff;
   background-image: linear-gradient(to bottom, #78ceff, #78ceff);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
@@ -6347,6 +6374,7 @@ infobar.question button:active, infobar.question button:checked {
   -gtk-icon-shadow: none;
   border-color: #008cfd;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  color: #282828;
 }
 
 infobar.question button:disabled {
@@ -6357,11 +6385,15 @@ infobar.question button:disabled {
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #64baff;
-  color: #2e2f2f;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.question button:disabled label, infobar.question button:disabled {
-  color: #5f6067;
+  color: #8e8f93;
+}
+
+infobar.question button:disabled label, infobar.question button:disabled image {
+  color: rgba(40, 40, 40, 0.5);
 }
 
 infobar.question button:backdrop {
@@ -6369,12 +6401,17 @@ infobar.question button:backdrop {
   background-image: linear-gradient(to bottom, #96d9ff, #91d7ff, #82d1ff);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   border-color: #008cfd;
-  -gtk-icon-shadow: none;
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.question button:backdrop label, infobar.question button:backdrop {
-  color: #414f58;
+  color: #8e8f93;
+}
+
+infobar.question button:backdrop label, infobar.question button:backdrop image {
+  color: #467194;
 }
 
 infobar.question button:backdrop:disabled {
@@ -6386,14 +6423,19 @@ infobar.question button:backdrop:disabled {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #64baff;
   border-color: #008cfd;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.question button:backdrop:disabled label, infobar.question button:backdrop:disabled {
-  color: #4c7ca3;
+  color: #8fbfe6;
+}
+
+infobar.question button:backdrop:disabled label, infobar.question button:backdrop:disabled image {
+  color: rgba(40, 40, 40, 0.3);
 }
 
 infobar.question selection {
-  background-color: #31a3ff;
+  background-color: #0f0f0f;
 }
 
 infobar.warning {
@@ -6407,7 +6449,7 @@ infobar.warning:backdrop, infobar.warning {
 }
 
 infobar.warning:backdrop label, infobar.warning:backdrop, infobar.warning label, infobar.warning {
-  color: #2e2e2e;
+  color: #282828;
 }
 
 infobar.warning:backdrop {
@@ -6415,32 +6457,38 @@ infobar.warning:backdrop {
 }
 
 infobar.warning button {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #ffe82e;
   background-image: linear-gradient(to bottom, #fff394, #fff28f, #fff180);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.367843);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.367843);
   border-color: #ffcc05;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.warning button:hover {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #ffe82e;
   background-image: linear-gradient(to bottom, #fff5a8, #fff5a3, #fff394);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.367843);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.367843);
   border-color: #ffcc05;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.warning button:active, infobar.warning button:checked {
-  color: #2e2e2e;
-  outline-color: rgba(46, 46, 46, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #ffe82e;
   background-image: linear-gradient(to bottom, #fff180, #fff180);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
@@ -6448,6 +6496,7 @@ infobar.warning button:active, infobar.warning button:checked {
   -gtk-icon-shadow: none;
   border-color: #ffcc05;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  color: #282828;
 }
 
 infobar.warning button:disabled {
@@ -6458,11 +6507,15 @@ infobar.warning button:disabled {
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #ffe16b;
-  color: #2f2f2e;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.warning button:disabled label, infobar.warning button:disabled {
-  color: #5f6067;
+  color: #8e8f93;
+}
+
+infobar.warning button:disabled label, infobar.warning button:disabled image {
+  color: rgba(40, 40, 40, 0.5);
 }
 
 infobar.warning button:backdrop {
@@ -6470,12 +6523,17 @@ infobar.warning button:backdrop {
   background-image: linear-gradient(to bottom, #fff49e, #fff499, #fff28a);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   border-color: #ffcc05;
-  -gtk-icon-shadow: none;
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.warning button:backdrop label, infobar.warning button:backdrop {
-  color: #585542;
+  color: #8e8f93;
+}
+
+infobar.warning button:backdrop label, infobar.warning button:backdrop image {
+  color: #94854a;
 }
 
 infobar.warning button:backdrop:disabled {
@@ -6487,28 +6545,33 @@ infobar.warning button:backdrop:disabled {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
   background-color: #ffe16b;
   border-color: #ffcc05;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.warning button:backdrop:disabled label, infobar.warning button:backdrop:disabled {
-  color: #a29151;
+  color: #e5d594;
+}
+
+infobar.warning button:backdrop:disabled label, infobar.warning button:backdrop:disabled image {
+  color: rgba(40, 40, 40, 0.3);
 }
 
 infobar.warning selection {
-  background-color: #ffd738;
+  background-color: #0f0f0f;
 }
 
 infobar.error {
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px rgba(0, 0, 0, 0.8), 0 0 0 1px #0d0101;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px rgba(0, 0, 0, 0.8), 0 0 0 1px #240404;
   text-shadow: none;
 }
 
 infobar.error:backdrop, infobar.error {
-  background-color: #ed5353;
+  background-color: #ef6a6a;
   border-color: #1a6fcf;
 }
 
 infobar.error:backdrop label, infobar.error:backdrop, infobar.error label, infobar.error {
-  color: #ffffff;
+  color: #282828;
 }
 
 infobar.error:backdrop {
@@ -6516,86 +6579,107 @@ infobar.error:backdrop {
 }
 
 infobar.error button {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #931c22;
-  background-image: linear-gradient(to bottom, #d93b43, #d9373f, #d62a33);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #ff2e1c;
+  background-image: linear-gradient(to bottom, #ff8c82, #ff877d, #ff796e);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  border-color: #c51515;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.396078);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.396078);
+  border-color: #dc1717;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.error button:hover {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #931c22;
-  background-image: linear-gradient(to bottom, #dd4c54, #dc4850, #d93b43);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #ff2e1c;
+  background-image: linear-gradient(to bottom, #ff9f96, #ff9a91, #ff8c82);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  border-color: #c51515;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.396078);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.396078);
+  border-color: #dc1717;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  color: #282828;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
 
 infobar.error button:active, infobar.error button:checked {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #931c22;
-  background-image: linear-gradient(to bottom, #d62a33, #d62a33);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #ff2e1c;
+  background-image: linear-gradient(to bottom, #ff796e, #ff796e);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
-  border-color: #c51515;
+  border-color: #dc1717;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  color: #282828;
 }
 
 infobar.error button:disabled {
-  border-color: #c51515;
+  border-color: #dc1717;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
   background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
-  background-color: #ed5353;
-  color: #fffefe;
+  background-color: #ef6a6a;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.error button:disabled label, infobar.error button:disabled {
-  color: #5f6067;
+  color: #8e8f93;
+}
+
+infobar.error button:disabled label, infobar.error button:disabled image {
+  color: rgba(40, 40, 40, 0.5);
 }
 
 infobar.error button:backdrop {
-  border-color: #931c22;
-  background-image: linear-gradient(to bottom, #db444b, #da4047, #d8333b);
+  border-color: #ff2e1c;
+  background-image: linear-gradient(to bottom, #ff958c, #ff9187, #ff8378);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #c51515;
-  -gtk-icon-shadow: none;
+  border-color: #dc1717;
+  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.error button:backdrop label, infobar.error button:backdrop {
-  color: #f7d8d9;
+  color: #8e8f93;
+}
+
+infobar.error button:backdrop label, infobar.error button:backdrop image {
+  color: #8c4949;
 }
 
 infobar.error button:backdrop:disabled {
-  border-color: #c51515;
+  border-color: #dc1717;
   background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
-  background-color: #ed5353;
-  border-color: #c51515;
+  background-color: #ef6a6a;
+  border-color: #dc1717;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 infobar.error button:backdrop:disabled label, infobar.error button:backdrop:disabled {
-  color: #e18c8d;
+  color: #dc9394;
+}
+
+infobar.error button:backdrop:disabled label, infobar.error button:backdrop:disabled image {
+  color: rgba(40, 40, 40, 0.3);
 }
 
 infobar.error selection {
-  background-color: #e82525;
+  background-color: #0f0f0f;
 }
 
 /************
