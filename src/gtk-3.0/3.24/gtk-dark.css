@@ -3147,6 +3147,19 @@ window.csd > .titlebar:not(headerbar) {
   background-color: #17181c;
 }
 
+headerbar.titlebar headerbar:not(.titlebar):not(:only-child) {
+  background: none;
+  box-shadow: none;
+}
+
+headerbar.titlebar headerbar:not(.titlebar):not(:only-child) + separator {
+  background-color: #17181c;
+}
+
+headerbar.titlebar.selection-mode headerbar:not(.titlebar):not(:only-child) + separator {
+  background-color: #1457a2;
+}
+
 /************
  * Pathbars *
  ************/
@@ -5911,26 +5924,26 @@ filechooserbutton:drop(active) {
 /***********
  * Sidebar *
  ***********/
-.sidebar {
+.sidebar:not(treeview):not(separator) {
   border-style: none;
   background-color: #282a31;
 }
 
-stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
+stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(treeview):not(separator):dir(ltr), .sidebar:not(treeview):not(separator).left, .sidebar:not(treeview):not(separator).left:dir(rtl) {
   border-right: 1px solid #17181c;
   border-left-style: none;
 }
 
-stacksidebar.sidebar:dir(rtl) list .sidebar:dir(rtl), stacksidebar.sidebar.right list .sidebar:dir(rtl), .sidebar.right {
+stacksidebar.sidebar:dir(rtl) list .sidebar:not(treeview):not(separator):dir(rtl), stacksidebar.sidebar.right list .sidebar:not(treeview):not(separator):dir(rtl), .sidebar:not(treeview):not(separator).right {
   border-left: 1px solid #17181c;
   border-right-style: none;
 }
 
-.sidebar .frame, .sidebar list {
+.sidebar:not(treeview):not(separator) .frame, .sidebar:not(treeview):not(separator) list {
   background-color: transparent;
 }
 
-.sidebar treeview.view:selected, .sidebar list:selected, .sidebar row:selected, .sidebar treeview.view:focus:selected, .sidebar list:focus:selected, .sidebar row:focus:selected {
+.sidebar:not(treeview):not(separator) treeview.view:selected, .sidebar:not(treeview):not(separator) list:selected, .sidebar:not(treeview):not(separator) row:selected, .sidebar:not(treeview):not(separator) treeview.view:focus:selected, .sidebar:not(treeview):not(separator) list:focus:selected, .sidebar:not(treeview):not(separator) row:focus:selected {
   color: #eeeeee;
   background-color: transparent;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.07));
@@ -5940,52 +5953,56 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:dir(rtl), stacksidebar.sidebar.right
   box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.03), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-.sidebar treeview.view:selected label, .sidebar list:selected label, .sidebar row:selected label, .sidebar treeview.view:focus:selected label, .sidebar list:focus:selected label, .sidebar row:focus:selected label {
+.sidebar:not(treeview):not(separator) treeview.view:selected label, .sidebar:not(treeview):not(separator) list:selected label, .sidebar:not(treeview):not(separator) row:selected label, .sidebar:not(treeview):not(separator) treeview.view:focus:selected label, .sidebar:not(treeview):not(separator) list:focus:selected label, .sidebar:not(treeview):not(separator) row:focus:selected label {
   color: #eeeeee;
 }
 
-.sidebar treeview.view:hover:selected, .sidebar list:hover:selected, .sidebar row:hover:selected {
+.sidebar:not(treeview):not(separator) treeview.view:hover:selected, .sidebar:not(treeview):not(separator) list:hover:selected, .sidebar:not(treeview):not(separator) row:hover:selected {
   background-color: #2b2d34;
 }
 
-.sidebar treeview.view:backdrop:selected, .sidebar list:backdrop:selected, .sidebar row:backdrop:selected, .sidebar treeview.view:backdrop:focus:selected, .sidebar list:backdrop:focus:selected, .sidebar row:backdrop:focus:selected {
+.sidebar:not(treeview):not(separator) treeview.view:backdrop:selected, .sidebar:not(treeview):not(separator) list:backdrop:selected, .sidebar:not(treeview):not(separator) row:backdrop:selected, .sidebar:not(treeview):not(separator) treeview.view:backdrop:focus:selected, .sidebar:not(treeview):not(separator) list:backdrop:focus:selected, .sidebar:not(treeview):not(separator) row:backdrop:focus:selected {
   color: #8e8f93;
   background-color: transparent;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03));
   border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.19), rgba(255, 255, 255, 0.1)) 1 1 1 1;
 }
 
-.sidebar treeview.view:backdrop:selected label, .sidebar list:backdrop:selected label, .sidebar row:backdrop:selected label, .sidebar treeview.view:backdrop:focus:selected label, .sidebar list:backdrop:focus:selected label, .sidebar row:backdrop:focus:selected label {
+.sidebar:not(treeview):not(separator) treeview.view:backdrop:selected label, .sidebar:not(treeview):not(separator) list:backdrop:selected label, .sidebar:not(treeview):not(separator) row:backdrop:selected label, .sidebar:not(treeview):not(separator) treeview.view:backdrop:focus:selected label, .sidebar:not(treeview):not(separator) list:backdrop:focus:selected label, .sidebar:not(treeview):not(separator) row:backdrop:focus:selected label {
   color: #8e8f93;
 }
 
-.sidebar treeview.view {
+.sidebar:not(treeview):not(separator) treeview.view {
   background-color: #282a31;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
 
-.sidebar separator {
+.sidebar:not(treeview):not(separator) separator {
   background-color: transparent;
 }
 
-.sidebar:backdrop {
+.sidebar:not(treeview):not(separator):backdrop {
   background-color: #2b2c34;
   border-color: #1c1d22;
   transition: 200ms ease-out;
 }
 
-.sidebar list, .sidebar row {
+.sidebar:not(treeview):not(separator) list, .sidebar:not(treeview):not(separator) row {
   background-color: transparent;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
 
-.sidebar list:hover, .sidebar row:hover {
+.sidebar:not(treeview):not(separator) list:hover, .sidebar:not(treeview):not(separator) row:hover {
   background-color: #2b2d34;
 }
 
-paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
+.sidebar:not(treeview):not(separator) row.sidebar-row {
+  margin: -1px 0;
+}
+
+paned .sidebar:not(treeview):not(separator).left, paned .sidebar:not(treeview):not(separator).right, paned .sidebar:not(treeview):not(separator).left:dir(rtl), paned .sidebar:not(treeview):not(separator):dir(rtl), paned .sidebar:not(treeview):not(separator):dir(ltr), paned .sidebar:not(treeview):not(separator) {
   border-style: none;
 }
 
@@ -6000,6 +6017,11 @@ stacksidebar row > label {
 
 stacksidebar row.needs-attention > label {
   background-size: 6px 6px, 0 0;
+}
+
+stacksidebar separator {
+  min-height: 0;
+  background-color: transparent;
 }
 
 /****************
@@ -6973,15 +6995,238 @@ button.titlebutton {
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
+button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
+  color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+button.titlebutton.close:backdrop, button.titlebutton.close:backdrop:active, button.titlebutton.maximize:backdrop, button.titlebutton.maximize:backdrop:active, button.titlebutton.minimize:backdrop, button.titlebutton.minimize:backdrop:active {
+  color: transparent;
+}
+
+button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/window-close-dark.png"), url("assets/window-close-dark@2.png"));
+}
+
+button.titlebutton.close:hover {
+  background-color: #454854;
+  transition: none;
+}
+
+button.titlebutton.close:active, button.titlebutton.close:backdrop:active {
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-close-active-dark.png"), url("assets/window-close-active-dark@2.png"));
+  transition: none;
+}
+
+button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/window-close-backdrop-dark.png"), url("assets/window-close-backdrop-dark@2.png"));
+}
+
+button.titlebutton.close:backdrop:hover, button.titlebutton.close:backdrop:active {
+  background-color: transparent;
+}
+
+button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-maximize-dark.png"), url("assets/window-maximize-dark@2.png"));
+}
+
+button.titlebutton.maximize:hover {
+  background-color: #454854;
+  transition: none;
+}
+
+button.titlebutton.maximize:active, button.titlebutton.maximize:backdrop:active {
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-maximize-active-dark.png"), url("assets/window-maximize-active-dark@2.png"));
+  transition: none;
+}
+
+button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-maximize-backdrop-dark.png"), url("assets/window-maximize-backdrop-dark@2.png"));
+}
+
+button.titlebutton.maximize:backdrop:hover, button.titlebutton.maximize:backdrop:active {
+  background-color: transparent;
+}
+
+button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/window-minimize-dark.png"), url("assets/window-minimize-dark@2.png"));
+}
+
+button.titlebutton.minimize:hover {
+  background-color: #454854;
+  transition: none;
+}
+
+button.titlebutton.minimize:active, button.titlebutton.minimize:backdrop:active {
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-minimize-active-dark.png"), url("assets/window-minimize-active-dark@2.png"));
+  transition: none;
+}
+
+button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-minimize-backdrop-dark.png"), url("assets/window-minimize-backdrop-dark@2.png"));
+}
+
+button.titlebutton.minimize:backdrop:hover, button.titlebutton.minimize:backdrop:active {
+  background-color: transparent;
+}
+
+.maximized button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-restore-dark.png"), url("assets/window-restore-dark@2.png"));
+}
+
+.maximized button.titlebutton.maximize:hover {
+  background-color: #454854;
+  transition: none;
+}
+
+.maximized button.titlebutton.maximize:active {
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-restore-active-dark.png"), url("assets/window-restore-active-dark@2.png"));
+  transition: none;
+}
+
+.maximized button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-restore-backdrop-dark.png"), url("assets/window-restore-backdrop-dark@2.png"));
+}
+
+.maximized button.titlebutton.maximize:backdrop:hover, .maximized button.titlebutton.maximize:backdrop:active {
+  background-color: transparent;
+}
+
 headerbar.selection-mode button.titlebutton,
 .titlebar.selection-mode button.titlebutton {
+  color: transparent;
   text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
 }
 
-headerbar.selection-mode button.titlebutton:backdrop,
-.titlebar.selection-mode button.titlebutton:backdrop {
-  color: #c9daec;
+headerbar.selection-mode button.titlebutton:backdrop, headerbar.selection-mode button.titlebutton:backdrop:active,
+.titlebar.selection-mode button.titlebutton:backdrop,
+.titlebar.selection-mode button.titlebutton:backdrop:active {
+  color: transparent;
+}
+
+headerbar.selection-mode button.titlebutton.close,
+.titlebar.selection-mode button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/window-close-selectionmode.png"), url("assets/window-close-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.close:hover,
+.titlebar.selection-mode button.titlebutton.close:hover {
+  background-color: #3f8ee7;
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.close:active, headerbar.selection-mode button.titlebutton.close:backdrop:active,
+.titlebar.selection-mode button.titlebutton.close:active,
+.titlebar.selection-mode button.titlebutton.close:backdrop:active {
+  background-color: #247ee4;
+  background-image: -gtk-scaled(url("assets/window-close-active-selectionmode.png"), url("assets/window-close-active-selectionmode@2.png"));
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.close:backdrop,
+.titlebar.selection-mode button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/window-close-backdrop-selectionmode.png"), url("assets/window-close-backdrop-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.close:backdrop:hover, headerbar.selection-mode button.titlebutton.close:backdrop:active,
+.titlebar.selection-mode button.titlebutton.close:backdrop:hover,
+.titlebar.selection-mode button.titlebutton.close:backdrop:active {
+  background-color: transparent;
+}
+
+headerbar.selection-mode button.titlebutton.maximize,
+.titlebar.selection-mode button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-maximize-selectionmode.png"), url("assets/window-maximize-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.maximize:hover,
+.titlebar.selection-mode button.titlebutton.maximize:hover {
+  background-color: #3f8ee7;
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.maximize:active, headerbar.selection-mode button.titlebutton.maximize:backdrop:active,
+.titlebar.selection-mode button.titlebutton.maximize:active,
+.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
+  background-color: #247ee4;
+  background-image: -gtk-scaled(url("assets/window-maximize-active-selectionmode.png"), url("assets/window-maximize-active-selectionmode@2.png"));
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.maximize:backdrop,
+.titlebar.selection-mode button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-maximize-backdrop-selectionmode.png"), url("assets/window-maximize-backdrop-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.maximize:backdrop:hover, headerbar.selection-mode button.titlebutton.maximize:backdrop:active,
+.titlebar.selection-mode button.titlebutton.maximize:backdrop:hover,
+.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
+  background-color: transparent;
+}
+
+headerbar.selection-mode button.titlebutton.minimize,
+.titlebar.selection-mode button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/window-minimize-selectionmode.png"), url("assets/window-minimize-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.minimize:hover,
+.titlebar.selection-mode button.titlebutton.minimize:hover {
+  background-color: #3f8ee7;
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.minimize:active, headerbar.selection-mode button.titlebutton.minimize:backdrop:active,
+.titlebar.selection-mode button.titlebutton.minimize:active,
+.titlebar.selection-mode button.titlebutton.minimize:backdrop:active {
+  background-color: #247ee4;
+  background-image: -gtk-scaled(url("assets/window-minimize-active-selectionmode.png"), url("assets/window-minimize-active-selectionmode@2.png"));
+  transition: none;
+}
+
+headerbar.selection-mode button.titlebutton.minimize:backdrop,
+.titlebar.selection-mode button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-minimize-backdrop-selectionmode.png"), url("assets/window-minimize-backdrop-selectionmode@2.png"));
+}
+
+headerbar.selection-mode button.titlebutton.minimize:backdrop:hover, headerbar.selection-mode button.titlebutton.minimize:backdrop:active,
+.titlebar.selection-mode button.titlebutton.minimize:backdrop:hover,
+.titlebar.selection-mode button.titlebutton.minimize:backdrop:active {
+  background-color: transparent;
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize, .maximized
+.titlebar.selection-mode button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/window-restore-selectionmode.png"), url("assets/window-restore-selectionmode@2.png"));
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:hover, .maximized
+.titlebar.selection-mode button.titlebutton.maximize:hover {
+  background-color: #3f8ee7;
+  transition: none;
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:active, .maximized
+.titlebar.selection-mode button.titlebutton.maximize:active {
+  background-color: #247ee4;
+  background-image: -gtk-scaled(url("assets/window-restore-active-selectionmode.png"), url("assets/window-restore-active-selectionmode@2.png"));
+  transition: none;
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:backdrop, .maximized
+.titlebar.selection-mode button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/window-restore-backdrop-selectionmode.png"), url("assets/window-restore-backdrop-selectionmode@2.png"));
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:backdrop:hover, .maximized headerbar.selection-mode button.titlebutton.maximize:backdrop:active, .maximized
+.titlebar.selection-mode button.titlebutton.maximize:backdrop:hover, .maximized
+.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
+  background-color: transparent;
 }
 
 .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,

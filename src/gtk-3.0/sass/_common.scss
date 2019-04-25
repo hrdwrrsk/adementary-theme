@@ -1703,6 +1703,19 @@ headerbar { // headerbar border rounding
   @extend %titlebar;
 }
 
+headerbar.titlebar {
+  headerbar:not(.titlebar):not(:only-child) {
+    background: none;
+    box-shadow: none;
+
+    + separator { background-color: $borders_color; }
+  }
+
+  &.selection-mode headerbar:not(.titlebar):not(:only-child) {
+    + separator { background-color: $selected_borders_color; }
+  }
+}
+
 
 /************
  * Pathbars *
@@ -4130,7 +4143,7 @@ filechooserbutton:drop(active) {
 /***********
  * Sidebar *
  ***********/
-.sidebar {
+.sidebar:not(treeview):not(separator) {
   border-style: none;
   background-color: $sidebar_bg_color;
 
@@ -4222,6 +4235,10 @@ filechooserbutton:drop(active) {
     }
   }
 
+  row.sidebar-row {
+    margin: -1px 0;
+  }
+
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
 
@@ -4248,6 +4265,11 @@ stacksidebar {
 
       background-size: 6px 6px, 0 0;
     }
+  }
+
+  separator {
+    min-height: 0;
+    background-color: transparent;
   }
 }
 
@@ -4848,13 +4870,126 @@ button.titlebutton {
 
     @extend %nobg_selected_items;
   }
+
+  &.close, &.maximize, &.minimize {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:backdrop, &:backdrop:active { color: transparent; }
+  }
+
+  @each $k in ('close','maximize', 'minimize') {
+    &.#{$k} {
+      background-image: -gtk-scaled(url('assets/window-#{$k}#{$asset_suffix}.png'),
+                                    url('assets/window-#{$k}#{$asset_suffix}@2.png'));
+
+      &:hover {
+        background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 10%));
+        transition: none;
+      }
+
+      &:active, &:backdrop:active {
+        background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
+        background-image: -gtk-scaled(url('assets/window-#{$k}-active#{$asset_suffix}.png'),
+                                      url('assets/window-#{$k}-active#{$asset_suffix}@2.png'));
+        transition: none;
+      }
+
+      &:backdrop {
+        background-image: -gtk-scaled(url('assets/window-#{$k}-backdrop#{$asset_suffix}.png'),
+                                      url('assets/window-#{$k}-backdrop#{$asset_suffix}@2.png'));
+
+        &:hover, &:active { background-color: transparent; }
+      }
+    }
+  }
+}
+
+.maximized button.titlebutton {
+  &.maximize {
+    background-image: -gtk-scaled(url('assets/window-restore#{$asset_suffix}.png'),
+                                  url('assets/window-restore#{$asset_suffix}@2.png'));
+
+    &:hover {
+      background-color: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 10%));
+      transition: none;
+    }
+
+    &:active {
+      background-color: if($variant == 'light', darken($bg_color, 12%), darken($bg_color, 4%));
+      background-image: -gtk-scaled(url('assets/window-restore-active#{$asset_suffix}.png'),
+                                    url('assets/window-restore-active#{$asset_suffix}@2.png'));
+      transition: none;
+    }
+
+    &:backdrop {
+      background-image: -gtk-scaled(url('assets/window-restore-backdrop#{$asset_suffix}.png'),
+                                    url('assets/window-restore-backdrop#{$asset_suffix}@2.png'));
+
+      &:hover, &:active { background-color: transparent; }
+    }
+  }
 }
 
 headerbar.selection-mode button.titlebutton,
 .titlebar.selection-mode button.titlebutton {
+  color: transparent;
   @include _button_text_shadow(white, $selected_bg_color);
 
-  &:backdrop { color: mix($dark_fg_color, $selected_bg_color, 80%); }
+  &:backdrop, &:backdrop:active { color: transparent; }
+
+  @each $k in ('close','maximize', 'minimize') {
+    &.#{$k} {
+      background-image: -gtk-scaled(url('assets/window-#{$k}-selectionmode.png'),
+                                    url('assets/window-#{$k}-selectionmode@2.png'));
+
+      &:hover {
+        background-color: lighten($selected_bg_color, 2%);
+        transition: none;
+      }
+
+      &:active, &:backdrop:active {
+        background-color: darken($selected_bg_color, 4%);
+        background-image: -gtk-scaled(url('assets/window-#{$k}-active-selectionmode.png'),
+                                      url('assets/window-#{$k}-active-selectionmode@2.png'));
+        transition: none;
+      }
+
+      &:backdrop {
+        background-image: -gtk-scaled(url('assets/window-#{$k}-backdrop-selectionmode.png'),
+                                      url('assets/window-#{$k}-backdrop-selectionmode@2.png'));
+
+        &:hover, &:active { background-color: transparent; }
+      }
+    }
+  }
+
+  .maximized & {
+    &.maximize {
+      background-image: -gtk-scaled(url('assets/window-restore-selectionmode.png'),
+                                    url('assets/window-restore-selectionmode@2.png'));
+
+      &:hover {
+        background-color: lighten($selected_bg_color, 2%);
+        transition: none;
+      }
+
+      &:active {
+        background-color: darken($selected_bg_color, 4%);
+        background-image: -gtk-scaled(url('assets/window-restore-active-selectionmode.png'),
+                                      url('assets/window-restore-active-selectionmode@2.png'));
+        transition: none;
+      }
+
+      &:backdrop {
+        background-image: -gtk-scaled(url('assets/window-restore-backdrop-selectionmode.png'),
+                                      url('assets/window-restore-backdrop-selectionmode@2.png'));
+
+        &:hover, &:active { background-color: transparent; }
+      }
+    }
+  }
 }
 
 
