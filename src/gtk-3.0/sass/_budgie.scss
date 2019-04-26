@@ -471,8 +471,14 @@ window.budgie-popover:not(.csd) {
 		border: 1px solid $borders_color;
 		background-color: $sidebar_bg_color; // use sidebar bg
 
-		&:dir(ltr) { border-right: 0; }
-		&:dir(rtl) { border-left: 0; }
+		&:dir(ltr) {
+			border-left: 1px solid $borders_color;
+			border-right: 0;
+		}
+		&:dir(rtl) {
+			border-left: 0;
+			border-right: 1px solid $borders_color;
+		}
 
 		button.flat.radio.category-button {
 			border-radius: 0;
@@ -648,7 +654,9 @@ calendar.raven-calendar {
   label { min-height: 24px; }
 
   button.image-button {
-		@include button(undecorated);
+		@include button(normal);
+
+		@extend %linked;
 
 		&:hover { @include button(hover); }
 		&:active { @include button(active); }
