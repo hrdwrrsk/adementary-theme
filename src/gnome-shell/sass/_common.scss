@@ -220,11 +220,12 @@ StScrollBar {
 }
 
 /* Switches */
-.toggle-switch {
-  width: 28px;
-  height: 14px;
-  background-size: contain;
-}
+@if $version < 3.31 {
+  .toggle-switch {
+    width: 28px;
+    height: 14px;
+    background-size: contain;
+  }
 
   @each $v in us, intl {
     .toggle-switch-#{$v} {
@@ -232,6 +233,17 @@ StScrollBar {
       &:checked { background-image: url("assets/toggle-on.svg"); }
     }
   }
+}
+@else {
+  .toggle-switch {
+    width: 28px;
+    height: 14px;
+    background-size: contain;
+    
+    background-image: url("assets/toggle-off.svg");
+    &:checked { background-image: url("assets/toggle-on.svg"); }
+  }
+}
 
 /* links */
 .shell-link {
