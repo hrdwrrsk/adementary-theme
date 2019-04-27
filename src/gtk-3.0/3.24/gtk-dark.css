@@ -9016,9 +9016,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_unfocused_title #8e8f93;
 @define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(238, 238, 238, 0.07);
-@define-color wm_bg_a #373a43;
+@define-color wm_bg_a #33353e;
 @define-color wm_bg_b #292b32;
-@define-color wm_backdrop_bg_a #3c3e49;
+@define-color wm_backdrop_bg_a #373a43;
 @define-color wm_backdrop_bg_b #2E3038;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_border alpha(black, 0.18);

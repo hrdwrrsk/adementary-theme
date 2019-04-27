@@ -27,11 +27,11 @@ $dark_borders_color: darken($dark_bg_color, 10%);
 $dark_headerbar_color: darken($dark_bg_color, 2%);
 
 // WM colors
-$wm_bg_a: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 4%));
+$wm_bg_a: if($variant == 'light', darken($bg_color, 6%), lighten($bg_color, 2%));
 $wm_bg_b: if($variant == 'light', darken($bg_color, 10%), darken($bg_color, 2%));
 
-$wm_backdrop_bg_a: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 6%));
-$wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 8%), $bg_color);
+$wm_backdrop_bg_a: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 4%));
+$wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 6%), $bg_color);
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: $BLUEBERRY_500;
