@@ -61,6 +61,9 @@
 							This needs to be 1 less then the
 							title_vertical_pad on normal state
 							or you'll have bigger buttons 								-->
+	<border name="title_border" left="4" right="4" top="3" bottom="8"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="1"/>
+	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
 <frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
@@ -190,7 +193,7 @@
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line x1="0" y1="0" x2="width-1" y2="0" color="C_window_bg_hilight" />
+	<line x1="0" y1="0" x2="width-0" y2="0" color="C_window_bg_hilight" />
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
