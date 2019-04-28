@@ -13,13 +13,13 @@
 <constant name="C_border_focused" value="gtk:custom(borders,gtk:bg[NORMAL])" />
 <constant name="C_border_unfocused" value="gtk:custom(unfocused_borders,gtk:bg[NORMAL])" />
 <constant name="C_window_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.5" />
-<constant name="C_window_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
+<constant name="C_window_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.5" />
 
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
 <constant name="C_title_focused_hilight" value="gtk:custom(wm_borders_edge,gtk:base[NORMAL])" />
-<constant name="C_title_focused_hilight_dark" value="gtk:custom(wm_borders_edge,gtk:bg[NORMAL])" />
+<constant name="C_title_focused_hilight_dark" value="gtk:custom(wm_borders_edge,gtk:base[NORMAL])" />
 <constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
@@ -46,7 +46,7 @@
 	<aspect_ratio name="button" value="1.15"/>
 </frame_geometry>
 
-<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="3" rounded_top_right="3" parent="normal">
+<frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="4" rounded_top_right="4" parent="normal">
 	<distance name="left_titlebar_edge" value="2"/>
 	<distance name="right_titlebar_edge" value="2"/>
 </frame_geometry>
