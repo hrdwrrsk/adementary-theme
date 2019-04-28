@@ -1404,9 +1404,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu-category-button-greyed {
-  padding: 7px;
+  padding: 6px;
   color: #8e8f93;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 0;
 }
 
 .menu-category-button-label:ltr {
