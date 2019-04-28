@@ -548,7 +548,7 @@ StScrollBar {
                                     ('right', 'left') {
     &-#{$panel_pos} {
       border-image: url("assets/panel-#{$panel_pos}.svg") 4;
-      padding-#{$padding_pos}: 1px;
+      border-#{$padding_pos}: 1px solid transparent;
     }
   }
 

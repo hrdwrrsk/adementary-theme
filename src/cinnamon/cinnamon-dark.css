@@ -615,22 +615,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .panel-top {
   border-image: url("assets/panel-top.svg") 4;
-  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
 }
 
 .panel-bottom {
   border-image: url("assets/panel-bottom.svg") 4;
-  padding-top: 1px;
+  border-top: 1px solid transparent;
 }
 
 .panel-left {
   border-image: url("assets/panel-left.svg") 4;
-  padding-right: 1px;
+  border-right: 1px solid transparent;
 }
 
 .panel-right {
   border-image: url("assets/panel-right.svg") 4;
-  padding-left: 1px;
+  border-left: 1px solid transparent;
 }
 
 .panel-dummy {
