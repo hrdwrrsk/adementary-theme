@@ -2154,10 +2154,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grouped-window-list-thumbnail-menu .item-box {
   padding: 10px;
   border-radius: 3px;
-}
-
-.grouped-window-list-thumbnail-menu .item-box > StBoxLayout {
-  padding: 4px;
+  margin: 8px;
 }
 
 .grouped-window-list-thumbnail-menu .item-box:outlined {

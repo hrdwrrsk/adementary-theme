@@ -2049,11 +2049,7 @@ StScrollBar {
     .item-box {
       padding: 10px;
       border-radius: 3px;
-
-      > StBoxLayout {
-        padding: 4px;
-      }
-
+      margin: 8px;
       &:outlined {
         border: 0;
       }
