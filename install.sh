@@ -69,6 +69,10 @@ install() {
 	mkdir -p									"$THEME_DIR"
 	cp -r "$SRC_DIR/index$color.theme"						"$THEME_DIR/index.theme"
 
+  mkdir -p                  "$THEME_DIR/cinnamon"
+  cp -r "$SRC_DIR/cinnamon/assets$color"            "$THEME_DIR/cinnamon/assets"
+  cp -r "$SRC_DIR/cinnamon/cinnamon$color.css"      "$THEME_DIR/cinnamon/cinnamon.css"
+
 	mkdir -p									"$THEME_DIR/gnome-shell"
 	cp -r "$SRC_DIR/gnome-shell/assets$color"					"$THEME_DIR/gnome-shell/assets"
 	cp -r "$SRC_DIR/gnome-shell/pad-osd.css"					"$THEME_DIR/gnome-shell"
@@ -201,4 +205,4 @@ for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
 done
 
 echo
-echo "Installation complete. Enjoy!"
+echo "Installation complete."

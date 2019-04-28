@@ -23,6 +23,7 @@ echo "== Generating the CSS..."
 for color in "${_COLOR_VARIANTS[@]}"; do
   sassc "${SASSC_OPT[@]}" "src/gtk-3.0/3.22/gtk$color."{scss,css}
   sassc "${SASSC_OPT[@]}" "src/gtk-3.0/3.24/gtk$color."{scss,css}
+  sassc "${SASSC_OPT[@]}" "src/cinnamon/cinnamon$color."{scss,css}
 
   for version in "${GS_VERSIONS[@]}"; do
     sassc "${SASSC_OPT[@]}" "src/gnome-shell/$version/gnome-shell$color."{scss,css}

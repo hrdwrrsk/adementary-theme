@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="checkbox-unchecked-focused.svg"
+   inkscape:export-filename="/home/steffen/.local/share/themes/neu2/gtk-3.0/assets/dark/checkbox-unchecked.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3768-6">
+      <stop
+         style="stop-color:#0f0f0f;stop-opacity:1;"
+         offset="0"
+         id="stop3770-6" />
+      <stop
+         id="stop3778-2"
+         offset="0.078125"
+         style="stop-color:#171717;stop-opacity:1;" />
+      <stop
+         style="stop-color:#171717;stop-opacity:1;"
+         offset="0.97355771"
+         id="stop3774-0" />
+      <stop
+         style="stop-color:#1b1b1b;stop-opacity:1;"
+         offset="1"
+         id="stop3776-1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1436"
+       id="linearGradient1386"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7997547,0,0,0.80024607,5.0041626,7.6646038)"
+       x1="25"
+       y1="31.362186"
+       x2="25"
+       y2="45.362186" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1436">
+      <stop
+         style="stop-color:#f3f3f3;stop-opacity:1"
+         offset="0"
+         id="stop1432" />
+      <stop
+         id="stop1438"
+         offset="0.76763028"
+         style="stop-color:#f0f0f0;stop-opacity:1" />
+      <stop
+         style="stop-color:#e9e9e9;stop-opacity:1"
+         offset="1"
+         id="stop1434" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.313709"
+     inkscape:cx="12.961254"
+     inkscape:cy="5.9508857"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="false"
+     showborder="true"
+     inkscape:window-width="1006"
+     inkscape:window-height="708"
+     inkscape:window-x="358"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-nodes="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1036.3622)">
+    <g
+       inkscape:label="#g14325"
+       id="checkbox-unchecked-hover"
+       transform="translate(-17,1006)"
+       style="display:inline">
+      <g
+         transform="translate(0,-3.9660404e-6)"
+         style="display:inline"
+         id="g5400-0">
+        <rect
+           ry="2.500001"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.05;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="rect1786"
+           width="13"
+           height="13"
+           x="18.499636"
+           y="32.862175"
+           rx="2.4999995" />
+        <rect
+           ry="1.9999989"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient1386);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="rect5147-9-1-5-7-6-4"
+           width="12"
+           height="11.999999"
+           x="18.999636"
+           y="32.362175"
+           rx="1.9999995" />
+        <rect
+           ry="2.500001"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           id="rect1371-3"
+           width="13.000366"
+           height="11.999662"
+           x="18.499269"
+           y="31.862173"
+           rx="2.4999995" />
+        <rect
+           rx="1.5000014"
+           y="32.862175"
+           x="19.499327"
+           height="10.99969"
+           width="11.00031"
+           id="rect1373-7"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           ry="1.4999989" />
+        <rect
+           rx="2.5003657"
+           y="32.862175"
+           x="18.499636"
+           height="11.999662"
+           width="13.000366"
+           id="rect1365-6"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.45;fill:none;fill-opacity:1;stroke:#fffff5;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           ry="2.499999" />
+        <rect
+           rx="2.4999995"
+           y="31.862173"
+           x="18.499636"
+           height="13"
+           width="13"
+           id="rect1384"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#b3b3b3;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           ry="2.500001" />
+      </g>
+      <rect
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+         id="rect14506"
+         width="16"
+         height="16"
+         x="17"
+         y="30.362183" />
+    </g>
+  </g>
+</svg>
