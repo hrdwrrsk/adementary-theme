@@ -18,11 +18,10 @@ This theme has come with **3 variants**
 - GNOME 3
 - Xfce
 - Budgie
+- Cinnamon (> 4.0)
 - MATE (partial, No WM theme for marco and still not completed.)
 
 ### Not supported desktops
-- Cinnamon
-> ~~Not happening. See you in 2019.~~ Canceled, no plans for Cinnamon support.
 - Pantheon
 > Elementary OS is NOT compatible.
 - LXDE
