@@ -14,6 +14,7 @@
 <constant name="C_border_unfocused" value="gtk:custom(unfocused_borders,gtk:bg[NORMAL])" />
 <constant name="C_window_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.5" />
 <constant name="C_window_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.5" />
+<constant name="C_window_bg_hilight" value="shade/gtk:custom(wm_bg_a,#ffffff)/1.3" />
 
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
@@ -40,9 +41,9 @@
 	<distance name="bottom_height" value="1" />
 	<distance name="left_titlebar_edge" value="2"/>
 	<distance name="right_titlebar_edge" value="2"/>
-	<distance name="title_vertical_pad" value="10"/>
-	<border name="title_border" left="6" right="6" top="0" bottom="2"/>
-	<border name="button_border" left="0" right="0" top="1" bottom="0"/>
+	<distance name="title_vertical_pad" value="4"/>
+	<border name="title_border" left="4" right="4" top="3" bottom="8"/>
+	<border name="button_border" left="0" right="0" top="0" bottom="1"/>
 	<aspect_ratio name="button" value="1.15"/>
 </frame_geometry>
 
@@ -56,13 +57,10 @@
 	<distance name="right_width" value="0" />
 	<distance name="left_titlebar_edge" value="1"/>
 	<distance name="right_titlebar_edge" value="1"/>
-	<distance name="title_vertical_pad" value="10"/> <!--
+	<distance name="title_vertical_pad" value="4"/> <!--
 							This needs to be 1 less then the
 							title_vertical_pad on normal state
 							or you'll have bigger buttons 								-->
-	<border name="title_border" left="4" right="4" top="0" bottom="2"/>
-	<border name="button_border" left="0" right="0" top="1" bottom="0"/>
-	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
 <frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
@@ -192,13 +190,13 @@
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line x1="0" y1="1" x2="width-1" y2="1" color="C_titlebar_focused_hilight" />
+	<line x1="0" y1="0" x2="width-1" y2="0" color="C_window_bg_hilight" />
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
-	<line x1="5" y1="1" x2="width-6" y2="1" color="C_titlebar_focused_hilight" />
-	<arc color="C_titlebar_focused_hilight" x="0" y="1" width="8" height="7"  start_angle="270" extent_angle="90" />
-	<arc color="C_titlebar_focused_hilight" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
+	<line x1="5" y1="1" x2="width-6" y2="1" color="C_window_bg_hilight" />
+	<arc color="C_window_bg_hilight" x="1" y="1" width="6" height="6"  start_angle="0" extent_angle="-60" />
+	<arc color="C_window_bg_hilight" x="width-8" y="0" width="6" height="6"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
