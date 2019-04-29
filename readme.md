@@ -19,11 +19,12 @@ This theme has come with **3 variants**
 - Xfce
 - Budgie
 - Cinnamon (> 4.0)
-- MATE (partial, No WM theme for marco and still not completed.)
 
 ### Not supported desktops
 - Pantheon
 > Elementary OS is NOT compatible.
+
+- MATE
 - LXDE
 - Window Managers (Openbox, enlightenment...)
 - Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
