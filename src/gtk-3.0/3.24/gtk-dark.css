@@ -2500,7 +2500,7 @@ combobox:drop(active) {
  * Toolbars *
  ************/
 toolbar, .inline-toolbar, searchbar > revealer > box,
-.location-bar {
+.location-bar, .nemo-window grid.vertical > widget {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   background-color: #292b32;
@@ -2511,30 +2511,30 @@ toolbar, .inline-toolbar, searchbar > revealer > box,
 }
 
 toolbar:backdrop, .inline-toolbar:backdrop, searchbar > revealer > box:backdrop,
-.location-bar:backdrop {
+.location-bar:backdrop, .nemo-window grid.vertical > widget:backdrop {
   background-color: #2E3038;
   border-color: #1c1d22;
 }
 
 toolbar.vertical, .vertical.inline-toolbar, searchbar > revealer > box.vertical,
-.vertical.location-bar {
+.vertical.location-bar, .nemo-window grid.vertical > widget.vertical {
   border-bottom-width: 0;
   border-color: #17181c;
   border-style: solid;
 }
 
 toolbar.vertical:backdrop, .vertical.inline-toolbar:backdrop, searchbar > revealer > box.vertical:backdrop,
-.vertical.location-bar:backdrop {
+.vertical.location-bar:backdrop, .nemo-window grid.vertical > widget.vertical:backdrop {
   border-color: #1c1d22;
 }
 
 toolbar.vertical:dir(ltr), .vertical.inline-toolbar:dir(ltr), searchbar > revealer > box.vertical:dir(ltr),
-.vertical.location-bar:dir(ltr) {
+.vertical.location-bar:dir(ltr), .nemo-window grid.vertical > widget.vertical:dir(ltr) {
   border-right-width: 1px;
 }
 
 toolbar.vertical:dir(rtl), .vertical.inline-toolbar:dir(rtl), searchbar > revealer > box.vertical:dir(rtl),
-.vertical.location-bar:dir(rtl) {
+.vertical.location-bar:dir(rtl), .nemo-window grid.vertical > widget.vertical:dir(rtl) {
   border-left-width: 1px;
 }
 
@@ -7234,7 +7234,7 @@ textview text:selected, .view text selection:focus, iconview text selection:focu
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
-.menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
+.menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:focus:selected {
   background-color: #3689e6;
 }
 
@@ -7243,7 +7243,7 @@ textview text:selected, .view text selection:focus, iconview text selection:focu
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
-.menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
+.menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:focus:selected {
   color: #ffffff;
 }
 
@@ -7252,7 +7252,7 @@ textview text:disabled:selected:focus, .view text:disabled:selected, iconview te
 textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
 textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:disabled, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection:disabled,
 entry selection:disabled, modelbutton.flat:disabled:selected,
-.menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected {
+.menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:disabled:selected {
   color: #9bc4f3;
 }
 
@@ -7261,7 +7261,7 @@ textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview te
 textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
 textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection:backdrop,
 entry selection:backdrop, modelbutton.flat:backdrop:selected,
-.menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
+.menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:backdrop:selected {
   color: #d6d7d9;
 }
 
@@ -7269,7 +7269,7 @@ row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .selecti
 textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
 textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, spinbutton:not(.vertical) selection:backdrop:disabled,
 entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected,
-.menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected {
+.menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:backdrop:disabled:selected {
   color: #66a0e2;
 }
 
@@ -7749,12 +7749,80 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
   color: #8e8f93;
 }
 
-.nemo-window grid > box > box > toolbar.primary-toolbar {
-  border-bottom: 1px solid #17181c;
-}
-
 .nemo-window grid.vertical > paned.horizontal > box.vertical > scrolledwindow.frame {
   border-width: 0;
+}
+
+.nemo-window .nemo-window-pane scrolledwindow widget > widget.entry, .nemo-window .nemo-window-pane scrolledwindow widget > widget.entry:focus {
+  transition: none;
+}
+
+.nemo-window grid.vertical > widget {
+  border-bottom-width: 0;
+}
+
+.nemo-window grid.vertical > widget > box {
+  padding: 0;
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button image {
+  -gtk-icon-transform: 1.0;
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:hover {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:active, .nemo-window grid.vertical > widget > box > button.image-button:checked {
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:active:disabled, .nemo-window grid.vertical > widget > box > button.image-button:checked:disabled {
+  border-color: #17181c;
+  background-color: #292b32;
+  background-image: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:active:disabled label, .nemo-window grid.vertical > widget > box > button.image-button:active:disabled, .nemo-window grid.vertical > widget > box > button.image-button:checked:disabled label, .nemo-window grid.vertical > widget > box > button.image-button:checked:disabled {
+  color: #8e8f93;
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:disabled {
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
+  background-color: #2E3038;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
+}
+
+.nemo-window grid.vertical > widget > box > button.image-button:disabled label, .nemo-window grid.vertical > widget > box > button.image-button:disabled {
+  color: #8e8f93;
+}
+
+.nemo-canvas-item:selected,
+.nemo-dim-list-label:selected {
+  background-color: #3689e6;
+  color: #ffffff;
+  border-radius: 3px;
 }
 
 widget.-vala-panel-appmenu-core menubar > menuitem {

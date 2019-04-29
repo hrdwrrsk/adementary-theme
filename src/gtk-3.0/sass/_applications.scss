@@ -360,17 +360,56 @@ scrolledwindow.view > viewport.frame > stack > list {
 }
 
 .nemo-window {
-  grid > box > box > toolbar.primary-toolbar {
-    border-bottom: 1px solid $borders_color;
-  }
-
   grid.vertical > paned.horizontal > box.vertical {
     > scrolledwindow.frame {
       border-width: 0;
     }
   }
+
+  .nemo-window-pane scrolledwindow widget > widget.entry {
+    &, &:focus {
+      transition: none;
+
+      &:selected {
+        @extend %selected_items;
+      }
+    }
+  }
+
+  grid.vertical > widget {
+    @extend %toolbar;
+    border-bottom-width: 0;
+
+    > box {
+      padding: 0;
+    }
+
+    > box > button.image-button {
+      @include button(undecorated);
+      image { -gtk-icon-transform: 1.0; }
+
+      &:hover { @include button(hover); }
+
+      &:active, &:checked {
+        @include button(active);
+        &:disabled { @include button(insensitive-active); }
+      }
+
+      &:disabled { @include button(insensitive); }
+    }
+  }
 }
 
+.nemo-canvas-item,
+.nemo-dim-list-label {
+  &:selected {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+    border-radius: 3px;
+  }
+}
+
+// Vala-panel Appmenu applet
 widget.-vala-panel-appmenu-core { // appmenu applets
   menubar > menuitem {
     font-weight: bold;
