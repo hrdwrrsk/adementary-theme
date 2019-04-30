@@ -1228,15 +1228,20 @@ StScrollBar {
 //
 .menu {
   &-favorites-box {
-    padding: 10px;
+    padding: 3px;
     transition-duration: 300;
     background-color: $base_color;
     border: 1px solid $borders_color;
+    border-radius: 3px;
+
+    &:ltr { margin-left: 10px; }
+    &:rtl { margin-right: 10px; }
   }
 
   &-favorites-button {
-    padding: 10px;
-    border: 1px solid rgba(0,0,0,0);
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
 
     &:hover {
       background-color: $selected_bg_color;
@@ -1250,13 +1255,18 @@ StScrollBar {
       border: 0px solid red;
     }
 
-    &-button { padding: 10px; }
+    &-button { padding: 6px; }
   }
 
-  &-categories-box { padding: 10px; }
+  &-categories-box {
+    padding: 10px 10px 0 10px;
+  }
 
-  &-applications-inner-box,
-  &-applications-outer-box { padding: 10px 10px 0 10px; }
+  &-applications-inner-box { padding: 10px 10px 0 10px; }
+  &-applications-outer-box {
+    &:ltr { padding: 10px (10px * 2) 0 10px; }
+    &:rtl { padding: 10px 10px 0 (10px * 2); }
+  }
 
   &-application-button {
     padding: 6px;
@@ -1331,8 +1341,8 @@ StScrollBar {
   &-selected-app-description { max-width: 150px; }
 
   &-search-box:ltr {
-    padding: 0 10px; }
-  &-search-box-rtl { padding: 0 10px; }
+    padding: 0 0 10px 10px; }
+  &-search-box-rtl { padding: 0 10px 10px 0; }
 }
 
 #menu-search-entry {
@@ -1345,7 +1355,7 @@ StScrollBar {
 }
 
 .menu-search-entry-icon {
-  icon-size: 1em;
+  icon-size: 16px;
   color: $fg_color;
 }
 

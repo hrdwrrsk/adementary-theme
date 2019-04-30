@@ -1323,15 +1323,25 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu-favorites-box {
-  padding: 10px;
+  padding: 3px;
   transition-duration: 300;
   background-color: #f8f8f8;
   border: 1px solid #b3b3b3;
+  border-radius: 3px;
+}
+
+.menu-favorites-box:ltr {
+  margin-left: 10px;
+}
+
+.menu-favorites-box:rtl {
+  margin-right: 10px;
 }
 
 .menu-favorites-button {
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
 }
 
 .menu-favorites-button:hover {
@@ -1344,15 +1354,23 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu-places-button {
-  padding: 10px;
+  padding: 6px;
 }
 
 .menu-categories-box {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
-.menu-applications-inner-box, .menu-applications-outer-box {
+.menu-applications-inner-box {
   padding: 10px 10px 0 10px;
+}
+
+.menu-applications-outer-box:ltr {
+  padding: 10px 20px 0 10px;
+}
+
+.menu-applications-outer-box:rtl {
+  padding: 10px 10px 0 20px;
 }
 
 .menu-application-button {
@@ -1440,11 +1458,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu-search-box:ltr {
-  padding: 0 10px;
+  padding: 0 0 10px 10px;
 }
 
 .menu-search-box-rtl {
-  padding: 0 10px;
+  padding: 0 10px 10px 0;
 }
 
 #menu-search-entry {
@@ -1455,7 +1473,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu-search-entry-icon {
-  icon-size: 1em;
+  icon-size: 16px;
   color: #2e2e2e;
 }
 
