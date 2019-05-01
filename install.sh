@@ -72,6 +72,7 @@ install() {
   mkdir -p                  "$THEME_DIR/cinnamon"
   cp -r "$SRC_DIR/cinnamon/assets$color"            "$THEME_DIR/cinnamon/assets"
   cp -r "$SRC_DIR/cinnamon/cinnamon$color.css"      "$THEME_DIR/cinnamon/cinnamon.css"
+  cp -r "$SRC_DIR/cinnamon/thumbnail$color.png"     "$THEME_DIR/cinnamon/thumbnail.png"
 
 	mkdir -p									"$THEME_DIR/gnome-shell"
 	cp -r "$SRC_DIR/gnome-shell/assets$color"					"$THEME_DIR/gnome-shell/assets"
@@ -92,6 +93,7 @@ install() {
 			cp -r "$SRC_DIR/gtk-3.0/$version/gtk$color.css"			"$THEME_DIR/gtk-3.0/gtk.css"
 			[[ "$color" != '-dark' ]] && \
 			cp -r "$SRC_DIR/gtk-3.0/$version/gtk-dark.css"			"$THEME_DIR/gtk-3.0/gtk-dark.css"
+      cp -r "$SRC_DIR/gtk-3.0/thumbnail$color.png"        "$THEME_DIR/gtk-3.0/thumbnail.png"
 		else
 			mkdir -p							"$THEME_DIR/gtk-$version"
 			cp -r "$SRC_DIR/gtk-3.0/$version/assets"			"$THEME_DIR/gtk-$version/assets"
