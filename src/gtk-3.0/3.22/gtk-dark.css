@@ -8908,9 +8908,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_backdrop_bg_b #2E3038;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_border alpha(black, 0.18);
-@define-color wm_button_hover_color_a shade(#2E3038, 1.3);
-@define-color wm_button_hover_color_b #2E3038;
-@define-color wm_button_active_color_a shade(#2E3038, 0.85);
-@define-color wm_button_active_color_b shade(#2E3038, 0.89);
-@define-color wm_button_active_color_c shade(#2E3038, 0.9);
+@define-color wm_button_hover_color_a #454854;
+@define-color wm_button_hover_color_b #454854;
+@define-color wm_button_active_color_a #25262d;
+@define-color wm_button_active_color_b #25262d;
+@define-color wm_button_active_color_c #25262d;
 @define-color content_view_bg #30333D;
