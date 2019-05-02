@@ -1768,11 +1768,11 @@ StScrollBar {
 // Applets (applet.js)
 //
 .applet {
-  &-separator { padding: 1px 4px; }
+  &-separator { padding: 8px 4px; }
 
   &-separator-line {
     width: 1px;
-    background: rgba(black, 0.8);
+    background: if($light-panel == 'false', rgba(white, 0.4), rgba(black, 0.4));
   }
 
   &-box {
@@ -2032,10 +2032,10 @@ StScrollBar {
     &:active, &:checked {
       border-color: if($light-panel == 'false', $selected_bg_color, $fg_color);
     }
-  }
 
-  & .progress {
-    background-color: rgba($success_color, 0.3);
+    & .progress {
+      background-color: rgba($success_color, 0.5);
+    }
   }
 
   &-number-label {
@@ -2046,6 +2046,8 @@ StScrollBar {
     border-radius: 99.99px;
     background-color: if($light-panel == 'false', rgba(black, 0.7), rgba(white, 0.7));
   }
+
+  &-thumbnail-label { padding-left: 24px; }
 
   &-thumbnail-alert {
     background-color: rgba($warning_color, 0.15);

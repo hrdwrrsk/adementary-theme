@@ -1876,12 +1876,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .applet-separator {
-  padding: 1px 4px;
+  padding: 8px 4px;
 }
 
 .applet-separator-line {
   width: 1px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .applet-box {
@@ -2146,8 +2146,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-color: #2e2e2e;
 }
 
-.grouped-window-list .progress {
-  background-color: rgba(104, 183, 35, 0.3);
+.grouped-window-list-item-box .progress {
+  background-color: rgba(104, 183, 35, 0.5);
 }
 
 .grouped-window-list-number-label {
@@ -2157,6 +2157,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grouped-window-list-badge {
   border-radius: 99.99px;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.grouped-window-list-thumbnail-label {
+  padding-left: 24px;
 }
 
 .grouped-window-list-thumbnail-alert {
