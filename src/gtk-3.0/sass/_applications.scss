@@ -457,8 +457,3 @@ widget.-vala-panel-appmenu-core { // appmenu applets
     }
   }
 }
-
-// Firefox
-#MozillaGtkWidget.background {
-  > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
-}

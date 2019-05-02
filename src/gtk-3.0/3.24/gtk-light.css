@@ -7922,10 +7922,6 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
   color: #8e8e8e;
 }
 
-#MozillaGtkWidget.background > menu > menuitem {
-  border-radius: 0;
-}
-
 .budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;
