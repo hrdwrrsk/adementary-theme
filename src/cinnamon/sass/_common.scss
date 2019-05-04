@@ -18,8 +18,8 @@ stage {
 // Buttons
 //
 %button {
-  min-height: 20px;
-  padding: 5px 32px;
+  min-height: (20px - 16px) / 2;
+  padding: 2px (32px - 16px);
   transition-duration: 0;
 
   &, &:focus, &:hover, &:hover:focus, &:active, &:active:focus, &:insensitive {
@@ -1176,10 +1176,12 @@ StScrollBar {
 // On-Screen Keyboard
 //
 #keyboard {
-  background-color: $osd_bg_color;
+  background-color: if($variant == 'dark', rgba(black, 0.8), rgba(white, 0.75));
   border-width: 0;
-  border-top-width: 1px;
-  border-color: transparentize(black, 0.6);
+  //border-top-width: 1px;
+  //border-color: transparentize(black, 0.5);
+
+  box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.22), rgba(black, 0.5));
 }
 
 .keyboard-layout {
@@ -1192,31 +1194,35 @@ StScrollBar {
 }
 
 .keyboard-key {
-  min-height: 2em;
-  min-width: 2em;
+  //min-height: 2em;
+  //min-width: 2em;
   font-size: 14pt;
   font-weight: bold;
   border-radius: 3px;
   box-shadow: none;
 
-  @include button(osd);
+  border-image: url("assets/buttons/button-default.svg") 4;
 
-  &:hover { @include button(osd-hover); }
-  &:active, &:checked { @include button(osd-active); }
-
-  &:grayed { @include button(osd-insensitive); }
+  &:hover { border-image: url("assets/buttons/button-default-hover.svg") 4; }
+  &:active { border-image: url("assets/buttons/button-default-active.svg") 4; }
+  &:insensitive { border-image: url("assets/buttons/button-default-disabled.svg") 4; }
+  padding: 4px;
 }
 
 .keyboard-subkeys { //long press on a key popup
-  color: $osd_fg_color;
-  padding: 5px;
+  color: $fg_color;
+  padding: 0;
+  margin: 8px 5px 8px;
+
+  border-image: url("assets/mpb-background.svg") 9;
+
   -arrow-border-radius: 2px;
-  -arrow-background-color: $osd_bg_color;
+  -arrow-background-color: transparent;
   -arrow-border-width: 1px;
-  -arrow-border-color: transparentize(black, 0.6);;
-  -arrow-base: 20px;
-  -arrow-rise: 10px;
-  -boxpointer-gap: 5px;
+  -arrow-border-color: transparent;
+  -arrow-base: 21px;
+  -arrow-rise: 9px;
+  -boxpointer-gap: 2px;
 }
 
 //
@@ -1328,7 +1334,6 @@ StScrollBar {
     padding-right: 30px;
     padding-left: 28px;
     text-align: right;
-    height: 30px;
 
     &:rtl {
       padding-top: 10px;
@@ -1773,43 +1778,45 @@ StScrollBar {
   &-separator-line {
     width: 1px;
     background: if($light-panel == 'false', rgba(white, 0.4), rgba(black, 0.4));
+
+    &-vertical {
+      height: 1px;
+      background: if($light-panel == 'false', rgba(white, 0.4), rgba(black, 0.4));
+    }
   }
 
   &-box {
-    padding-left: 6px;
-    padding-right: 6px;
-    spacing: 6px;
     color: if($light-panel == 'false', $dark_fg_color, $fg_color);
     text-shadow: none;
     transition-duration: 100;
 
     & StLabel { padding-top: 0; }
 
-    &.vertical {
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top: 6px;
-      padding-bottom: 6px;
-
-      & StLabel { padding-top: 0; }
-    }
-
-    &:hover {
-      background-color: rgba(0,0,0,0.01);
-      box-shadow: inset 0 -2px if($light-panel == 'false',
-                                  rgba($dark_fg_color, 0.75),
-                                  rgba($fg_color, 0.75));
-    }
-
-    &:checked {
-      background-color: rgba(0,0,0,0.01);
-      box-shadow: inset 0 -2px if($light-panel == 'false', $selected_bg_color, $fg_color);
-    }
-
     &:highlight {
       background-image: none;
       border-image: none;
       background-color: transparentize($error_color, 0.5);
+    }
+
+    @each $position, $_padding, $_indicator in (top, 0 8px, 0 2px),
+                                               (bottom, 0 8px, 0 -2px),
+                                               (left, 8px 0, 2px 0),
+                                               (right, 8px 0, -2px 0) {
+      .panel-#{$position} & {
+        padding: #{$_padding};
+        spacing: 8px;
+        &:hover {
+          background-color: rgba(0,0,0,0.01);
+          box-shadow: inset #{$_indicator} 0 if($light-panel == 'false',
+                                             rgba($dark_fg_color, 0.75),
+                                             rgba($fg_color, 0.75));
+        }
+
+        &:checked {
+          background-color: rgba(0,0,0,0.01);
+          box-shadow: inset #{$_indicator} 0 $selected_bg_color;
+        }
+      }
     }
   }
 
@@ -1838,7 +1845,6 @@ StScrollBar {
       text-shadow: none;
     }
   }
-
 }
 
 //
@@ -1870,12 +1876,12 @@ StScrollBar {
   }
 
   &-with-borders {
-    border: 1px solid $borders_color;
     border-radius: 5px;
-    background-color: $bg_color;
+    background-color: transparent;
     color: $fg_color;
     padding: 12px;
     padding-bottom: 16px;
+    border-image: url("assets/mpb-background.svg") 9;
 
     &:highlight {
       background-color: transparentize($error_color, 0.5);
@@ -1883,16 +1889,16 @@ StScrollBar {
   }
 
   &-with-borders-and-header {
-    border: 1px solid $borders_color;
     border-top-width: 0;
     border-radius: 0 0 5px 5px;
-    background-color: $bg_color;
+    background-color: transparent;
     color: $fg_color;
     border-radius: 0;
     border-radius-topleft: 0;
     border-radius-topright: 0;
     padding: 12px;
     padding-bottom: 17px;
+    border-image: url("assets/mpb-background.svg") 9;
 
     &:highlight {
       background-color: transparentize($error_color, 0.5);
@@ -1900,13 +1906,13 @@ StScrollBar {
   }
 
   &-header {
-    border: 1px solid $borders_color;
     border-radius: 5px 5px 0 0;
-    background-color: darken($bg_color, 3%);
+    background-color: transparent;
     color: $fg_color;
     font-size: 1em;
     padding: 12px;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
+    border-image: url("assets/mpb-background.svg") 9;
   }
 
   &-drag-placeholder {
@@ -1916,12 +1922,12 @@ StScrollBar {
 }
 
 .photoframe-box {
-  border: 1px solid $borders_color;
   border-radius: 5px;
   background-color: $bg_color;
   color: $fg_color;
   padding: 12px;
   padding-bottom: 16px;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 //
@@ -1997,8 +2003,8 @@ StScrollBar {
   &-item-box {
     font-weight: bold;
     padding-top: 0;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
     background-image: none;
 
     &.top, &.bottom {
@@ -2008,8 +2014,8 @@ StScrollBar {
 
     &.left,
     &.right {
-      padding-top: 6px;
-      padding-bottom: 6px;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
 
     &.left {

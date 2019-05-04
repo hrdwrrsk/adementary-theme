@@ -9,8 +9,8 @@ stage {
 }
 
 .popup-menu #notification .notification-button, .popup-menu #notification .notification-icon-button, .notification-button, .notification-icon-button, .modal-dialog-button-box .modal-dialog-button, .sound-button {
-  min-height: 20px;
-  padding: 5px 32px;
+  min-height: 2px;
+  padding: 2px 16px;
   transition-duration: 0;
   border-image: url("assets/buttons/button-default.svg") 4;
 }
@@ -1286,10 +1286,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #keyboard {
-  background-color: #2e3038;
+  background-color: rgba(255, 255, 255, 0.75);
   border-width: 0;
-  border-top-width: 1px;
-  border-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.22);
 }
 
 .keyboard-layout {
@@ -1302,24 +1301,38 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .keyboard-key {
-  min-height: 2em;
-  min-width: 2em;
   font-size: 14pt;
   font-weight: bold;
   border-radius: 3px;
   box-shadow: none;
+  border-image: url("assets/buttons/button-default.svg") 4;
+  padding: 4px;
+}
+
+.keyboard-key:hover {
+  border-image: url("assets/buttons/button-default-hover.svg") 4;
+}
+
+.keyboard-key:active {
+  border-image: url("assets/buttons/button-default-active.svg") 4;
+}
+
+.keyboard-key:insensitive {
+  border-image: url("assets/buttons/button-default-disabled.svg") 4;
 }
 
 .keyboard-subkeys {
-  color: #eeeeec;
-  padding: 5px;
+  color: #2e2e2e;
+  padding: 0;
+  margin: 8px 5px 8px;
+  border-image: url("assets/mpb-background.svg") 9;
   -arrow-border-radius: 2px;
-  -arrow-background-color: #2e3038;
+  -arrow-background-color: transparent;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(0, 0, 0, 0.4);
-  -arrow-base: 20px;
-  -arrow-rise: 10px;
-  -boxpointer-gap: 5px;
+  -arrow-border-color: transparent;
+  -arrow-base: 21px;
+  -arrow-rise: 9px;
+  -boxpointer-gap: 2px;
 }
 
 .menu-favorites-box {
@@ -1441,7 +1454,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding-right: 30px;
   padding-left: 28px;
   text-align: right;
-  height: 30px;
 }
 
 .menu-selected-app-box:rtl {
@@ -1884,10 +1896,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background: rgba(255, 255, 255, 0.4);
 }
 
+.applet-separator-line-vertical {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
 .applet-box {
-  padding-left: 6px;
-  padding-right: 6px;
-  spacing: 6px;
   color: #eeeeee;
   text-shadow: none;
   transition-duration: 100;
@@ -1897,31 +1911,70 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding-top: 0;
 }
 
-.applet-box.vertical {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.applet-box.vertical StLabel {
-  padding-top: 0;
-}
-
-.applet-box:hover {
-  background-color: rgba(0, 0, 0, 0.01);
-  box-shadow: inset 0 -2px rgba(238, 238, 238, 0.75);
-}
-
-.applet-box:checked {
-  background-color: rgba(0, 0, 0, 0.01);
-  box-shadow: inset 0 -2px #3689e6;
-}
-
 .applet-box:highlight {
   background-image: none;
   border-image: none;
   background-color: rgba(198, 38, 46, 0.5);
+}
+
+.panel-top .applet-box {
+  padding: 0 8px;
+  spacing: 8px;
+}
+
+.panel-top .applet-box:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 2px 0 rgba(238, 238, 238, 0.75);
+}
+
+.panel-top .applet-box:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 2px 0 #3689e6;
+}
+
+.panel-bottom .applet-box {
+  padding: 0 8px;
+  spacing: 8px;
+}
+
+.panel-bottom .applet-box:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 -2px 0 rgba(238, 238, 238, 0.75);
+}
+
+.panel-bottom .applet-box:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 -2px 0 #3689e6;
+}
+
+.panel-left .applet-box {
+  padding: 8px 0;
+  spacing: 8px;
+}
+
+.panel-left .applet-box:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 2px 0 0 rgba(238, 238, 238, 0.75);
+}
+
+.panel-left .applet-box:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 2px 0 0 #3689e6;
+}
+
+.panel-right .applet-box {
+  padding: 8px 0;
+  spacing: 8px;
+}
+
+.panel-right .applet-box:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset -2px 0 0 rgba(238, 238, 238, 0.75);
+}
+
+.panel-right .applet-box:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset -2px 0 0 #3689e6;
 }
 
 .applet-label {
@@ -1972,12 +2025,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders {
-  border: 1px solid #b3b3b3;
   border-radius: 5px;
-  background-color: #f3f3f3;
+  background-color: transparent;
   color: #2e2e2e;
   padding: 12px;
   padding-bottom: 16px;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 .desklet-with-borders:highlight {
@@ -1985,16 +2038,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders-and-header {
-  border: 1px solid #b3b3b3;
   border-top-width: 0;
   border-radius: 0 0 5px 5px;
-  background-color: #f3f3f3;
+  background-color: transparent;
   color: #2e2e2e;
   border-radius: 0;
   border-radius-topleft: 0;
   border-radius-topright: 0;
   padding: 12px;
   padding-bottom: 17px;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 .desklet-with-borders-and-header:highlight {
@@ -2002,13 +2055,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet-header {
-  border: 1px solid #b3b3b3;
   border-radius: 5px 5px 0 0;
-  background-color: #ebebeb;
+  background-color: transparent;
   color: #2e2e2e;
   font-size: 1em;
   padding: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 .desklet-drag-placeholder {
@@ -2017,12 +2070,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .photoframe-box {
-  border: 1px solid #b3b3b3;
   border-radius: 5px;
   background-color: #f3f3f3;
   color: #2e2e2e;
   padding: 12px;
   padding-bottom: 16px;
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 /*FIXME*/
@@ -2110,8 +2163,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grouped-window-list-item-box {
   font-weight: bold;
   padding-top: 0;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-image: none;
 }
 
@@ -2121,8 +2174,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .grouped-window-list-item-box.left, .grouped-window-list-item-box.right {
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .grouped-window-list-item-box.left {
