@@ -2770,13 +2770,31 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #eeeeee;
 }
 
+#dashtodockContainer .dash-item-container .show-apps .show-apps-icon {
+  color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 1px #17181c;
+  border-radius: 3px;
+}
+
+#dashtodockContainer .dash-item-container .show-apps:hover .show-apps-icon {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#dashtodockContainer .dash-item-container .show-apps:checked .show-apps-icon {
+  background-color: #3689e6;
+  box-shadow: inset 0 0 0 1px #17181c;
+}
+
 #dashtodockContainer .dash-item-container .app-well-app .overview-icon,
 #dashtodockContainer .dash-item-container .show-apps .overview-icon {
-  padding: 4px;
+  padding: 6px;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 #dashtodockContainer .dash-item-container .app-well-app:hover .overview-icon {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #dashtodockContainer .dash-item-container .app-well-app.focused .overview-icon {
@@ -2794,13 +2812,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.top .dash-item-container > StWidget {
-  padding: 4px 6px;
+  padding: 0 4px;
 }
 
 #dashtodockContainer.top .app-well-app .overview-icon,
 #dashtodockContainer.top .show-apps .overview-icon {
   border: 0;
-  border-radius: 3px;
+  border-radius: 0;
   margin-bottom: 1px;
 }
 
@@ -2815,13 +2833,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.bottom .dash-item-container > StWidget {
-  padding: 4px 6px;
+  padding: 0 4px;
 }
 
 #dashtodockContainer.bottom .app-well-app .overview-icon,
 #dashtodockContainer.bottom .show-apps .overview-icon {
   border: 0;
-  border-radius: 3px;
+  border-radius: 0;
   margin-top: 1px;
 }
 
@@ -2836,7 +2854,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.left .dash-item-container > StWidget {
-  padding: 6px 4px;
+  padding: 4px;
 }
 
 #dashtodockContainer.left .app-well-app .overview-icon,
@@ -2857,7 +2875,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.right .dash-item-container > StWidget {
-  padding: 6px 4px;
+  padding: 4px;
 }
 
 #dashtodockContainer.right .app-well-app .overview-icon,
