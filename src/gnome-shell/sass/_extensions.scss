@@ -5,9 +5,9 @@
 #dashtodockContainer {
 	.dash-item-container {
 		.app-well-app-running-dot {
-			width: 6px;
-  		height: 2px;
-			margin: 0px;
+			width: 8px;
+  		height: 4px;
+			margin: 1px;
 			border-radius: 32px;
 
 			background-color: if($variant == 'light', rgba(black, 0.6), rgba(white, 0.6));
