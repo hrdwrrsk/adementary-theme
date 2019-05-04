@@ -4106,6 +4106,16 @@ messagedialog { // Message Dialog styling
     &:backdrop { background-image: none; }
   }
 
+  &:not(.csd) {
+    .dialog-action-area {
+      padding: 0 8px 8px 8px; // labels are not vertically centered on message dialog, this is a workaround
+      border-radius: 0;
+      border-left-style: solid;
+      border-right-style: none;
+      border-bottom-style: none;
+    }
+  }
+
   &.csd { // rounded bottom border styling for csd version
     &.background {
       // bigger radius for better antialiasing
@@ -4119,7 +4129,6 @@ messagedialog { // Message Dialog styling
       border-left-style: solid;
       border-right-style: none;
       border-bottom-style: none;
-
     }
   }
 }
