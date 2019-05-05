@@ -2816,17 +2816,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer .dash-item-container .show-apps .show-apps-icon {
-  color: #2e2e2e;
+  color: rgba(46, 46, 46, 0.75);
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 }
 
 #dashtodockContainer .dash-item-container .show-apps:hover .show-apps-icon {
+  color: #2e2e2e;
   background-color: rgba(255, 255, 255, 0.65);
 }
 
 #dashtodockContainer .dash-item-container .show-apps:checked .show-apps-icon {
+  color: #2e2e2e;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
