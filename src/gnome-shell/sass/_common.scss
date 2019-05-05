@@ -1679,7 +1679,7 @@ StScrollBar {
   }
 
   .app-well-app.app-folder > .overview-icon {
-    background-color: transparentize($osd_bg_color,.6);
+    background-color: rgba(black, 0.5);
   }
 
   .show-apps:checked .show-apps-icon,
@@ -1696,14 +1696,26 @@ StScrollBar {
     -arrow-rise: 0;
   }
   .app-folder-popup-bin {
-		padding: 5px;
+		padding: 5px + 4px;
 		border-radius: 5px;
-		background-color: transparentize($bg_color, 0.05);
+		background-color: transparent;
 		border: 0;
-		box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), rgba($borders_color, 0.90));
+		//box-shadow: 0 0 0 1px if($variant == 'light', rgba(black, 0.30), rgba($borders_color, 0.90));
+    border-image: url("assets/mpb-background.svg") 9;
 
     & .overview-icon {
       color: $fg_color;
+    }
+
+    .app-well-app {
+      &:hover .overview-icon,
+      &:focus .overview-icon,
+      &:selected .overview-icon {
+        background-color: if($variant == light, rgba(black, 0.1), rgba(white, 0.1));
+        transition-duration: 0ms;
+        border-image: none;
+        background-image: none;
+      }
     }
 	}
 

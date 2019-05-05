@@ -1856,7 +1856,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-well-app.app-folder > .overview-icon {
-  background-color: rgba(46, 48, 56, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .show-apps:checked .show-apps-icon,
@@ -1873,15 +1873,24 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-folder-popup-bin {
-  padding: 5px;
+  padding: 9px;
   border-radius: 5px;
-  background-color: rgba(243, 243, 243, 0.95);
+  background-color: transparent;
   border: 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  border-image: url("assets/mpb-background.svg") 9;
 }
 
 .app-folder-popup-bin .overview-icon {
   color: #2e2e2e;
+}
+
+.app-folder-popup-bin .app-well-app:hover .overview-icon,
+.app-folder-popup-bin .app-well-app:focus .overview-icon,
+.app-folder-popup-bin .app-well-app:selected .overview-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition-duration: 0ms;
+  border-image: none;
+  background-image: none;
 }
 
 .app-folder-icon {
