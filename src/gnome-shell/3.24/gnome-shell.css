@@ -187,23 +187,23 @@ StScrollView.hfade {
 }
 
 StScrollBar {
-  padding: 0;
+  padding: 2px;
 }
 
 StScrollView StScrollBar {
-  min-width: 14px;
-  min-height: 14px;
+  min-width: 6px;
+  min-height: 6px;
 }
 
 StScrollBar StBin#trough {
-  border-radius: 0;
-  background-color: transparent;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   border-radius: 8px;
   background-color: #7d7d7d;
-  margin: 3px;
+  margin: 0;
 }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
