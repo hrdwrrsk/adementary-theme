@@ -5,12 +5,12 @@
 #dashtodockContainer {
 	.dash-item-container {
 		.app-well-app-running-dot {
-			width: 8px;
+			width: 4px;
   		height: 4px;
 			margin: 1px;
 			border-radius: 32px;
 
-			background-color: if($variant == 'light', rgba(black, 0.6), rgba(white, 0.6));
+			background-color: if($variant == 'light', rgba(black, 0.5), rgba(white, 0.5));
 		}
 
 		> StWidget.focused .app-well-app-running-dot {

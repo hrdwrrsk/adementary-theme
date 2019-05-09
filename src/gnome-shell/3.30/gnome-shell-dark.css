@@ -2812,11 +2812,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Legacy tray icon support (GNOME 3.22-3.24) */
 /* Dash to dock */
 #dashtodockContainer .dash-item-container .app-well-app-running-dot {
-  width: 8px;
+  width: 4px;
   height: 4px;
   margin: 1px;
   border-radius: 32px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #dashtodockContainer .dash-item-container > StWidget.focused .app-well-app-running-dot {
