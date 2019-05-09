@@ -1,6 +1,6 @@
-Tetra
+Adwaitheon
 ======
-Tetra (formerly or codenamed "Project Beaucoup") is Adwaita-based gtk+ theme with design influence from elementary OS stylesheet/theme.
+Adwaitheon (formerly or codenamed "Project Beaucoup" and "Tetra") is Adwaita-based gtk+ theme blended with elementary OS visual design.
 
 -------------------
 ![Screenshot](/data/Screenshot.png)
@@ -24,10 +24,13 @@ This theme has come with **3 variants**
 - Pantheon
 > Elementary OS is NOT compatible.
 
+- Downstream patched GNOME session (Ubuntu, Pop! OS....)
+> However, you can install 'vanilla' GNOME by typing `sudo apt install gnome-session` in terminal
+
 - MATE
 - LXDE
 - Window Managers (Openbox, enlightenment...)
-- Qt/Non-gtk+ desktops (Plasma 5, LXQt...)
+- Qt/Non-gtk+ desktops (Plasma 5, LXQt, Deepin...)
 
 
 ### Nautilus 3.30 on Ubuntu 18.10
@@ -54,8 +57,8 @@ before you installing this theme, you need this package installed on your system
 Then run this command:
 
 ```
-git clone https://github.com/hrdwrrsk/tetra-gtk-theme.git
-cd tetra-gtk-theme
+git clone https://github.com/hrdwrrsk/adwaitheon-theme.git
+cd adwaitheon-theme
 
 # System-wide install
 sudo ./install.sh
@@ -70,7 +73,7 @@ for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. supp
 
 # Credits
 - Adwaita Gtk theme by GNOME, for Gtk theme basis
-- elementary stylesheet/Gtk theme and their visual design as main inspiration (also color palette.)
+- elementary OS visual design as main inspiration (also color palette.)
 - Mint-Y theme by Linux Mint, for Cinnamon theme basis
 - install.sh, parse-sass.sh and render-assets.sh script are from nana-4's materia-theme
 - some other projects: Adapta, Arc, plane-gtk-theme and more for code fixes, hacks, etc

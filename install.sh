@@ -6,7 +6,7 @@ REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$REPO_DIR/src"
 
 DEST_DIR="/usr/share/themes"
-THEME_NAME="Tetra"
+THEME_NAME="Adementary"
 COLOR_VARIANTS=('' '-dark' '-light')
 
 GTK_VERSIONS=('3.22' '3.24')
