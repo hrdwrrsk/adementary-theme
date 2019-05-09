@@ -1,6 +1,6 @@
-Adwaitheon
+Adementary
 ======
-Adwaitheon (formerly or codenamed "Project Beaucoup" and "Tetra") is Adwaita-based gtk+ theme blended with elementary OS visual design.
+Adementary (formerly or codenamed "Project Beaucoup" and "Tetra") is a GTK theme based on Adwaita, blended with elementary OS visual design.
 
 -------------------
 ![Screenshot](/data/Screenshot.png)
@@ -57,8 +57,8 @@ before you installing this theme, you need this package installed on your system
 Then run this command:
 
 ```
-git clone https://github.com/hrdwrrsk/adwaitheon-theme.git
-cd adwaitheon-theme
+git clone https://github.com/hrdwrrsk/adementary-theme.git
+cd adementary-theme
 
 # System-wide install
 sudo ./install.sh
@@ -66,6 +66,8 @@ sudo ./install.sh
 # Local install
 ./install.sh -d ~/.themes
 ```
+
+Then apply this theme with GNOME Tweaks or using your desktop's appearance settings
 
 # Reporting bugs/Add suggestions
 report it via "Issues" tab, Pull request for bugfixes and features also accepted.
