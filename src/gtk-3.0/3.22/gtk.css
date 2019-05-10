@@ -782,18 +782,18 @@ button:drop(active) {
 
 row:selected
 button {
-  border-color: #0e3f75;
+  border-color: #b3b3b3;
 }
 
 row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled), row:selected
 button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
-  color: #ffffff;
+  color: #282828;
   border-color: transparent;
 }
 
 row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled):backdrop, row:selected
 button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
-  color: whitesmoke;
+  color: #8e8e8e;
 }
 
 .xfce4-panel.background menu .linked button,
@@ -5982,6 +5982,16 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:not(treeview):not(separator):dir(rtl
   border-bottom: 1px solid transparent;
 }
 
+.sidebar:not(treeview):not(separator) treeview.view:backdrop {
+  color: #8e8e8e;
+  background-color: #e7e7e7;
+  transition: 200ms ease-out;
+}
+
+.sidebar:not(treeview):not(separator) treeview.view:backdrop label {
+  color: #8e8e8e;
+}
+
 .sidebar:not(treeview):not(separator) separator {
   background-color: transparent;
 }
@@ -6040,7 +6050,7 @@ placessidebar > viewport.frame {
 }
 
 placessidebar row {
-  min-height: 28px;
+  min-height: 24px;
   padding: 0px;
 }
 
@@ -6049,7 +6059,7 @@ placessidebar row > revealer {
 }
 
 placessidebar row:selected {
-  color: #ffffff;
+  color: #282828;
 }
 
 placessidebar row:disabled {
