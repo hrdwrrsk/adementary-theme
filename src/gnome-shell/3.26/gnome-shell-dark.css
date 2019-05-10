@@ -283,7 +283,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Modal Dialogs */
 .headline {
-  font-size: 110%;
+  font-size: 100%;
 }
 
 .lightbox {
@@ -2591,7 +2591,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .login-dialog-prompt-label {
   color: #bebeb6;
-  font-size: 110%;
+  font-size: 100%;
   padding-top: 1em;
 }
 

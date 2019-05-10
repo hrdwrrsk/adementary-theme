@@ -253,7 +253,10 @@ StScrollBar {
 
 /* Modal Dialogs */
 
-.headline { font-size: 110%; }
+.headline {
+  font-size: 100%;
+}
+
 .lightbox { background-color: black; }
 .flashspot { background-color: white; }
 
@@ -2180,7 +2183,7 @@ StScrollBar {
 
   .login-dialog-prompt-label {
       color: darken($osd_fg_color, 20%);
-      font-size: 110%;
+      font-size: 100%;
       padding-top: 1em;
   }
 
