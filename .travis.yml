@@ -2,6 +2,7 @@ sudo: false
 
 dist: bionic
 before_install:
+  - sudo add-apt-repository -y ppa:fossfreedom/arc-gtk-theme-daily
   - sudo apt update
   - sudo apt install -y sassc bc libgtk-3.0
 script: ./install.sh
