@@ -1,0 +1,20 @@
+sudo: false
+
+dist: bionic
+before_install:
+  - sudo apt update
+  - sudo apt install -y sassc bc libgtk-3.0
+script: ./install.sh
+
+jobs:
+  include:
+    - script: echo "Running unit tests (1)"
+    - script: echo "Running unit tests (2)"
+    - stage: GitHub Release
+      script: echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: releases
+        api_key: 124992b12b5f2230af119a4277f5bc6d87b6c1d5
+        skip_cleanup: true
+        on:
+          tags: true
