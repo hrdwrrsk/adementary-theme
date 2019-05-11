@@ -16,7 +16,7 @@ jobs:
       deploy:
         provider: releases
         file: Adementary.zip
-        api_key: 124992b12b5f2230af119a4277f5bc6d87b6c1d5
+        api_key: d59f8ea80d946466aa7687660310b749e7ed10ee
         skip_cleanup: true
         on:
           repo: hrdwrrsk/adementary-theme
