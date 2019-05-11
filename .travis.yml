@@ -15,7 +15,9 @@ jobs:
       script: echo "Deploying to GitHub releases ..."
       deploy:
         provider: releases
+        file: Adementary.zip
         api_key: 124992b12b5f2230af119a4277f5bc6d87b6c1d5
         skip_cleanup: true
         on:
+          repo: hrdwrrsk/adementary-theme
           tags: true
