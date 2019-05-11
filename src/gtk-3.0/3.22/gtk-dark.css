@@ -4216,7 +4216,7 @@ switch {
 switch:checked {
   color: transparent;
   border: 1px solid #070708;
-  background-image: linear-gradient(to bottom, #3689e6, #3186e5, #247ee4);
+  background-image: linear-gradient(to bottom, #3f8ee7, #1c79e1);
   text-shadow: none;
   box-shadow: 0 1px rgba(255, 255, 255, 0.05);
 }
@@ -4228,7 +4228,7 @@ switch:checked:disabled {
 }
 
 switch:checked:backdrop {
-  background-image: linear-gradient(to bottom, #3f8ee7, #3b8ce7, #2d84e5);
+  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
 }
 
 switch:disabled {
