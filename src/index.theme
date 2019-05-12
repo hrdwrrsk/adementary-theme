@@ -1,9 +1,9 @@
 [X-GNOME-Metatheme]
-Name=Tetra
+Name=Adementary
 Type=X-GNOME-Metatheme
-Comment=Adwaita-based theme with design influence from elementary OS stylesheet/gtk+ theme
+Comment=Adementary is a GTK theme based on Adwaita, blended with elementary OS visual design.
 Encoding=UTF-8
-GtkTheme=Tetra
+GtkTheme=Adementary
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24
