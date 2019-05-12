@@ -86,7 +86,7 @@
 
 /* Dash to Panel */
 /* NOTE: new version of DtP seems ignores image asset, only works in old version */
-/* or version that before panel opacity customization feature introducted */
+/* or version that before panel opacity customization feature introduced */
 #panel.dashtopanelMainPanel {
 	&.dashtopanelTop {
 		@if ($version > 3.25) and ($version < 3.31) {

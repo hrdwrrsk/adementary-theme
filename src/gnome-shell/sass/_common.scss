@@ -1927,50 +1927,55 @@ StScrollBar {
     &:rtl { padding-left: 0; padding-right: 4px; }
   }
 
-  //hotplug
-  .hotplug-transient-box {
+//hotplug
+.hotplug {
+  &-transient-box {
     spacing: 6px;
     padding: 2px 72px 2px 12px;
   }
-    .hotplug-notification-item {
-      padding: 2px 10px;
-      margin: 8px;
-      margin-top: 0;
-      &:focus { padding: 1px 71px 1px 11px; }
-    }
 
-    .hotplug-notification-item-icon {
-      icon-size: 24px;
+  &-notification-item {
+    padding: 2px 10px;
+    margin: 8px;
+    margin-top: 0;
+
+    &:focus { padding: 1px 71px 1px 11px; }
+
+    &-icon {
+      icon-size: 16px;
       padding: 2px 5px;
     }
+  }
 
-    .hotplug-resident-box { spacing: 8px; }
+  &-resident {
+    &-box { spacing: 8px; }
 
-    .hotplug-resident-mount {
+    &-mount {
       spacing: 8px;
       border-radius: 4px;
       &:hover { background-color: transparentize($bg_color,0.7); }
+
+      &-label {
+        color: inherit;
+        padding-left: 6px;
+        text-shadow: none;
+      }
+
+      &-icon {
+        icon-size: 16px;
+        padding-left: 6px;
+      }
     }
 
-    .hotplug-resident-mount-label {
-      color: inherit;
-      padding-left: 6px;
-    }
+    &-eject-icon { icon-size: 16px; }
 
-    .hotplug-resident-mount-icon {
-      icon-size: 24px;
-      padding-left: 6px;
-    }
-
-    .hotplug-resident-eject-icon {
-      icon-size: 16px;
-    }
-
-    .hotplug-resident-eject-button {
+    &-eject-button {
       padding: 7px;
       border-radius: 5px;
       color: pink;
     }
+  }
+}
 
 /* Eeeky things */
 

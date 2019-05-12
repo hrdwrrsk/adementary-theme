@@ -2228,7 +2228,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .hotplug-notification-item-icon {
-  icon-size: 24px;
+  icon-size: 16px;
   padding: 2px 5px;
 }
 
@@ -2248,10 +2248,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .hotplug-resident-mount-label {
   color: inherit;
   padding-left: 6px;
+  text-shadow: none;
 }
 
 .hotplug-resident-mount-icon {
-  icon-size: 24px;
+  icon-size: 16px;
   padding-left: 6px;
 }
 
@@ -2939,7 +2940,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Dash to Panel */
 /* NOTE: new version of DtP seems ignores image asset, only works in old version */
-/* or version that before panel opacity customization feature introducted */
+/* or version that before panel opacity customization feature introduced */
 #panel.dashtopanelMainPanel.dashtopanelTop {
   border-image: url("assets/panel-top.svg") 4;
 }
