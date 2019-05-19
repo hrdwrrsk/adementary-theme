@@ -2821,7 +2821,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer .dash-item-container > StWidget.focused .app-well-app-running-dot {
-  width: 16px;
   background-color: #eeeeee;
 }
 
