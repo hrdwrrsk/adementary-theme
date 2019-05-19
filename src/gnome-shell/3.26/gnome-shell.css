@@ -2943,31 +2943,98 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Dash to Panel */
 /* NOTE: new version of DtP seems ignores image asset, only works in old version */
 /* or version that before panel opacity customization feature introduced */
+#panel.dashtopanelMainPanel {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+}
+
 #panel.dashtopanelMainPanel.dashtopanelTop {
   border-image: url("assets/panel-top.svg") 4;
+  border-bottom: 1px solid transparent;
+}
+
+#panel.dashtopanelMainPanel.dashtopanelTop StButton.show-apps:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 2px 0px rgba(238, 238, 238, 0.75);
+}
+
+#panel.dashtopanelMainPanel.dashtopanelTop StButton.show-apps:active, #panel.dashtopanelMainPanel.dashtopanelTop StButton.show-apps:overview, #panel.dashtopanelMainPanel.dashtopanelTop StButton.show-apps:focus, #panel.dashtopanelMainPanel.dashtopanelTop StButton.show-apps:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 2px 0px #3689e6;
 }
 
 #panel.dashtopanelMainPanel.dashtopanelTop.solid {
   border-image: url("assets/panel-top.svg") 4;
+  border-bottom: 1px solid transparent;
 }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom {
   border-image: url("assets/panel-bottom.svg") 4;
+  border-top: 1px solid transparent;
+}
+
+#panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:hover {
+  box-shadow: inset 0 -2px 0px rgba(238, 238, 238, 0.75);
 }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:active, #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:overview, #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:focus, #panel.dashtopanelMainPanel.dashtopanelBottom .panel-button:checked {
-  box-shadow: inset 0 -2px 0px #4d96e9;
+  box-shadow: inset 0 -2px 0px #3689e6;
+}
+
+#panel.dashtopanelMainPanel.dashtopanelBottom StButton.show-apps:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 -2px 0px rgba(238, 238, 238, 0.75);
+}
+
+#panel.dashtopanelMainPanel.dashtopanelBottom StButton.show-apps:active, #panel.dashtopanelMainPanel.dashtopanelBottom StButton.show-apps:overview, #panel.dashtopanelMainPanel.dashtopanelBottom StButton.show-apps:focus, #panel.dashtopanelMainPanel.dashtopanelBottom StButton.show-apps:checked {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 -2px 0px #3689e6;
 }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom.solid {
   border-image: url("assets/panel-bottom.svg") 4;
+  border-top: 1px solid transparent;
 }
 
-#panel.dashtopanelMainPanel .show-apps .overview-icon {
+#panel.dashtopanelMainPanel #dashtopanelScrollview {
+  padding: 0;
+}
+
+#panel.dashtopanelMainPanel #dashtopanelScrollview .app-well-app:focus .dtp-container {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#panel.dashtopanelMainPanel #dashtopanelScrollview .app-well-app:active .dtp-container {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#panel.dashtopanelMainPanel #dashtopanelScrollview .app-well-app .app-well-app-running-dot {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#panel.dashtopanelMainPanel #dashtopanelScrollview .app-well-app.focused .app-well-app-running-dot {
+  background-color: #eeeeee;
+}
+
+#panel.dashtopanelMainPanel .panel-button {
+  -natural-hpadding: 10px;
+  -minimum-hpadding: 10px;
+}
+
+#panel.dashtopanelMainPanel .show-apps show-apps-icon, #panel.dashtopanelMainPanel .show-apps .overview-icon {
   color: #eeeeee;
-  border: 0;
+  background-color: transparent;
 }
 
-#panel.dashtopanelMainPanel .show-apps:hover .overview-icon {
-  background-color: rgba(255, 255, 255, 0.03);
+#panel.dashtopanelMainPanel .show-apps:hover .show-apps-icon,
+#panel.dashtopanelMainPanel .show-apps:active .show-apps-icon,
+#panel.dashtopanelMainPanel .show-apps:checked .show-apps-icon {
+  color: #eeeeee;
+}
+
+#panel.dashtopanelMainPanel .show-apps:hover .overview-icon,
+#panel.dashtopanelMainPanel .show-apps:active .overview-icon,
+#panel.dashtopanelMainPanel .show-apps:checked .overview-icon {
+  background-color: transparent;
 }

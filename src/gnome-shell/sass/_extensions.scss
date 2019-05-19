@@ -88,17 +88,35 @@
 /* NOTE: new version of DtP seems ignores image asset, only works in old version */
 /* or version that before panel opacity customization feature introduced */
 #panel.dashtopanelMainPanel {
+	background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
 	&.dashtopanelTop {
 		@if ($version > 3.25) and ($version < 3.31) {
 			border-image: url("assets/panel-top.svg") 4;
+			border-bottom: 1px solid transparent;
 		}
 		@else {
 			border-image: url("assets/panel-top.svg") 4;
+			border-bottom: 1px solid transparent;
+		}
+
+		StButton.show-apps {
+			&:hover {
+				background-color: rgba(0,0,0,0.01);
+				box-shadow: inset 0 2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
+			}
+
+			&:active, &:overview, &:focus, &:checked {
+				background-color: rgba(0,0,0,0.01);
+				box-shadow: inset 0 2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
+			}
 		}
 
 		@if ($version > 3.25) and ($version < 3.31) {
 			&.solid {
 				border-image: url("assets/panel-top.svg") 4;
+				border-bottom: 1px solid transparent;
 			}
 		}
 	}
@@ -106,30 +124,77 @@
 	&.dashtopanelBottom {
 		@if ($version > 3.25) and ($version < 3.31) {
 			border-image: url("assets/panel-bottom.svg") 4;
+			border-top: 1px solid transparent;
 		}
 		@else {
 			border-image: url("assets/panel-bottom.svg") 4;
+			border-top: 1px solid transparent;
 		}
 
 		.panel-button {
+			&:hover {
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
+			}
 			&:active, &:overview, &:focus, &:checked {
-				box-shadow: inset 0 -2px 0px lighten($selected_bg_color,5%);
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
+			}
+		}
+
+		StButton.show-apps {
+			&:hover {
+				background-color: rgba(0,0,0,0.01);
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
+			}
+
+			&:active, &:overview, &:focus, &:checked {
+				background-color: rgba(0,0,0,0.01);
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
 			}
 		}
 
 		@if ($version > 3.25) and ($version < 3.31) {
 			&.solid {
 				border-image: url("assets/panel-bottom.svg") 4;
+				border-top: 1px solid transparent;
 			}
 		}
 	}
 
-	.show-apps .overview-icon {
-		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-		border: 0;
-	}
+	#dashtopanelScrollview {
+    padding: 0;
 
-	.show-apps:hover .overview-icon {
-		background-color: if($light-panel == 'false', rgba(white, 0.03), rgba(black, 0.05));
+    .app-well-app {
+      &:focus .dtp-container {
+        background-color: if($light-panel == 'true', rgba(black, 0.10), rgba(white, 0.10));
+      }
+
+      &:active .dtp-container {
+        background-color: if($light-panel == 'true', rgba(black, 0.15), rgba(white, 0.15));
+      }
+
+      // unfocused dot(s)
+      .app-well-app-running-dot { background-color: if($light-panel == 'true', rgba(black, 0.5), rgba(white, 0.5)); }
+      // focused dot(s)
+      &.focused .app-well-app-running-dot { background-color: if($light-panel == 'true', $fg_color, $dark_fg_color); }
+    }
+  }
+
+	.show-apps {
+		show-apps-icon, .overview-icon {
+			color: if($light-panel == 'true', $fg_color, $dark_fg_color);
+			background-color: transparent;
+		}
+
+		&:hover .show-apps-icon,
+		&:active .show-apps-icon,
+		&:checked .show-apps-icon {
+			color: if($light-panel == 'true', $fg_color, $dark_fg_color);
+		}
+
+		&:hover .overview-icon,
+		&:active .overview-icon,
+		&:checked .overview-icon {
+			background-color: transparent;
+		}
 	}
 }
