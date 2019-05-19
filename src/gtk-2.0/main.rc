@@ -1153,8 +1153,9 @@ style "default" {
     image {
       function = BOX
       detail   = "menubar"
-      file     = "assets/line.png"
-      border   = {0, 0, 0, 1}
+      file     = "assets/toolbar.png"
+      stretch  = TRUE
+      border   = {1, 1, 1, 1}
     }
 
     #########
@@ -2410,6 +2411,45 @@ style "frame" {
 
 }
 
+style "toolbar" {
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file  = "assets/toolbar.png"
+      stretch  = TRUE
+      border = { 1, 1, 1, 1 }
+    }
+    
+    image {
+      function    = HANDLE
+      file        = "assets/handle-horz.png"
+      border      = {0, 0, 4, 4}
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = HANDLE
+      file        = "assets/handle-vert.png"
+      border      = {4, 4, 0, 0}
+      orientation = VERTICAL
+    }
+    
+    image {
+      function = VLINE
+      recolorable = TRUE
+      file = "assets/null.png"
+    }
+
+    image {
+      function = HLINE
+      recolorable = TRUE
+      file = "assets/null.png"
+    }
+  }
+  
+}
+
 style "toolbar_button" {
 
   xthickness = 2
@@ -2492,6 +2532,7 @@ class "GtkScrolledWindow"                                          style "scroll
 class "GtkFrame"                                                   style "frame"
 class "GtkSeparatorToolItem"                                       style "toolbar_separator"
 class "GtkMenuBar"                                                 style "menubar"
+class "GtkToolbar"                                                 style "toolbar"
 class "GtkMenu"                                                    style "menu"
 class "GtkTextView"                                                style "textview"
 

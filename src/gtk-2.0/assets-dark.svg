@@ -494,19 +494,19 @@
      borderopacity="1"
      inkscape:pageopacity="0.52941176"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="151.34077"
-     inkscape:cy="293.66334"
+     inkscape:zoom="8.5741877"
+     inkscape:cx="54.097309"
+     inkscape:cy="298.99367"
      inkscape:current-layer="combo-entry-rtl-button-insensitive"
      inkscape:document-units="px"
-     showgrid="false"
+     showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:snap-global="true"
      inkscape:snap-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="666"
+     inkscape:window-height="663"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -3037,6 +3037,32 @@
          y="125"
          rx="0"
          ry="0" />
+      <g
+         transform="matrix(-1,0,0,1,253,35)"
+         id="toolbar"
+         inkscape:label="#g1650">
+        <rect
+           y="172"
+           x="52"
+           height="32"
+           width="24"
+           id="rect1641"
+           style="opacity:1;fill:#292b32;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+        <rect
+           y="203"
+           x="52"
+           height="1"
+           width="24"
+           id="rect1643-36"
+           style="opacity:1;fill:#17181c;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+        <rect
+           y="172.5"
+           x="52.5"
+           height="30"
+           width="23"
+           id="rect1645"
+           style="opacity:0.03;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+      </g>
     </g>
     <g
        inkscape:label="#g7242"

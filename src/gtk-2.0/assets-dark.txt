@@ -134,6 +134,7 @@ tab-down
 tab-down-active
 tab-horz-gap
 tab-vert-gap
+toolbar
 treeview-pan-up
 treeview-pan-up-hover
 treeview-pan-up-active
