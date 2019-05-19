@@ -680,7 +680,7 @@ style "default" {
 
     image {
       function = FOCUS
-      file     = "assets/focus.png"
+      file     = "assets/null.png"
       border   = {1, 1, 1, 1}
       stretch  = TRUE
     }
