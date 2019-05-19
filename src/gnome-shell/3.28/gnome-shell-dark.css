@@ -3017,11 +3017,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #eeeeee;
 }
 
-#panel.dashtopanelMainPanel .panel-button {
-  -natural-hpadding: 10px;
-  -minimum-hpadding: 10px;
-}
-
 #panel.dashtopanelMainPanel .show-apps show-apps-icon, #panel.dashtopanelMainPanel .show-apps .overview-icon {
   color: #eeeeee;
   background-color: transparent;
