@@ -7912,6 +7912,23 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
   color: #8e8e8e;
 }
 
+.xed-window .xed-statusbar {
+  border-top: 1px solid #b3b3b3;
+}
+
+.xed-window .xed-searchbar {
+  box-shadow: inset 0 1px #b3b3b3;
+}
+
+.xed-window paned > widget > box > notebook > stack > box > expander {
+  border-top: 1px solid #b3b3b3;
+  padding: 6px;
+}
+
+.xed-window paned > widget > box > notebook > stack > box > expander > box {
+  margin: 6px 2px;
+}
+
 .budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;
