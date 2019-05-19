@@ -34,6 +34,7 @@ stage {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
+  text-shadow: none;
   border-image: url("assets/buttons/button-default.svg") 4;
 }
 
