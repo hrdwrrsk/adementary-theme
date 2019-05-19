@@ -968,7 +968,7 @@ StScrollBar {
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
-      color: $dark_fg_color;
+      color: lighten($dark_fg_color, 10%);
       &:focus, &:hover, &:active {
         color: if($light-panel == 'false', lighten($dark_fg_color, 10%), darken($fg_color, 10%));
       }
