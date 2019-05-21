@@ -2420,7 +2420,7 @@ style "toolbar" {
       stretch  = TRUE
       border = { 1, 1, 1, 1 }
     }
-    
+
     image {
       function    = HANDLE
       file        = "assets/handle-horz.png"
@@ -2434,7 +2434,7 @@ style "toolbar" {
       border      = {4, 4, 0, 0}
       orientation = VERTICAL
     }
-    
+
     image {
       function = VLINE
       recolorable = TRUE
@@ -2447,7 +2447,7 @@ style "toolbar" {
       file = "assets/null.png"
     }
   }
-  
+
 }
 
 style "toolbar_button" {
@@ -2455,7 +2455,7 @@ style "toolbar_button" {
   xthickness = 2
   ythickness = 2
 
-  GtkButton::inner-border = {2, 2, 2, 2}
+  GtkButton::inner-border = {0, 0, 0, 0}
 
 }
 
