@@ -197,7 +197,7 @@
       box-shadow: none;
       border-color: transparent;
 
-      font-size: 18pt;
+      font-size: 14pt;
 
       &:hover { @include button(hover); }
       &:active { @include button(active); }

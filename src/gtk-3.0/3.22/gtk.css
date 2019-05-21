@@ -7613,7 +7613,7 @@ button.emoji-section:checked label {
   background-image: none;
   box-shadow: none;
   border-color: transparent;
-  font-size: 18pt;
+  font-size: 14pt;
 }
 
 .lightdm-gtk-greeter #login_window combobox button.combo:hover {
