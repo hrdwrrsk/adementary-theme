@@ -336,17 +336,17 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.5098813"
-     inkscape:cx="66.262922"
-     inkscape:cy="293.70413"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="13.823335"
+     inkscape:cx="144.21109"
+     inkscape:cy="469.72277"
+     inkscape:current-layer="g5149"
      inkscape:document-units="px"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:snap-global="true"
      inkscape:snap-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="663"
+     inkscape:window-height="674"
      inkscape:window-x="0"
      inkscape:window-y="31"
      inkscape:window-maximized="1"
@@ -1955,6 +1955,14 @@
          id="g5043"
          transform="translate(105,29)">
         <rect
+           ry="0"
+           y="2.5494193e-08"
+           x="31"
+           height="5"
+           width="6"
+           id="rect1646"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:0.99999994;marker:none;enable-background:accumulate" />
+        <rect
            style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5045"
            width="4"
@@ -1989,6 +1997,15 @@
       <g
          transform="translate(119,29)"
          id="g5149">
+        <rect
+           rx="0"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f3f3f3;fill-opacity:1;stroke:none;stroke-width:0.99999994;marker:none;enable-background:accumulate"
+           id="rect1648"
+           width="5"
+           height="6"
+           x="30"
+           y="0"
+           ry="0" />
         <rect
            ry="0"
            y="1"

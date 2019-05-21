@@ -495,16 +495,16 @@
      inkscape:pageopacity="0.52941176"
      inkscape:pageshadow="2"
      inkscape:zoom="8.5741877"
-     inkscape:cx="54.097309"
-     inkscape:cy="298.99367"
-     inkscape:current-layer="combo-entry-rtl-button-insensitive"
+     inkscape:cx="123.4032"
+     inkscape:cy="475.80342"
+     inkscape:current-layer="g5149"
      inkscape:document-units="px"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:snap-global="true"
      inkscape:snap-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="663"
+     inkscape:window-height="674"
      inkscape:window-x="0"
      inkscape:window-y="31"
      inkscape:window-maximized="1"
@@ -2115,6 +2115,14 @@
          id="g5043"
          transform="translate(105,29)">
         <rect
+           ry="0"
+           y="2.5494193e-08"
+           x="31"
+           height="5"
+           width="6"
+           id="rect1667"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2e3038;fill-opacity:1;stroke:none;stroke-width:0.99999994;marker:none;enable-background:accumulate" />
+        <rect
            style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5045"
            width="4"
@@ -2149,6 +2157,15 @@
       <g
          transform="translate(119,29)"
          id="g5149">
+        <rect
+           rx="0"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2e3038;fill-opacity:1;stroke:none;stroke-width:0.99999994;marker:none;enable-background:accumulate"
+           id="rect1671"
+           width="5"
+           height="6"
+           x="30"
+           y="0"
+           ry="0" />
         <rect
            ry="0"
            y="1"
@@ -3061,7 +3078,7 @@
            height="30"
            width="23"
            id="rect1645"
-           style="opacity:0.03;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+           style="opacity:0.02999998;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
       </g>
     </g>
     <g
