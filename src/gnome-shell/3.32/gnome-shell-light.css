@@ -570,7 +570,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .polkit-dialog-user-icon {
-  border-radius: 5px;
+  border-radius: 99px;
   background-size: contain;
   width: 48px;
   height: 48px;
@@ -2395,15 +2395,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 /* Auth Dialogs & Screen Shield */
-.framed-user-icon {
+.user-icon {
   background-size: contain;
-  border: 2px solid #eeeeec;
-  color: #eeeeec;
-  border-radius: 3px;
+  color: #2e2e2e;
+  border-radius: 99px;
 }
 
-.framed-user-icon:hover {
-  border-color: white;
+.user-icon:hover {
   color: white;
 }
 
