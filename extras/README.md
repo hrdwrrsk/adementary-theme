@@ -6,7 +6,6 @@ Additional extras for Adementary theme, it includes:
 This hack are used to style budgie-desktop 'dock-mode' (currently only affects bottom panel/dock position)
 
 ### How to use
-======
 - Create bottom panel in Budgie desktop settings with 3 panel items (2 spacer in start/end region, 1 icon tasklist in center region), then enable "Dock Mode" in that panel
 - Set panel spacer to 0
 - Move `Adementary-budgie-dock` to `~/.config/gtk-3.0`
@@ -17,7 +16,7 @@ This hack are used to style budgie-desktop 'dock-mode' (currently only affects b
 @import url("Adementary-budgie-dock/light.css");
 
 # dark mode
-@import url("Adementary-budgie-dock/light.css");
+@import url("Adementary-budgie-dock/dark.css");
 ```
 
 - Restart budgie-panel (not recommended if you using terminal, use tool something like `xfce4-appfinder`)
@@ -26,5 +25,5 @@ This hack are used to style budgie-desktop 'dock-mode' (currently only affects b
 
 If you want to reset it to default, just remove `gtk.css` in `~/.config/gtk-3.0`
 
-======
+
 More extras maybe coming, but priority is currently low.
