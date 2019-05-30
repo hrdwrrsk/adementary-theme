@@ -1,0 +1,9 @@
+.bottom .budgie-panel {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: inset 0 1px rgba(255,255,255,0.45),
+  0 0 0 1px rgba(0,0,0,0.22);
+  margin: 1px;
+  margin-bottom: 0;
+  background-color: alpha(@theme_bg_color, 0.75);
+}
