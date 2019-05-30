@@ -9,7 +9,7 @@ This hack are used to style budgie-desktop 'dock-mode' (currently only affects b
 - Create bottom panel in Budgie desktop settings with 3 panel items (2 spacer in start/end region, 1 icon tasklist in center region), then enable "Dock Mode" in that panel
 - Set panel spacer to 0
 - Move `Adementary-budgie-dock` to `~/.config/gtk-3.0`
-- create `gtk.css`, then edit it with your favorite text editor, add:
+- create `gtk.css` in `~/.config/gtk-3.0`, then edit it with your favorite text editor, add:
 
 ```
 # light mode
