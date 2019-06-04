@@ -3192,22 +3192,27 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
  * GtkScale *
  ************/
 %scale_trough {
-  border: 1px solid $borders_color;
-  border-radius: 3px;
-  background-color: $dark_fill;
+  border: 1px solid rgba(black, 0.3);
+  border-radius: 6px;
+  background-color: rgba(black, 0.05);
 
-  &:disabled { background-color: $insensitive_bg_color; }
+  min-width: 4px;
+  min-height: 4px;
+
+  box-shadow: inset 0 0 0 1px rgba(black, 0.03),
+              0 1px rgba(white, 0.05);
+
+  &:disabled { background-color: rgba(black, 0.05); }
 
   &:backdrop {
-    background-color: $backdrop_dark_fill;
-    border-color: $backdrop_borders_color;
+    background-color: rgba(black, 0.05);
     transition: $backdrop_transition;
 
-    &:disabled { background-color: $insensitive_bg_color; }
+    &:disabled { background-color: rgba(black, 0.05); }
   }
 
   // ...on selected list rows
-  row:selected & { &:disabled, & { border-color: $borders_color; }}
+  row:selected & { &:disabled, & { border-color: rgba(black, 0.3); }}
 
   // OSD
   // .osd & {
@@ -3219,25 +3224,35 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 }
 
 %scale_highlight {
-  border: 1px solid if($variant == 'light', rgba(black, 0.50), $borders_color);
-  border-radius: 3px;
-  background-color: $selected_bg_color;
+  border: 1px solid if($variant == 'light', rgba(black, 0.3), $borders_color);
+  border-radius: 6px;
+  background-color: if($variant == 'light', rgba(black, 0.45), $SILVER_700);
+
+  @if $variant == 'dark' {
+    box-shadow: inset 0 1px rgba(white, 0.2);
+  }
 
   &:disabled {
-    background-color: transparent;
-    border-color: transparent;
+    background-color: if($variant == 'light', rgba(black, 0.15), $SILVER_900);
+    border: 1px solid if($variant == 'light', rgba(black, 0.15), $borders_color);
+
+    @if $variant == 'dark' {
+      box-shadow: none;
+    }
   }
 
   &:backdrop {
-    border: 1px solid if($variant == 'light', rgba(black, 0.50), $borders_color);
+    border: 1px solid if($variant == 'light', rgba(black, 0.15), $borders_color);
     &:disabled {
-      background-color: transparent;
-      border-color: transparent;
+      background-color: if($variant == 'light', rgba(black, 0.15), $SILVER_900);
+      @if $variant == 'dark' {
+        box-shadow: none;
+      }
     }
   }
 
   // ...on selected list rows
-  row:selected & { &:disabled, & { border-color: $selected_borders_color; }}
+  row:selected & { &:disabled, & { border-color: if($variant == 'light', rgba(black, 0.3), $borders_color); }}
 
   // OSD
   // .osd & {
@@ -3360,8 +3375,7 @@ scale {
 	  }
 
     &:disabled {
-      @include button(insensitive);
-      box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95));
+      @include button(undecorated);
     }
 
     &:backdrop {
@@ -3372,8 +3386,7 @@ scale {
                   0 1px rgba(black, 0.10);
 
       &:disabled {
-        @include button(backdrop-insensitive);
-        box-shadow: inset 0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95));
+        @include button(undecorated);
       }
     }
 
