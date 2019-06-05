@@ -32,7 +32,7 @@
 
 		.show-apps:checked .show-apps-icon {
 			color: if($variant == 'light', $fg_color, $selected_fg_color);
-			background-color: if($variant == 'light', rgba(black, 0.1), $selected_bg_color);
+			background-color: if($variant == 'light', rgba(black, 0.1), $accent_primary);
 			box-shadow: inset 0 0 0 1px if($variant == 'light', rgba(black, 0.4), $borders_color);
 		}
 
@@ -111,7 +111,7 @@
 
 			&:active, &:overview, &:focus, &:checked {
 				background-color: rgba(0,0,0,0.01);
-				box-shadow: inset 0 2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
+				box-shadow: inset 0 2px 0px if($light-panel == 'false', $accent_primary, $fg_color);
 			}
 		}
 
@@ -138,7 +138,7 @@
 				box-shadow: inset 0 -2px 0px if($light-panel == 'false', rgba($dark_fg_color, 0.75), rgba($fg_color, 0.5));
 			}
 			&:active, &:overview, &:focus, &:checked {
-				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $accent_primary, $fg_color);
 			}
 		}
 
@@ -150,7 +150,7 @@
 
 			&:active, &:overview, &:focus, &:checked {
 				background-color: rgba(0,0,0,0.01);
-				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $selected_bg_color, $fg_color);
+				box-shadow: inset 0 -2px 0px if($light-panel == 'false', $accent_primary, $fg_color);
 			}
 		}
 

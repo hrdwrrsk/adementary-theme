@@ -1,6 +1,6 @@
 $variant: 'light';
 $light-panel: 'false';
 
-@import "../gnome-shell/sass/_colors"; //use gtk colors
+@import "../gtk-3.0/sass/_colors"; //use gtk colors
 @import "../cinnamon/sass/_drawing";
 @import "../cinnamon/sass/_common";

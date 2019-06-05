@@ -25,7 +25,7 @@
 
 // entries
 
-@mixin entry($t, $fc:$selected_bg_color, $edge: $borders_edge) {
+@mixin entry($t, $fc:$accent_primary, $edge: $borders_edge) {
 //
 // Entries drawing function
 //
@@ -47,7 +47,7 @@
   }
   @if $t==focus {
     @include _shadows($_inner_shadows);
-    border-color: $selected_bg_color;
+    border-color: $accent_primary;
   }
   @if $t==hover { }
   @if $t==insensitive {

@@ -333,7 +333,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-sub-menu {
-  background-color: #333640;
+  background-color: #30333D;
   box-shadow: none;
 }
 
@@ -807,7 +807,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 100px;
   border: 1px solid #17181c;
   border-radius: 2px;
-  background-color: #333640;
+  background-color: #30333D;
   padding: 4px;
   padding-right: 0;
   border-radius: 0;
@@ -1333,7 +1333,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu-favorites-box {
   padding: 3px;
   transition-duration: 300;
-  background-color: #333640;
+  background-color: #30333D;
   border: 1px solid #17181c;
   border-radius: 3px;
 }
