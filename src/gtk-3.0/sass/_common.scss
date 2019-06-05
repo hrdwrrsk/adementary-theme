@@ -37,7 +37,7 @@ $button_transition: all 200ms $ease-out-quad;
   outline-width: 1px;
   -gtk-outline-radius: 2px;
 
-  -gtk-secondary-caret-color: $selected_bg_color
+  -gtk-secondary-caret-color: $accent_primary
 }
 
 
@@ -86,7 +86,7 @@ $button_transition: all 200ms $ease-out-quad;
 
   &:selected {
     color: $selected_fg_color;
-    background-color: $selected_bg_color;
+    background-color: $accent_primary;
   }
 }
 
@@ -130,8 +130,8 @@ iconview { @extend .view; }
 
 .rubberband,
 rubberband {
-  border: 1px solid darken($selected_bg_color, 10%);
-  background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
+  border: 1px solid darken($accent_primary, 10%);
+  background-color: transparentize(darken($accent_primary, 10%), 0.8);
 }
 
 flowbox {
@@ -155,7 +155,7 @@ flowbox {
   padding: 0;
 
   &:backdrop { background-color: if($variant=='light', transparent, darken($backdrop_base_color,5%)); }
-  &:active, &:selected { background-color: if($variant=='light', transparent, $selected_bg_color); }
+  &:active, &:selected { background-color: if($variant=='light', transparent, $accent_primary); }
   &:disabled { background-color: if($variant=='light', transparent, $insensitive_bg_color); }
 }
 
@@ -174,7 +174,7 @@ label {
   &:selected { @extend %nobg_selected_items; }
 
   selection {
-    background-color: $selected_bg_color;
+    background-color: $accent_primary;
     color: $selected_fg_color;
   }
 
@@ -310,7 +310,7 @@ entry {
 
       &:hover { color: $fg_color; }
 
-      &:active { color: $selected_bg_color; }
+      &:active { color: $accent_primary; }
 
       &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 80%); }
     }
@@ -329,7 +329,7 @@ entry {
     background-image: none;
     border-radius: 0;
     border-width: 0 0 2px;
-    border-color: $selected_bg_color;
+    border-color: $accent_primary;
     border-style: solid;
     box-shadow: none;
 
@@ -402,7 +402,7 @@ treeview entry {
     background-image: none;
     background-color: $base_color;
 
-    &:focus { border-color: $selected_bg_color; }
+    &:focus { border-color: $accent_primary; }
   }
 }
 
@@ -429,7 +429,7 @@ treeview entry {
   $_entry_tag_color: $selected_fg_color;
   color: $_entry_tag_color;
 
-  $_entry_tag_bg: $selected_bg_color;
+  $_entry_tag_bg: $accent_primary;
   background-color: $_entry_tag_bg;
 
   &:hover {
@@ -438,7 +438,7 @@ treeview entry {
 
   :backdrop & {
     color: $backdrop_base_color;
-    background-color: if($variant=='light', $selected_bg_color,
+    background-color: if($variant=='light', $accent_primary,
                                             mix($backdrop_fg_color, $backdrop_base_color, 50%));
   }
 
@@ -464,8 +464,8 @@ treeview entry {
  * Buttons *
  ***********/
 // stuff for .needs-attention
-$_dot_color: if($variant=='light', $selected_bg_color,
-                                   lighten($selected_bg_color,15%));
+$_dot_color: if($variant=='light', $accent_primary,
+                                   lighten($accent_primary,15%));
 @keyframes needs_attention {
   from {
     background-image: -gtk-gradient(radial,
@@ -479,7 +479,7 @@ $_dot_color: if($variant=='light', $selected_bg_color,
     background-image: -gtk-gradient(radial,
                                     center center, 0,
                                     center center, 0.5,
-                                    to($selected_bg_color),
+                                    to($accent_primary),
                                     to(transparent));
   }
 }
@@ -676,7 +676,7 @@ button {
   }
 
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $selected_bg_color),
+  @each $b_type, $b_color in (suggested-action, $accent_primary),
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button(colored, $b_color, white);
@@ -1057,26 +1057,26 @@ button.color {
   &:visited {
     color: $link_visited_color;
 
-    *:selected & { color: mix($selected_fg_color, $selected_bg_color, 60%); }
+    *:selected & { color: mix($selected_fg_color, $accent_primary, 60%); }
   }
 
   &:hover {
     color: lighten($link_color,10%);
 
-    *:selected & { color: mix($selected_fg_color, $selected_bg_color, 90%); }
+    *:selected & { color: mix($selected_fg_color, $accent_primary, 90%); }
   }
 
   &:active {
     color: $link_color;
 
-    *:selected & { color: mix($selected_fg_color, $selected_bg_color, 80%); }
+    *:selected & { color: mix($selected_fg_color, $accent_primary, 80%); }
   }
 
-  &:backdrop { &:backdrop:hover, &:backdrop:hover:selected, & { color: $selected_bg_color; }}
+  &:backdrop { &:backdrop:hover, &:backdrop:hover:selected, & { color: $accent_primary; }}
 
   @at-root %link_selected,
   &:selected,
-  *:selected & { color: mix($selected_fg_color, $selected_bg_color, 80%); }
+  *:selected & { color: mix($selected_fg_color, $accent_primary, 80%); }
 }
 
 button:link,
@@ -1442,7 +1442,7 @@ headerbar {
   }
 
   &.selection-mode {
-    $_hc: mix($top_hilight,$selected_bg_color, 50%); // hilight color
+    $_hc: mix($top_hilight,$accent_primary, 50%); // hilight color
 
     color: $selected_fg_color;
     border-color: $selected_borders_color;
@@ -1450,56 +1450,56 @@ headerbar {
 
     .title {
       color: $selected_fg_color;
-      @include _button_text_shadow(white, $selected_bg_color);
+      @include _button_text_shadow(white, $accent_primary);
 
-      &:backdrop { color: mix($dark_fg_color, $selected_bg_color, 80%); }
+      &:backdrop { color: mix($dark_fg_color, $accent_primary, 80%); }
     }
 
-    @include headerbar_fill_colored($selected_bg_color, $_hc);
+    @include headerbar_fill_colored($accent_primary, $_hc);
     //box-shadow: inset 0 1px transparentize(white, 0.8);
 
     &:backdrop {
-      @include headerbar_fill_colored_backdrop($selected_bg_color, $_hc);
+      @include headerbar_fill_colored_backdrop($accent_primary, $_hc);
       //box-shadow: inset 0 1px transparentize(white, 0.8);
     }
 
     .subtitle:link { @extend *:link:selected;  }
 
     button {
-      @include button(colored, lighten($selected_bg_color, 4%), $selected_fg_color);
+      @include button(colored, lighten($accent_primary, 4%), $selected_fg_color);
 
       &.flat { @include button(undecorated); }
 
       &:hover {
-        @include button(colored-hover, lighten($selected_bg_color, 4%), $selected_fg_color);
+        @include button(colored-hover, lighten($accent_primary, 4%), $selected_fg_color);
       }
 
       &:active,
       &:checked {
-        @include button(colored-active, darken($selected_bg_color, 4%), $selected_fg_color);
+        @include button(colored-active, darken($accent_primary, 4%), $selected_fg_color);
       }
 
       &:backdrop {
         &.flat, & {
-          @include button(colored-backdrop, lighten($selected_bg_color, 4%), $selected_fg_color);
+          @include button(colored-backdrop, lighten($accent_primary, 4%), $selected_fg_color);
 
           // -gtk-icon-effect: none;
-          border-color: darken($selected_bg_color, 15%);
+          border-color: darken($accent_primary, 15%);
 
           &:active,
           &:checked {
-            @include button(colored-backdrop-active, darken($selected_bg_color, 4%), $selected_fg_color);
+            @include button(colored-backdrop-active, darken($accent_primary, 4%), $selected_fg_color);
 
             border-color: $selected_borders_color;
           }
 
           &:disabled {
-            @include button(backdrop-insensitive, $selected_bg_color, $selected_fg_color);
+            @include button(backdrop-insensitive, $accent_primary, $selected_fg_color);
 
             //border-color: $selected_borders_color;
 
             &:active, &:checked {
-              @include button(backdrop-insensitive-active, $selected_bg_color, $selected_fg_color);
+              @include button(backdrop-insensitive-active, $accent_primary, $selected_fg_color);
 
               border-color: $selected_borders_color;
             }
@@ -1510,10 +1510,10 @@ headerbar {
       &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
 
       &:disabled {
-        @include button(insensitive, $selected_bg_color, $selected_fg_color);
+        @include button(insensitive, $accent_primary, $selected_fg_color);
 
         &:active,
-        &:checked { @include button(insensitive-active, $selected_bg_color, $selected_fg_color); }
+        &:checked { @include button(insensitive-active, $accent_primary, $selected_fg_color); }
       }
 
       &.suggested-action {
@@ -1555,8 +1555,8 @@ headerbar {
 
     .selection-menu {
       &:backdrop, & {
-        border-color: transparentize($selected_bg_color, 1);
-        background-color: transparentize($selected_bg_color, 1);
+        border-color: transparentize($accent_primary, 1);
+        background-color: transparentize($accent_primary, 1);
         background-image: none;
         box-shadow: none;
         padding-left: 10px;
@@ -1773,7 +1773,7 @@ treeview.view {
     }
 
     &:backdrop, & {
-      border-left-color: mix($selected_fg_color, $selected_bg_color, 50%);
+      border-left-color: mix($selected_fg_color, $accent_primary, 50%);
       border-top-color: transparentize($fg_color, 0.9); // doesn't work unfortunatelly
     }
   }
@@ -1782,8 +1782,8 @@ treeview.view {
     color: $insensitive_fg_color;
 
     &:selected {
-      color: mix($selected_fg_color, $selected_bg_color, 40%);
-      &:backdrop { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+      color: mix($selected_fg_color, $accent_primary, 40%);
+      &:backdrop { color: mix($backdrop_selected_fg_color, $accent_primary, 30%); }
     }
 
     &:backdrop { color: $backdrop_insensitive_color; }
@@ -1820,11 +1820,11 @@ treeview.view {
     &:hover { color: $text_color; }
 
     &:selected {
-      color: mix($selected_fg_color, $selected_bg_color, 70%);
+      color: mix($selected_fg_color, $accent_primary, 70%);
 
       &:hover { color: $selected_fg_color; }
 
-      &:backdrop { color: mix($backdrop_selected_fg_color, $selected_bg_color, 70%); }
+      &:backdrop { color: mix($backdrop_selected_fg_color, $accent_primary, 70%); }
     }
 
     &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
@@ -1837,11 +1837,11 @@ treeview.view {
 
     border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
     border-radius: 0;
-    background-color: $selected_bg_color;
+    background-color: $accent_primary;
     background-image: linear-gradient(to bottom,
-                                      $selected_bg_color,
-                                      darken($selected_bg_color, 1%),
-                                      darken($selected_bg_color, 4%));
+                                      $accent_primary,
+                                      darken($accent_primary, 1%),
+                                      darken($accent_primary, 4%));
     box-shadow: inset 0 1px rgba(white, 0.25),
                 inset 0 0 0 1px rgba(white, 0.05),
                 inset 0 -1px rgba(white, 0.1),
@@ -1852,13 +1852,13 @@ treeview.view {
         border-radius: 0;
 
         &:backdrop {
-          color: mix($selected_fg_color, $selected_bg_color, 80%);
+          color: mix($selected_fg_color, $accent_primary, 80%);
           border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
 
           background-image: linear-gradient(to bottom,
-                                            lighten($selected_bg_color, 2%),
-                                            lighten($selected_bg_color, 1%),
-                                            darken($selected_bg_color, 2%));
+                                            lighten($accent_primary, 2%),
+                                            lighten($accent_primary, 1%),
+                                            darken($accent_primary, 2%));
 
           box-shadow: inset 0 1px rgba(white, 0.25),
                       inset 0 0 0 1px rgba(white, 0.05),
@@ -1872,9 +1872,9 @@ treeview.view {
       border: 1px solid if($variant == 'light', $selected_borders_color, $borders_color);
 
       background-image: linear-gradient(to bottom,
-                                        lighten($selected_bg_color, 2%),
-                                        lighten($selected_bg_color, 1%),
-                                        darken($selected_bg_color, 2%));
+                                        lighten($accent_primary, 2%),
+                                        lighten($accent_primary, 1%),
+                                        darken($accent_primary, 2%));
 
       box-shadow: inset 0 1px rgba(white, 0.25),
                   inset 0 0 0 1px rgba(white, 0.05),
@@ -1943,7 +1943,7 @@ treeview.view {
       padding: 0 6px;
       color: $base_color;
       background-image: none;
-      background-color: $selected_bg_color;
+      background-color: $accent_primary;
       border-style: none;
       border-radius: 0;
       box-shadow: inset 0 0 0 1px $base_color;
@@ -1952,7 +1952,7 @@ treeview.view {
     }
   }
 
-  acceleditor > label { background-color: $selected_bg_color; } // see tests/testaccel to test
+  acceleditor > label { background-color: $accent_primary; } // see tests/testaccel to test
 }
 
 %column_header_button {
@@ -2004,7 +2004,7 @@ menubar,
     padding: 4px 8px;
 
     &:hover { //Seems like it :hover even with keyboard focus
-      box-shadow: inset 0 -3px $selected_bg_color;
+      box-shadow: inset 0 -3px $accent_primary;
       color: $link_color;
     }
 
@@ -2047,7 +2047,7 @@ menu,
 
     &:hover {
       color: $selected_fg_color;
-      background-color: $selected_bg_color;
+      background-color: $accent_primary;
     }
 
     &:disabled {
@@ -2736,8 +2736,8 @@ switch {
     color: transparent;
     border: 1px solid if($variant == 'light', lighten($selected_borders_color, 8%), $alt_borders_color);
     background-image: linear-gradient(to bottom,
-                                      lighten($selected_bg_color, 2%),
-                                      darken($selected_bg_color, 6%));
+                                      lighten($accent_primary, 2%),
+                                      darken($accent_primary, 6%));
     text-shadow: none;
 		box-shadow: 0 1px transparentize(white, 0.95);
 
@@ -2757,8 +2757,8 @@ switch {
 
     &:backdrop {
       background-image: linear-gradient(to bottom,
-                                        lighten($selected_bg_color, 4%),
-                                        darken($selected_bg_color, 4%));
+                                        lighten($accent_primary, 4%),
+                                        darken($accent_primary, 4%));
       @if $min_ver > 23 {
         image { color: rgba($selected_fg_color, 0.8); }
       }
@@ -2887,8 +2887,8 @@ switch {
   row:selected & {
     box-shadow: 0 1px transparentize(white, 0.8),
                 inset 0 0 0 1px rgba(black, 0.05);
-    background-color: mix(darken($inverse_bg_color, 12%), $selected_bg_color);
-    border-color: darken($selected_bg_color, 20%);
+    background-color: mix(darken($inverse_bg_color, 12%), $accent_primary);
+    border-color: darken($accent_primary, 20%);
 
       slider {
         background-image: linear-gradient(to bottom,
@@ -3015,8 +3015,8 @@ radio {
   }
 
   &:checked {
-		@include button(colored, $selected_bg_color, white);
-		border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+		@include button(colored, $accent_primary, white);
+		border-color: if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
 
     box-shadow: inset 0 1px rgba(white, 0.25),
                 0 1px rgba(black, 0.1),
@@ -3026,8 +3026,8 @@ radio {
     -gtk-icon-shadow: none;
 
 		&:hover {
-			@include button(colored-hover, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+			@include button(colored-hover, $accent_primary, white);
+			border-color: if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
 
       box-shadow: inset 0 1px rgba(white, 0.25),
                   0 1px rgba(black, 0.1),
@@ -3038,14 +3038,14 @@ radio {
 		}
 
 		&:active {
-			@include button(colored-active, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+			@include button(colored-active, $accent_primary, white);
+			border-color: if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
 			box-shadow: inset 0 1px rgba(black, 0.05);
 		}
 
 		&:backdrop {
-			@include button(colored-backdrop, $selected_bg_color, white);
-			border-color: if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+			@include button(colored-backdrop, $accent_primary, white);
+			border-color: if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
 
       box-shadow: inset 0 1px rgba(white, 0.25),
                   0 1px rgba(black, 0.1),
@@ -3176,13 +3176,13 @@ treeview.view radio {
     }
 
     &:disabled {
-      color: mix(white, $selected_bg_color, 50%);
+      color: mix(white, $accent_primary, 50%);
 
       &:backdrop { color: $backdrop_insensitive_color; }
     }
   }
 
-  &:backdrop { &:selected, & { color: mix(white, $selected_bg_color, 80%); }}
+  &:backdrop { &:selected, & { color: mix(white, $accent_primary, 80%); }}
 }
 
 treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround
@@ -3370,7 +3370,7 @@ scale {
 
     &:active {
 	     @include button(active);
-	      border-color: $selected_bg_color;
+	      border-color: $accent_primary;
 	      box-shadow: inset 0 0 0 1px rgba(black, 0.05);
 	  }
 
@@ -3711,11 +3711,11 @@ progressbar {
   // &:backdrop trough { @extend %scale_trough:backdrop; } // looks like states are not passed to the trough component here
 
   progress {
-    border: 1px solid if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+    border: 1px solid if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
     background-image: linear-gradient(to bottom,
-                                      $selected_bg_color,
-                                      darken($selected_bg_color, 1%),
-                                      darken($selected_bg_color, 4%));
+                                      $accent_primary,
+                                      darken($accent_primary, 1%),
+                                      darken($accent_primary, 4%));
     border-radius: 0;
     box-shadow: inset 0 1px rgba(white, 0.25),
                 0 1px if($variant == 'light', rgba(white, 0.15), rgba(white, 0.05)),
@@ -3726,18 +3726,18 @@ progressbar {
   &.vertical {
     progress {
       background-image: linear-gradient(to right,
-                                        $selected_bg_color,
-                                        darken($selected_bg_color, 1%),
-                                        darken($selected_bg_color, 4%));
+                                        $accent_primary,
+                                        darken($accent_primary, 1%),
+                                        darken($accent_primary, 4%));
     }
   }
 
   &:backdrop progress {
-    border: 1px solid if($variant == 'light', darken($selected_bg_color, 20%), darken($selected_bg_color, 45%));
+    border: 1px solid if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
     background-image: linear-gradient(to bottom,
-                                      lighten($selected_bg_color, 2%),
-                                      lighten($selected_bg_color, 1%),
-                                      darken($selected_bg_color, 2%));
+                                      lighten($accent_primary, 2%),
+                                      lighten($accent_primary, 1%),
+                                      darken($accent_primary, 2%));
   }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
@@ -3999,9 +3999,9 @@ row {
       &:active { box-shadow: inset 0 2px 3px -1px transparentize(black, 0.5); }
 
       &.has-open-popup,
-      &:hover { background-color: mix($fg_color, $selected_bg_color, 10%); }
+      &:hover { background-color: mix($fg_color, $accent_primary, 10%); }
 
-      &:backdrop { background-color: $selected_bg_color; }
+      &:backdrop { background-color: $accent_primary; }
     }
   }
 
@@ -4372,7 +4372,7 @@ placessidebar {
       background-clip: content-box;
     }
 
-    &.sidebar-new-bookmark-row { color: $selected_bg_color; }
+    &.sidebar-new-bookmark-row { color: $accent_primary; }
 
     &:drop(active):not(:disabled) {
       color: $drop_target_color;
@@ -4422,7 +4422,7 @@ paned {
     background-image: image($borders_color);
     background-size: 1px 1px;
 
-    &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
+    &:selected { background-image: image($accent_primary); } // FIXME is this needed?
 
     &:backdrop { background-image: image($backdrop_borders_color); }
 
@@ -4499,7 +4499,7 @@ infobar {
       &:backdrop, & {
         label, & { color: $inverse_fg_color; }
         background-color: $info_color;
-        border-color: darken($selected_bg_color, 10%);
+        border-color: darken($accent_primary, 10%);
       }
 
       text-shadow: none;
@@ -4963,7 +4963,7 @@ button.titlebutton {
 headerbar.selection-mode button.titlebutton,
 .titlebar.selection-mode button.titlebutton {
   color: transparent;
-  @include _button_text_shadow(white, $selected_bg_color);
+  @include _button_text_shadow(white, $accent_primary);
 
   &:backdrop, &:backdrop:active { color: transparent; }
 
@@ -4973,12 +4973,12 @@ headerbar.selection-mode button.titlebutton,
                                     url('assets/window-#{$k}-selectionmode@2.png'));
 
       &:hover {
-        background-color: lighten($selected_bg_color, 2%);
+        background-color: lighten($accent_primary, 2%);
         transition: none;
       }
 
       &:active, &:backdrop:active {
-        background-color: darken($selected_bg_color, 4%);
+        background-color: darken($accent_primary, 4%);
         background-image: -gtk-scaled(url('assets/window-#{$k}-active-selectionmode.png'),
                                       url('assets/window-#{$k}-active-selectionmode@2.png'));
         transition: none;
@@ -4999,12 +4999,12 @@ headerbar.selection-mode button.titlebutton,
                                     url('assets/window-restore-selectionmode@2.png'));
 
       &:hover {
-        background-color: lighten($selected_bg_color, 2%);
+        background-color: lighten($accent_primary, 2%);
         transition: none;
       }
 
       &:active {
-        background-color: darken($selected_bg_color, 4%);
+        background-color: darken($accent_primary, 4%);
         background-image: -gtk-scaled(url('assets/window-restore-active-selectionmode.png'),
                                       url('assets/window-restore-active-selectionmode@2.png'));
         transition: none;
@@ -5024,17 +5024,17 @@ headerbar.selection-mode button.titlebutton,
 // catch all extend :)
 
 %selected_items {
-  background-color: $selected_bg_color;
+  background-color: $accent_primary;
 
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
 
-    &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
+    &:disabled { color: mix($selected_fg_color, $accent_primary, 50%); }
 
     &:backdrop {
       color: $backdrop_selected_fg_color;
 
-      &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+      &:disabled { color: mix($backdrop_selected_fg_color, $accent_primary, 30%); }
     }
   }
 }
@@ -5160,7 +5160,7 @@ button.emoji-section {
 
   &:backdrop:not(:checked) { border-color: transparent; }
   &:hover { border-color: $borders_color; }
-  &:checked { border-color: $selected_bg_color; }
+  &:checked { border-color: $accent_primary; }
 
   label {
     padding: 0;
@@ -5178,6 +5178,6 @@ button.emoji-section {
   border-radius: 6px;
 
   :hover {
-    background: $selected_bg_color;
+    background: $accent_primary;
   }
 }

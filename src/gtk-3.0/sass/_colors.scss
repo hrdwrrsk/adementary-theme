@@ -33,14 +33,18 @@ $wm_bg_b: if($variant == 'light', darken($bg_color, 10%), darken($bg_color, 2%))
 $wm_backdrop_bg_a: if($variant == 'light', darken($bg_color, 2%), lighten($bg_color, 4%));
 $wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 6%), $bg_color);
 
+// Accent color
+$accent_primary: $BLUEBERRY_500;
+$accent_secondary: $BLUEBERRY_300;
+$accent_tertiary: $BLUEBERRY_100;
+
 $selected_fg_color: #ffffff;
-$selected_bg_color: $BLUEBERRY_500;
-$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
+$selected_borders_color: if($variant== 'light', darken($accent_primary, 30%), darken($accent_primary, 20%));
 $borders_color: if($variant == 'light', darken($bg_color, 25%), darken($bg_color, 10%));
 $alt_borders_color: if($variant == 'light', darken($bg_color, 35%), darken($bg_color, 17%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.4), transparentize($fg_color, 0.93));
-$link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
-$link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$link_color: if($variant == 'light', darken($accent_primary, 10%), lighten($accent_primary, 20%));
+$link_visited_color: if($variant == 'light', darken($accent_primary, 20%), lighten($accent_primary, 10%));
 $top_hilight: $borders_edge;
 $dark_fill: mix($borders_color, $bg_color, 50%);
 $headerbar_color: darken($bg_color, 2%);
@@ -51,7 +55,7 @@ $popover_hover_color: darken($bg_color, 8%);
 $scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, 80%), mix($base_color, $bg_color, 50%));
 $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
-$scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
+$scrollbar_slider_active_color: if($variant=='light', darken($accent_primary, 10%), lighten($accent_primary, 10%));
 
 $warning_color: $BANANA_500;
 $error_color: $STRAWBERRY_500;
