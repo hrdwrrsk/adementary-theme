@@ -65,7 +65,7 @@ style "default" {
 
   GtkScale::slider_length       = 16
   GtkScale::slider_width        = 16
-  GtkScale::trough-side-details = 1
+  GtkScale::trough-side-details = 4
 
   GtkProgressBar::min-horizontal-bar-height = 8
   GtkProgressBar::min-vertical-bar-width    = 8
@@ -1057,7 +1057,7 @@ style "default" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-horz-trough.png"
-      border      = {10, 10, 0, 0}
+      border      = {6, 6, 0, 0}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -1066,7 +1066,7 @@ style "default" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-horz-trough-active.png"
-      border      = {10, 10, 0, 0}
+      border      = {6, 6, 0, 0}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -1075,7 +1075,7 @@ style "default" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-vert-trough.png"
-      border      = {0, 0, 10, 10}
+      border      = {0, 0, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -1084,7 +1084,7 @@ style "default" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-vert-trough-active.png"
-      border      = {0, 0, 10, 10}
+      border      = {0, 0, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -2216,7 +2216,7 @@ style "scale_horz" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-horz-trough.png"
-      border      = {10, 10, 0, 0}
+      border      = {6, 6, 0, 0}
       stretch     = TRUE
     }
 
@@ -2224,7 +2224,7 @@ style "scale_horz" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-horz-trough-active.png"
-      border      = {10, 10, 0, 0}
+      border      = {6, 6, 0, 0}
       stretch     = TRUE
     }
 
@@ -2240,7 +2240,7 @@ style "scale_vert" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-vert-trough.png"
-      border      = {0, 0, 10, 10}
+      border      = {0, 0, 6, 6}
       stretch     = TRUE
     }
 
@@ -2248,7 +2248,7 @@ style "scale_vert" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-vert-trough-active.png"
-      border      = {0, 0, 10, 10}
+      border      = {0, 0, 6, 6}
       stretch     = TRUE
     }
 
