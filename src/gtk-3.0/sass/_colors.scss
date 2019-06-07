@@ -69,7 +69,7 @@ $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_col
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
 $osd_borders_color: transparentize(black, 0.15);
 
-$sidebar_bg_color: if($variant == 'light', lighten($dark_fill, 6%), darken($bg_color, 2.5%));
+$sidebar_bg_color: if($variant == 'light', lighten($dark_fill, 6%), darken($bg_color, 2%));
 $base_hover_color: transparentize($fg_color, 0.95);
 
 $tooltip_borders_color: transparentize(white, 0.9);

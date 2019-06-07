@@ -5901,7 +5901,7 @@ filechooserbutton:drop(active) {
  ***********/
 .sidebar:not(treeview):not(separator) {
   border-style: none;
-  background-color: #282a31;
+  background-color: #292b32;
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:not(treeview):not(separator):dir(ltr), .sidebar:not(treeview):not(separator).left, .sidebar:not(treeview):not(separator).left:dir(rtl) {
@@ -5933,7 +5933,7 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:not(treeview):not(separator):dir(rtl
 }
 
 .sidebar:not(treeview):not(separator) treeview.view:hover:selected, .sidebar:not(treeview):not(separator) list:hover:selected, .sidebar:not(treeview):not(separator) row:hover:selected {
-  background-color: #2b2d34;
+  background-color: #2c2e35;
 }
 
 .sidebar:not(treeview):not(separator) treeview.view:backdrop:selected, .sidebar:not(treeview):not(separator) list:backdrop:selected, .sidebar:not(treeview):not(separator) row:backdrop:selected, .sidebar:not(treeview):not(separator) treeview.view:backdrop:focus:selected, .sidebar:not(treeview):not(separator) list:backdrop:focus:selected, .sidebar:not(treeview):not(separator) row:backdrop:focus:selected {
@@ -5948,7 +5948,7 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:not(treeview):not(separator):dir(rtl
 }
 
 .sidebar:not(treeview):not(separator) treeview.view {
-  background-color: #282a31;
+  background-color: #292b32;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
@@ -5980,7 +5980,7 @@ stacksidebar.sidebar:dir(rtl) list .sidebar:not(treeview):not(separator):dir(rtl
 }
 
 .sidebar:not(treeview):not(separator) list:hover, .sidebar:not(treeview):not(separator) row:hover {
-  background-color: #2b2d34;
+  background-color: #2c2e35;
 }
 
 .sidebar:not(treeview):not(separator) row.sidebar-row {
@@ -7630,7 +7630,7 @@ button.emoji-section:checked label {
 }
 
 scrolledwindow.view > viewport.frame > stack > list {
-  background-color: #282a31;
+  background-color: #292b32;
 }
 
 scrolledwindow.view > viewport.frame > stack > list:backdrop {
@@ -7658,7 +7658,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected l
 }
 
 scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:hover {
-  background-color: #2b2d34;
+  background-color: #2c2e35;
 }
 
 scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:backdrop, scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:backdrop:focus {
@@ -7673,7 +7673,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 }
 
 .tweak-categories {
-  background-color: #282a31;
+  background-color: #292b32;
 }
 
 .tweak-categories:backdrop {
@@ -7707,7 +7707,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 }
 
 .tweak-category.activatable:selected:hover {
-  background-color: #2b2d34;
+  background-color: #2c2e35;
 }
 
 .tweak-category.activatable:selected:backdrop, .tweak-category.activatable:selected:backdrop:focus {
@@ -8488,7 +8488,7 @@ window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-pop
 
 .budgie-menu .categories {
   border: 1px solid #17181c;
-  background-color: #282a31;
+  background-color: #292b32;
 }
 
 .budgie-menu .categories:dir(ltr) {
@@ -8523,7 +8523,7 @@ window.budgie-popover:not(.csd).budgie-menu > frame.container, window.budgie-pop
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked:hover {
-  background-color: #2b2d34;
+  background-color: #2c2e35;
 }
 
 .user-menu list,
