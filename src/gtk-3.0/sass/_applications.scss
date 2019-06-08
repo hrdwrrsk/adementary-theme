@@ -21,6 +21,7 @@
 
 	button,
   .tasklist button {
+    background-color: transparent;
 	  padding: 0 1px;
 	  color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 	  border: none;

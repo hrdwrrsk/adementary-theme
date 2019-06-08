@@ -7493,6 +7493,7 @@ button.emoji-section:checked label {
 
 .xfce4-panel.background button,
 .xfce4-panel.background .tasklist button {
+  background-color: transparent;
   padding: 0 1px;
   color: #282828;
   border: none;
