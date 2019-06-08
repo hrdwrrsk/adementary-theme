@@ -7463,7 +7463,8 @@ button.emoji-section:checked label {
   color: #282828;
 }
 
-.xfce4-panel.background button {
+.xfce4-panel.background button,
+.xfce4-panel.background .tasklist button {
   padding: 0 1px;
   color: #282828;
   border: none;
@@ -7472,47 +7473,22 @@ button.emoji-section:checked label {
   text-shadow: none;
 }
 
-.xfce4-panel.background button label {
+.xfce4-panel.background button label,
+.xfce4-panel.background .tasklist button label {
   padding: 0 6px;
 }
 
-.xfce4-panel.background button:hover, .xfce4-panel.background button:active, .xfce4-panel.background button:checked, .xfce4-panel.background button:active:hover, .xfce4-panel.background button:checked:hover {
+.xfce4-panel.background button:hover, .xfce4-panel.background button:active, .xfce4-panel.background button:checked, .xfce4-panel.background button:active:hover, .xfce4-panel.background button:checked:hover,
+.xfce4-panel.background .tasklist button:hover,
+.xfce4-panel.background .tasklist button:active,
+.xfce4-panel.background .tasklist button:checked,
+.xfce4-panel.background .tasklist button:active:hover,
+.xfce4-panel.background .tasklist button:checked:hover {
   box-shadow: inset 0 -3px #3689e6;
   background-color: transparent;
   border: none;
   background-image: none;
   transition: none;
-}
-
-.xfce4-panel.background .tasklist button {
-  margin: 2px 1px;
-  color: #282828;
-  border-color: #b3b3b3;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-}
-
-.xfce4-panel.background .tasklist button:hover {
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-}
-
-.xfce4-panel.background .tasklist button:active, .xfce4-panel.background .tasklist button:checked, .xfce4-panel.background .tasklist button:active:hover, .xfce4-panel.background .tasklist button:checked:hover {
-  background-image: none;
-  background-color: #d4d4d4;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
-}
-
-.xfce4-panel.background .tasklist button label {
-  padding: 0;
-}
-
-.xfce4-panel.background .tasklist button:active, .xfce4-panel.background .tasklist button:checked, .xfce4-panel.background .tasklist button:active:hover, .xfce4-panel.background .tasklist button:checked:hover {
-  border-color: #b3b3b3;
-  border-style: solid;
-  border-width: 1px;
 }
 
 .xfce4-panel.background menu {
