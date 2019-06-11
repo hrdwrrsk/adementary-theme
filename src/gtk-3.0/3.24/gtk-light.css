@@ -7922,6 +7922,11 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
   margin: 6px 2px;
 }
 
+.h1 {
+  font-size: 18pt;
+  font-weight: 300;
+}
+
 .budgie-container, .budgie-container:backdrop {
   background-color: transparent;
   padding: 0;

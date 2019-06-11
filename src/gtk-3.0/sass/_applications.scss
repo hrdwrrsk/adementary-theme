@@ -423,3 +423,9 @@ widget.-vala-panel-appmenu-core { // appmenu applets
     }
   }
 }
+
+// Misc
+.h1 { // this actually elementary/granite-specific
+  font-size: 18pt;
+  font-weight: 300; 
+}
