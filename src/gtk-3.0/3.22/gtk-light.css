@@ -1082,7 +1082,7 @@ button.suggested-action {
   border-color: #1457a2;
 }
 
-.selection-mode button.titlebutton, .lightdm-gtk-greeter #login_window button.flat#login_button, .lightdm-gtk-greeter #login_window button.flat#restart_button,
+.lightdm-gtk-greeter #login_window button.flat#login_button, .lightdm-gtk-greeter #login_window button.flat#restart_button,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button,
@@ -1136,7 +1136,7 @@ button.suggested-action:checked {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
@@ -1153,7 +1153,7 @@ button.suggested-action.flat:backdrop {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .selection-mode button.titlebutton:backdrop label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop label, .selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
@@ -1173,11 +1173,11 @@ button.suggested-action.flat:backdrop {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:checked,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .selection-mode button.titlebutton:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active,
-.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .selection-mode button.titlebutton:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked,
@@ -1200,11 +1200,11 @@ button.suggested-action.flat:backdrop:checked {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:checked,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .selection-mode button.titlebutton:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active label, .selection-mode button.titlebutton:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:active,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:active,
-.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .selection-mode button.titlebutton:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:checked label, .selection-mode button.titlebutton:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:checked,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:checked,
@@ -1224,7 +1224,7 @@ button.suggested-action.flat:backdrop:checked {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
@@ -1243,7 +1243,7 @@ button.suggested-action.flat:backdrop:disabled {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .selection-mode button.titlebutton:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled label, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
@@ -1263,11 +1263,11 @@ button.suggested-action.flat:backdrop:disabled {
 .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked,
 .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked,
 .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked, .selection-mode button.titlebutton:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active,
+.lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active,
-.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active, .selection-mode button.titlebutton:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked,
@@ -1283,7 +1283,7 @@ button.suggested-action.flat:backdrop:disabled:checked {
   border-color: #1457a2;
 }
 
-.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked label, .selection-mode button.titlebutton:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active label, .selection-mode button.titlebutton:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:checked label,
+.lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:checked label,
 button.suggested-action:backdrop:disabled:active label,
 button.suggested-action:backdrop:disabled:checked label,
 button.suggested-action.flat:backdrop:disabled:active label,
@@ -1291,15 +1291,15 @@ button.suggested-action.flat:backdrop:disabled:checked label {
   color: #78b0ee;
 }
 
-.selection-mode button.titlebutton:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
+.lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop,
-.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop, .selection-mode button.titlebutton:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#login_button:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:disabled,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:disabled,
-.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:disabled, .selection-mode button.titlebutton:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
+.lightdm-gtk-greeter #restart_dialog button.flat#restart_button:disabled, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled,
 .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled,
@@ -2332,8 +2332,6 @@ button:backdrop:backdrop:hover:visited,
 *:link:backdrop:backdrop:hover:selected,
 button:backdrop:backdrop:hover:selected:link,
 button:backdrop:backdrop:hover:selected:visited,
-.selection-mode.titlebar:not(headerbar) .subtitle:backdrop:backdrop:hover:link,
-headerbar.selection-mode .subtitle:backdrop:backdrop:hover:link,
 *:link:backdrop,
 button:backdrop:link,
 button:backdrop:visited {
@@ -2351,8 +2349,6 @@ button:visited > label:selected,
 *:link:selected,
 button:selected:link,
 button:selected:visited,
-.selection-mode.titlebar:not(headerbar) .subtitle:link,
-headerbar.selection-mode .subtitle:link,
 *:selected *:link,
 *:selected button:link,
 *:selected button:visited {
@@ -2663,288 +2659,22 @@ headerbar .subtitle {
   padding-right: 12px;
 }
 
-.selection-mode.titlebar:not(headerbar),
-headerbar.selection-mode {
-  color: #ffffff;
-  border-color: #0e3f75;
-  text-shadow: none;
-  background-image: linear-gradient(to bottom, #3689e6, #247ee4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-.selection-mode.titlebar:not(headerbar) .title,
-headerbar.selection-mode .title {
-  color: #ffffff;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-}
-
-.selection-mode.titlebar:not(headerbar) .title:backdrop,
-headerbar.selection-mode .title:backdrop {
-  color: #c9daec;
-}
-
-.selection-mode.titlebar:backdrop:not(headerbar),
-headerbar.selection-mode:backdrop {
-  background-image: linear-gradient(to bottom, #3f8ee7, #2d84e5);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px rgba(255, 255, 255, 0.05);
-}
-
-.selection-mode.titlebar:not(headerbar) button,
-headerbar.selection-mode button {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #1661b4;
-  background-image: linear-gradient(to bottom, #5199e9, #2d84e5);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.52251);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.52251);
-}
-
-.selection-mode.titlebar:not(headerbar) button.flat,
-headerbar.selection-mode button.flat {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-}
-
-.selection-mode.titlebar:not(headerbar) button:hover,
-headerbar.selection-mode button:hover {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #1661b4;
-  background-image: linear-gradient(to bottom, #6ca9ed, #3f8ee7);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.52251);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.52251);
-}
-
-.selection-mode.titlebar:not(headerbar) button:active, .selection-mode.titlebar:not(headerbar) button:checked,
-headerbar.selection-mode button:active,
-headerbar.selection-mode button:checked {
-  color: #ffffff;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #124d90;
-  background-image: linear-gradient(to bottom, #1b74d8, #1b74d8);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat, .selection-mode.titlebar:not(headerbar) button:backdrop,
-headerbar.selection-mode button:backdrop.flat,
-headerbar.selection-mode button:backdrop {
-  border-color: #4894e8;
-  background-image: linear-gradient(to bottom, #5a9eeb, #3689e6);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #1763b9;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat label, .selection-mode.titlebar:not(headerbar) button:backdrop.flat, .selection-mode.titlebar:not(headerbar) button:backdrop label, .selection-mode.titlebar:not(headerbar) button:backdrop,
-headerbar.selection-mode button:backdrop.flat label,
-headerbar.selection-mode button:backdrop.flat,
-headerbar.selection-mode button:backdrop label,
-headerbar.selection-mode button:backdrop {
-  color: #daeafa;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:active, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:checked, .selection-mode.titlebar:not(headerbar) button:backdrop:active, .selection-mode.titlebar:not(headerbar) button:backdrop:checked,
-headerbar.selection-mode button:backdrop.flat:active,
-headerbar.selection-mode button:backdrop.flat:checked,
-headerbar.selection-mode button:backdrop:active,
-headerbar.selection-mode button:backdrop:checked {
-  border-color: #207ce2;
-  background-image: linear-gradient(to bottom, #1c79e1, #1c79e1);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:active label, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:active, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:checked label, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:checked, .selection-mode.titlebar:not(headerbar) button:backdrop:active label, .selection-mode.titlebar:not(headerbar) button:backdrop:active, .selection-mode.titlebar:not(headerbar) button:backdrop:checked label, .selection-mode.titlebar:not(headerbar) button:backdrop:checked,
-headerbar.selection-mode button:backdrop.flat:active label,
-headerbar.selection-mode button:backdrop.flat:active,
-headerbar.selection-mode button:backdrop.flat:checked label,
-headerbar.selection-mode button:backdrop.flat:checked,
-headerbar.selection-mode button:backdrop:active label,
-headerbar.selection-mode button:backdrop:active,
-headerbar.selection-mode button:backdrop:checked label,
-headerbar.selection-mode button:backdrop:checked {
-  color: #d2e5f9;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled,
-headerbar.selection-mode button:backdrop.flat:disabled,
-headerbar.selection-mode button:backdrop:disabled {
-  border-color: #1457a2;
-  background-color: #f3f3f3;
-  background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled label, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled label, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled,
-headerbar.selection-mode button:backdrop.flat:disabled label,
-headerbar.selection-mode button:backdrop.flat:disabled,
-headerbar.selection-mode button:backdrop:disabled label,
-headerbar.selection-mode button:backdrop:disabled {
-  color: #8fbdf1;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:active, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:checked, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled:active, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled:checked,
-headerbar.selection-mode button:backdrop.flat:disabled:active,
-headerbar.selection-mode button:backdrop.flat:disabled:checked,
-headerbar.selection-mode button:backdrop:disabled:active,
-headerbar.selection-mode button:backdrop:disabled:checked {
-  border-color: #1457a2;
-  background-color: #eeeeee;
-  background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:active label, .selection-mode.titlebar:not(headerbar) button:backdrop.flat:disabled:checked label, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled:active label, .selection-mode.titlebar:not(headerbar) button:backdrop:disabled:checked label,
-headerbar.selection-mode button:backdrop.flat:disabled:active label,
-headerbar.selection-mode button:backdrop.flat:disabled:checked label,
-headerbar.selection-mode button:backdrop:disabled:active label,
-headerbar.selection-mode button:backdrop:disabled:checked label {
-  color: #78b0ee;
-}
-
-.selection-mode.titlebar:not(headerbar) button.flat:backdrop, .selection-mode.titlebar:not(headerbar) button.flat:disabled, .selection-mode.titlebar:not(headerbar) button.flat:backdrop:disabled,
-headerbar.selection-mode button.flat:backdrop,
-headerbar.selection-mode button.flat:disabled,
-headerbar.selection-mode button.flat:backdrop:disabled {
-  border-color: transparent;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-}
-
-.selection-mode.titlebar:not(headerbar) button:disabled,
-headerbar.selection-mode button:disabled {
-  border-color: #1457a2;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-}
-
-.selection-mode.titlebar:not(headerbar) button:disabled label, .selection-mode.titlebar:not(headerbar) button:disabled,
-headerbar.selection-mode button:disabled label,
-headerbar.selection-mode button:disabled {
-  color: #fafafa;
-}
-
-.selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:checked,
-headerbar.selection-mode button:disabled:active,
-headerbar.selection-mode button:disabled:checked {
-  border-color: #1457a2;
-  background-color: #2d84e5;
-  background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
-}
-
-.selection-mode.titlebar:not(headerbar) button:disabled:active label, .selection-mode.titlebar:not(headerbar) button:disabled:active, .selection-mode.titlebar:not(headerbar) button:disabled:checked label, .selection-mode.titlebar:not(headerbar) button:disabled:checked,
-headerbar.selection-mode button:disabled:active label,
-headerbar.selection-mode button:disabled:active,
-headerbar.selection-mode button:disabled:checked label,
-headerbar.selection-mode button:disabled:checked {
-  color: #8e8e8e;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action,
-headerbar.selection-mode button.suggested-action {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:hover,
-headerbar.selection-mode button.suggested-action:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:active,
-headerbar.selection-mode button.suggested-action:active {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:disabled,
-headerbar.selection-mode button.suggested-action:disabled {
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:disabled label, .selection-mode.titlebar:not(headerbar) button.suggested-action:disabled,
-headerbar.selection-mode button.suggested-action:disabled label,
-headerbar.selection-mode button.suggested-action:disabled {
-  color: #8e8e8e;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop,
-headerbar.selection-mode button.suggested-action:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop label, .selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop,
-headerbar.selection-mode button.suggested-action:backdrop label,
-headerbar.selection-mode button.suggested-action:backdrop {
-  color: #8e8e8e;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop:disabled,
-headerbar.selection-mode button.suggested-action:backdrop:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
-  background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #0e3f75;
-}
-
-.selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop:disabled label, .selection-mode.titlebar:not(headerbar) button.suggested-action:backdrop:disabled,
-headerbar.selection-mode button.suggested-action:backdrop:disabled label,
-headerbar.selection-mode button.suggested-action:backdrop:disabled {
-  color: silver;
-}
-
 .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop, .selection-mode.titlebar:not(headerbar) .selection-menu,
 headerbar.selection-mode .selection-menu:backdrop,
 headerbar.selection-mode .selection-menu {
-  border-color: rgba(54, 137, 230, 0);
-  background-color: rgba(54, 137, 230, 0);
+  border-color: transparent;
+  background-color: transparent;
   background-image: none;
   box-shadow: none;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:backdrop label, .selection-mode.titlebar:not(headerbar) .selection-menu label,
+headerbar.selection-mode .selection-menu:backdrop label,
+headerbar.selection-mode .selection-menu label {
+  font-weight: bold;
+  margin-top: 1px;
 }
 
 .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop arrow, .selection-mode.titlebar:not(headerbar) .selection-menu arrow,
@@ -2959,6 +2689,48 @@ headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   color: rgba(255, 255, 255, 0.5);
   -gtk-icon-shadow: none;
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:hover,
+headerbar.selection-mode .selection-menu:hover {
+  color: #282828;
+  outline-color: rgba(40, 40, 40, 0.3);
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:active, .selection-mode.titlebar:not(headerbar) .selection-menu:checked,
+headerbar.selection-mode .selection-menu:active,
+headerbar.selection-mode .selection-menu:checked {
+  color: #282828;
+  outline-color: rgba(40, 40, 40, 0.3);
+  border-color: #b3b3b3;
+  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:disabled,
+headerbar.selection-mode .selection-menu:disabled {
+  color: #8e8e8e;
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:active, .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:checked,
+headerbar.selection-mode .selection-menu:backdrop:active,
+headerbar.selection-mode .selection-menu:backdrop:checked {
+  border-color: silver;
+  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:active label, .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:active, .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:checked label, .selection-mode.titlebar:not(headerbar) .selection-menu:backdrop:checked,
+headerbar.selection-mode .selection-menu:backdrop:active label,
+headerbar.selection-mode .selection-menu:backdrop:active,
+headerbar.selection-mode .selection-menu:backdrop:checked label,
+headerbar.selection-mode .selection-menu:backdrop:checked {
+  color: #8e8e8e;
 }
 
 .tiled .titlebar:backdrop:not(headerbar), .tiled .titlebar:not(headerbar),
@@ -3174,7 +2946,7 @@ headerbar.titlebar headerbar:not(.titlebar):not(:only-child) + separator {
 }
 
 headerbar.titlebar.selection-mode headerbar:not(.titlebar):not(:only-child) + separator {
-  background-color: #0e3f75;
+  background-color: #b3b3b3;
 }
 
 /************
@@ -7098,138 +6870,6 @@ button.titlebutton.minimize:backdrop:hover, button.titlebutton.minimize:backdrop
   background-color: transparent;
 }
 
-headerbar.selection-mode button.titlebutton,
-.titlebar.selection-mode button.titlebutton {
-  color: transparent;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-}
-
-headerbar.selection-mode button.titlebutton:backdrop, headerbar.selection-mode button.titlebutton:backdrop:active,
-.titlebar.selection-mode button.titlebutton:backdrop,
-.titlebar.selection-mode button.titlebutton:backdrop:active {
-  color: transparent;
-}
-
-headerbar.selection-mode button.titlebutton.close,
-.titlebar.selection-mode button.titlebutton.close {
-  background-image: -gtk-scaled(url("assets/window-close-selectionmode.png"), url("assets/window-close-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.close:hover,
-.titlebar.selection-mode button.titlebutton.close:hover {
-  background-color: #3f8ee7;
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.close:active, headerbar.selection-mode button.titlebutton.close:backdrop:active,
-.titlebar.selection-mode button.titlebutton.close:active,
-.titlebar.selection-mode button.titlebutton.close:backdrop:active {
-  background-color: #247ee4;
-  background-image: -gtk-scaled(url("assets/window-close-active-selectionmode.png"), url("assets/window-close-active-selectionmode@2.png"));
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.close:backdrop,
-.titlebar.selection-mode button.titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url("assets/window-close-backdrop-selectionmode.png"), url("assets/window-close-backdrop-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.close:backdrop:hover, headerbar.selection-mode button.titlebutton.close:backdrop:active,
-.titlebar.selection-mode button.titlebutton.close:backdrop:hover,
-.titlebar.selection-mode button.titlebutton.close:backdrop:active {
-  background-color: transparent;
-}
-
-headerbar.selection-mode button.titlebutton.maximize,
-.titlebar.selection-mode button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/window-maximize-selectionmode.png"), url("assets/window-maximize-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.maximize:hover,
-.titlebar.selection-mode button.titlebutton.maximize:hover {
-  background-color: #3f8ee7;
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.maximize:active, headerbar.selection-mode button.titlebutton.maximize:backdrop:active,
-.titlebar.selection-mode button.titlebutton.maximize:active,
-.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
-  background-color: #247ee4;
-  background-image: -gtk-scaled(url("assets/window-maximize-active-selectionmode.png"), url("assets/window-maximize-active-selectionmode@2.png"));
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.maximize:backdrop,
-.titlebar.selection-mode button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-maximize-backdrop-selectionmode.png"), url("assets/window-maximize-backdrop-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.maximize:backdrop:hover, headerbar.selection-mode button.titlebutton.maximize:backdrop:active,
-.titlebar.selection-mode button.titlebutton.maximize:backdrop:hover,
-.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
-  background-color: transparent;
-}
-
-headerbar.selection-mode button.titlebutton.minimize,
-.titlebar.selection-mode button.titlebutton.minimize {
-  background-image: -gtk-scaled(url("assets/window-minimize-selectionmode.png"), url("assets/window-minimize-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.minimize:hover,
-.titlebar.selection-mode button.titlebutton.minimize:hover {
-  background-color: #3f8ee7;
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.minimize:active, headerbar.selection-mode button.titlebutton.minimize:backdrop:active,
-.titlebar.selection-mode button.titlebutton.minimize:active,
-.titlebar.selection-mode button.titlebutton.minimize:backdrop:active {
-  background-color: #247ee4;
-  background-image: -gtk-scaled(url("assets/window-minimize-active-selectionmode.png"), url("assets/window-minimize-active-selectionmode@2.png"));
-  transition: none;
-}
-
-headerbar.selection-mode button.titlebutton.minimize:backdrop,
-.titlebar.selection-mode button.titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-minimize-backdrop-selectionmode.png"), url("assets/window-minimize-backdrop-selectionmode@2.png"));
-}
-
-headerbar.selection-mode button.titlebutton.minimize:backdrop:hover, headerbar.selection-mode button.titlebutton.minimize:backdrop:active,
-.titlebar.selection-mode button.titlebutton.minimize:backdrop:hover,
-.titlebar.selection-mode button.titlebutton.minimize:backdrop:active {
-  background-color: transparent;
-}
-
-.maximized headerbar.selection-mode button.titlebutton.maximize, .maximized
-.titlebar.selection-mode button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/window-restore-selectionmode.png"), url("assets/window-restore-selectionmode@2.png"));
-}
-
-.maximized headerbar.selection-mode button.titlebutton.maximize:hover, .maximized
-.titlebar.selection-mode button.titlebutton.maximize:hover {
-  background-color: #3f8ee7;
-  transition: none;
-}
-
-.maximized headerbar.selection-mode button.titlebutton.maximize:active, .maximized
-.titlebar.selection-mode button.titlebutton.maximize:active {
-  background-color: #247ee4;
-  background-image: -gtk-scaled(url("assets/window-restore-active-selectionmode.png"), url("assets/window-restore-active-selectionmode@2.png"));
-  transition: none;
-}
-
-.maximized headerbar.selection-mode button.titlebutton.maximize:backdrop, .maximized
-.titlebar.selection-mode button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-restore-backdrop-selectionmode.png"), url("assets/window-restore-backdrop-selectionmode@2.png"));
-}
-
-.maximized headerbar.selection-mode button.titlebutton.maximize:backdrop:hover, .maximized headerbar.selection-mode button.titlebutton.maximize:backdrop:active, .maximized
-.titlebar.selection-mode button.titlebutton.maximize:backdrop:hover, .maximized
-.titlebar.selection-mode button.titlebutton.maximize:backdrop:active {
-  background-color: transparent;
-}
-
 .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,
 textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
 textview text selection:focus,
@@ -7239,7 +6879,7 @@ entry selection, modelbutton.flat:selected,
   background-color: #3689e6;
 }
 
-row:selected label, label:selected, .selection-mode button.titlebutton, .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,
+row:selected label, label:selected, .view:selected:focus, .view:selected, iconview:selected, .view text:selected, iconview text:selected,
 textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection,
@@ -7248,7 +6888,7 @@ entry selection, modelbutton.flat:selected,
   color: #ffffff;
 }
 
-row:selected label:disabled, label:disabled:selected, .selection-mode button.titlebutton:disabled, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected, iconview text:disabled:selected:focus,
+row:selected label:disabled, label:disabled:selected, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected, iconview text:disabled:selected:focus,
 textview text:disabled:selected:focus, .view text:disabled:selected, iconview text:disabled:selected,
 textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
 textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:disabled, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection:disabled,
@@ -7257,7 +6897,7 @@ entry selection:disabled, modelbutton.flat:disabled:selected,
   color: #9bc4f3;
 }
 
-row:selected label:backdrop, label:backdrop:selected, .selection-mode button.titlebutton:backdrop, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus,
+row:selected label:backdrop, label:backdrop:selected, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected, iconview text:backdrop:selected:focus,
 textview text:backdrop:selected:focus, .view text:backdrop:selected, iconview text:backdrop:selected,
 textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
 textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection:backdrop,
@@ -7266,7 +6906,7 @@ entry selection:backdrop, modelbutton.flat:backdrop:selected,
   color: whitesmoke;
 }
 
-row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .selection-mode button.titlebutton:backdrop:disabled, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .view text:backdrop:disabled:selected, iconview text:backdrop:disabled:selected,
+row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .view text:backdrop:disabled:selected, iconview text:backdrop:disabled:selected,
 textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
 textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, spinbutton:not(.vertical) selection:backdrop:disabled,
 entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected,

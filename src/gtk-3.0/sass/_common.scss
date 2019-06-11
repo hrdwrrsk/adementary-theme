@@ -1442,125 +1442,19 @@ headerbar {
   }
 
   &.selection-mode {
-    $_hc: mix($top_hilight,$accent_primary, 50%); // hilight color
-
-    color: $selected_fg_color;
-    border-color: $selected_borders_color;
-    text-shadow: none;
-
-    .title {
-      color: $selected_fg_color;
-      @include _button_text_shadow(white, $accent_primary);
-
-      &:backdrop { color: mix($dark_fg_color, $accent_primary, 80%); }
-    }
-
-    @include headerbar_fill_colored($accent_primary, $_hc);
-    //box-shadow: inset 0 1px transparentize(white, 0.8);
-
-    &:backdrop {
-      @include headerbar_fill_colored_backdrop($accent_primary, $_hc);
-      //box-shadow: inset 0 1px transparentize(white, 0.8);
-    }
-
-    .subtitle:link { @extend *:link:selected;  }
-
-    button {
-      @include button(colored, lighten($accent_primary, 4%), $selected_fg_color);
-
-      &.flat { @include button(undecorated); }
-
-      &:hover {
-        @include button(colored-hover, lighten($accent_primary, 4%), $selected_fg_color);
-      }
-
-      &:active,
-      &:checked {
-        @include button(colored-active, darken($accent_primary, 4%), $selected_fg_color);
-      }
-
-      &:backdrop {
-        &.flat, & {
-          @include button(colored-backdrop, lighten($accent_primary, 4%), $selected_fg_color);
-
-          // -gtk-icon-effect: none;
-          border-color: darken($accent_primary, 15%);
-
-          &:active,
-          &:checked {
-            @include button(colored-backdrop-active, darken($accent_primary, 4%), $selected_fg_color);
-
-            border-color: $selected_borders_color;
-          }
-
-          &:disabled {
-            @include button(backdrop-insensitive, $accent_primary, $selected_fg_color);
-
-            //border-color: $selected_borders_color;
-
-            &:active, &:checked {
-              @include button(backdrop-insensitive-active, $accent_primary, $selected_fg_color);
-
-              border-color: $selected_borders_color;
-            }
-          }
-        }
-      }
-
-      &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
-
-      &:disabled {
-        @include button(insensitive, $accent_primary, $selected_fg_color);
-
-        &:active,
-        &:checked { @include button(insensitive-active, $accent_primary, $selected_fg_color); }
-      }
-
-      &.suggested-action {
-        @include button(normal);
-
-        border-color: $selected_borders_color;
-
-        &:hover {
-          @include button(hover);
-
-          border-color: $selected_borders_color;
-        }
-
-        &:active {
-          @include button(active);
-
-          border-color: $selected_borders_color;
-        }
-
-        &:disabled {
-          @include button(insensitive);
-
-          border-color: $selected_borders_color;
-        }
-
-        &:backdrop {
-          @include button(backdrop);
-
-          border-color: $selected_borders_color;
-        }
-
-        &:backdrop:disabled {
-          @include button(backdrop-insensitive);
-
-          border-color: $selected_borders_color;
-        }
-      }
-    }
-
     .selection-menu {
       &:backdrop, & {
-        border-color: transparentize($accent_primary, 1);
-        background-color: transparentize($accent_primary, 1);
+        border-color: transparent;
+        background-color: transparent;
         background-image: none;
         box-shadow: none;
         padding-left: 10px;
         padding-right: 10px;
+
+        label { 
+          font-weight: bold;
+          margin-top: 1px;
+        }
 
         arrow { -GtkArrow-arrow-scaling: 1; }
 
@@ -1570,6 +1464,13 @@ headerbar {
           -gtk-icon-shadow: none;
         }
       }
+
+      &:hover { @include button(hover); }
+      &:active, &:checked { @include button(active); }
+
+      &:disabled { color: $insensitive_fg_color; }
+
+      &:backdrop:active, &:backdrop:checked { @include button(backdrop-active); }
     }
   }
 
@@ -1712,7 +1613,7 @@ headerbar.titlebar {
   }
 
   &.selection-mode headerbar:not(.titlebar):not(:only-child) {
-    + separator { background-color: $selected_borders_color; }
+    + separator { background-color: $borders_color; }
   }
 }
 
@@ -4893,12 +4794,6 @@ button.titlebutton {
 
 	@include button(undecorated-shadow);
 
-  .selection-mode & {
-    @extend %button.flat.suggested-action;
-
-    @extend %nobg_selected_items;
-  }
-
   &.close, &.maximize, &.minimize {
     color: transparent;
     background-position: center;
@@ -4959,67 +4854,6 @@ button.titlebutton {
     }
   }
 }
-
-headerbar.selection-mode button.titlebutton,
-.titlebar.selection-mode button.titlebutton {
-  color: transparent;
-  @include _button_text_shadow(white, $accent_primary);
-
-  &:backdrop, &:backdrop:active { color: transparent; }
-
-  @each $k in ('close','maximize', 'minimize') {
-    &.#{$k} {
-      background-image: -gtk-scaled(url('assets/window-#{$k}-selectionmode.png'),
-                                    url('assets/window-#{$k}-selectionmode@2.png'));
-
-      &:hover {
-        background-color: lighten($accent_primary, 2%);
-        transition: none;
-      }
-
-      &:active, &:backdrop:active {
-        background-color: darken($accent_primary, 4%);
-        background-image: -gtk-scaled(url('assets/window-#{$k}-active-selectionmode.png'),
-                                      url('assets/window-#{$k}-active-selectionmode@2.png'));
-        transition: none;
-      }
-
-      &:backdrop {
-        background-image: -gtk-scaled(url('assets/window-#{$k}-backdrop-selectionmode.png'),
-                                      url('assets/window-#{$k}-backdrop-selectionmode@2.png'));
-
-        &:hover, &:active { background-color: transparent; }
-      }
-    }
-  }
-
-  .maximized & {
-    &.maximize {
-      background-image: -gtk-scaled(url('assets/window-restore-selectionmode.png'),
-                                    url('assets/window-restore-selectionmode@2.png'));
-
-      &:hover {
-        background-color: lighten($accent_primary, 2%);
-        transition: none;
-      }
-
-      &:active {
-        background-color: darken($accent_primary, 4%);
-        background-image: -gtk-scaled(url('assets/window-restore-active-selectionmode.png'),
-                                      url('assets/window-restore-active-selectionmode@2.png'));
-        transition: none;
-      }
-
-      &:backdrop {
-        background-image: -gtk-scaled(url('assets/window-restore-backdrop-selectionmode.png'),
-                                      url('assets/window-restore-backdrop-selectionmode@2.png'));
-
-        &:hover, &:active { background-color: transparent; }
-      }
-    }
-  }
-}
-
 
 // catch all extend :)
 
