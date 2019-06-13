@@ -316,7 +316,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog .run-dialog-label {
   font-size: 10pt;
   font-weight: bold;
-  color: #0f0f0f;
+  color: #0f0e0e;
   padding-bottom: .4em;
 }
 
@@ -479,7 +479,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .mount-dialog-app-list-item {
-  color: #0f0f0f;
+  color: #0f0e0e;
 }
 
 .mount-dialog-app-list-item:hover {
@@ -997,7 +997,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button:hover {
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0 2px 0px rgba(40, 40, 40, 0.5);
-  color: #0f0f0f;
+  color: #0f0e0e;
   text-shadow: none;
 }
 
@@ -1010,7 +1010,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
   background-color: rgba(0, 0, 0, 0.01);
   box-shadow: inset 0 2px 0px #282828;
-  color: #0f0f0f;
+  color: #0f0e0e;
   text-shadow: none;
 }
 
@@ -1036,7 +1036,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .lock-screen #panel .panel-button:focus,
 .lock-screen #panel .panel-button:hover,
 .lock-screen #panel .panel-button:active {
-  color: #0f0f0f;
+  color: #0f0e0e;
 }
 
 #panel .panel-status-indicators-box,
@@ -1378,7 +1378,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .media-message-cover-icon.fallback {
-  color: #424242;
+  color: #424141;
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 2px;
@@ -2153,7 +2153,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .chat-log-message {
-  color: #0f0f0f;
+  color: #0f0e0e;
 }
 
 .chat-new-group {
@@ -2353,7 +2353,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: #0f0f0f;
+  color: #0f0e0e;
 }
 
 .candidate-box {

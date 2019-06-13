@@ -2989,8 +2989,12 @@ treeview.view:selected:focus, treeview.view:selected {
   border-radius: 0;
 }
 
+treeview.view:selected:focus:backdrop, treeview.view:selected:backdrop {
+  background-color: #8e8e8e;
+}
+
 treeview.view:selected:backdrop, treeview.view:selected {
-  border-left-color: #9bc4f3;
+  border-left-color: #c6c6c7;
   border-top-color: rgba(238, 238, 238, 0.1);
 }
 
@@ -4002,7 +4006,7 @@ switch:checked image {
 }
 
 switch:checked:disabled {
-  background-color: #454854;
+  background-color: #2E3038;
   background-image: none;
   border: 1px solid #070708;
 }
@@ -4012,7 +4016,8 @@ switch:checked:disabled image {
 }
 
 switch:checked:backdrop {
-  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
+  border-color: #070708;
+  background-image: linear-gradient(to bottom, #939393, #7f7f7f);
 }
 
 switch:checked:backdrop image {
@@ -4331,18 +4336,16 @@ radio:checked:active {
 
 check:checked:backdrop,
 radio:checked:backdrop {
-  border-color: #1457a2;
-  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
+  color: white;
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #5b5b5b;
+  background-image: linear-gradient(to bottom, #939393, #7f7f7f);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #061a30;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  border-color: #1b1b1b;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   -gtk-icon-shadow: none;
-}
-
-check:checked:backdrop label, check:checked:backdrop,
-radio:checked:backdrop label,
-radio:checked:backdrop {
-  color: #d7e7fa;
 }
 
 check:disabled,
@@ -4519,7 +4522,7 @@ treeview.view radio:selected:disabled:backdrop {
 treeview.view check:backdrop:selected, treeview.view check:backdrop,
 treeview.view radio:backdrop:selected,
 treeview.view radio:backdrop {
-  color: #d7e7fa;
+  color: #e8e8e8;
 }
 
 /************
@@ -5230,8 +5233,8 @@ progressbar.vertical progress {
 }
 
 progressbar:backdrop progress {
-  border: 1px solid #061a30;
-  background-image: linear-gradient(to bottom, #3f8ee7, #3b8ce7, #2d84e5);
+  border: 1px solid #1b1b1b;
+  background-image: linear-gradient(to bottom, #939393, #919191, #898989);
 }
 
 progressbar.osd {
@@ -5530,7 +5533,7 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover {
 }
 
 row.activatable:selected:backdrop {
-  background-color: #3689e6;
+  background-color: #8e8e8e;
 }
 
 /*********************
@@ -6120,7 +6123,7 @@ infobar.info button:backdrop:disabled label, infobar.info button:backdrop:disabl
 }
 
 infobar.info selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.question {
@@ -6242,7 +6245,7 @@ infobar.question button:backdrop:disabled label, infobar.question button:backdro
 }
 
 infobar.question selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.warning {
@@ -6364,7 +6367,7 @@ infobar.warning button:backdrop:disabled label, infobar.warning button:backdrop:
 }
 
 infobar.warning selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.error {
@@ -6486,7 +6489,7 @@ infobar.error button:backdrop:disabled label, infobar.error button:backdrop:disa
 }
 
 infobar.error selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 /************

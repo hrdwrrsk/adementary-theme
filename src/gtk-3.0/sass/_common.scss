@@ -1671,10 +1671,12 @@ treeview.view {
       border-radius: 0;
 
       @extend %selected_items;
+
+      &:backdrop { background-color: desaturate($accent_primary, 100%); }
     }
 
     &:backdrop, & {
-      border-left-color: mix($selected_fg_color, $accent_primary, 50%);
+      border-left-color: mix($selected_fg_color, desaturate($accent_primary, 100%), 50%);
       border-top-color: transparentize($fg_color, 0.9); // doesn't work unfortunatelly
     }
   }
@@ -2647,7 +2649,7 @@ switch {
     }
 
 		&:disabled {
-			background-color: if($variant == 'light', darken($bg_color, 22%), lighten($bg_color, 10%));
+			background-color: $bg_color;
 			background-image: none;
 			border: 1px solid if($variant == 'light', $borders_color, $alt_borders_color);
 
@@ -2657,9 +2659,10 @@ switch {
 		}
 
     &:backdrop {
+      border-color: if($variant == 'light', lighten(desaturate($selected_borders_color, 100%), 8%), $alt_borders_color);
       background-image: linear-gradient(to bottom,
-                                        lighten($accent_primary, 4%),
-                                        darken($accent_primary, 4%));
+                                        lighten(desaturate($accent_primary, 100%), 2%),
+                                        darken(desaturate($accent_primary, 100%), 6%));
       @if $min_ver > 23 {
         image { color: rgba($selected_fg_color, 0.8); }
       }
@@ -2778,7 +2781,7 @@ switch {
                                       darken($inverse_bg_color, 2%),
                                       darken($inverse_bg_color, 3%),
                                       darken($inverse_bg_color, 6%));
-		box-shadow: 0 0 0 1px if($variant == 'light', $selected_borders_color, rgba(black, 0.30)),
+		box-shadow: 0 0 0 1px rgba(black, 0.30),
                 inset 0 1px rgba(white, 0.45),
                 inset 0 0 0 1px rgba(white, 0.05),
                 inset 0 -1px rgba(white, 0.15),
@@ -2945,8 +2948,8 @@ radio {
 		}
 
 		&:backdrop {
-			@include button(colored-backdrop, $accent_primary, white);
-			border-color: if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
+			@include button(colored, desaturate($accent_primary, 100%), white);
+			border-color: if($variant == 'light', darken(desaturate($accent_primary, 100%), 20%), darken(desaturate($accent_primary, 100%), 45%));
 
       box-shadow: inset 0 1px rgba(white, 0.25),
                   0 1px rgba(black, 0.1),
@@ -3083,7 +3086,7 @@ treeview.view radio {
     }
   }
 
-  &:backdrop { &:selected, & { color: mix(white, $accent_primary, 80%); }}
+  &:backdrop { &:selected, & { color: mix(white, desaturate($accent_primary, 100%), 80%); }}
 }
 
 treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround
@@ -3634,11 +3637,11 @@ progressbar {
   }
 
   &:backdrop progress {
-    border: 1px solid if($variant == 'light', darken($accent_primary, 20%), darken($accent_primary, 45%));
+    border: 1px solid if($variant == 'light', darken(desaturate($accent_primary, 100%), 20%), darken(desaturate($accent_primary, 100%), 45%));
     background-image: linear-gradient(to bottom,
-                                      lighten($accent_primary, 2%),
-                                      lighten($accent_primary, 1%),
-                                      darken($accent_primary, 2%));
+                                      lighten(desaturate($accent_primary, 100%), 2%),
+                                      lighten(desaturate($accent_primary, 100%), 1%),
+                                      darken(desaturate($accent_primary, 100%), 2%));
   }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
@@ -3902,7 +3905,7 @@ row {
       &.has-open-popup,
       &:hover { background-color: mix($fg_color, $accent_primary, 10%); }
 
-      &:backdrop { background-color: $accent_primary; }
+      &:backdrop { background-color: desaturate($accent_primary, 100%); }
     }
   }
 

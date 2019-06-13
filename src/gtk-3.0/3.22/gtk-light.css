@@ -53,7 +53,7 @@
 
 .gtkstyle-fallback:active {
   color: #282828;
-  background-color: #dadada;
+  background-color: #dad9d9;
 }
 
 .gtkstyle-fallback:disabled {
@@ -658,7 +658,7 @@ button:backdrop.flat:checked,
 button:backdrop:active,
 button:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -921,7 +921,7 @@ button:checked:backdrop,
 .osd
 button:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -2117,7 +2117,7 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
 
 .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -2516,7 +2516,7 @@ toolbar, .inline-toolbar, searchbar > revealer > box,
 .location-bar, .nemo-window grid.vertical > widget {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: #dadada;
+  background-color: #dad9d9;
   border-bottom-width: 1px;
   border-style: solid;
   border-color: #b3b3b3;
@@ -2612,7 +2612,7 @@ searchbar > revealer > box {
 .inline-toolbar:backdrop, searchbar > revealer > box:backdrop,
 .location-bar:backdrop {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #e4e4e4);
+  background-image: linear-gradient(to bottom, #dad9d9, #e4e4e4);
   box-shadow: none;
   transition: 200ms ease-out;
 }
@@ -2721,7 +2721,7 @@ headerbar.selection-mode .selection-menu:disabled {
 headerbar.selection-mode .selection-menu:backdrop:active,
 headerbar.selection-mode .selection-menu:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -3001,8 +3001,12 @@ treeview.view:selected:focus, treeview.view:selected {
   border-radius: 0;
 }
 
+treeview.view:selected:focus:backdrop, treeview.view:selected:backdrop {
+  background-color: #8e8e8e;
+}
+
 treeview.view:selected:backdrop, treeview.view:selected {
-  border-left-color: #9bc4f3;
+  border-left-color: #c6c6c7;
   border-top-color: rgba(40, 40, 40, 0.1);
 }
 
@@ -3202,7 +3206,7 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: #dadada;
+  background-color: #dad9d9;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.23);
 }
 
@@ -4007,13 +4011,14 @@ switch:checked {
 }
 
 switch:checked:disabled {
-  background-color: #bbbbbb;
+  background-color: #f3f3f3;
   background-image: none;
   border: 1px solid #b3b3b3;
 }
 
 switch:checked:backdrop {
-  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
+  border-color: #565656;
+  background-image: linear-gradient(to bottom, #939393, #7f7f7f);
 }
 
 switch:disabled {
@@ -4024,7 +4029,7 @@ switch:disabled {
 }
 
 switch:backdrop {
-  background-color: #dadada;
+  background-color: #dad9d9;
 }
 
 switch:backdrop:disabled {
@@ -4069,7 +4074,7 @@ switch:backdrop slider {
 
 switch:backdrop:checked slider {
   background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: 0 0 0 1px #0e3f75, inset 0 1px rgba(255, 255, 255, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 }
 
 row:selected switch {
@@ -4316,18 +4321,16 @@ radio:checked:active {
 
 check:checked:backdrop,
 radio:checked:backdrop {
-  border-color: #3689e6;
-  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
+  color: white;
+  outline-color: rgba(255, 255, 255, 0.3);
+  border-color: #5b5b5b;
+  background-image: linear-gradient(to bottom, #939393, #7f7f7f);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border-color: #1457a2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  border-color: #5b5b5b;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   -gtk-icon-shadow: none;
-}
-
-check:checked:backdrop label, check:checked:backdrop,
-radio:checked:backdrop label,
-radio:checked:backdrop {
-  color: #d7e7fa;
 }
 
 check:disabled,
@@ -4510,7 +4513,7 @@ treeview.view radio:selected:disabled:backdrop {
 treeview.view check:backdrop:selected, treeview.view check:backdrop,
 treeview.view radio:backdrop:selected,
 treeview.view radio:backdrop {
-  color: #d7e7fa;
+  color: #e8e8e8;
 }
 
 /************
@@ -5218,8 +5221,8 @@ progressbar.vertical progress {
 }
 
 progressbar:backdrop progress {
-  border: 1px solid #1457a2;
-  background-image: linear-gradient(to bottom, #3f8ee7, #3b8ce7, #2d84e5);
+  border: 1px solid #5b5b5b;
+  background-image: linear-gradient(to bottom, #939393, #919191, #898989);
 }
 
 progressbar.osd {
@@ -5518,7 +5521,7 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover {
 }
 
 row.activatable:selected:backdrop {
-  background-color: #3689e6;
+  background-color: #8e8e8e;
 }
 
 /*********************
@@ -5561,7 +5564,7 @@ expander title > arrow:dir(rtl) {
 }
 
 expander title > arrow:hover {
-  color: #757575;
+  color: #757474;
 }
 
 expander title > arrow:disabled {
@@ -6108,7 +6111,7 @@ infobar.info button:backdrop:disabled label, infobar.info button:backdrop:disabl
 }
 
 infobar.info selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.question {
@@ -6230,7 +6233,7 @@ infobar.question button:backdrop:disabled label, infobar.question button:backdro
 }
 
 infobar.question selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.warning {
@@ -6352,7 +6355,7 @@ infobar.warning button:backdrop:disabled label, infobar.warning button:backdrop:
 }
 
 infobar.warning selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 infobar.error {
@@ -6474,7 +6477,7 @@ infobar.error button:backdrop:disabled label, infobar.error button:backdrop:disa
 }
 
 infobar.error selection {
-  background-color: #0f0f0f;
+  background-color: #0f0e0e;
 }
 
 /************
@@ -7437,7 +7440,7 @@ scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected:b
 
 .nemo-window grid.vertical > widget > box > button.image-button:backdrop:active, .nemo-window grid.vertical > widget > box > button.image-button:backdrop:checked {
   border-color: silver;
-  background-image: linear-gradient(to bottom, #dadada, #dadada);
+  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -8624,7 +8627,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_highlight rgba(255, 255, 255, 0.6);
 @define-color wm_borders_edge rgba(255, 255, 255, 0.6);
 @define-color wm_bg_a #e4e4e4;
-@define-color wm_bg_b #dadada;
+@define-color wm_bg_b #dad9d9;
 @define-color wm_backdrop_bg_a #eeeeee;
 @define-color wm_backdrop_bg_b #e4e4e4;
 @define-color wm_shadow alpha(black, 0.35);

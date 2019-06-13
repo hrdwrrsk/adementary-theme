@@ -327,7 +327,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog .run-dialog-label {
   font-size: 10pt;
   font-weight: bold;
-  color: #d5d5d5;
+  color: #d5d4d4;
   padding-bottom: .4em;
 }
 
@@ -490,7 +490,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .mount-dialog-app-list-item {
-  color: #d5d5d5;
+  color: #d5d4d4;
 }
 
 .mount-dialog-app-list-item:hover {
@@ -2198,7 +2198,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .chat-log-message {
-  color: #d5d5d5;
+  color: #d5d4d4;
 }
 
 .chat-new-group {
@@ -2398,7 +2398,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: #d5d5d5;
+  color: #d5d4d4;
 }
 
 .candidate-box {
