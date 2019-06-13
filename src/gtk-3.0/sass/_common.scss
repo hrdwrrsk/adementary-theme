@@ -2794,6 +2794,11 @@ switch {
     background-color: mix(darken($inverse_bg_color, 12%), $accent_primary);
     border-color: darken($accent_primary, 20%);
 
+    &:backdrop {
+      background-color: mix(darken($inverse_bg_color, 12%), desaturate($accent_primary, 100%));
+      border-color: darken(desaturate($accent_primary, 100%), 20%);
+    }
+
       slider {
         background-image: linear-gradient(to bottom,
                                           darken($inverse_bg_color, 4%),
@@ -4871,7 +4876,7 @@ button.titlebutton {
     &:backdrop {
       color: $backdrop_selected_fg_color;
 
-      &:disabled { color: mix($backdrop_selected_fg_color, $accent_primary, 30%); }
+      &:disabled { color: mix($backdrop_selected_fg_color, desaturate($accent_primary, 100%), 30%); }
     }
   }
 }
