@@ -124,3 +124,9 @@ read if you used those and something break with a version upgrade you're on your
 //FIXME this is really an API
 
 @define-color content_view_bg #{"" + $base_color};
+
+
+// Budgie indicator(s)
+@define-color budgie_tasklist_indicator_color #{"" + if($light-panel == 'true', lighten($fg_color, 30%), darken($dark_fg_color, 30%))};
+@define-color budgie_tasklist_indicator_color_active #{"" + if($light-panel == 'true', $fg_color, $accent_primary)};
+@define-color budgie_tasklist_indicator_color_active_window #{"" + if($light-panel == 'true', lighten($fg_color, 30%), $accent_tertiary)};

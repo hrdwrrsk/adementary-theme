@@ -8766,3 +8766,6 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b #d4d4d4;
 @define-color wm_button_active_color_c #d4d4d4;
 @define-color content_view_bg #f8f8f8;
+@define-color budgie_tasklist_indicator_color #a2a1a1;
+@define-color budgie_tasklist_indicator_color_active #3689e6;
+@define-color budgie_tasklist_indicator_color_active_window #8cd5ff;
