@@ -1,3 +1,7 @@
+@define-color budgie_tasklist_indicator_color #757474;
+@define-color budgie_tasklist_indicator_color_active #282828;
+@define-color budgie_tasklist_indicator_color_active_window #757474;
+
 .bottom .budgie-panel {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -6,4 +10,13 @@
   margin: 1px;
   margin-bottom: 0;
   background-color: alpha(@theme_bg_color, 0.75);
+}
+
+.bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:not(:checked):hover {
+  box-shadow: inset 0 -3px transparent;
+  background-color: alpha(black,0.1);
+}
+
+.bottom box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:checked {
+  background-color: alpha(black,0.15);
 }
