@@ -569,6 +569,41 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
   padding: 0;
   border: none;
 
+  // New: Raven notification view styling
+  // NEEDS MOAR TESTING
+  // Only affects in new git version
+  .raven-notifications-view {
+  	row {
+  	  &, &:hover, &:active, &:selected, &:selected:hover {
+  	  	background-color: transparent;
+  	  	box-shadow: none;
+  	  }
+  	}
+  }
+
+  .raven-notifications-group {
+  	border: 1px solid $borders_color;
+  	padding: 6px;
+  	border-radius: 3px;
+
+  	box-shadow: inset 0 1px $top_hilight;
+
+  	&:dir(ltr) { margin-right: 4px; }
+  	&:dir(rtl) { margin-left: 4px; }
+
+  	.notification-clone {
+  	  &:dir(ltr) { 
+  	  	border-left: 2px solid $accent_primary; 
+  	  	padding: 0 0 0 8px;
+  	  }
+
+  	  &:dir(rtl) { 
+  	  	border-right: 2px solid $accent_primary;
+  	  	padding: 0 8px 0 0; 
+  	  }
+  	}
+  }
+
   .raven-header {
     min-height: 26px;
 
