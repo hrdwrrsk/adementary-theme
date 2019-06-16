@@ -7595,7 +7595,6 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
 }
 
 .budgie-panel button:hover {
-  box-shadow: inset 0 -3px #eeeeee;
   background-color: transparent;
   border: none;
   background-image: none;
@@ -7603,7 +7602,6 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
 }
 
 .budgie-panel button:active, .budgie-panel button:active:backdrop, .budgie-panel button:checked, .budgie-panel button:checked:backdrop {
-  box-shadow: inset 0 -3px #3689e6;
   background-color: transparent;
   background-image: none;
   color: #eeeeee;
@@ -7667,16 +7665,48 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
   margin-bottom: 1px;
 }
 
+.top .budgie-panel button:hover {
+  box-shadow: inset 0 3px #eeeeee;
+}
+
+.top .budgie-panel button:active, .top .budgie-panel button:checked {
+  box-shadow: inset 0 3px #3689e6;
+}
+
 .bottom .budgie-panel {
   margin-top: 1px;
+}
+
+.bottom .budgie-panel button:hover {
+  box-shadow: inset 0 -3px #eeeeee;
+}
+
+.bottom .budgie-panel button:active, .bottom .budgie-panel button:checked {
+  box-shadow: inset 0 -3px #3689e6;
 }
 
 .left .budgie-panel {
   margin-right: 1px;
 }
 
+.left .budgie-panel button:hover {
+  box-shadow: inset 3px 0 #eeeeee;
+}
+
+.left .budgie-panel button:active, .left .budgie-panel button:checked {
+  box-shadow: inset 3px 0 #3689e6;
+}
+
 .right .budgie-panel {
   margin-left: 1px;
+}
+
+.right .budgie-panel button:hover {
+  box-shadow: inset -3px 0 #eeeeee;
+}
+
+.right .budgie-panel button:active, .right .budgie-panel button:checked {
+  box-shadow: inset -3px 0 #3689e6;
 }
 
 button.budgie-menu-launcher {
