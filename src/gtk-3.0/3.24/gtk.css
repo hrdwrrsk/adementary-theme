@@ -7661,6 +7661,14 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
   min-width: 24px;
 }
 
+.end-region > widget > widget box.battery-icon.horizontal > label.percent-label {
+  font-size: 75%;
+}
+
+.end-region > widget > widget box.battery-icon.horizontal > label.percent-label, .end-region > widget > widget box.battery-icon.horizontal > label.percent-label:backdrop {
+  color: #eeeeee;
+}
+
 .end-region > widget > widget box.battery-icon.horizontal > label.percent-label:dir(ltr) {
   margin: 0 -6px 0 3px;
 }
@@ -7671,6 +7679,10 @@ widget.-vala-panel-appmenu-core menubar > menuitem menu > menuitem:disabled labe
 
 .end-region > widget > widget box.battery-icon.vertical > label.percent-label {
   font-size: 75%;
+}
+
+.end-region > widget > widget box.battery-icon.vertical > label.percent-label, .end-region > widget > widget box.battery-icon.vertical > label.percent-label:backdrop {
+  color: #eeeeee;
 }
 
 .end-region > widget > widget box.battery-icon.vertical > label.percent-label:dir(ltr) {

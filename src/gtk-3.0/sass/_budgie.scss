@@ -106,11 +106,16 @@
 	// battery percent label
 	box.battery-icon {
 		&.horizontal > label.percent-label {
+			&, &:backdrop { color: if($light-panel == 'true', $fg_color, $dark_fg_color); } // untested
+
+			font-size: 75%;
 			&:dir(ltr) { margin: 0 -6px 0 3px; }
 			&:dir(rtl) { margin: 0 3px 0 -6px; }
 		}
 
 		&.vertical > label.percent-label {
+			&, &:backdrop { color: if($light-panel == 'true', $fg_color, $dark_fg_color); } // untested
+
 			font-size: 75%;
 			&:dir(ltr) { margin-right: -2px; }
 			&:dir(rtl) { margin-left: -2px; }
