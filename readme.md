@@ -45,7 +45,7 @@ If you already have main theme installed system wide this fork will override it 
 report it via "Issues" tab, Pull request for bugfixes and features also accepted.
 for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. support, add [feature request] tag
 
-ONLY "Darker" is made by me, as such Light and Dark modes issues are to be reported to main developer, hrdwrrsk,
+ONLY "Darker" is made by me, as such Light and Dark modes issues are to be reported to main developer, hrdwrrsk.
 
 # Credits
 - Adwaita Gtk theme by GNOME, for Gtk theme basis
