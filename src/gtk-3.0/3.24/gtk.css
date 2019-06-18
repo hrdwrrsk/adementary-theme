@@ -20,13 +20,13 @@
  * Base States *
  ***************/
 .background {
-  color: #282828;
-  background-color: #f3f3f3;
+  color: #eeeeee;
+  background-color: #2E3038;
 }
 
 .background:backdrop {
-  color: #8e8e8e;
-  background-color: #f3f3f3;
+  color: #8e8f93;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -42,23 +42,23 @@
 }
 
 .gtkstyle-fallback {
-  color: #282828;
-  background-color: #f3f3f3;
+  color: #eeeeee;
+  background-color: #2E3038;
 }
 
 .gtkstyle-fallback:hover {
-  color: #282828;
-  background-color: white;
+  color: #eeeeee;
+  background-color: #454854;
 }
 
 .gtkstyle-fallback:active {
-  color: #282828;
-  background-color: #dad9d9;
+  color: #eeeeee;
+  background-color: #17181c;
 }
 
 .gtkstyle-fallback:disabled {
-  color: #8e8e8e;
-  background-color: whitesmoke;
+  color: #8e8f93;
+  background-color: #2f313a;
 }
 
 .gtkstyle-fallback:selected {
@@ -70,31 +70,31 @@
 .view text,
 iconview text,
 textview text {
-  color: black;
-  background-color: #f8f8f8;
+  color: white;
+  background-color: #30333D;
 }
 
 .view:backdrop, iconview:backdrop,
 .view text:backdrop,
 iconview text:backdrop,
 textview text:backdrop {
-  color: #313131;
-  background-color: whitesmoke;
+  color: #d6d7d9;
+  background-color: #323540;
 }
 
 .view:backdrop:disabled, iconview:backdrop:disabled,
 .view text:backdrop:disabled,
 iconview text:backdrop:disabled,
 textview text:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 .view:disabled, iconview:disabled,
 .view text:disabled,
 iconview text:disabled,
 textview text:disabled {
-  color: #8e8e8e;
-  background-color: whitesmoke;
+  color: #8e8f93;
+  background-color: #2f313a;
 }
 
 .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected,
@@ -108,7 +108,7 @@ textview text:selected {
 }
 
 textview border {
-  background-color: #f6f6f6;
+  background-color: #2f323b;
 }
 
 .rubberband,
@@ -131,21 +131,21 @@ flowbox flowboxchild:selected {
 
 .content-view .tile {
   margin: 2px;
-  background-color: transparent;
+  background-color: black;
   border-radius: 0;
   padding: 0;
 }
 
 .content-view .tile:backdrop {
-  background-color: transparent;
+  background-color: #272932;
 }
 
 .content-view .tile:active, .content-view .tile:selected {
-  background-color: transparent;
+  background-color: #3689e6;
 }
 
 .content-view .tile:disabled {
-  background-color: transparent;
+  background-color: #2f313a;
 }
 
 label {
@@ -153,11 +153,11 @@ label {
 }
 
 label.separator {
-  color: #282828;
+  color: #eeeeee;
 }
 
 label.separator:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 label selection {
@@ -166,15 +166,15 @@ label selection {
 }
 
 label:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 label:disabled:backdrop {
-  color: silver;
+  color: #515462;
 }
 
 label:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .dim-label, label.separator, .titlebar:not(headerbar) .subtitle,
@@ -184,13 +184,13 @@ headerbar .subtitle, .budgie-notification .notification-body, .budgie-osd .notif
 }
 
 assistant .sidebar {
-  background-color: #f8f8f8;
-  border-top: 1px solid #b3b3b3;
+  background-color: #30333D;
+  border-top: 1px solid #17181c;
 }
 
 assistant .sidebar:backdrop {
-  background-color: whitesmoke;
-  border-color: silver;
+  background-color: #323540;
+  border-color: #1c1d22;
 }
 
 assistant.csd .sidebar {
@@ -202,15 +202,15 @@ assistant .sidebar label {
 }
 
 assistant .sidebar label.highlight {
-  background-color: #cacaca;
+  background-color: #54565c;
 }
 
 .csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .csd popover.background.osd, popover.background.osd, .app-notification,
 .app-notification.frame, colorchooser .popover.osd, .osd .scale-popup,
 .osd {
-  color: #282828;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  background-color: #f3f3f3;
+  color: #eeeeee;
+  border: 1px solid #17181c;
+  background-color: #2E3038;
   background-clip: padding-box;
 }
 
