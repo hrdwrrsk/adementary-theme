@@ -1,18 +1,18 @@
 Adementary
 ======
 Adementary (formerly or codenamed "Project Beaucoup" and "Tetra") is a GTK theme based on Adwaita, blended with elementary OS visual design.
+
 This fork is purely for adding a "darker" version of standard adementary-theme.
 -------------------
-![Screenshot](/data/Screenshot.png)
-![Screenshot](/data/Screenshot-dark.png)
+
 -------------------
 This theme has come with **3 variants**
 
-**Variants** | **Description** | **Preview**
-:-: | :-: | :-:
-**Darker** | Light variant with dark accents from Dark variant and dark panel | ![Default](/data/variant-default.svg)
-**Dark** | Dark variant | ![Dark](/data/variant-dark.svg)
-**Light** | Light variant with light panel (and GNOME shell/Cinnamon theme) | ![Light](/data/variant-light.svg)
+**Variants** | **Description**
+:-: | :-:
+**Darker** | Light variant with dark accents from Dark variant and dark panel
+**Dark** | Dark variant
+**Light** | Light variant with light panel (and GNOME shell/Cinnamon theme)
 
 # Supported desktop environments
 - Budgie
@@ -35,11 +35,10 @@ Then run this command:
 git clone https://github.com/hrdwrrsk/adementary-theme.git
 cd adementary-darker-theme
 
-# System-wide install NO!!!
-sudo ./install.sh
-
 # Local install RECOMMENDED!!!
 ./install.sh -d ~/.themes
+
+If you already have main theme installed system wide this fork will override the main theme but easily removable without interfering with original.
 ```
 
 # Reporting bugs/Add suggestions
