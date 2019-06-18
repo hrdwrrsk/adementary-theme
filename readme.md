@@ -37,9 +37,9 @@ cd adementary-darker-theme
 
 # Local install RECOMMENDED!!!
 ./install.sh -d ~/.themes
+```
 
 If you already have main theme installed system wide this fork will override the main theme but easily removable without interfering with original.
-```
 
 # Reporting bugs/Add suggestions
 report it via "Issues" tab, Pull request for bugfixes and features also accepted.
