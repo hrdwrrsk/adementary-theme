@@ -4,7 +4,7 @@ Adementary (formerly or codenamed "Project Beaucoup" and "Tetra") is a GTK theme
 
 This fork is purely for adding a "darker" version of standard adementary-theme.
 -------------------
-
+![Screenshot]()
 -------------------
 This theme has come with **3 variants**
 
