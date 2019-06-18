@@ -1,7 +1,5 @@
 Adementary
 ======
-Adementary (formerly or codenamed "Project Beaucoup" and "Tetra") is a GTK theme based on Adwaita, blended with elementary OS visual design.
-
 This fork is purely for adding a "darker" version of standard adementary-theme.
 -------------------
 ![Screenshot](https://github.com/SaucySauce/adementary-darker-theme/blob/master/Screenshot%20from%202019-06-18%2002:02:01.png?raw=true)
