@@ -249,9 +249,9 @@ entry {
   border: 1px solid;
   border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: black;
-  border-color: #b3b3b3;
-  background-color: #e9e9e9;
+  color: white;
+  border-color: #17181c;
+  background-color: #272932;
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
 }
 
@@ -280,31 +280,31 @@ entry.flat {
 
 spinbutton:focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:focus:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:focus:not(.vertical),
 entry:focus {
-  border-color: #3689e6;
+  border-color: #1457a2;
 }
 
 spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:disabled:not(.vertical),
 entry:disabled {
-  color: #8e8e8e;
-  border-color: #b3b3b3;
-  background-color: whitesmoke;
+  color: #8e8f93;
+  border-color: #17181c;
+  background-color: #2f313a;
   background-image: none;
 }
 
 spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:backdrop:not(.vertical),
 entry:backdrop {
-  color: black;
-  border-color: #b3b3b3;
-  background-color: #eeeeee;
-  box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
+  color: white;
+  border-color: #17181c;
+  background-color: #272932;
+  box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.05);
   transition: 200ms ease-out;
 }
 
 spinbutton:backdrop:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:disabled:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:backdrop:disabled:not(.vertical),
 entry:backdrop:disabled {
-  color: silver;
-  border-color: silver;
-  background-color: whitesmoke;
+  color: #515462;
+  border-color: #1c1d22;
+  background-color: #2f313a;
   background-image: none;
 }
 
@@ -342,12 +342,12 @@ entry.warning selection {
 
 spinbutton:not(.vertical) image, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) image,
 entry image {
-  color: #525252;
+  color: #c8c9cb;
 }
 
 spinbutton:not(.vertical) image:hover, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:hover, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) image:hover,
 entry image:hover {
-  color: #282828;
+  color: #eeeeee;
 }
 
 spinbutton:not(.vertical) image:active, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:active, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) image:active,
@@ -357,7 +357,7 @@ entry image:active {
 
 spinbutton:not(.vertical) image:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) image:backdrop, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) image:backdrop,
 entry image:backdrop {
-  color: #a3a3a3;
+  color: #7c7d82;
 }
 
 spinbutton:drop(active):focus:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:drop(active):focus:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:drop(active):focus:not(.vertical), spinbutton:drop(active):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:drop(active):not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:drop(active):not(.vertical),
@@ -397,7 +397,7 @@ entry:focus + button,
 entry:focus + combobox > box > button.combo, .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, window.budgie-popover:not(.csd).workspace-popover .linked:not(.vertical) > spinbutton:focus:not(.vertical) + entry, .linked:not(.vertical) >
 entry:focus +
 entry {
-  border-left-color: #b3b3b3;
+  border-left-color: #17181c;
 }
 
 .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked:not(.vertical) > spinbutton:drop(active):not(.vertical) + spinbutton:not(.vertical),
@@ -424,7 +424,7 @@ entry:not(:disabled) + entry:not(:disabled),
 .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical),
 window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical),
 window.budgie-popover:not(.csd).workspace-popover .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):not(.vertical) {
-  border-top-color: #e3e3e3;
+  border-top-color: #292b33;
 }
 
 .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop, window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop, window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:not(:disabled):not(.vertical) + entry:not(:disabled):backdrop,
@@ -435,7 +435,7 @@ entry:not(:disabled) + entry:not(:disabled):backdrop,
 .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical),
 window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical),
 window.budgie-popover:not(.csd).workspace-popover .linked.vertical > entry:not(:disabled) + spinbutton:not(:disabled):backdrop:not(.vertical) {
-  border-top-color: #e5e5e5;
+  border-top-color: #2c2e37;
 }
 
 .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:disabled:not(.vertical) + spinbutton:disabled:not(.vertical),
@@ -444,7 +444,7 @@ window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbut
 window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:disabled:not(.vertical) + entry:disabled, .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > entry:disabled + spinbutton:disabled:not(.vertical),
 .linked.vertical >
 entry:disabled + entry:disabled {
-  border-top-color: #e3e3e3;
+  border-top-color: #292b33;
 }
 
 .linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:not(.vertical) + spinbutton:focus:not(:only-child):not(.vertical),
@@ -453,7 +453,7 @@ window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbut
 window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:not(.vertical) + entry:focus:not(:only-child), .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > entry + spinbutton:focus:not(:only-child):not(.vertical),
 .linked.vertical >
 entry + entry:focus:not(:only-child) {
-  border-top-color: #3689e6;
+  border-top-color: #1457a2;
 }
 
 .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:not(.vertical) + spinbutton:drop(active):not(:only-child):not(.vertical),
@@ -481,7 +481,7 @@ entry:focus:not(:only-child) + entry,
 entry:focus:not(:only-child) + button,
 .linked.vertical >
 entry:focus:not(:only-child) + combobox > box > button.combo {
-  border-top-color: #3689e6;
+  border-top-color: #1457a2;
 }
 
 .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked.vertical > spinbutton:drop(active):not(:only-child):not(.vertical) + spinbutton:not(.vertical),
@@ -504,14 +504,14 @@ entry:drop(active):not(:only-child) + combobox > box > button.combo {
 }
 
 treeview entry:focus:dir(rtl), treeview entry:focus:dir(ltr) {
-  background-color: #f8f8f8;
+  background-color: #30333D;
   transition-property: color, background;
 }
 
 treeview entry.flat, treeview entry {
   border-radius: 0;
   background-image: none;
-  background-color: #f8f8f8;
+  background-color: #30333D;
 }
 
 treeview entry.flat:focus, treeview entry:focus {
@@ -542,8 +542,8 @@ treeview entry.flat:focus, treeview entry:focus {
 }
 
 :backdrop .entry-tag {
-  color: whitesmoke;
-  background-color: #3689e6;
+  color: #323540;
+  background-color: #606269;
 }
 
 .entry-tag.button {
@@ -567,7 +567,7 @@ treeview entry.flat:focus, treeview entry:focus {
  ***********/
 @keyframes needs_attention {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(#3689e6), to(transparent));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(#7ab1ee), to(transparent));
   }
   to {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3689e6), to(transparent));
@@ -582,13 +582,13 @@ button {
   border: 1px solid;
   border-radius: 3px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
 notebook > header > tabs > arrow, button.sidebar-button, button.titlebutton,
@@ -613,22 +613,22 @@ button.flat:hover:active {
 
 notebook > header > tabs > arrow:hover, button.titlebutton:hover,
 button:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
   -gtk-icon-effect: highlight;
 }
 
 notebook > header > tabs > arrow:active, button.titlebutton:active, notebook > header > tabs > arrow:checked, button.titlebutton:checked,
 button:active,
 button:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
   transition-duration: 50ms;
@@ -637,9 +637,9 @@ button:checked {
 notebook > header > tabs > arrow:backdrop, button.sidebar-button:backdrop, button.titlebutton:backdrop, notebook > header > tabs > arrow:backdrop, button.titlebutton:backdrop,
 button:backdrop.flat,
 button:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #3c3e49, #3a3c46, #33353e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
   transition: 200ms ease-out;
   -gtk-icon-effect: none;
 }
@@ -649,7 +649,7 @@ button:backdrop.flat label,
 button:backdrop.flat,
 button:backdrop label,
 button:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 notebook > header > tabs > arrow:backdrop:active, button.sidebar-button:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, button.sidebar-button:backdrop:checked, button.titlebutton:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked,
@@ -657,9 +657,9 @@ button:backdrop.flat:active,
 button:backdrop.flat:checked,
 button:backdrop:active,
 button:backdrop:checked {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #292b32, #292b32);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 notebook > header > tabs > arrow:backdrop:active label, button.sidebar-button:backdrop:active label, button.titlebutton:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.sidebar-button:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.sidebar-button:backdrop:checked label, button.titlebutton:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.sidebar-button:backdrop:checked, button.titlebutton:backdrop:checked, notebook > header > tabs > arrow:backdrop:active label, button.titlebutton:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.titlebutton:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked,
@@ -671,18 +671,18 @@ button:backdrop:active label,
 button:backdrop:active,
 button:backdrop:checked label,
 button:backdrop:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 notebook > header > tabs > arrow:backdrop:disabled, button.sidebar-button:backdrop:disabled, button.titlebutton:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled,
 button:backdrop.flat:disabled,
 button:backdrop:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
+  border-color: #17181c;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 notebook > header > tabs > arrow:backdrop:disabled label, button.sidebar-button:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.sidebar-button:backdrop:disabled, button.titlebutton:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled label, button.titlebutton:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled,
@@ -690,7 +690,7 @@ button:backdrop.flat:disabled label,
 button:backdrop.flat:disabled,
 button:backdrop:disabled label,
 button:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 notebook > header > tabs > arrow:backdrop:disabled:active, button.sidebar-button:backdrop:disabled:active, button.titlebutton:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, button.sidebar-button:backdrop:disabled:checked, button.titlebutton:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, button.titlebutton:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, button.titlebutton:backdrop:disabled:checked,
@@ -698,10 +698,10 @@ button:backdrop.flat:disabled:active,
 button:backdrop.flat:disabled:checked,
 button:backdrop:disabled:active,
 button:backdrop:disabled:checked {
-  border-color: #b3b3b3;
-  background-color: #eeeeee;
+  border-color: #17181c;
+  background-color: #292b32;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 notebook > header > tabs > arrow:backdrop:disabled:active label, button.sidebar-button:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.sidebar-button:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label, notebook > header > tabs > arrow:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label,
@@ -709,7 +709,7 @@ button:backdrop.flat:disabled:active label,
 button:backdrop.flat:disabled:checked label,
 button:backdrop:disabled:active label,
 button:backdrop:disabled:checked label {
-  color: silver;
+  color: #515462;
 }
 
 notebook > header > tabs > arrow:backdrop, button.sidebar-button:backdrop, button.titlebutton:backdrop, notebook > header > tabs > arrow:disabled, button.sidebar-button:disabled, button.titlebutton:disabled, notebook > header > tabs > arrow:backdrop:disabled, button.sidebar-button:backdrop:disabled, button.titlebutton:backdrop:disabled,
@@ -724,27 +724,27 @@ button.flat:backdrop:disabled {
 
 notebook > header > tabs > arrow:disabled, button.titlebutton:disabled,
 button:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 notebook > header > tabs > arrow:disabled label, button.titlebutton:disabled label, notebook > header > tabs > arrow:disabled, button.titlebutton:disabled,
 button:disabled label,
 button:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 notebook > header > tabs > arrow:disabled:active, button.titlebutton:disabled:active, notebook > header > tabs > arrow:disabled:checked, button.titlebutton:disabled:checked,
 button:disabled:active,
 button:disabled:checked {
-  border-color: #b3b3b3;
-  background-color: #eeeeee;
+  border-color: #17181c;
+  background-color: #292b32;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 notebook > header > tabs > arrow:disabled:active label, button.titlebutton:disabled:active label, notebook > header > tabs > arrow:disabled:active, button.titlebutton:disabled:active, notebook > header > tabs > arrow:disabled:checked label, button.titlebutton:disabled:checked label, notebook > header > tabs > arrow:disabled:checked, button.titlebutton:disabled:checked,
@@ -752,7 +752,7 @@ button:disabled:active label,
 button:disabled:active,
 button:disabled:checked label,
 button:disabled:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 notebook > header > tabs > arrow.image-button, button.image-button.titlebutton,
@@ -782,34 +782,34 @@ button:drop(active) {
 
 row:selected
 button {
-  border-color: #b3b3b3;
+  border-color: #17181c;
 }
 
 row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled), row:selected
 button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
-  color: #282828;
+  color: #eeeeee;
   border-color: transparent;
 }
 
 row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled):backdrop, row:selected
 button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .xfce4-panel.background menu .linked button,
 button.osd {
   min-width: 20px;
   min-height: 28px;
-  color: #282828;
+  color: #eeeeee;
   border-radius: 3px;
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  border: 1px solid #17181c;
 }
 
 .xfce4-panel.background menu .linked button.image-button,
@@ -819,37 +819,37 @@ button.osd.image-button {
 
 .xfce4-panel.background menu .linked button:hover,
 button.osd:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  border: 1px solid #17181c;
 }
 
 .xfce4-panel.background menu .linked button:active, .xfce4-panel.background menu .linked button:checked,
 button.osd:active,
 button.osd:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid #17181c;
 }
 
 .xfce4-panel.background menu .linked button:disabled:backdrop, .xfce4-panel.background menu .linked button:disabled,
 button.osd:disabled:backdrop,
 button.osd:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
+  border: 1px solid #17181c;
 }
 
 .xfce4-panel.background menu .linked button:disabled:backdrop label, .xfce4-panel.background menu .linked button:disabled:backdrop, .xfce4-panel.background menu .linked button:disabled label, .xfce4-panel.background menu .linked button:disabled,
@@ -857,44 +857,44 @@ button.osd:disabled:backdrop label,
 button.osd:disabled:backdrop,
 button.osd:disabled label,
 button.osd:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .xfce4-panel.background menu .linked button:backdrop,
 button.osd:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #3c3e49, #3a3c46, #33353e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  border: 1px solid #17181c;
 }
 
 .xfce4-panel.background menu .linked button:backdrop label, .xfce4-panel.background menu .linked button:backdrop,
 button.osd:backdrop label,
 button.osd:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .csd popover.background.touch-selection button, .csd popover.background.magnifier button, popover.background.touch-selection button, popover.background.magnifier button, .app-notification button,
 .app-notification.frame button,
 .osd
 button {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
 popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .app-notification button:hover,
 .osd
 button:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:active, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .app-notification button:checked,
@@ -902,11 +902,11 @@ popover.background.touch-selection button:active, popover.background.magnifier b
 button:active,
 .osd
 button:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -920,9 +920,9 @@ button:active,
 button:checked:backdrop,
 .osd
 button:checked {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #292b32, #292b32);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 popover.background.touch-selection button:active:backdrop label, popover.background.magnifier button:active:backdrop label, .app-notification button:active:backdrop label, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active:backdrop, popover.background.touch-selection button:active label, popover.background.magnifier button:active label, .app-notification button:active label, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:active, popover.background.touch-selection button:checked:backdrop label, popover.background.magnifier button:checked:backdrop label, .app-notification button:checked:backdrop label, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked label, popover.background.magnifier button:checked label, .app-notification button:checked label, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .app-notification button:checked,
@@ -942,18 +942,18 @@ button:checked:backdrop,
 button:checked label,
 .osd
 button:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .app-notification button:disabled,
 .osd
 button:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 popover.background.touch-selection button:disabled label, popover.background.magnifier button:disabled label, .app-notification button:disabled label, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .app-notification button:disabled,
@@ -961,7 +961,7 @@ popover.background.touch-selection button:disabled label, popover.background.mag
 button:disabled label,
 .osd
 button:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .app-notification button:disabled,
@@ -969,12 +969,12 @@ popover.background.touch-selection button:disabled:backdrop, popover.background.
 button:disabled:backdrop,
 .osd
 button:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
+  border-color: #17181c;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 popover.background.touch-selection button:disabled:backdrop label, popover.background.magnifier button:disabled:backdrop label, .app-notification button:disabled:backdrop label, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled label, popover.background.magnifier button:disabled label, .app-notification button:disabled label, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .app-notification button:disabled,
@@ -986,15 +986,15 @@ button:disabled:backdrop,
 button:disabled label,
 .osd
 button:disabled {
-  color: silver;
+  color: #515462;
 }
 
 popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop, .app-notification button:backdrop,
 .osd
 button:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #3c3e49, #3a3c46, #33353e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 popover.background.touch-selection button:backdrop label, popover.background.magnifier button:backdrop label, .app-notification button:backdrop label, popover.background.touch-selection button:backdrop, popover.background.magnifier button:backdrop, .app-notification button:backdrop,
@@ -1002,7 +1002,7 @@ popover.background.touch-selection button:backdrop label, popover.background.mag
 button:backdrop label,
 .osd
 button:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 popover.background.touch-selection button.flat, popover.background.magnifier button.flat, .app-notification button.flat,
@@ -1017,22 +1017,22 @@ button.flat {
 popover.background.touch-selection button.flat:hover, popover.background.magnifier button.flat:hover, .app-notification button.flat:hover,
 .osd
 button.flat:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .app-notification button.flat:disabled,
 .osd
 button.flat:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 popover.background.touch-selection button.flat:disabled label, popover.background.magnifier button.flat:disabled label, .app-notification button.flat:disabled label, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .app-notification button.flat:disabled,
@@ -1040,7 +1040,7 @@ popover.background.touch-selection button.flat:disabled label, popover.backgroun
 button.flat:disabled label,
 .osd
 button.flat:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 popover.background.touch-selection button.flat:backdrop, popover.background.magnifier button.flat:backdrop, .app-notification button.flat:backdrop,
@@ -1057,11 +1057,11 @@ popover.background.touch-selection button.flat:active, popover.background.magnif
 button.flat:active,
 .osd
 button.flat:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -1076,10 +1076,10 @@ button.suggested-action {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #3f8ee7, #1c79e1);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-  border-color: #1457a2;
+  border-color: #061a30;
 }
 
 .lightdm-gtk-greeter #login_window button.flat#login_button, .lightdm-gtk-greeter #login_window button.flat#restart_button,
@@ -1105,10 +1105,10 @@ button.suggested-action:hover {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #5a9eeb, #2d84e5);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
-  border-color: #1457a2;
+  border-color: #061a30;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:active, .lightdm-gtk-greeter #login_window button#restart_button:active,
@@ -1126,10 +1126,10 @@ button.suggested-action:checked {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #247ee4, #247ee4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
-  border-color: #1457a2;
+  border-color: #061a30;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window button#restart_button:backdrop,
@@ -1143,10 +1143,10 @@ button.suggested-action:checked {
 .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop,
 button.suggested-action:backdrop,
 button.suggested-action.flat:backdrop {
-  border-color: #3689e6;
-  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   border-color: #1457a2;
+  background-image: linear-gradient(to bottom, #4894e8, #247ee4);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  border-color: #061a30;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop label, .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window button#restart_button:backdrop,
@@ -1186,10 +1186,10 @@ button.suggested-action:backdrop:active,
 button.suggested-action:backdrop:checked,
 button.suggested-action.flat:backdrop:active,
 button.suggested-action.flat:backdrop:checked {
+  border-color: #061a30;
   border-color: #1457a2;
-  border-color: #2f85e4;
   background-image: linear-gradient(to bottom, #2d84e5, #2d84e5);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:active, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:active,
@@ -1217,7 +1217,7 @@ button.suggested-action.flat:backdrop:active label,
 button.suggested-action.flat:backdrop:active,
 button.suggested-action.flat:backdrop:checked label,
 button.suggested-action.flat:backdrop:checked {
-  color: #d5e7fa;
+  color: #d5e3f2;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
@@ -1231,12 +1231,12 @@ button.suggested-action.flat:backdrop:checked {
 .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled,
 button.suggested-action:backdrop:disabled,
 button.suggested-action.flat:backdrop:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
+  border-color: #17181c;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled,
@@ -1252,7 +1252,7 @@ button.suggested-action:backdrop:disabled label,
 button.suggested-action:backdrop:disabled,
 button.suggested-action.flat:backdrop:disabled label,
 button.suggested-action.flat:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active,
@@ -1277,10 +1277,10 @@ button.suggested-action:backdrop:disabled:checked,
 button.suggested-action.flat:backdrop:disabled:active,
 button.suggested-action.flat:backdrop:disabled:checked {
   border-color: #1457a2;
-  background-color: #eeeeee;
+  background-color: #292b32;
   background-image: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
-  border-color: #1457a2;
+  border-color: #061a30;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#restart_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#login_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#restart_button:backdrop:disabled:checked label,
@@ -1288,7 +1288,7 @@ button.suggested-action:backdrop:disabled:active label,
 button.suggested-action:backdrop:disabled:checked label,
 button.suggested-action.flat:backdrop:disabled:active label,
 button.suggested-action.flat:backdrop:disabled:checked label {
-  color: #78b0ee;
+  color: #78a3d5;
 }
 
 .lightdm-gtk-greeter #login_window button.flat#login_button:backdrop, .lightdm-gtk-greeter #login_window button.flat#restart_button:backdrop,
@@ -1320,12 +1320,12 @@ button.suggested-action.flat:backdrop:disabled {
 .lightdm-gtk-greeter #restart_dialog button#login_button:disabled,
 .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
 button.suggested-action:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled label, .lightdm-gtk-greeter #login_window button#restart_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#login_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window button#restart_button:disabled,
@@ -1335,7 +1335,7 @@ button.suggested-action:disabled {
 .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
 button.suggested-action:disabled label,
 button.suggested-action:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active,
@@ -1352,7 +1352,7 @@ button.suggested-action:disabled:checked {
   border-color: #1457a2;
   background-color: #2d84e5;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled:active label, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#login_button:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:active label, .lightdm-gtk-greeter #login_window button#login_button:disabled:active, .lightdm-gtk-greeter #login_window button#restart_button:disabled:active,
@@ -1368,7 +1368,7 @@ button.suggested-action:disabled:active label,
 button.suggested-action:disabled:active,
 button.suggested-action:disabled:checked label,
 button.suggested-action:disabled:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button, .lightdm-gtk-greeter #login_window .osd button#login_button, .osd .lightdm-gtk-greeter #login_window button#restart_button, .lightdm-gtk-greeter #login_window .osd button#restart_button,
@@ -1377,13 +1377,13 @@ button.suggested-action:disabled:checked {
 .osd .lightdm-gtk-greeter #restart_dialog button#login_button, .lightdm-gtk-greeter #restart_dialog .osd button#login_button,
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button, .osd
 button.suggested-action {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #3f8ee7, #1c79e1);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:hover, .lightdm-gtk-greeter #login_window .osd button#login_button:hover, .osd .lightdm-gtk-greeter #login_window button#restart_button:hover, .lightdm-gtk-greeter #login_window .osd button#restart_button:hover,
@@ -1392,13 +1392,13 @@ button.suggested-action {
 .osd .lightdm-gtk-greeter #restart_dialog button#login_button:hover, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:hover,
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:hover, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:hover, .osd
 button.suggested-action:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #5a9eeb, #2d84e5);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.55451);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.55451);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:active, .lightdm-gtk-greeter #login_window .osd button#login_button:active, .osd .lightdm-gtk-greeter #login_window button#restart_button:active, .lightdm-gtk-greeter #login_window .osd button#restart_button:active,
@@ -1412,11 +1412,11 @@ button.suggested-action:hover {
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:checked, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:checked, .osd
 button.suggested-action:active, .osd
 button.suggested-action:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, #247ee4, #247ee4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -1442,9 +1442,9 @@ button.suggested-action:active:backdrop, .osd
 button.suggested-action:active, .osd
 button.suggested-action:checked:backdrop, .osd
 button.suggested-action:checked {
-  border-color: #2f85e4;
+  border-color: #1457a2;
   background-image: linear-gradient(to bottom, #2d84e5, #2d84e5);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:active:backdrop label, .lightdm-gtk-greeter #login_window .osd button#login_button:active:backdrop label, .osd .lightdm-gtk-greeter #login_window button#restart_button:active:backdrop label, .lightdm-gtk-greeter #login_window .osd button#restart_button:active:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#login_button:active:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:active:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#restart_button:active:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:active:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#login_button:active:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:active:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:active:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:active:backdrop label, .osd .lightdm-gtk-greeter #login_window button#login_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:active:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:active:backdrop,
@@ -1472,7 +1472,7 @@ button.suggested-action:checked:backdrop label, .osd
 button.suggested-action:checked:backdrop, .osd
 button.suggested-action:checked label, .osd
 button.suggested-action:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled,
@@ -1483,10 +1483,10 @@ button.suggested-action:checked {
 button.suggested-action:disabled {
   border-color: #1457a2;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:disabled label, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled label, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled label, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled label, .osd .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:disabled label, .osd .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:disabled label, .osd .lightdm-gtk-greeter #restart_dialog button#login_button:disabled label, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:disabled label, .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled label, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:disabled label, .osd .lightdm-gtk-greeter #login_window button#login_button:disabled, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled,
@@ -1496,7 +1496,7 @@ button.suggested-action:disabled {
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:disabled, .osd
 button.suggested-action:disabled label, .osd
 button.suggested-action:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled:backdrop,
@@ -1511,11 +1511,11 @@ button.suggested-action:disabled {
 button.suggested-action:disabled:backdrop, .osd
 button.suggested-action:disabled {
   border-color: #1457a2;
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:disabled:backdrop label, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled:backdrop label, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#login_button:disabled:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#restart_button:disabled:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#login_button:disabled:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #login_window button#login_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:disabled:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:disabled:backdrop,
@@ -1531,7 +1531,7 @@ button.suggested-action:disabled:backdrop label, .osd
 button.suggested-action:disabled:backdrop, .osd
 button.suggested-action:disabled label, .osd
 button.suggested-action:disabled {
-  color: #4472a5;
+  color: #76a4d9;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:backdrop,
@@ -1540,9 +1540,9 @@ button.suggested-action:disabled {
 .osd .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:backdrop,
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:backdrop, .osd
 button.suggested-action:backdrop {
-  border-color: #3689e6;
+  border-color: #1457a2;
   background-image: linear-gradient(to bottom, #4894e8, #247ee4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#login_button:backdrop label, .lightdm-gtk-greeter #login_window .osd button#login_button:backdrop label, .osd .lightdm-gtk-greeter #login_window button#restart_button:backdrop label, .lightdm-gtk-greeter #login_window .osd button#restart_button:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#login_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#login_button:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#restart_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#restart_button:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#login_button:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#login_button:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:backdrop label, .osd .lightdm-gtk-greeter #login_window button#login_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#login_button:backdrop, .osd .lightdm-gtk-greeter #login_window button#restart_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#restart_button:backdrop,
@@ -1552,7 +1552,7 @@ button.suggested-action:backdrop {
 .osd .lightdm-gtk-greeter #restart_dialog button#restart_button:backdrop, .lightdm-gtk-greeter #restart_dialog .osd button#restart_button:backdrop, .osd
 button.suggested-action:backdrop label, .osd
 button.suggested-action:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button,
@@ -1563,10 +1563,10 @@ button.destructive-action {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #db444b, #cf2830);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  border-color: #931c22;
+  border-color: #280809;
 }
 
 .lightdm-gtk-greeter #login_window button.flat#shutdown_button,
@@ -1588,10 +1588,10 @@ button.destructive-action:hover {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #e05e64, #d8333b);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
   -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
-  border-color: #931c22;
+  border-color: #280809;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:active,
@@ -1605,10 +1605,10 @@ button.destructive-action:checked {
   outline-color: rgba(255, 255, 255, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #d62a33, #d62a33);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
-  border-color: #931c22;
+  border-color: #280809;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop,
@@ -1618,10 +1618,10 @@ button.destructive-action:checked {
 .lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop,
 button.destructive-action:backdrop,
 button.destructive-action.flat:backdrop {
-  border-color: #d93b43;
-  background-image: linear-gradient(to bottom, #dd4c54, #d62a33);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
   border-color: #931c22;
+  background-image: linear-gradient(to bottom, #dd4c54, #d62a33);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  border-color: #280809;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop,
@@ -1649,10 +1649,10 @@ button.destructive-action:backdrop:active,
 button.destructive-action:backdrop:checked,
 button.destructive-action.flat:backdrop:active,
 button.destructive-action.flat:backdrop:checked {
+  border-color: #280809;
   border-color: #931c22;
-  border-color: #d7363d;
   background-image: linear-gradient(to bottom, #d8333b, #d8333b);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:active label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:active label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:active,
@@ -1672,7 +1672,7 @@ button.destructive-action.flat:backdrop:active label,
 button.destructive-action.flat:backdrop:active,
 button.destructive-action.flat:backdrop:checked label,
 button.destructive-action.flat:backdrop:checked {
-  color: #f7d7d8;
+  color: #efd7d8;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
@@ -1682,12 +1682,12 @@ button.destructive-action.flat:backdrop:checked {
 .lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled,
 button.destructive-action:backdrop:disabled,
 button.destructive-action.flat:backdrop:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
+  border-color: #17181c;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled,
@@ -1699,7 +1699,7 @@ button.destructive-action:backdrop:disabled label,
 button.destructive-action:backdrop:disabled,
 button.destructive-action.flat:backdrop:disabled label,
 button.destructive-action.flat:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:active,
@@ -1716,10 +1716,10 @@ button.destructive-action:backdrop:disabled:checked,
 button.destructive-action.flat:backdrop:disabled:active,
 button.destructive-action.flat:backdrop:disabled:checked {
   border-color: #931c22;
-  background-color: #eeeeee;
+  background-color: #292b32;
   background-image: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
-  border-color: #931c22;
+  border-color: #280809;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:active label, .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #shutdown_dialog button.flat#shutdown_button:backdrop:disabled:checked label, .lightdm-gtk-greeter #restart_dialog button.flat#shutdown_button:backdrop:disabled:checked label,
@@ -1727,7 +1727,7 @@ button.destructive-action:backdrop:disabled:active label,
 button.destructive-action:backdrop:disabled:checked label,
 button.destructive-action.flat:backdrop:disabled:active label,
 button.destructive-action.flat:backdrop:disabled:checked label {
-  color: #e57c81;
+  color: #cc7c81;
 }
 
 .lightdm-gtk-greeter #login_window button.flat#shutdown_button:backdrop,
@@ -1751,12 +1751,12 @@ button.destructive-action.flat:backdrop:disabled {
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
 .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled,
 button.destructive-action:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled,
@@ -1764,7 +1764,7 @@ button.destructive-action:disabled {
 .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled,
 button.destructive-action:disabled label,
 button.destructive-action:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active,
@@ -1777,7 +1777,7 @@ button.destructive-action:disabled:checked {
   border-color: #931c22;
   background-color: #d8333b;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active label, .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:active label, .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:active label, .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:active,
@@ -1789,33 +1789,33 @@ button.destructive-action:disabled:active label,
 button.destructive-action:disabled:active,
 button.destructive-action:disabled:checked label,
 button.destructive-action:disabled:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button, .lightdm-gtk-greeter #login_window .osd button#shutdown_button,
 .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button,
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button, .osd
 button.destructive-action {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #db444b, #cf2830);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:hover, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:hover,
 .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:hover, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:hover,
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:hover, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:hover, .osd
 button.destructive-action:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #e05e64, #d8333b);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.565804);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.565804);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:active, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:active,
@@ -1825,11 +1825,11 @@ button.destructive-action:hover {
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:checked, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:checked, .osd
 button.destructive-action:active, .osd
 button.destructive-action:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
   border-color: #931c22;
   background-image: linear-gradient(to bottom, #d62a33, #d62a33);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
@@ -1847,9 +1847,9 @@ button.destructive-action:active:backdrop, .osd
 button.destructive-action:active, .osd
 button.destructive-action:checked:backdrop, .osd
 button.destructive-action:checked {
-  border-color: #d7363d;
+  border-color: #931c22;
   background-image: linear-gradient(to bottom, #d8333b, #d8333b);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:active:backdrop label, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:active:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:active:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:active:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:active:backdrop label, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:active:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:active:backdrop,
@@ -1869,7 +1869,7 @@ button.destructive-action:checked:backdrop label, .osd
 button.destructive-action:checked:backdrop, .osd
 button.destructive-action:checked label, .osd
 button.destructive-action:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled,
@@ -1878,10 +1878,10 @@ button.destructive-action:checked {
 button.destructive-action:disabled {
   border-color: #931c22;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled label, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled label, .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:disabled label, .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled label, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:disabled label, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled,
@@ -1889,7 +1889,7 @@ button.destructive-action:disabled {
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:disabled, .osd
 button.destructive-action:disabled label, .osd
 button.destructive-action:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled:backdrop,
@@ -1900,11 +1900,11 @@ button.destructive-action:disabled {
 button.destructive-action:disabled:backdrop, .osd
 button.destructive-action:disabled {
   border-color: #931c22;
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:backdrop label, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:disabled:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:disabled:backdrop label, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:disabled:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:disabled:backdrop,
@@ -1916,16 +1916,16 @@ button.destructive-action:disabled:backdrop label, .osd
 button.destructive-action:disabled:backdrop, .osd
 button.destructive-action:disabled label, .osd
 button.destructive-action:disabled {
-  color: #9e474b;
+  color: #d0797e;
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:backdrop,
 .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:backdrop,
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:backdrop, .osd
 button.destructive-action:backdrop {
-  border-color: #d93b43;
+  border-color: #931c22;
   background-image: linear-gradient(to bottom, #dd4c54, #d62a33);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
 }
 
 .osd .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop label, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:backdrop label, .osd .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:backdrop label, .lightdm-gtk-greeter #shutdown_dialog .osd button#shutdown_button:backdrop label, .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop label, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:backdrop label, .osd .lightdm-gtk-greeter #login_window button#shutdown_button:backdrop, .lightdm-gtk-greeter #login_window .osd button#shutdown_button:backdrop,
@@ -1933,7 +1933,7 @@ button.destructive-action:backdrop {
 .osd .lightdm-gtk-greeter #restart_dialog button#shutdown_button:backdrop, .lightdm-gtk-greeter #restart_dialog .osd button#shutdown_button:backdrop, .osd
 button.destructive-action:backdrop label, .osd
 button.destructive-action:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .stack-switcher >
@@ -2016,31 +2016,31 @@ button.circular label {
 
 
 button.circular:not(.flat):not(:checked):not(:active):not(:disabled):not(:backdrop) {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
 
 button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 .stack-switcher > button.needs-attention > label,
 .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3689e6), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.769231)), to(transparent));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#7ab1ee), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.45, to(rgba(0, 0, 0, 0.84)), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
-  background-position: right 3px, right 4px;
+  background-position: right 3px, right 2px;
 }
 
 .stack-switcher > button.needs-attention > label:backdrop,
@@ -2050,103 +2050,103 @@ button.circular:hover:not(:checked):not(:active):not(:disabled):not(:backdrop) {
 
 .stack-switcher > button.needs-attention > label:dir(rtl),
 .stack-switcher > button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > label:dir(rtl) {
-  background-position: left 3px, left 4px;
+  background-position: left 3px, left 2px;
 }
 
 .inline-toolbar toolbutton > button {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #e9e9e9, #e6e6e6, #dfdfdf);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #40434e, #3e414c, #373a43);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
 .inline-toolbar toolbutton > button:hover {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #f3f3f3, #f0f0f0, #e9e9e9);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #4a4d5a, #474a57, #40434e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 .inline-toolbar toolbutton > button:active, .inline-toolbar toolbutton > button:checked {
-  color: #282828;
-  outline-color: rgba(40, 40, 40, 0.3);
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #d4d4d4);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  color: #eeeeee;
+  outline-color: rgba(238, 238, 238, 0.3);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #25262d);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
 
 .inline-toolbar toolbutton > button:disabled {
-  border-color: #b3b3b3;
+  border-color: #17181c;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.04));
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .inline-toolbar toolbutton > button:disabled label, .inline-toolbar toolbutton > button:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .inline-toolbar toolbutton > button:disabled:active, .inline-toolbar toolbutton > button:disabled:checked {
-  border-color: #b3b3b3;
-  background-color: #eeeeee;
+  border-color: #17181c;
+  background-color: #292b32;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .inline-toolbar toolbutton > button:disabled:active label, .inline-toolbar toolbutton > button:disabled:active, .inline-toolbar toolbutton > button:disabled:checked label, .inline-toolbar toolbutton > button:disabled:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .inline-toolbar toolbutton > button:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #eeeeee, #ebebeb, #e4e4e4);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.45), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #3c3e49, #3a3c46, #33353e);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
 
 .inline-toolbar toolbutton > button:backdrop label, .inline-toolbar toolbutton > button:backdrop {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #dad9d9, #dad9d9);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.15);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #292b32, #292b32);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .inline-toolbar toolbutton > button:backdrop:active label, .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked label, .inline-toolbar toolbutton > button:backdrop:checked {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled {
-  border-color: #b3b3b3;
-  background-color: #f3f3f3;
+  border-color: #17181c;
+  background-color: #2E3038;
   background-image: linear-gradient(to bottom, transparent, transparent, rgba(0, 0, 0, 0.02));
   text-shadow: none;
   -gtk-icon-shadow: none;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled label, .inline-toolbar toolbutton > button:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled:active, .inline-toolbar toolbutton > button:backdrop:disabled:checked {
-  border-color: #b3b3b3;
-  background-color: #eeeeee;
+  border-color: #17181c;
+  background-color: #292b32;
   background-image: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .inline-toolbar toolbutton > button:backdrop:disabled:active label, .inline-toolbar toolbutton > button:backdrop:disabled:checked label {
-  color: silver;
+  color: #515462;
 }
 
 toolbar.inline-toolbar toolbutton > button.flat,
@@ -2231,7 +2231,7 @@ modelbutton.flat,
 
 modelbutton.flat:hover,
 .menuitem.button.flat:hover {
-  background-color: #dfdfdf;
+  background-color: #1c1d22;
 }
 
 modelbutton.flat arrow {
@@ -2254,20 +2254,8 @@ button.color {
   padding: 4px;
 }
 
-button.color colorswatch:only-child {
-  box-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-}
-
 button.color colorswatch:only-child, button.color colorswatch:only-child overlay {
   border-radius: 0;
-}
-
-.osd button.color colorswatch:only-child {
-  box-shadow: none;
-}
-
-.osd button.color:disabled colorswatch:only-child, .osd button.color:backdrop colorswatch:only-child, .osd button.color:active colorswatch:only-child, .osd button.color:checked colorswatch:only-child, button.color:disabled colorswatch:only-child, button.color:backdrop colorswatch:only-child, button.color:active colorswatch:only-child, button.color:checked colorswatch:only-child {
-  box-shadow: none;
 }
 
 /*********
@@ -2278,14 +2266,14 @@ button:visited > label,
 *:link,
 button:link,
 button:visited {
-  color: #1a6fcf;
+  color: #91bef1;
 }
 
 button:link > label:visited,
 button:visited > label:visited,
 *:link:visited,
 button:visited {
-  color: #1457a2;
+  color: #63a4ec;
 }
 
 *:selected button:link > label:visited,
@@ -2299,7 +2287,7 @@ button:visited > label:hover,
 *:link:hover,
 button:hover:link,
 button:hover:visited {
-  color: #3689e6;
+  color: #bed9f7;
 }
 
 *:selected button:link > label:hover,
@@ -2313,7 +2301,7 @@ button:visited > label:active,
 *:link:active,
 button:active:link,
 button:active:visited {
-  color: #1a6fcf;
+  color: #91bef1;
 }
 
 *:selected button:link > label:active,
@@ -2397,10 +2385,10 @@ spinbutton:not(.vertical) button, window.budgie-popover:not(.csd).night-light-in
   margin: 0;
   padding-bottom: 0;
   padding-top: 0;
-  color: #3d3d3d;
+  color: #dbdbdc;
   background-image: none;
   border-style: none none none solid;
-  border-color: rgba(179, 179, 179, 0.3);
+  border-color: rgba(23, 24, 28, 0.3);
   border-radius: 0;
   box-shadow: none;
 }
@@ -2410,12 +2398,12 @@ spinbutton:not(.vertical) button:dir(rtl), window.budgie-popover:not(.csd).night
 }
 
 spinbutton:not(.vertical) button:hover, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:hover, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) button:hover {
-  color: #282828;
-  background-color: rgba(40, 40, 40, 0.05);
+  color: #eeeeee;
+  background-color: rgba(238, 238, 238, 0.05);
 }
 
 spinbutton:not(.vertical) button:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:disabled, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) button:disabled {
-  color: rgba(142, 142, 142, 0.3);
+  color: rgba(142, 143, 147, 0.3);
   background-color: transparent;
 }
 
@@ -2425,14 +2413,14 @@ spinbutton:not(.vertical) button:active, window.budgie-popover:not(.csd).night-l
 }
 
 spinbutton:not(.vertical) button:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) button:backdrop, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) button:backdrop {
-  color: #989898;
+  color: #85868b;
   background-color: transparent;
-  border-color: rgba(192, 192, 192, 0.3);
+  border-color: rgba(28, 29, 34, 0.3);
   transition: 200ms ease-out;
 }
 
 spinbutton:not(.vertical) button:backdrop:disabled {
-  color: rgba(192, 192, 192, 0.3);
+  color: rgba(81, 84, 98, 0.3);
   background-color: transparent;
   border-style: none none none solid;
 }
@@ -2450,11 +2438,11 @@ spinbutton:not(.vertical) button:dir(rtl):first-child, window.budgie-popover:not
 }
 
 spinbutton.vertical:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:disabled, window.budgie-popover:not(.csd).workspace-popover spinbutton.vertical:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 spinbutton.vertical:backdrop:disabled, window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:backdrop:disabled, window.budgie-popover:not(.csd).workspace-popover spinbutton.vertical:backdrop:disabled {
-  color: silver;
+  color: #515462;
 }
 
 spinbutton.vertical:drop(active), window.budgie-popover:not(.csd).night-light-indicator spinbutton.vertical:drop(active), window.budgie-popover:not(.csd).workspace-popover spinbutton.vertical:drop(active) {
@@ -2516,29 +2504,29 @@ toolbar, .inline-toolbar, searchbar > revealer > box,
 .location-bar, .nemo-window grid.vertical > widget {
   -GtkWidget-window-dragging: true;
   padding: 4px;
-  background-color: #dad9d9;
+  background-color: #292b32;
   border-bottom-width: 1px;
   border-style: solid;
-  border-color: #b3b3b3;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-color: #17181c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 toolbar:backdrop, .inline-toolbar:backdrop, searchbar > revealer > box:backdrop,
 .location-bar:backdrop, .nemo-window grid.vertical > widget:backdrop {
-  background-color: #e9e9e9;
-  border-color: silver;
+  background-color: #2E3038;
+  border-color: #1c1d22;
 }
 
 toolbar.vertical, .vertical.inline-toolbar, searchbar > revealer > box.vertical,
 .vertical.location-bar, .nemo-window grid.vertical > widget.vertical {
   border-bottom-width: 0;
-  border-color: #b3b3b3;
+  border-color: #17181c;
   border-style: solid;
 }
 
 toolbar.vertical:backdrop, .vertical.inline-toolbar:backdrop, searchbar > revealer > box.vertical:backdrop,
 .vertical.location-bar:backdrop, .nemo-window grid.vertical > widget.vertical:backdrop {
-  border-color: silver;
+  border-color: #1c1d22;
 }
 
 toolbar.vertical:dir(ltr), .vertical.inline-toolbar:dir(ltr), searchbar > revealer > box.vertical:dir(ltr),
@@ -2561,9 +2549,9 @@ toolbar {
 
 toolbar.osd {
   padding: 13px;
-  border: 1px solid rgba(0, 0, 0, 0.44);
+  border: 1px solid #17181c;
   border-radius: 5px;
-  background-color: #f3f3f3;
+  background-color: #2E3038;
   box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -2605,14 +2593,14 @@ searchbar > revealer > box {
 .inline-toolbar, searchbar > revealer > box,
 .location-bar {
   border-style: solid;
-  border-color: #b3b3b3;
-  background-image: linear-gradient(to bottom, #d4d4d4, #dfdfdf);
+  border-color: #17181c;
+  background-image: linear-gradient(to bottom, #25262d, #292b32);
 }
 
 .inline-toolbar:backdrop, searchbar > revealer > box:backdrop,
 .location-bar:backdrop {
-  border-color: silver;
-  background-image: linear-gradient(to bottom, #dad9d9, #e4e4e4);
+  border-color: #1c1d22;
+  background-image: linear-gradient(to bottom, #292b32, #2E3038);
   box-shadow: none;
   transition: 200ms ease-out;
 }
@@ -3205,13 +3193,13 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: #dad9d9;
+  background-color: #292b32;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.23);
 }
 
 menubar:backdrop,
 .menubar:backdrop {
-  background-color: #e9e9e9;
+  background-color: #2E3038;
 }
 
 menubar > menuitem,
@@ -3223,12 +3211,12 @@ menubar > menuitem,
 menubar > menuitem:hover,
 .menubar > menuitem:hover {
   box-shadow: inset 0 -3px #3689e6;
-  color: #1a6fcf;
+  color: #91bef1;
 }
 
 menubar > menuitem:disabled,
 .menubar > menuitem:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
   box-shadow: none;
 }
 
@@ -3241,8 +3229,8 @@ menu,
 .context-menu {
   margin: 4px;
   padding: 6px 0px;
-  background-color: #f8f8f8;
-  border: 1px solid #a4a4a4;
+  background-color: #30323c;
+  border: 1px solid #090a0b;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
 }
 
@@ -3256,7 +3244,7 @@ menu,
 menu:backdrop,
 .menu:backdrop,
 .context-menu:backdrop {
-  background-color: whitesmoke;
+  background-color: #31343e;
 }
 
 menu separator,
@@ -3284,13 +3272,13 @@ menu menuitem:hover,
 menu menuitem:disabled,
 .menu menuitem:disabled,
 .context-menu menuitem:disabled {
-  color: #8e8e8e;
+  color: #8e8f93;
 }
 
 menu menuitem:disabled:backdrop,
 .menu menuitem:disabled:backdrop,
 .context-menu menuitem:disabled:backdrop {
-  color: silver;
+  color: #515462;
 }
 
 menu menuitem:backdrop, menu menuitem:backdrop:hover,
@@ -3298,7 +3286,7 @@ menu menuitem:backdrop, menu menuitem:backdrop:hover,
 .menu menuitem:backdrop:hover,
 .context-menu menuitem:backdrop,
 .context-menu menuitem:backdrop:hover {
-  color: #8e8e8e;
+  color: #8e8f93;
   background-color: transparent;
 }
 
@@ -3341,7 +3329,7 @@ menu > arrow,
   min-height: 16px;
   min-width: 16px;
   padding: 4px;
-  background-color: #f8f8f8;
+  background-color: #30323c;
   border-radius: 0;
 }
 
@@ -3349,7 +3337,7 @@ menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -6px;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #43464f;
   border-radius: 3px 3px 0 0;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
@@ -3358,7 +3346,7 @@ menu > arrow.bottom,
 .menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -6px;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid #43464f;
   border-radius: 0 0 3px 3px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
@@ -3366,13 +3354,13 @@ menu > arrow.bottom,
 menu > arrow:hover,
 .menu > arrow:hover,
 .context-menu > arrow:hover {
-  background-color: #e3e3e3;
+  background-color: #43464f;
 }
 
 menu > arrow:backdrop,
 .menu > arrow:backdrop,
 .context-menu > arrow:backdrop {
-  background-color: whitesmoke;
+  background-color: #31343e;
 }
 
 menu > arrow:disabled,
@@ -6737,12 +6725,12 @@ colorchooser .popover.osd {
 decoration {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(23, 24, 28, 0.9);
   margin: 10px;
 }
 
 decoration:backdrop {
-  box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(23, 24, 28, 0.9);
   transition: 200ms ease-out;
 }
 
@@ -6761,12 +6749,12 @@ decoration:backdrop {
 }
 
 .ssd decoration {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 0 0 1px rgba(23, 24, 28, 0.9);
 }
 
 .csd.popup decoration {
   border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(23, 24, 28, 0.8);
 }
 
 tooltip.csd decoration {
@@ -6776,20 +6764,20 @@ tooltip.csd decoration {
 
 messagedialog.csd decoration {
   border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(23, 24, 28, 0.8);
 }
 
 .solid-csd decoration {
   margin: 0;
   padding: 4px;
-  background-color: #b3b3b3;
-  border: solid 1px #b3b3b3;
+  background-color: #17181c;
+  border: solid 1px #17181c;
   border-radius: 0;
-  box-shadow: inset 0 0 0 3px #eeeeee, inset 0 1px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 3px #292b32, inset 0 1px rgba(238, 238, 238, 0.07);
 }
 
 .solid-csd decoration:backdrop {
-  box-shadow: inset 0 0 0 3px #f3f3f3, inset 0 1px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 3px #2E3038, inset 0 1px rgba(238, 238, 238, 0.07);
 }
 
 button.titlebutton {
@@ -6799,8 +6787,8 @@ button.titlebutton {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.769231);
-  -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.84);
+  -gtk-icon-shadow: 0 1px rgba(0, 0, 0, 0.84);
 }
 
 button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
@@ -6814,22 +6802,22 @@ button.titlebutton.close:backdrop, button.titlebutton.close:backdrop:active, but
 }
 
 button.titlebutton.close {
-  background-image: -gtk-scaled(url("assets/window-close.png"), url("assets/window-close@2.png"));
+  background-image: -gtk-scaled(url("assets/window-close-dark.png"), url("assets/window-close-dark@2.png"));
 }
 
 button.titlebutton.close:hover {
-  background-color: #eeeeee;
+  background-color: #454854;
   transition: none;
 }
 
 button.titlebutton.close:active, button.titlebutton.close:backdrop:active {
-  background-color: #d4d4d4;
-  background-image: -gtk-scaled(url("assets/window-close-active.png"), url("assets/window-close-active@2.png"));
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-close-active-dark.png"), url("assets/window-close-active-dark@2.png"));
   transition: none;
 }
 
 button.titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url("assets/window-close-backdrop.png"), url("assets/window-close-backdrop@2.png"));
+  background-image: -gtk-scaled(url("assets/window-close-backdrop-dark.png"), url("assets/window-close-backdrop-dark@2.png"));
 }
 
 button.titlebutton.close:backdrop:hover, button.titlebutton.close:backdrop:active {
@@ -6837,22 +6825,22 @@ button.titlebutton.close:backdrop:hover, button.titlebutton.close:backdrop:activ
 }
 
 button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/window-maximize.png"), url("assets/window-maximize@2.png"));
+  background-image: -gtk-scaled(url("assets/window-maximize-dark.png"), url("assets/window-maximize-dark@2.png"));
 }
 
 button.titlebutton.maximize:hover {
-  background-color: #eeeeee;
+  background-color: #454854;
   transition: none;
 }
 
 button.titlebutton.maximize:active, button.titlebutton.maximize:backdrop:active {
-  background-color: #d4d4d4;
-  background-image: -gtk-scaled(url("assets/window-maximize-active.png"), url("assets/window-maximize-active@2.png"));
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-maximize-active-dark.png"), url("assets/window-maximize-active-dark@2.png"));
   transition: none;
 }
 
 button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-maximize-backdrop.png"), url("assets/window-maximize-backdrop@2.png"));
+  background-image: -gtk-scaled(url("assets/window-maximize-backdrop-dark.png"), url("assets/window-maximize-backdrop-dark@2.png"));
 }
 
 button.titlebutton.maximize:backdrop:hover, button.titlebutton.maximize:backdrop:active {
@@ -6860,22 +6848,22 @@ button.titlebutton.maximize:backdrop:hover, button.titlebutton.maximize:backdrop
 }
 
 button.titlebutton.minimize {
-  background-image: -gtk-scaled(url("assets/window-minimize.png"), url("assets/window-minimize@2.png"));
+  background-image: -gtk-scaled(url("assets/window-minimize-dark.png"), url("assets/window-minimize-dark@2.png"));
 }
 
 button.titlebutton.minimize:hover {
-  background-color: #eeeeee;
+  background-color: #454854;
   transition: none;
 }
 
 button.titlebutton.minimize:active, button.titlebutton.minimize:backdrop:active {
-  background-color: #d4d4d4;
-  background-image: -gtk-scaled(url("assets/window-minimize-active.png"), url("assets/window-minimize-active@2.png"));
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-minimize-active-dark.png"), url("assets/window-minimize-active-dark@2.png"));
   transition: none;
 }
 
 button.titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-minimize-backdrop.png"), url("assets/window-minimize-backdrop@2.png"));
+  background-image: -gtk-scaled(url("assets/window-minimize-backdrop-dark.png"), url("assets/window-minimize-backdrop-dark@2.png"));
 }
 
 button.titlebutton.minimize:backdrop:hover, button.titlebutton.minimize:backdrop:active {
@@ -6883,22 +6871,22 @@ button.titlebutton.minimize:backdrop:hover, button.titlebutton.minimize:backdrop
 }
 
 .maximized button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/window-restore.png"), url("assets/window-restore@2.png"));
+  background-image: -gtk-scaled(url("assets/window-restore-dark.png"), url("assets/window-restore-dark@2.png"));
 }
 
 .maximized button.titlebutton.maximize:hover {
-  background-color: #eeeeee;
+  background-color: #454854;
   transition: none;
 }
 
 .maximized button.titlebutton.maximize:active {
-  background-color: #d4d4d4;
-  background-image: -gtk-scaled(url("assets/window-restore-active.png"), url("assets/window-restore-active@2.png"));
+  background-color: #25262d;
+  background-image: -gtk-scaled(url("assets/window-restore-active-dark.png"), url("assets/window-restore-active-dark@2.png"));
   transition: none;
 }
 
 .maximized button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/window-restore-backdrop.png"), url("assets/window-restore-backdrop@2.png"));
+  background-image: -gtk-scaled(url("assets/window-restore-backdrop-dark.png"), url("assets/window-restore-backdrop-dark@2.png"));
 }
 
 .maximized button.titlebutton.maximize:backdrop:hover, .maximized button.titlebutton.maximize:backdrop:active {
@@ -6938,7 +6926,7 @@ textview text:backdrop:selected, iconview text selection:backdrop:focus, .view t
 textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).night-light-indicator spinbutton:not(.vertical) selection:backdrop, window.budgie-popover:not(.csd).workspace-popover spinbutton:not(.vertical) selection:backdrop,
 entry selection:backdrop, modelbutton.flat:backdrop:selected,
 .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:selected {
-  color: whitesmoke;
+  color: #d6d7d9;
 }
 
 row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected, .view text:backdrop:disabled:selected, iconview text:backdrop:disabled:selected,
@@ -6946,7 +6934,7 @@ textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled
 textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, spinbutton:not(.vertical) selection:backdrop:disabled,
 entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected,
 .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:disabled:selected {
-  color: #adadad;
+  color: #a4a4a5;
 }
 
 .monospace {
