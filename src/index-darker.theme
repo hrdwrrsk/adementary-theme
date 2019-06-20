@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=Adementary
+Type=X-GNOME-Metatheme
+Comment=Adementary is a GTK theme based on Adwaita, blended with elementary OS visual design.
+Encoding=UTF-8
+GtkTheme=Adementary-darker
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
