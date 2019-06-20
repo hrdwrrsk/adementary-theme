@@ -1,8 +1,9 @@
 Adementary
 ======
-This fork is purely for adding a "darker" version of standard adementary-theme.
+This fork is purely for adding a "darker" version to standard adementary-theme.
 -------------------
 ![Screenshot](https://github.com/SaucySauce/adementary-darker-theme/blob/master/example.png?raw=true)
+Screenshot of gtk.css changes, no other file. Deprecated.
 -------------------
 This theme has come with **3 variants**
 
@@ -11,9 +12,11 @@ This theme has come with **3 variants**
 **Darker** | Light variant with dark accents from Dark variant and dark panel
 **Dark** | Dark variant
 **Light** | Light variant with light panel (and GNOME shell/Cinnamon theme)
+**Standard** | Light variant with dark panel (old gtk.css file is still in so it's an weird mixed breed of original code with an attempt at darkening it, in the future it'll be back to original code only)
 
 # Supported desktop environments
-- Budgie
+- Every DE that OC supports
+- (development of Darker mode in Budgie therefore it might be more optimized for said DE)
 
 # Installation
 ### Dependencies
