@@ -7,7 +7,7 @@ SRC_DIR="$REPO_DIR/src"
 
 DEST_DIR="/usr/share/themes"
 THEME_NAME="Adementary"
-COLOR_VARIANTS=('' '-dark' '-light')
+COLOR_VARIANTS=('' '-dark' '-light' '-darker')
 
 GTK_VERSIONS=('3.22' '3.24')
 GS_VERSIONS=('3.20' '3.22' '3.24' '3.26' '3.28' '3.30' '3.32')
