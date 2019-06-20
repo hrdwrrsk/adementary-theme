@@ -58,7 +58,6 @@
 		}
 
 		&:hover {
-			box-shadow: inset 0 -3px if($light-panel == 'false', $dark_fg_color, $fg_color);
 			background-color: transparent;
 			border: none;
 			background-image: none;
@@ -67,7 +66,6 @@
 
 		&:active, &:checked {
 			&, &:backdrop {
-				box-shadow: inset 0 -3px $accent_primary;
 				background-color: transparent;
 				background-image: none;
 				color: if($light-panel == 'false', $dark_fg_color, $fg_color);
@@ -108,11 +106,16 @@
 	// battery percent label
 	box.battery-icon {
 		&.horizontal > label.percent-label {
+			&, &:backdrop { color: if($light-panel == 'true', $fg_color, $dark_fg_color); } // untested
+
+			font-size: 75%;
 			&:dir(ltr) { margin: 0 -6px 0 3px; }
 			&:dir(rtl) { margin: 0 3px 0 -6px; }
 		}
 
 		&.vertical > label.percent-label {
+			&, &:backdrop { color: if($light-panel == 'true', $fg_color, $dark_fg_color); } // untested
+
 			font-size: 75%;
 			&:dir(ltr) { margin-right: -2px; }
 			&:dir(rtl) { margin-left: -2px; }
@@ -131,13 +134,23 @@
 	}
 }
 
-@each $panel_pos, $border_pos in (top, bottom),
-																 (bottom, top),
-																 (left, right),
-																 (right, left) {
+@each $panel_pos, $border_pos, $indicator_pos in (top, bottom, 0 3px),
+																 								 (bottom, top, 0 -3px),
+																 								 (left, right, 3px 0),
+																 								 (right, left, -3px 0) {
 	.#{$panel_pos} .budgie-panel {
 		//border-#{$border_pos}: 1px solid if($light-panel == 'true', rgba(black, 0.4), rgba(black, 0.22));
 		margin-#{$border_pos}: 1px;
+
+		button {
+			&:hover {
+				box-shadow: inset #{$indicator_pos} if($light-panel == 'false', $dark_fg_color, $fg_color);
+			}
+
+			&:active, &:checked {
+				box-shadow: inset #{$indicator_pos} $accent_primary;
+			}
+		}
 	}
 }
 
@@ -839,52 +852,3 @@ calendar.raven-calendar {
 		&, &:backdrop { color: if($light-panel == 'false', $dark_fg_color, $fg_color); }
 	}
 }
-
-
-// pixel-saver(?) applet
-.budgie-panel box.titlebar {
-  border-radius: 0;
-  background: unset;
-
-  > widget > label { color: $selected_fg_color; } // titles
-
-  > button.image-button.titlebutton {
-    min-width: $icon_size;
-    min-height: $icon_size;
-    padding: 0;
-    background: none;
-    color: $inverted_fg_color;
-
-    image {
-      border-radius: 100px;
-      background-size: $icon_size;
-      background-position: center center;
-      background-repeat: no-repeat;
-      transition-duration: 0s;
-    }
-
-    &:hover,
-    &:active {
-      background: none;
-      color: $selected_fg_color;
-      animation: none;
-
-      image { -gtk-icon-shadow: none; }
-    }
-
-    &.close {
-      &:hover image { background-image: image($destructive_color); }
-
-      &:active image { background-image: image($selected_bg_color); }
-    }
-
-    &:not(.close) {
-      &:hover image {
-        background-image: image(gtkopacity($selected_fg_color, 0.12));
-      }
-
-      &:active image {
-        background-image: image(gtkopacity($selected_fg_color, 0.25));
-      }
-    }
-} } 
