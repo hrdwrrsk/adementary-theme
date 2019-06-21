@@ -151,6 +151,10 @@ while [[ "$#" -gt 0 ]]; do
             colors+=("${COLOR_VARIANTS[2]}")
             shift
             ;;
+	  darker)
+            colors+=("${COLOR_VARIANTS[3]}")
+            shift
+            ;;
           -*)
             break
             ;;
