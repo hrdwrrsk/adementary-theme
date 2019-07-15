@@ -67,12 +67,11 @@
     .nautilus-path-bar button {
       @include button(undecorated);
       margin: 0px;
-      padding: 2px 8px;
-
-      &.text-button.image-button image:not(:only-child) { margin: 0; }
 
       &:hover { @include button(hover); }
       &:active { @include button(active); }
+
+      label { padding: 0; }
 
       &:last-child:dir(ltr),
       &:first-child:dir(rtl) {

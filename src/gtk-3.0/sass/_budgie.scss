@@ -582,38 +582,56 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
   padding: 0;
   border: none;
 
-  // New: Raven notification view styling
-  // NEEDS MOAR TESTING
-  // Only affects in new git version
-  .raven-notifications-view {
-  	row {
-  	  &, &:hover, &:active, &:selected, &:selected:hover {
-  	  	background-color: transparent;
-  	  	box-shadow: none;
-  	  }
-  	}
-  }
+  // Notification center styling
+  // Use dirtyhack-way to retain backward compatibility
+  box.vertical > stack > box.vertical {
+  	> .raven-background > viewport.frame {
+  		padding: 0;
 
-  .raven-notifications-group {
-  	border: 1px solid $borders_color;
-  	padding: 6px;
-  	border-radius: 3px;
+  		list { background-color: transparent; }
 
-  	box-shadow: inset 0 1px $top_hilight;
+  		> list > row.activatable {
+  			border-bottom: 1px solid $borders_color;
+  			background-color: transparent;
 
-  	&:dir(ltr) { margin-right: 4px; }
-  	&:dir(rtl) { margin-left: 4px; }
+  			&:selected { 
+  				background-color: transparent;
+  				color: $fg_color;
+  				box-shadow: none; // remove ugly box-shadow: 
+  				label { color: $fg_color; }
+  			}
 
-  	.notification-clone {
-  	  &:dir(ltr) { 
-  	  	border-left: 2px solid $accent_primary; 
-  	  	padding: 0 0 0 8px;
-  	  }
+  			> box.vertical > box.horizontal > button.image-button {
+  				&:dir(ltr) { margin-right: 4px; }
+  				&:dir(rtl) { margin-left: 4px; }
+  			}
 
-  	  &:dir(rtl) { 
-  	  	border-right: 2px solid $accent_primary;
-  	  	padding: 0 8px 0 0; 
-  	  }
+  			list {
+  				border: 1px solid rgba($borders_color, 0.5); 
+  				border-radius: 3px;
+
+  				&:dir(ltr) { margin-right: 4px; }
+  				&:dir(rtl) { margin-left: 4px; }
+
+  				> row.activatable {
+  					border-bottom: 1px solid rgba($borders_color, 0.5); 
+
+  					&:last-child { border-bottom: none; }
+
+  					box.horizontal > label:first-child { font-weight: bold; }
+
+  					&:hover, &:selected { 
+  						background-color: transparent;
+  						color: $fg_color;
+  						label { color: $fg_color; }
+  					}
+
+  	  			&:dir(ltr) { padding: 4px 4px 4px 10px; }
+
+  	  			&:dir(rtl) { padding: 4px 10px 4px 4px; }
+  	  		}
+  			}
+  		}
   	}
   }
 
@@ -631,6 +649,10 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
 			border-bottom: 1px solid $borders_color;
 
       @include headerbar_fill;
+
+      stackswitcher.linked {
+      	button.text-button.radio { min-width: 85px; }
+      }
 		}
 
 		&.bottom { border-top: 1px solid $borders_color; }

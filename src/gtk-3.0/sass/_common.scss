@@ -1526,8 +1526,8 @@ headerbar {
     margin-bottom: 6px;
   }
   switch {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 9px;
+    margin-bottom: 9px;
   }
 
   separator { background-color: transparent; }
@@ -2003,7 +2003,8 @@ menu,
     }
 
     &.bottom {
-      margin-bottom: -6px;
+      margin-top: 12px;
+      margin-bottom: -18px;
       border-top: 1px solid mix($fg_color, $base_color, 10%);
       border-radius: 0 0 3px 3px;
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
@@ -2698,8 +2699,8 @@ switch {
 
   slider {
     margin: 0px;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 20px - 2;
+    min-height: 20px - 2 ;
     border: 0px solid;
     border-radius: 99px;
     background-image: if($variant == 'light',
@@ -3931,7 +3932,7 @@ row {
   background-image: none;
   background-clip: padding-box;
   border-width: 0 1px 1px 1px;
-  border-color: if($variant == 'light', rgba(black, 0.4), $borders_color);
+  border-color: if($variant == 'light', rgba(black, 0.22), $borders_color);
   border-style: solid;
 
   &:backdrop {
@@ -4508,24 +4509,22 @@ tooltip {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
     background-color: transparentize(black, 0.2);
-    background-clip: padding-box;
-    border: 1px solid $tooltip_borders_color; // this suble border is meant to
-                                              // not make the tooltip melt with
-                                              // very dark backgrounds
+    color: $dark_fg_color;
   }
 
-  padding: 4px; /* not working */
-  border-radius: 5px;
+  // padding: 4px; /* not working */
+  border-radius: 3px;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
-  text-shadow: 0 1px black;
 
   // FIXME: we need a border or tooltips vanish on black background.
   decoration { background-color: transparent; }
 
-  * { // Yeah this is ugly
-    padding: 4px;
-    background-color: transparent;
-    color: white;
+  > box {
+    margin: -6px;
+    padding: 8px (12px - 2);
+  }
+
+  * {
   }
 }
 
@@ -4952,7 +4951,7 @@ cursor-handle {
   caret-color: $drop_target_color;
 }
 
-stackswitcher button.text-button { min-width: 100px; } // FIXME aggregate with buttons
+stackswitcher button.text-button { min-width: 32px; } // FIXME aggregate with buttons
 
 stackswitcher button.circular,
 stackswitcher button.text-button.circular { // FIXME aggregate with buttons

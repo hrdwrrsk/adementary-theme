@@ -186,7 +186,7 @@
   @if $t==normal {
   // normal button
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
@@ -209,7 +209,7 @@
   @else if $t==colored {
   // special case for colored button(s)
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: linear-gradient(to bottom,
                                       lighten($c, 2%),
@@ -226,7 +226,7 @@
   @else if $t==hover {
   // hovered button
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
@@ -248,7 +248,7 @@
   @else if $t==colored-hover {
   // special case for colored button(s)
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: linear-gradient(to bottom,
                                       lighten($c, 8%),
@@ -265,7 +265,7 @@
   @else if $t==active {
   // pushed button
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
@@ -286,7 +286,7 @@
   @else if $t==colored-active {
   // pushed button
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
+    outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-image: linear-gradient(to bottom,
                                       darken($c, 4%),
