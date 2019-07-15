@@ -2154,26 +2154,26 @@ toolbar.inline-toolbar toolbutton:backdrop > button.flat, .linked:not(.vertical)
 .linked > button:hover,
 .linked > button:active,
 .linked > button:checked,
-.linked > button:backdrop, .xfce4-panel.background menu .linked button, .raven-mpris button.image-button, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
+.linked > button:backdrop, .xfce4-panel.background menu .linked button, stack.icon-popover-stack grid.horizontal > button.flat.image-button, .raven-mpris button.image-button, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border-radius: 0;
   border-right-style: none;
 }
 
 .linked:not(.vertical) > spinbutton:first-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:first-child:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child, .inline-toolbar button:first-child, .linked > button:first-child, toolbar.inline-toolbar toolbutton:first-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .xfce4-panel.background menu .linked button:first-child, .raven-mpris button.image-button:first-child {
+toolbar.inline-toolbar toolbutton:backdrop:first-child > button.flat, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .xfce4-panel.background menu .linked button:first-child, stack.icon-popover-stack grid.horizontal > button.flat.image-button:first-child, .raven-mpris button.image-button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
 .linked:not(.vertical) > spinbutton:last-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:last-child:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child, .inline-toolbar button:last-child, .linked > button:last-child, toolbar.inline-toolbar toolbutton:last-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .xfce4-panel.background menu .linked button:last-child, .raven-mpris button.image-button:last-child {
+toolbar.inline-toolbar toolbutton:backdrop:last-child > button.flat, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .xfce4-panel.background menu .linked button:last-child, stack.icon-popover-stack grid.horizontal > button.flat.image-button:last-child, .raven-mpris button.image-button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right-style: solid;
 }
 
 .linked:not(.vertical) > spinbutton:only-child:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator .linked:not(.vertical) > spinbutton:only-child:not(.vertical), window.budgie-popover:not(.csd).workspace-popover .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child, .inline-toolbar button:only-child, .linked > button:only-child, toolbar.inline-toolbar toolbutton:only-child > button.flat,
-toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo, .xfce4-panel.background menu .linked button:only-child, .raven-mpris button.image-button:only-child {
+toolbar.inline-toolbar toolbutton:backdrop:only-child > button.flat, .linked:not(.vertical) > combobox:only-child > box > button.combo, .xfce4-panel.background menu .linked button:only-child, stack.icon-popover-stack grid.horizontal > button.flat.image-button:only-child, .raven-mpris button.image-button:only-child {
   border-radius: 3px;
   border-style: solid;
 }
@@ -7990,13 +7990,15 @@ widget > box.workspace-switcher widget.workspace-item label.workspace-more-label
   color: #eeeeee;
 }
 
+stack.icon-popover-stack {
+  margin: 4px;
+}
+
 stack.icon-popover-stack box.horizontal > button.flat {
-  margin: 5px;
   text-shadow: none;
 }
 
 stack.icon-popover-stack grid.horizontal > button.flat.image-button {
-  margin: 5px;
   color: #eeeeee;
   outline-color: transparent;
   border-color: #17181c;

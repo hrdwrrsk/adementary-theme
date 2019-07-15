@@ -335,15 +335,17 @@ widget > box.workspace-switcher {
 
 // Icon tasklist popover
 stack.icon-popover-stack {
+	margin: 4px;
 	box.horizontal > button.flat {
-		margin: 5px;
 		text-shadow: none;
 	}
 
 	grid.horizontal {
 		> button.flat.image-button {
-			margin: 5px;
+			//margin: 0px;
 			@include button(normal);
+
+			@extend %linked;
 
 			&:hover {
 				@include button(hover);
