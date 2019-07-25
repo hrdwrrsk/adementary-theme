@@ -69,6 +69,11 @@ sudo ./install.sh
 
 Then apply this theme with GNOME Tweaks or using your desktop's appearance settings
 
+# Flatpak install
+```
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.gtk.Gtk3theme.Adementary
+```
 # Reporting bugs/Add suggestions
 report it via "Issues" tab, Pull request for bugfixes and features also accepted.
 for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. support, add [feature request] tag
