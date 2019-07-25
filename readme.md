@@ -23,6 +23,7 @@ This theme has come with **3 variants**
 ### Not supported desktops
 - Pantheon
 > Elementary OS is NOT compatible.
+**NOTE:** Some of 3rd party elementary/Granite apps are uses custom stylesheet that requires default elementary Gtk theme to work (except Flatpak-ed version because it enforced to use elementary Gtk theme), so it will broken if you use this theme (also with other 3rd-party theme)
 
 - Downstream patched GNOME session (Ubuntu, Pop! OS....)
 > However, you can install 'vanilla' GNOME by typing `sudo apt install gnome-session` in terminal
