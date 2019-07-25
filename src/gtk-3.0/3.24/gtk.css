@@ -8311,6 +8311,10 @@ frame.raven-frame > border {
   border: none;
 }
 
+.raven box.vertical > stack > box.vertical > .raven-header {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
+}
+
 .raven box.vertical > stack > box.vertical > .raven-background > viewport.frame {
   padding: 0;
 }
@@ -8386,6 +8390,7 @@ frame.raven-frame > border {
 
 .raven .raven-header {
   min-height: 26px;
+  font-weight: bold;
 }
 
 .raven .raven-header:not(.top) {
@@ -8416,8 +8421,12 @@ frame.raven-frame > border {
   background-color: #f8f8f8;
 }
 
+.raven scrolledwindow > .frame {
+  padding: 0;
+}
+
 .raven scrolledwindow > .frame > box.vertical > box.vertical {
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), inset 0 -1px 0 0 rgba(0, 0, 0, 0.22);
 }
 
 .raven scrolledwindow > .frame box.audio-widget list.sound-devices row.activatable > box > label:dir(ltr) {

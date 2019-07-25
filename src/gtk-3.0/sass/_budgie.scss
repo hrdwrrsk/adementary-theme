@@ -587,6 +587,10 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
   // Notification center styling
   // Use dirtyhack-way to retain backward compatibility
   box.vertical > stack > box.vertical {
+  	> .raven-header {
+			box-shadow: inset 0 1px $top_hilight;
+  	}
+
   	> .raven-background > viewport.frame {
   		padding: 0;
 
@@ -639,6 +643,7 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
 
   .raven-header {
     min-height: 26px;
+    font-weight: bold;
 
     &:not(.top) {
 			margin-top: -6px;
@@ -668,8 +673,11 @@ $raven_borders: ((top, bottom), (bottom, top), (left, right), (right, left));
 	}
 
 	scrolledwindow > .frame {
+		padding: 0;
 		> box.vertical > box.vertical {
-			box-shadow: inset 0 -1px 0 0 if($variant == 'light', rgba(black, 0.22), $borders_color);
+			box-shadow: 
+			inset 0 1px $top_hilight,
+			inset 0 -1px 0 0 if($variant == 'light', rgba(black, 0.22), $borders_color);
 		}
 
 		box.audio-widget {
