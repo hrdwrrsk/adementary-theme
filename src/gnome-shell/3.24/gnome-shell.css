@@ -1692,17 +1692,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash {
   font-size: 9pt;
   color: #282828;
-  border-image: url("assets/dash/dash-left.svg") 7;
-  background-color: transparent;
+  background-color: rgba(243, 243, 243, 0.75);
+  background-clip: border-box;
   padding: 0;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.22);
   border-left: 0;
   border-radius: 0px 5px 5px 0px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
 #dash:rtl {
-  border-image: url("assets/dash/dash-right.svg") 7;
   border-radius: 5px 0 0 5px;
+  border-right: 0;
 }
 
 #dash .placeholder {
@@ -1742,22 +1743,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash .show-apps:checked .show-apps-icon {
   background-color: #3689e6;
   color: white;
-}
-
-#dash .show-apps .overview-icon {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22);
-  border: 4px solid transparent;
-}
-
-#dash .show-apps:hover .overview-icon {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-#dash .show-apps:active .overview-icon,
-#dash .show-apps:checked .overview-icon {
-  background-color: #3689e6;
 }
 
 .dash-item-container > StWidget {
@@ -2873,13 +2858,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.top #dash {
-  border-image: url("assets/dash/dash-top.svg") 7;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.22);
   border-top-width: 0;
+  background-color: rgba(243, 243, 243, 0.75);
+  background-clip: border-box;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 5px 5px;
 }
 
 #dashtodockContainer.top.extended #dash {
-  border-image: url("assets/dash/dash-top-extended.svg") 7;
+  border-radius: 0;
+}
+
+#dashtodockContainer.top.transparent #dash,
+#dashtodockContainer.top.opaque #dash {
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background-clip: border-box;
 }
 
 #dashtodockContainer.top .dash-item-container > StWidget {
@@ -2893,13 +2887,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.bottom #dash {
-  border-image: url("assets/dash/dash-bottom.svg") 7;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.22);
   border-bottom-width: 0;
+  background-color: rgba(243, 243, 243, 0.75);
+  background-clip: border-box;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
+  border-radius: 5px 5px 0 0;
 }
 
 #dashtodockContainer.bottom.extended #dash {
-  border-image: url("assets/dash/dash-bottom-extended.svg") 7;
+  border-radius: 0;
+}
+
+#dashtodockContainer.bottom.transparent #dash,
+#dashtodockContainer.bottom.opaque #dash {
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background-clip: border-box;
 }
 
 #dashtodockContainer.bottom .dash-item-container > StWidget {
@@ -2913,13 +2916,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.left #dash {
-  border-image: url("assets/dash/dash-left.svg") 7;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.22);
   border-left-width: 0;
+  background-color: rgba(243, 243, 243, 0.75);
+  background-clip: border-box;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
+  border-radius: 0 5px 5px 0;
 }
 
 #dashtodockContainer.left.extended #dash {
-  border-image: url("assets/dash/dash-left-extended.svg") 7;
+  border-radius: 0;
+}
+
+#dashtodockContainer.left.transparent #dash,
+#dashtodockContainer.left.opaque #dash {
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background-clip: border-box;
 }
 
 #dashtodockContainer.left .dash-item-container > StWidget {
@@ -2933,13 +2945,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #dashtodockContainer.right #dash {
-  border-image: url("assets/dash/dash-right.svg") 7;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.22);
   border-right-width: 0;
+  background-color: rgba(243, 243, 243, 0.75);
+  background-clip: border-box;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.6);
+  border-radius: 5px 0 0 5px;
 }
 
 #dashtodockContainer.right.extended #dash {
-  border-image: url("assets/dash/dash-right-extended.svg") 7;
+  border-radius: 0;
+}
+
+#dashtodockContainer.right.transparent #dash,
+#dashtodockContainer.right.opaque #dash {
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background-clip: border-box;
 }
 
 #dashtodockContainer.right .dash-item-container > StWidget {
