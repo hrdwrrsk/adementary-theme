@@ -14,7 +14,7 @@
    height="24"
    id="svg3199"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="mpb-background.svg">
   <defs
      id="defs3201">
@@ -202,16 +202,16 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="42.154385"
-     inkscape:cx="13.721842"
+     inkscape:zoom="15.971863"
+     inkscape:cx="9.7345432"
      inkscape:cy="9.6971046"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1366"
-     inkscape:window-height="655"
+     inkscape:window-height="663"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -271,7 +271,7 @@
        height="14"
        width="14"
        id="rect4592-5"
-       style="opacity:1;fill:#2e3038;fill-opacity:1;stroke:none;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.99999994;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
        id="rect17347"
@@ -296,7 +296,7 @@
       <path
          id="rect4561"
          d="M 3.5907742,289.45941 H 6.463393 c 0.6304734,0 1.0772321,0.69457 1.0772321,1.07722 v 2.87261 c 0,0.38264 -0.4804455,1.07722 -1.0772321,1.07722 H 3.5907742 c -0.5967874,0 -1.0772325,-0.67204 -1.0772325,-1.07722 v -2.87261 c 0,-0.45028 0.4804451,-1.07722 1.0772325,-1.07722 z"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#17181c;stroke-width:0.33548237;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99607843"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#1a1919;stroke-width:0.33548237;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99607843"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="sssssssss" />
     </g>

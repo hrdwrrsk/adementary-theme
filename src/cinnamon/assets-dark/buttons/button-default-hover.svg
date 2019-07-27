@@ -34,15 +34,15 @@
       <stop
          id="stop1635"
          offset="0"
-         style="stop-color:#4a4d5a;stop-opacity:1" />
+         style="stop-color:#525252;stop-opacity:1" />
       <stop
-         style="stop-color:#474a57;stop-opacity:1"
+         style="stop-color:#4f4f4f;stop-opacity:1"
          offset="0.64285713"
          id="stop1641" />
       <stop
          id="stop1637"
          offset="1"
-         style="stop-color:#40434e;stop-opacity:1" />
+         style="stop-color:#474747;stop-opacity:1" />
     </linearGradient>
   </defs>
   <sodipodi:namedview
@@ -53,8 +53,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="12.98"
-     inkscape:cx="-5.8015628"
-     inkscape:cy="14.163954"
+     inkscape:cx="8.3740921"
+     inkscape:cy="17.014493"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -63,9 +63,9 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="666"
+     inkscape:window-height="663"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="31"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -80,7 +80,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -142,7 +142,7 @@
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cssssc" />
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#17181c;stroke-width:0.99815619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1a1919;stroke-width:0.99815619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
            id="rect5365"
            width="29.001844"
            height="29.001844"

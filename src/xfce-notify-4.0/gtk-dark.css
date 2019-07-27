@@ -1,7 +1,7 @@
 #XfceNotifyWindow {
-  border: 1px solid #17181c;
+  border: 1px solid #1A1919;
   border-radius: 5px;
-  background-color: #2E3038;
+  background-color: #333333;
 }
 
 #XfceNotifyWindow box.vertical > label#summary { color: #eee; font-weight: 700; }

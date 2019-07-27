@@ -32,15 +32,15 @@
        inkscape:collect="always"
        id="linearGradient6691">
       <stop
-         style="stop-color:#40434e;stop-opacity:1"
+         style="stop-color:#474747;stop-opacity:1"
          offset="0"
          id="stop6687" />
       <stop
          id="stop6693"
          offset="0.64285713"
-         style="stop-color:#3e414c;stop-opacity:1" />
+         style="stop-color:#454545;stop-opacity:1" />
       <stop
-         style="stop-color:#373a43;stop-opacity:1"
+         style="stop-color:#3d3d3d;stop-opacity:1"
          offset="1"
          id="stop6689" />
     </linearGradient>
@@ -53,8 +53,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="12.98"
-     inkscape:cx="7.6807176"
-     inkscape:cy="14.163954"
+     inkscape:cx="10.762382"
+     inkscape:cy="14.318037"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -63,9 +63,9 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:window-width="1366"
-     inkscape:window-height="666"
+     inkscape:window-height="663"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="31"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -142,7 +142,7 @@
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cssssc" />
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#17181c;stroke-width:0.99815619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1a1919;stroke-width:0.99815619;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
            id="rect5365"
            width="29.001844"
            height="29.001844"

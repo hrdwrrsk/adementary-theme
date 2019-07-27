@@ -14,7 +14,7 @@
    height="22"
    id="svg3199"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="checkbox-off.svg">
   <defs
      id="defs3201">
@@ -210,15 +210,15 @@
       <stop
          id="stop1599"
          offset="0"
-         style="stop-color:#40434e;stop-opacity:1" />
+         style="stop-color:#474747;stop-opacity:1" />
       <stop
-         style="stop-color:#3e414c;stop-opacity:1"
+         style="stop-color:#454545;stop-opacity:1"
          offset="0.70000345"
          id="stop1601" />
       <stop
          id="stop1603"
          offset="1"
-         style="stop-color:#373a43;stop-opacity:1" />
+         style="stop-color:#3d3d3d;stop-opacity:1" />
     </linearGradient>
   </defs>
   <sodipodi:namedview
@@ -229,15 +229,15 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="13.89925"
-     inkscape:cx="1.5697437"
-     inkscape:cy="9.5455922"
+     inkscape:cx="11.498337"
+     inkscape:cy="12.92707"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1366"
-     inkscape:window-height="661"
+     inkscape:window-height="663"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="31"
      inkscape:window-maximized="1"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -357,7 +357,7 @@
            height="5.027082"
            width="5.027082"
            id="rect1101-36-2"
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#17181c;stroke-width:0.26458326;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#1a1919;stroke-width:0.26458326;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </g>
     </g>
   </g>
