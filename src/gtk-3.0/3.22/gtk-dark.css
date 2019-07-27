@@ -251,7 +251,7 @@ entry {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: white;
   border-color: #1a1919;
-  background-color: #2f2f2f;
+  background-color: #2a2a2a;
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.05);
 }
 
@@ -295,7 +295,7 @@ spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-
 entry:backdrop {
   color: white;
   border-color: #1a1919;
-  background-color: #2f2f2f;
+  background-color: #2a2a2a;
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.05);
   transition: 200ms ease-out;
 }
@@ -7087,7 +7087,7 @@ button.emoji-section:checked label {
 }
 
 .xfce4-panel.background {
-  background-color: #2E3038;
+  background-color: #333;
   color: #eeeeee;
 }
 
@@ -7137,7 +7137,7 @@ button.emoji-section:checked label {
 
 .lightdm-gtk-greeter #panel_window menubar {
   color: #eeeeee;
-  background-color: #2E3038;
+  background-color: #333;
   margin-bottom: 1px;
   box-shadow: 0 1px #1a1919;
   padding-bottom: 1px;
@@ -7769,7 +7769,7 @@ button.budgie-menu-launcher image {
 
 .top .budgie-panel button#tasklist-button:hover,
 .top .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 0 3px #4e5362;
+  box-shadow: inset 0 3px #585858;
   background-color: transparent;
   border: none;
 }
@@ -7795,7 +7795,7 @@ button.budgie-menu-launcher image {
 
 .bottom .budgie-panel button#tasklist-button:hover,
 .bottom .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 0 -3px #4e5362;
+  box-shadow: inset 0 -3px #585858;
   background-color: transparent;
   border: none;
 }
@@ -7821,7 +7821,7 @@ button.budgie-menu-launcher image {
 
 .left .budgie-panel button#tasklist-button:hover,
 .left .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset 3px 0 #4e5362;
+  box-shadow: inset 3px 0 #585858;
   background-color: transparent;
   border: none;
 }
@@ -7847,7 +7847,7 @@ button.budgie-menu-launcher image {
 
 .right .budgie-panel button#tasklist-button:hover,
 .right .budgie-panel button.flat.launcher:hover {
-  box-shadow: inset -3px 0 #4e5362;
+  box-shadow: inset -3px 0 #585858;
   background-color: transparent;
   border: none;
 }
@@ -7950,11 +7950,11 @@ widget > box.workspace-switcher widget.workspace-item {
 }
 
 widget > box.workspace-switcher widget.workspace-item {
-  background-color: rgba(51, 54, 64, 0.3);
+  background-color: rgba(57, 57, 57, 0.3);
 }
 
 widget > box.workspace-switcher widget.workspace-item.current-workspace {
-  background-color: rgba(51, 54, 64, 0.85);
+  background-color: rgba(57, 57, 57, 0.85);
   box-shadow: inset 0 -3px #3689e6;
 }
 

@@ -39,7 +39,7 @@
   @if $t==normal {
     color: $text_color;
     border-color: $borders_color;
-		background-color: if($variant == 'light', darken($base_color, 6%), darken($base_color, 4%));
+		background-color: if($variant == 'light', darken($base_color, 6%), darken($base_color, 6%));
     @include _shadows(entry_focus_shadow(transparentize($fc, 1)),
     				  inset 0 1px rgba(black, 0.1),
     				  0 1px transparentize(white, 0.95));
@@ -58,7 +58,7 @@
   @if $t==backdrop {
     color: $text_color;
     border-color: $borders_color;
-	background-color: darken($base_color, 4%);
+	  background-color: if($variant == 'light', darken($base_color, 6%), darken($base_color, 6%));
     @include _shadows(entry_focus_shadow(transparentize($fc, 1)),
     				  inset 0 1px rgba(black, 0.07),
     				  0 1px if($variant == 'light', transparentize(white, 0.6), transparentize(white, 0.95)));

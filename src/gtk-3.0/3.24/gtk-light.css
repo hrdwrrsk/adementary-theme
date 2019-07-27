@@ -295,7 +295,7 @@ spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-
 entry:backdrop {
   color: black;
   border-color: #b3b3b3;
-  background-color: #eeeeee;
+  background-color: #e9e9e9;
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
   transition: 200ms ease-out;
 }
@@ -8756,7 +8756,7 @@ calendar.raven-calendar:selected {
 .nautilus-window .path-bar-box:backdrop {
   color: black;
   border-color: #b3b3b3;
-  background-color: #eeeeee;
+  background-color: #e9e9e9;
   box-shadow: inset 0 0 0 1px rgba(54, 137, 230, 0), inset 0 1px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.4);
 }
 
