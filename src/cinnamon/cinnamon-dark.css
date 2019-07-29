@@ -108,9 +108,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-slider-menu-item,
 .slider {
   -slider-height: 3px;
-  -slider-background-color: #292929;
-  -slider-border-color: #1a1919;
-  -slider-active-background-color: #3689e6;
+  -slider-background-color: rgba(0, 0, 0, 0.05);
+  -slider-border-color: rgba(0, 0, 0, 0.3);
+  -slider-active-background-color: #7e8087;
   -slider-active-border-color: #1a1919;
   -slider-border-width: 1px;
   -slider-handle-radius: 0.5em;
@@ -297,8 +297,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .menu .popup-menu-item:active {
-  background-color: #3689e6;
-  color: #ffffff;
+  background-color: rgba(238, 238, 238, 0.1);
+  color: #eeeeee;
 }
 
 .menu .popup-menu-item:insensitive {
@@ -376,8 +376,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-menu-item:active {
-  background-color: #3689e6;
-  color: #ffffff;
+  background-color: rgba(238, 238, 238, 0.1);
+  color: #eeeeee;
 }
 
 .popup-menu .popup-menu-item:insensitive {

@@ -106,10 +106,10 @@ StScrollBar {
 .popup-slider-menu-item,
 .slider {
   -slider-height: 3px;
-  -slider-background-color: darken($bg_color, 4%); //background of the trough
-  -slider-border-color: $borders_color; //trough border color
-  -slider-active-background-color: $accent_primary;              //active trough fill
-  -slider-active-border-color: if($variant == 'light', $selected_borders_color, $borders_color);      //active trough border
+  -slider-background-color: rgba(black, 0.05); //background of the trough
+  -slider-border-color: rgba(black, 0.3); //trough border color
+  -slider-active-background-color: if($variant == 'light', rgba(black, 0.45), $SILVER_700); //active trough fill
+  -slider-active-border-color: if($variant == 'light', rgba(black, 0.45), $borders_color); //active trough border
   -slider-border-width: 1px;
   -slider-handle-radius: 0.5em;
   height: 1em;
@@ -289,7 +289,7 @@ StScrollBar {
       font-weight: bold;
     }
     &.selected { background-color: transparentize($fg_color,0.9); color: $fg_color; }
-    &:active { background-color: $accent_primary; color: $selected_fg_color; }
+    &:active { background-color: transparentize($fg_color,0.9); color: $fg_color; }
     &:insensitive { color: transparentize($fg_color,.5); }
   }
 
@@ -343,7 +343,7 @@ StScrollBar {
       font-weight: bold;
     }
     &.selected { background-color: transparentize($fg_color,0.9); color: $fg_color; }
-    &:active { background-color: $accent_primary; color: $selected_fg_color; }
+    &:active { background-color: transparentize($fg_color,0.9); color: $fg_color; }
     &:insensitive { color: transparentize($fg_color,.5); }
   }
 
