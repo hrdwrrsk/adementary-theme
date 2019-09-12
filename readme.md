@@ -74,7 +74,7 @@ for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. supp
 
 # Credits
 - [Adwaita](https://gitlab.gnome.org/GNOME/gtk) GTK theme by GNOME. (this theme are based on Adwaita)
-- elementary OS's GTK [stylesheet](https://github.com/elementary/stylesheet) and it's color palette
+- elementary OS's GTK [theme/stylesheet](https://github.com/elementary/stylesheet) and it's color palette
 - [Mint-Y](https://github.com/linuxmint/mint-themes) theme by Linux Mint, for Cinnamon theme basis
 - install.sh, parse-sass.sh and render-assets.sh script are based on nana-4's [materia-theme](https://github.com/nana-4/materia-theme)
 - some other projects: Adapta, Arc, plane-gtk-theme and more for code fixes, hacks, etc
