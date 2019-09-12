@@ -1,6 +1,6 @@
 Adementary
 ======
-Adementary (formerly or codenamed "Project Beaucoup" and "Tetra") is a GTK theme based on Adwaita, blended with elementary OS visual design.
+Adementary is a theme for GNOME/Budgie/Xfce/Cinnamon desktop with elementary-ish aesthetics.
 
 -------------------
 ![Screenshot](/data/Screenshot.png)
@@ -22,23 +22,16 @@ This theme has come with **3 variants**
 
 ### Not supported desktops
 - Pantheon
-> Elementary OS is NOT compatible.
-**NOTE:** Some of 3rd party elementary/Granite apps are uses custom stylesheet that requires default elementary Gtk theme to work (except Flatpak-ed version because it enforced to use elementary Gtk theme), so it will broken if you use this theme (also with other 3rd-party theme)
+> elementary OS is NOT compatible.
+**NOTE:** Some of 3rd-party elementary/Granite apps are uses custom stylesheet that requires default elementary Gtk theme to work (except Flatpak-ed version because it enforced to use elementary Gtk theme), so it will broken if you use this theme (also with other 3rd-party theme)
 
-- Downstream patched GNOME session (Ubuntu, Pop! OS....)
+- Downstream patched GNOME session (Ubuntu, Pop! OS)
 > However, you can install 'vanilla' GNOME by typing `sudo apt install gnome-session` in terminal
 
 - MATE
 - LXDE
-- Window Managers (Openbox, enlightenment...)
-- Qt/Non-gtk+ desktops (Plasma 5, LXQt, Deepin...)
-
-
-### Nautilus 3.30 on Ubuntu 18.10
-> By default, Ubuntu 18.10 ships with Nautilus version 3.26 because new version doesn't have desktop icons feature
-
-Nautilus 3.30 is available for Ubuntu 18.10 on [gnome3-team/gnome3-staging ppa](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging?field.series_filter=cosmic), so it's **important** to use Nautilus 3.30 to have a better experience on Ubuntu 18.10 **(it will lose desktop icons feature, but you can use desktop icons extension for GNOME shell to restore desktop icon feature)**.
-Ubuntu 19.04 and later versions ships with latest Nautilus with Desktop icons Shell extension
+- KDE Plasma 5
+- Other desktops/WMs
 
 # (GNOME Shell) Typography
 **Noto Sans** is used as default primary font for GNOME shell theme, Cantarell is used as fallback.
@@ -80,8 +73,8 @@ report it via "Issues" tab, Pull request for bugfixes and features also accepted
 for suggestion about design add [design] tag, for DEs/gtk+ app theming/etc. support, add [feature request] tag
 
 # Credits
-- Adwaita Gtk theme by GNOME, for Gtk theme basis
-- elementary OS visual design as main inspiration (also color palette.)
-- Mint-Y theme by Linux Mint, for Cinnamon theme basis
-- install.sh, parse-sass.sh and render-assets.sh script are from nana-4's materia-theme
+- [Adwaita](https://gitlab.gnome.org/GNOME/gtk) GTK theme by GNOME. (this theme are based on Adwaita)
+- elementary OS's GTK [stylesheet](https://github.com/elementary/stylesheet) and it's color palette
+- [Mint-Y](https://github.com/linuxmint/mint-themes) theme by Linux Mint, for Cinnamon theme basis
+- install.sh, parse-sass.sh and render-assets.sh script are based on nana-4's [materia-theme](https://github.com/nana-4/materia-theme)
 - some other projects: Adapta, Arc, plane-gtk-theme and more for code fixes, hacks, etc
