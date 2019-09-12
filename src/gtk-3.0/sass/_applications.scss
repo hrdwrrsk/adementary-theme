@@ -84,10 +84,10 @@
     // Theme pulseaudio-plugin's mpris buttons
     .linked button {
       @extend %linked;
-      @extend %button.osd;
+      @extend %button;
 
     	&:disabled {
-        @include button(osd-insensitive);
+        @include button(insensitive);
       }
     }
   }

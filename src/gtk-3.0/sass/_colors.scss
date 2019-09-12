@@ -34,7 +34,7 @@ $wm_backdrop_bg_a: if($variant == 'light', darken($bg_color, 2%), lighten($bg_co
 $wm_backdrop_bg_b: if($variant == 'light', darken($bg_color, 6%), $bg_color);
 
 // Accent color
-$accent_primary: $BLUEBERRY_500;
+$accent_primary: #3EA1F0;
 $accent_secondary: $BLUEBERRY_300;
 $accent_tertiary: $BLUEBERRY_100;
 
