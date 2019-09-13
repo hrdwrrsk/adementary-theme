@@ -652,6 +652,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Popovers/Menus */
 .popup-menu {
   min-width: 200px;
+  color: #eeeeee;
   border-image: url("assets/mpb-background.svg") 9;
 }
 
@@ -1785,7 +1786,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-view-control {
-  padding: 6px 24px;
+  margin: 0;
+  padding: 2px 24px;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1828,6 +1830,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .list-search-result:hover {
   background-color: rgba(238, 238, 236, 0.1);
   transition-duration: 200ms;
+}
+
+.app-well-app:drop .overview-icon,
+.app-well-app.app-folder:drop .overview-icon,
+.show-apps:drop .overview-icon,
+.grid-search-result:drop .overview-icon {
+  background-color: #3EA1F0;
 }
 
 .app-well-app:active .overview-icon,

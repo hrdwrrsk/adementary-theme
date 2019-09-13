@@ -589,6 +589,9 @@ StScrollBar {
 .popup-menu {
   min-width: 200px;
   @if $version < 3.31 { padding: 5px; }
+
+  @if $version > 3.33 { color: $fg_color; }
+
   border-image: url("assets/mpb-background.svg") 9;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
@@ -1632,7 +1635,12 @@ StScrollBar {
     padding-bottom: 16px;
   }
   .app-view-control { //favorties | all toggle button
-    padding: 6px 24px;
+    @if $version > 3.33 { 
+      margin: 0;
+      padding: 2px 24px;
+    }
+    @else { padding: 6px 24px; }
+
     background-color: transparent;
     background-image: none;
     box-shadow: none;
@@ -1667,6 +1675,13 @@ StScrollBar {
     & .overview-icon {
       @extend %icon_tile;
     }
+
+    @if $version > 3.33 {
+      &:drop .overview-icon {
+        background-color: $accent_primary;
+      }
+    }
+
     &:active .overview-icon,
     &:checked .overview-icon {
       background-color: $accent_primary;
