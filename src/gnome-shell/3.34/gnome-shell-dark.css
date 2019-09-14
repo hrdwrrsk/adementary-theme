@@ -2877,6 +2877,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.top .app-well-app .overview-icon,
 #dashtodockContainer.top .show-apps .overview-icon {
+  padding: 9px;
   border: 0;
   border-radius: 0;
   margin-bottom: 1px;
@@ -2909,6 +2910,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dashtodockContainer.bottom .app-well-app .overview-icon,
 #dashtodockContainer.bottom .show-apps .overview-icon {
+  padding: 9px;
   border: 0;
   border-radius: 0;
   margin-top: 1px;

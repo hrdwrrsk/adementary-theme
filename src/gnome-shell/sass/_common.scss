@@ -1238,6 +1238,7 @@ StScrollBar {
         }
 
         .message {
+          @if $version > 3.33 { background-color: transparent; }
           border: 1px solid if($variant == 'light', rgba(black, 0.1), rgba(black, 0.2));
           border-radius: 3px;
 
