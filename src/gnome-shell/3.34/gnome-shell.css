@@ -1900,6 +1900,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 100ms;
 }
 
+.rename-folder-popup .popup-menu-item:ltr {
+  padding: 0 16px 0 14px;
+}
+
+.rename-folder-popup .popup-menu-item:rtl {
+  padding: 0 14px 0 16px;
+}
+
 .app-folder-popup {
   -arrow-border-radius: 0;
   -arrow-background-color: transparent;

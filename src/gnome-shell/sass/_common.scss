@@ -1723,6 +1723,16 @@ StScrollBar {
     transition-duration: 100ms;
   }
 
+  // AppFolder rename popup
+  @if $version > 3.33 {
+    .rename-folder-popup {
+      .popup-menu-item {
+        &:ltr { padding: 0 16px 0 14px; }
+        &:rtl { padding: 0 14px 0 16px; }
+      }
+    }
+  }
+
   // Collections
   .app-folder-popup { //expanded collection
     -arrow-border-radius: 0;
