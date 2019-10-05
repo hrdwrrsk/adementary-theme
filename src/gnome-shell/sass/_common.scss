@@ -1771,11 +1771,11 @@ StScrollBar {
   }
 
   .page-indicator {
-    padding: 15px 20px;
+    padding: 16px 16px;
 
     .page-indicator-icon {
-      width: 12px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       background-color: rgba(white, 0.1);
       border: none;
       border-radius: 7px;
@@ -1784,7 +1784,7 @@ StScrollBar {
     &:hover .page-indicator-icon { background-color: rgba(white, 0.4); }
     &:active .page-indicator-icon,
     &:checked .page-indicator-icon,
-    &:checked:active { border: none; margin: 0; background-color: white; }
+    &:checked:active { border: none; margin: 0; background-color: rgba(white, 0.75); }
   }
 
   .no-frequent-applications-label { @extend %status_text; }

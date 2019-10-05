@@ -1928,12 +1928,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .page-indicator {
-  padding: 15px 20px;
+  padding: 16px 16px;
 }
 
 .page-indicator .page-indicator-icon {
-  width: 12px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 7px;
@@ -1947,7 +1947,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
   border: none;
   margin: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
