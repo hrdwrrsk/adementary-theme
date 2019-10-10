@@ -1872,6 +1872,10 @@ StScrollBar {
       background-color: transparent;
       padding-top: 2px;
       spacing: 1px;
+
+      @if $version > 3.33 {
+        border: 0;
+      }
     }
     .notification-button {
       border: 0;
@@ -1881,6 +1885,11 @@ StScrollBar {
       padding: 6px 6px 7px;
       margin: 6px;
       margin-top: 0;
+
+      @if $version > 3.33 {
+        color: $fg_color;
+        min-height: 0;
+      }
 
       border-image: url("assets/buttons/button-default.svg") 4;
       &:hover { border-image: url("assets/buttons/button-default-hover.svg") 4; }

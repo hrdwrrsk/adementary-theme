@@ -2058,6 +2058,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
   padding-top: 2px;
   spacing: 1px;
+  border: 0;
 }
 
 .notification-banner .notification-button {
@@ -2068,6 +2069,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 6px 6px 7px;
   margin: 6px;
   margin-top: 0;
+  color: #eeeeee;
+  min-height: 0;
   border-image: url("assets/buttons/button-default.svg") 4;
 }
 
