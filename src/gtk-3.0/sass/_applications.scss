@@ -15,81 +15,77 @@
 }
 
 // Xfce4-panel (gtk3)
-.xfce4-panel.background {
-	background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
-	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+.xfce4-panel {
+	&, &.background {
+		background-color: if($light-panel == 'false', $dark_bg_color, $bg_color);
+		color: if($light-panel == 'false', $dark_fg_color, $fg_color);
 
-	button {
-    background-color: transparent;
-	  padding: 0 1px;
-	  color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-	  border: none;
-	  border-radius: 0;
-	  -gtk-icon-shadow: none;
-    text-shadow: none;
+		button, button:backdrop {
+    	background-color: transparent;
+	  	padding: 0 1px;
+	  	border: none;
+	  	border-radius: 0;
+	  	-gtk-icon-shadow: none;
+      text-shadow: none;
+      color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+      
+      label { all: unset }
 
-    label { padding: 0 6px; }
+	  	&:hover, &:active, &:checked, &:active:hover, &:checked:hover {
+				box-shadow: inset 0 -3px $accent_primary;
+				border: none;
+				background: none;
+	  		transition: none;
+	  	}
+		}
 
-	  &:hover, &:active, &:checked, &:active:hover, &:checked:hover {
-			box-shadow: inset 0 -3px $accent_primary;
-		  background-color: transparent;
-			border: none;
-		  background-image: none;
-	  	transition: none;
-	  }
-	}
+  	.tasklist button {
+    	margin: 2px 1px;
+    	border-radius: 3px;
+    	color: if($light-panel == 'false', $dark_fg_color, $fg_color);
+    	border: 1px solid if($light-panel == 'false', $dark_borders_color, $borders_color);
+    	background-image: if($light-panel == 'true',
+                      	linear-gradient(to bottom,
+                                      	darken($bg_color, 4%),
+                                      	darken($bg_color, 5%),
+                                      	darken($bg_color, 8%)),
+                      	linear-gradient(to bottom,
+                                      	lighten($dark_bg_color, 8%),
+                                      	lighten($dark_bg_color, 7%),
+                                      	lighten($dark_bg_color, 4%)));
+    	box-shadow: inset 0 1px if($light-panel == 'true', rgba(white, 0.45), rgba(white, 0.08)),
+                	0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05)),
+                	inset 0 0 0 1px if($light-panel == 'true', rgba(white, 0.05), rgba(white, 0.03)),
+                	inset 0 -1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.03));
 
-  .tasklist button {
-    margin: 2px 1px;
-    border-radius: 3px;
-    color: if($light-panel == 'false', $dark_fg_color, $fg_color);
-    border: 1px solid if($light-panel == 'false', $dark_borders_color, $borders_color);
-    background-image: if($light-panel == 'true',
-                      linear-gradient(to bottom,
-                                      darken($bg_color, 4%),
-                                      darken($bg_color, 5%),
-                                      darken($bg_color, 8%)),
-                      linear-gradient(to bottom,
-                                      lighten($dark_bg_color, 8%),
-                                      lighten($dark_bg_color, 7%),
-                                      lighten($dark_bg_color, 4%)));
-    box-shadow: inset 0 1px if($light-panel == 'true', rgba(white, 0.45), rgba(white, 0.08)),
-                0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05)),
-                inset 0 0 0 1px if($light-panel == 'true', rgba(white, 0.05), rgba(white, 0.03)),
-                inset 0 -1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.03));
+    	&:hover {
+      	background-image: if($light-panel == 'true',
+                        	linear-gradient(to bottom,
+                                        	$bg_color,
+                                        	darken($bg_color, 1%),
+                                        	darken($bg_color, 4%)),
+                        	linear-gradient(to bottom,
+                                        	lighten($dark_bg_color, 12%),
+                                        	lighten($dark_bg_color, 11%),
+                                        	lighten($dark_bg_color, 8%)));
+    	}
 
-    &:hover {
-      background-image: if($light-panel == 'true',
-                        linear-gradient(to bottom,
-                                        $bg_color,
-                                        darken($bg_color, 1%),
-                                        darken($bg_color, 4%)),
-                        linear-gradient(to bottom,
-                                        lighten($dark_bg_color, 12%),
-                                        lighten($dark_bg_color, 11%),
-                                        lighten($dark_bg_color, 8%)));
-    }
+    	&:active, &:checked, &:active:hover, &:checked:hover {
+      	background-image: if($light-panel == 'true', image(darken($bg_color, 12%)), image(darken($dark_bg_color, 4%)));
+      	box-shadow: inset 0 0 0 1px rgba(black, 0.05),
+                  	0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05));
+    	}
+  	}
 
-    &:active, &:checked, &:active:hover, &:checked:hover {
-      background-image: none;
-      background-color: if($light-panel == 'true', darken($bg_color, 12%), darken($dark_bg_color, 4%));
-      box-shadow: inset 0 0 0 1px rgba(black, 0.05),
-                  0 1px if($light-panel == 'true', rgba(white, 0.15), rgba(white, 0.05));
-    }
-  }
+		// Theme pulseaudio-plugin's mpris buttons
+  	#pulseaudio-button menu {
+    	-gtk-icon-effect: none;
 
-  menu {
-    -gtk-icon-effect: none;
-
-    // Theme pulseaudio-plugin's mpris buttons
-    .linked button {
-      @extend %linked;
-      @extend %button;
-
-    	&:disabled {
-        @include button(insensitive);
-      }
-    }
+    	.linked button {
+      	@extend %linked;
+      	@extend %button_basic;
+    	}
+  	}
   }
 }
 
