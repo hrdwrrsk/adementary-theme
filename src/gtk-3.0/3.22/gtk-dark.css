@@ -294,7 +294,7 @@ entry:disabled {
 
 spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:backdrop:not(.vertical),
 entry:backdrop {
-  color: white;
+  color: #d8d8d8;
   border-color: #1a1919;
   background-color: #2f2f2f;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), transparent);

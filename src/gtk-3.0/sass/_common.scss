@@ -1941,7 +1941,7 @@ menu,
   &:backdrop { background-color: $backdrop_menu_color; }
 
   separator { 
-    background-color: rgba(black, 0.22);
+    background-color: if($variant == 'light', rgba(black, 0.1), rgba(black, 0.22));
     box-shadow: 0 1px rgba(white, 0.05); 
     margin: 4px 0;
   }

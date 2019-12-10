@@ -57,7 +57,7 @@
     //box-shadow: 0 1px if($variant == 'light', 0 1px white, 0 1px transparentize(white, 0.95));
   }
   @if $t==backdrop {
-    color: $text_color;
+    color: $backdrop_text_color;
     border-color: $borders_color;
 	  background-color: if($variant == 'light', darken($base_color, 2%), darken($base_color, 4%));
     background-image: linear-gradient(to bottom, rgba(black, 0.04), transparent);

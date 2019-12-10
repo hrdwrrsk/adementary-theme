@@ -294,7 +294,7 @@ entry:disabled {
 
 spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).night-light-indicator spinbutton:backdrop:not(.vertical), window.budgie-popover:not(.csd).workspace-popover spinbutton:backdrop:not(.vertical),
 entry:backdrop {
-  color: black;
+  color: #313131;
   border-color: #b3b3b3;
   background-color: #f3f3f3;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), transparent);
@@ -3261,7 +3261,7 @@ menu:backdrop,
 menu separator,
 .menu separator,
 .context-menu separator {
-  background-color: rgba(0, 0, 0, 0.22);
+  background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px rgba(255, 255, 255, 0.05);
   margin: 4px 0;
 }
@@ -8748,7 +8748,7 @@ calendar.raven-calendar:selected {
 }
 
 .nautilus-window .path-bar-box:backdrop {
-  color: black;
+  color: #313131;
   border-color: #b3b3b3;
   background-color: #f3f3f3;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), transparent);
