@@ -1145,6 +1145,23 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing: 0.4em;
 }
 
+.world-clocks-city {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.world-clocks-time {
+  font-feature-settings: "tnum";
+  font-size: 90%;
+  color: white;
+}
+
+.world-clocks-timezone {
+  font-feature-settings: "tnum";
+  font-size: 90%;
+  color: #919191;
+}
+
 .calendar-month-label {
   color: #e1e1e1;
   font-weight: bold;
