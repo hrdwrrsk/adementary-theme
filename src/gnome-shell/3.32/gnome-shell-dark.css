@@ -2937,6 +2937,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-radius: 0;
   border-top-width: 0;
   border-bottom-width: 0;
+  box-shadow: none;
 }
 
 #dashtodockContainer.left.transparent #dash,
@@ -2969,6 +2970,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-radius: 0;
   border-top-width: 0;
   border-bottom-width: 0;
+  box-shadow: none;
 }
 
 #dashtodockContainer.right.transparent #dash,

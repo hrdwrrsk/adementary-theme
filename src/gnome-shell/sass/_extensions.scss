@@ -120,6 +120,7 @@
 			border-radius: 0;
 			border-top-width: 0;
 			border-bottom-width: 0;
+			box-shadow: none; // FIXME removing highlight effect in extended dock seems not fancy
 		}
 
 		&.transparent #dash,
