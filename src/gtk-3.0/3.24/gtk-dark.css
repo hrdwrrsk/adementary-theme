@@ -2606,7 +2606,7 @@ searchbar > revealer > box {
  ***************/
 .titlebar:not(headerbar),
 headerbar {
-  padding: 0 10px;
+  padding: 0 9px;
   min-height: 46px;
   border-width: 0 0 1px;
   border-style: solid;
