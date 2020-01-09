@@ -129,11 +129,11 @@
 		button {
 			&#login_button,
 			&#restart_button {
-				@extend %button.suggested-action;
+				@extend %button_suggested_action;
 			}
 
 			&#shutdown_button {
-				@extend %button.destructive-action;
+				@extend %button_destructive_action;
 			}
 		}
 
