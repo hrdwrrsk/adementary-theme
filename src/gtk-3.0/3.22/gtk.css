@@ -2618,8 +2618,8 @@ searchbar > revealer > box {
  ***************/
 .titlebar:not(headerbar),
 headerbar {
-  padding: 0 6px;
-  min-height: 38px;
+  padding: 0 10px;
+  min-height: 46px;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: #b3b3b3;
@@ -2808,13 +2808,13 @@ headerbar window.budgie-popover:not(.csd).workspace-popover spinbutton,
 window.budgie-popover:not(.csd).workspace-popover headerbar spinbutton,
 headerbar separator,
 headerbar button {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 headerbar switch {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
 headerbar separator {
