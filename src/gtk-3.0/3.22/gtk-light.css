@@ -760,7 +760,7 @@ button:disabled:checked {
 notebook > header > tabs > arrow.image-button, button.image-button.titlebutton, .xfce4-panel #pulseaudio-button menu .linked button.image-button,
 button.image-button {
   min-width: 20px;
-  padding: 2px;
+  padding: 0 2px;
 }
 
 notebook > header > tabs > arrow.text-button, button.text-button.titlebutton, .xfce4-panel #pulseaudio-button menu .linked button.text-button,
