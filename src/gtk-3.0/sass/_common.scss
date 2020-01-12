@@ -2084,10 +2084,17 @@ menuitem {
 
 popover.background {
   padding: 0;
-  border-radius: 5px;
   background-color: $popover_bg_color;
 
-  .csd &, & { border: 1px solid $borders_color; }
+  .csd &, & { 
+    border: 1px solid $borders_color;
+    border-radius: 5px;
+  }
+
+  .csd & {
+    border-color: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
+    background-clip: padding-box;
+  }
 
   &.menu {
     margin: 0;
