@@ -190,6 +190,7 @@
     color: $tc;
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
+    background-clip: padding-box;
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
                                       darken($c, 4%),
@@ -214,6 +215,7 @@
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
     background-color: $c;
+    background-clip: padding-box;
     background-image: linear-gradient(to bottom,
                                       shade($c, 1.1),
                                       shade($c, 0.9));
@@ -231,6 +233,7 @@
     color: $tc;
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
+    background-clip: padding-box;
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
                                       $c,
@@ -253,6 +256,7 @@
     color: $tc;
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
+    background-clip: padding-box;
     background-image: linear-gradient(to bottom,
                                       shade($c, 1.2),
                                       shade($c, 1.0));
@@ -270,6 +274,7 @@
     color: $tc;
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
+    background-clip: padding-box;
     background-image: if($variant == 'light', image(darken($c, 12%)),
 						          			  image(darken($c, 4%)));
     @include _shadows(
@@ -286,6 +291,7 @@
     color: $tc;
     outline-color: transparent;
     border-color: if($c != $bg_color, _border_color($c), $borders_color);
+    background-clip: padding-box;
     background-image: image(darken($c, 4%));
     @include _shadows(
       inset 0 0 0 1px rgba(black, 0.05),
@@ -303,6 +309,7 @@
     label, & { color: if($tc != $fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color); }
 
     border-color: if($c != $bg_color, _border_color($c), $insensitive_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-image: linear-gradient(to bottom,
                                       transparent,
@@ -323,6 +330,7 @@
   @else if $t==insensitive-active {
   // insensitive pushed button
     $_bc: if($c != $bg_color, _border_color($c), $insensitive_borders_color);
+    background-clip: padding-box;
 
     label, & { color: $insensitive_fg_color; }
 
@@ -342,6 +350,7 @@
     label, & { color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c != $bg_color, $_bc, $backdrop_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-image: if($variant == 'light',
 						          linear-gradient(to bottom,
@@ -368,6 +377,7 @@
     label, & { color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c != $bg_color, $_bc, $backdrop_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-image: linear-gradient(to bottom,
                                       lighten($c, 4%),
@@ -388,6 +398,7 @@
     label, & { color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c != $bg_color, $_bc, $backdrop_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-image: if($variant == 'light',
 						          image(darken($c, 10%)),
@@ -407,6 +418,7 @@
     label, & { color: if($tc != $fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c != $bg_color, $_bc, $backdrop_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-image: image(darken($c, 2%));
     @include _shadows(
@@ -424,6 +436,7 @@
     label, & { color: if($c != $bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
 
     border-color: if($c != $bg_color, _border_color($c), $insensitive_borders_color);
+    background-clip: padding-box;
     $button_fill: image($_bg) !global;
     background-color: $bg_color;
     background-image: linear-gradient(to bottom,
@@ -450,6 +463,7 @@
     label { color: if($c != $bg_color, mix($tc, $_bg, 35%), $backdrop_insensitive_color); }
 
     border-color: if($c != $bg_color, _border_color($c), $insensitive_borders_color);
+    background-clip: padding-box;
     background-color: darken($bg_color, 2%);
     background-image: none;
     box-shadow: inset 0 0 0 1px rgba(black, 0.05), 0 1px $_hilight_color;

@@ -8,6 +8,16 @@
     background: $base_color;
   }
 
+	.nautilus-canvas-item.dim-label,
+	.nautilus-list-dim-label {
+		color: mix($fg_color, $bg_color, 50%);
+    &:selected { color: mix($selected_fg_color, $accent_primary, 80%); }
+  }
+  
+  .disclosure-button {
+  	padding: 0 2px;
+	}
+
   .floating-bar {
     padding: 1px;
     background-color: $base_color;
@@ -127,6 +137,40 @@
       }
     }
   }
+}
+
+// disk space piechart
+$disk_space_unknown: $BLACK_300;
+$disk_space_used: $accent_primary;
+$disk_space_free: $osd_fg_color;
+
+.disk-space-display {
+	border-style: solid;
+	border-width: 2px;
+
+	&.unknown {
+		background-color: $disk_space_unknown;
+		border-color: shade($disk_space_unknown, 0.7);
+		color: $disk_space_unknown;
+
+		&.border { color: shade($disk_space_unknown, 0.7); }
+	}
+
+	&.used {
+		background-color: $disk_space_used;
+		border-color: shade($disk_space_used, 0.7);
+		color: $disk_space_used;
+
+		&.border { color: shade($disk_space_used, 0.7); }
+	}
+
+	&.free {
+		background-color: $disk_space_free;
+		border-color: shade($disk_space_free, 0.7);
+		color: $disk_space_free;
+
+		&.border { color: shade($disk_space_free, 0.7); }
+	}
 }
 
 // gedit fixes

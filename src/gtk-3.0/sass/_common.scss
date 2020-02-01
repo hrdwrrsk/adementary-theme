@@ -4174,8 +4174,8 @@ filechooserbutton:drop(active) {
                                           if($variant == 'light', rgba(black, 0.04), rgba(black, 0.08)),
                                           rgba(black, 0.03));
         border-image: linear-gradient(to bottom,
-                                      if($variant == 'light', rgba(black, 0.15), rgba(black, 0.19)),
-                                      if($variant == 'light', rgba(white, 0.25), rgba(white, 0.1)))
+                                      if($variant == 'light', rgba(black, 0.17), rgba(black, 0.21)),
+                                      if($variant == 'light', rgba(white, 0.25), rgba(white, 0.05)))
                                       1 1 1 1;
 
         label { color: $backdrop_fg_color; }
@@ -4774,8 +4774,8 @@ decoration {
 
   // this needs to be transparent
   // see bug #722563
-  $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
-  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
+  $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize(darken($borders_color, 4%), 0.1));
+  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize(darken($borders_color, 4%), 0.1));
 
   box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
               0 0 0 1px $_wm_border; //doing borders with box-shadow
