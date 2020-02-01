@@ -48,12 +48,12 @@
 
 .gtkstyle-fallback:hover {
   color: #eeeeee;
-  background-color: #4d4c4c;
+  background-color: #4d4d4d;
 }
 
 .gtkstyle-fallback:active {
   color: #eeeeee;
-  background-color: #1a1919;
+  background-color: #1a1a1a;
 }
 
 .gtkstyle-fallback:disabled {
@@ -639,7 +639,7 @@ button:checked {
   transition-duration: 50ms;
 }
 
-notebook > header > tabs > arrow:backdrop.flat, button.titlebutton:backdrop.flat, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat, notebook > header > tabs > arrow:backdrop, button.titlebutton:backdrop, .xfce4-panel #pulseaudio-button menu .linked button:backdrop,
+notebook > header > tabs > arrow:backdrop.flat, button:backdrop.flat.titlebutton, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat, notebook > header > tabs > arrow:backdrop, button.titlebutton:backdrop, .xfce4-panel #pulseaudio-button menu .linked button:backdrop,
 button:backdrop.flat,
 button:backdrop {
   border-color: #232323;
@@ -650,7 +650,7 @@ button:backdrop {
   -gtk-icon-effect: none;
 }
 
-notebook > header > tabs > arrow:backdrop.flat label, button.titlebutton:backdrop.flat label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat label, notebook > header > tabs > arrow:backdrop.flat, button.titlebutton:backdrop.flat, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat, notebook > header > tabs > arrow:backdrop label, button.titlebutton:backdrop label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop label, notebook > header > tabs > arrow:backdrop, button.titlebutton:backdrop, .xfce4-panel #pulseaudio-button menu .linked button:backdrop,
+notebook > header > tabs > arrow:backdrop.flat label, button:backdrop.flat.titlebutton label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat label, notebook > header > tabs > arrow:backdrop.flat, button:backdrop.flat.titlebutton, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat, notebook > header > tabs > arrow:backdrop label, button.titlebutton:backdrop label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop label, notebook > header > tabs > arrow:backdrop, button.titlebutton:backdrop, .xfce4-panel #pulseaudio-button menu .linked button:backdrop,
 button:backdrop.flat label,
 button:backdrop.flat,
 button:backdrop label,
@@ -658,7 +658,7 @@ button:backdrop {
   color: #919191;
 }
 
-notebook > header > tabs > arrow:backdrop.flat:active, button.titlebutton:backdrop.flat:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active, notebook > header > tabs > arrow:backdrop.flat:checked, button.titlebutton:backdrop.flat:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked,
+notebook > header > tabs > arrow:backdrop.flat:active, button:backdrop.flat.titlebutton:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active, notebook > header > tabs > arrow:backdrop.flat:checked, button:backdrop.flat.titlebutton:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked,
 button:backdrop.flat:active,
 button:backdrop.flat:checked,
 button:backdrop:active,
@@ -669,7 +669,7 @@ button:backdrop:checked {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
-notebook > header > tabs > arrow:backdrop.flat:active label, button.titlebutton:backdrop.flat:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active label, notebook > header > tabs > arrow:backdrop.flat:active, button.titlebutton:backdrop.flat:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active, notebook > header > tabs > arrow:backdrop.flat:checked label, button.titlebutton:backdrop.flat:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked label, notebook > header > tabs > arrow:backdrop.flat:checked, button.titlebutton:backdrop.flat:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked, notebook > header > tabs > arrow:backdrop:active label, button.titlebutton:backdrop:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.titlebutton:backdrop:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked,
+notebook > header > tabs > arrow:backdrop.flat:active label, button:backdrop.flat.titlebutton:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active label, notebook > header > tabs > arrow:backdrop.flat:active, button:backdrop.flat.titlebutton:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:active, notebook > header > tabs > arrow:backdrop.flat:checked label, button:backdrop.flat.titlebutton:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked label, notebook > header > tabs > arrow:backdrop.flat:checked, button:backdrop.flat.titlebutton:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:checked, notebook > header > tabs > arrow:backdrop:active label, button.titlebutton:backdrop:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active label, notebook > header > tabs > arrow:backdrop:active, button.titlebutton:backdrop:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, button.titlebutton:backdrop:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked, button.titlebutton:backdrop:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:checked,
 button:backdrop.flat:active label,
 button:backdrop.flat:active,
 button:backdrop.flat:checked label,
@@ -681,7 +681,7 @@ button:backdrop:checked {
   color: #919191;
 }
 
-notebook > header > tabs > arrow:backdrop.flat:disabled, button.titlebutton:backdrop.flat:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled,
+notebook > header > tabs > arrow:backdrop.flat:disabled, button:backdrop.flat.titlebutton:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled,
 button:backdrop.flat:disabled,
 button:backdrop:disabled {
   border-color: #1f1f1f;
@@ -693,7 +693,7 @@ button:backdrop:disabled {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.01), inset 0 -1px rgba(255, 255, 255, 0.01);
 }
 
-notebook > header > tabs > arrow:backdrop.flat:disabled label, button.titlebutton:backdrop.flat:disabled label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled label, notebook > header > tabs > arrow:backdrop.flat:disabled, button.titlebutton:backdrop.flat:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled, notebook > header > tabs > arrow:backdrop:disabled label, button.titlebutton:backdrop:disabled label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled,
+notebook > header > tabs > arrow:backdrop.flat:disabled label, button:backdrop.flat.titlebutton:disabled label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled label, notebook > header > tabs > arrow:backdrop.flat:disabled, button:backdrop.flat.titlebutton:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled, notebook > header > tabs > arrow:backdrop:disabled label, button.titlebutton:backdrop:disabled label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, button.titlebutton:backdrop:disabled, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled,
 button:backdrop.flat:disabled label,
 button:backdrop.flat:disabled,
 button:backdrop:disabled label,
@@ -701,7 +701,7 @@ button:backdrop:disabled {
   color: #595959;
 }
 
-notebook > header > tabs > arrow:backdrop.flat:disabled:active, button.titlebutton:backdrop.flat:disabled:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:active, notebook > header > tabs > arrow:backdrop.flat:disabled:checked, button.titlebutton:backdrop.flat:disabled:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, button.titlebutton:backdrop:disabled:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, button.titlebutton:backdrop:disabled:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:checked,
+notebook > header > tabs > arrow:backdrop.flat:disabled:active, button:backdrop.flat.titlebutton:disabled:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:active, notebook > header > tabs > arrow:backdrop.flat:disabled:checked, button:backdrop.flat.titlebutton:disabled:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, button.titlebutton:backdrop:disabled:active, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, button.titlebutton:backdrop:disabled:checked, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:checked,
 button:backdrop.flat:disabled:active,
 button:backdrop.flat:disabled:checked,
 button:backdrop:disabled:active,
@@ -713,7 +713,7 @@ button:backdrop:disabled:checked {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.05);
 }
 
-notebook > header > tabs > arrow:backdrop.flat:disabled:active label, button.titlebutton:backdrop.flat:disabled:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:active label, notebook > header > tabs > arrow:backdrop.flat:disabled:checked label, button.titlebutton:backdrop.flat:disabled:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:checked label, notebook > header > tabs > arrow:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:checked label,
+notebook > header > tabs > arrow:backdrop.flat:disabled:active label, button:backdrop.flat.titlebutton:disabled:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:active label, notebook > header > tabs > arrow:backdrop.flat:disabled:checked label, button:backdrop.flat.titlebutton:disabled:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop.flat:disabled:checked label, notebook > header > tabs > arrow:backdrop:disabled:active label, button.titlebutton:backdrop:disabled:active label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, button.titlebutton:backdrop:disabled:checked label, .xfce4-panel #pulseaudio-button menu .linked button:backdrop:disabled:checked label,
 button:backdrop.flat:disabled:active label,
 button:backdrop.flat:disabled:checked label,
 button:backdrop:disabled:active label,
@@ -2394,7 +2394,7 @@ button:visited > label:backdrop,
   color: #3EA1F0;
 }
 
-infobar.info *:link, infobar.question *:link, infobar.warning *:link, infobar.error *:link, button:selected:link,
+infobar.info :link, infobar.question :link, infobar.warning :link, infobar.error :link, button:selected:link,
 button:selected:visited, button:link > label:selected,
 button:visited > label:selected,
 *:selected button:link,
@@ -2674,7 +2674,7 @@ searchbar > revealer > box {
  ***************/
 .titlebar:not(headerbar),
 headerbar {
-  padding: 0 9px;
+  padding: 0 8px;
   min-height: 46px;
   border-width: 0 0 1px;
   border-style: solid;
@@ -2835,16 +2835,16 @@ headerbar.default-decoration {
   min-height: 24px;
   padding-left: 4px;
   padding-right: 4px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .default-decoration.titlebar:not(headerbar) button.titlebutton,
 headerbar.default-decoration button.titlebutton {
   min-height: 14px;
   min-width: 14px;
-  margin: 0;
-  padding: 0px;
+  margin: 0 -1px;
+  padding: 2px;
 }
 
 .solid-csd .titlebar:backdrop:dir(rtl):not(headerbar), .solid-csd .titlebar:backdrop:dir(ltr):not(headerbar), .solid-csd .titlebar:dir(rtl):not(headerbar), .solid-csd .titlebar:dir(ltr):not(headerbar), .solid-csd
@@ -6220,7 +6220,7 @@ infobar.info button:backdrop:disabled label, infobar.info button:backdrop:disabl
 }
 
 infobar.info selection {
-  background-color: #0f0e0e;
+  background-color: #0f0f0f;
 }
 
 infobar.question {
@@ -6347,7 +6347,7 @@ infobar.question button:backdrop:disabled label, infobar.question button:backdro
 }
 
 infobar.question selection {
-  background-color: #0f0e0e;
+  background-color: #0f0f0f;
 }
 
 infobar.warning {
@@ -6474,7 +6474,7 @@ infobar.warning button:backdrop:disabled label, infobar.warning button:backdrop:
 }
 
 infobar.warning selection {
-  background-color: #0f0e0e;
+  background-color: #0f0f0f;
 }
 
 infobar.error {
@@ -6601,7 +6601,7 @@ infobar.error button:backdrop:disabled label, infobar.error button:backdrop:disa
 }
 
 infobar.error selection {
-  background-color: #0f0e0e;
+  background-color: #0f0f0f;
 }
 
 /************
@@ -6885,7 +6885,9 @@ messagedialog.csd decoration {
 button.titlebutton {
   min-width: 14px;
   min-height: 14px;
-  padding: 0px;
+  padding: 2px;
+  border-radius: 100%;
+  margin: 0 -1px;
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -6908,7 +6910,7 @@ button.titlebutton.close {
 }
 
 button.titlebutton.close:hover {
-  background-color: #4d4c4c;
+  background-color: #4d4d4d;
   transition: none;
 }
 
@@ -6931,7 +6933,7 @@ button.titlebutton.maximize {
 }
 
 button.titlebutton.maximize:hover {
-  background-color: #4d4c4c;
+  background-color: #4d4d4d;
   transition: none;
 }
 
@@ -6954,7 +6956,7 @@ button.titlebutton.minimize {
 }
 
 button.titlebutton.minimize:hover {
-  background-color: #4d4c4c;
+  background-color: #4d4d4d;
   transition: none;
 }
 
@@ -6977,7 +6979,7 @@ button.titlebutton.minimize:backdrop:hover, button.titlebutton.minimize:backdrop
 }
 
 .maximized button.titlebutton.maximize:hover {
-  background-color: #4d4c4c;
+  background-color: #4d4d4d;
   transition: none;
 }
 
@@ -7036,7 +7038,7 @@ textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled
 textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled,
 entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected,
 .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected, .nemo-window .nemo-window-pane widget.entry:backdrop:disabled:selected {
-  color: #aaabab;
+  color: #ababab;
 }
 
 .monospace {
@@ -7253,7 +7255,7 @@ button.emoji-section:checked label {
   margin: 2px 1px;
   border-radius: 3px;
   color: #eeeeee;
-  border: 1px solid #1a1919;
+  border: 1px solid #1a1a1a;
   background-image: linear-gradient(to bottom, #474747, #454545, #3d3d3d);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 -1px rgba(255, 255, 255, 0.03);
 }
@@ -9047,12 +9049,12 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_backdrop_bg_b #333;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_border alpha(black, 0.18);
-@define-color wm_button_hover_color_a #4d4c4c;
-@define-color wm_button_hover_color_b #4d4c4c;
+@define-color wm_button_hover_color_a #4d4d4d;
+@define-color wm_button_hover_color_b #4d4d4d;
 @define-color wm_button_active_color_a #292929;
 @define-color wm_button_active_color_b #292929;
 @define-color wm_button_active_color_c #292929;
 @define-color content_view_bg #393939;
-@define-color budgie_tasklist_indicator_color #a2a1a1;
+@define-color budgie_tasklist_indicator_color #a2a2a2;
 @define-color budgie_tasklist_indicator_color_active #3EA1F0;
 @define-color budgie_tasklist_indicator_color_active_window #8cd5ff;

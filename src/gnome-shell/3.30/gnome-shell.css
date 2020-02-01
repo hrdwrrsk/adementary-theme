@@ -327,7 +327,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog .run-dialog-label {
   font-size: 10pt;
   font-weight: bold;
-  color: #0f0e0e;
+  color: #0f0f0f;
   padding-bottom: .4em;
 }
 
@@ -490,7 +490,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .mount-dialog-app-list-item {
-  color: #0f0e0e;
+  color: #0f0f0f;
 }
 
 .mount-dialog-app-list-item:hover {
@@ -1435,7 +1435,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .media-message-cover-icon.fallback {
-  color: #424141;
+  color: #424242;
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 2px;
@@ -2204,7 +2204,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .chat-log-message {
-  color: #0f0e0e;
+  color: #0f0f0f;
 }
 
 .chat-new-group {
@@ -2404,7 +2404,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: #0f0e0e;
+  color: #0f0f0f;
 }
 
 .candidate-box {
@@ -2455,7 +2455,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .framed-user-icon:hover {
-  color: #757474;
+  color: #757575;
 }
 
 .login-dialog-banner-view {
