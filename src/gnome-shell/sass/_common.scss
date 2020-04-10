@@ -2026,7 +2026,7 @@ StScrollBar {
 
   // Banners
   .notification-banner {
-    @include fontsize($font-size);
+    font-size: 100%;
     width: 34em;
     margin: 5px;
     border-radius: 6px;

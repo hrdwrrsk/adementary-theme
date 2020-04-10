@@ -2147,7 +2147,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner {
-  font-size: 9ptpt;
+  font-size: 100%;
   width: 34em;
   margin: 5px;
   border-radius: 6px;
