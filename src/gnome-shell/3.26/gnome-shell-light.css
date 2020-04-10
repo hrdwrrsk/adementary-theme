@@ -322,7 +322,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .run-dialog-label {
-  font-size: 10pt;
+  font-size: 125%;
   font-weight: bold;
   color: #0f0f0f;
   padding-bottom: .4em;
@@ -330,7 +330,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .mount-dialog-subject,
 .end-session-dialog-subject {
-  font-size: 12pt;
+  font-size: 125%;
 }
 
 /* Message Dialog */
@@ -667,6 +667,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu .popup-sub-menu {
   background-color: #eeeeee;
   box-shadow: inset 0 -1px 0px #c8c8c8;
+  border-color: transparent;
 }
 
 .popup-menu .popup-menu-content {
@@ -1036,19 +1037,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 0 6px;
 }
 
-.unlock-screen #panel .panel-button,
-.login-screen #panel .panel-button,
-.lock-screen #panel .panel-button {
+.unlock-screen #panel .panel-button, .login-screen #panel .panel-button, .lock-screen #panel .panel-button {
   color: white;
 }
 
-.unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active,
-.login-screen #panel .panel-button:focus,
-.login-screen #panel .panel-button:hover,
-.login-screen #panel .panel-button:active,
-.lock-screen #panel .panel-button:focus,
-.lock-screen #panel .panel-button:hover,
-.lock-screen #panel .panel-button:active {
+.unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active, .login-screen #panel .panel-button:focus, .login-screen #panel .panel-button:hover, .login-screen #panel .panel-button:active, .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .lock-screen #panel .panel-button:active {
   color: #0f0f0f;
 }
 
@@ -1168,8 +1161,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #3EA1F0;
 }
 
+.datemenu-today-button .day-label {
+  font-size: 125%;
+}
+
 .datemenu-today-button .date-label {
-  font-size: 14pt;
+  font-size: 200%;
   font-weight: 300;
 }
 
@@ -1191,6 +1188,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .world-clocks-city {
   font-size: 90%;
   font-weight: bold;
+  color: #282828;
 }
 
 .world-clocks-time {
@@ -1246,8 +1244,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .calendar-day-base {
   font-size: 100%;
   text-align: center;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   padding: 0px;
   margin: 2px;
   border-radius: 100px;
@@ -1422,8 +1420,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding-left: 18px;
 }
 
-.message-media-control:hover {
+.message-media-control:hover, .message-media-control:selected {
   color: #282828;
+  background-color: transparent;
 }
 
 .message-media-control:insensitive {
@@ -1649,6 +1648,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.95);
   border-radius: 3px;
   padding: 4px 8px;
+  font-size: 100%;
+  border: 0;
 }
 
 .search-entry {
@@ -1773,8 +1774,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-#dash .app-well-app:active .overview-icon,
-#dash .app-well-app:checked .overview-icon {
+#dash .app-well-app:active .overview-icon, #dash .app-well-app:checked .overview-icon {
   background-color: #3EA1F0;
 }
 
@@ -1880,8 +1880,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 200ms;
 }
 
-.app-well-app:active .overview-icon,
-.app-well-app:checked .overview-icon,
+.app-well-app:active .overview-icon, .app-well-app:checked .overview-icon,
 .app-well-app.app-folder:active .overview-icon,
 .app-well-app.app-folder:checked .overview-icon,
 .show-apps:active .overview-icon,
@@ -1892,9 +1891,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-.app-well-app:hover .overview-icon,
-.app-well-app:focus .overview-icon,
-.app-well-app:selected .overview-icon,
+.app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
 .app-well-app.app-folder:hover .overview-icon,
 .app-well-app.app-folder:focus .overview-icon,
 .app-well-app.app-folder:selected .overview-icon,
@@ -1959,9 +1956,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #282828;
 }
 
-.app-folder-popup-bin .app-well-app:hover .overview-icon,
-.app-folder-popup-bin .app-well-app:focus .overview-icon,
-.app-folder-popup-bin .app-well-app:selected .overview-icon {
+.app-folder-popup-bin .app-well-app:hover .overview-icon, .app-folder-popup-bin .app-well-app:focus .overview-icon, .app-folder-popup-bin .app-well-app:selected .overview-icon {
   background-color: rgba(0, 0, 0, 0.1);
   transition-duration: 0ms;
   border-image: none;
@@ -1990,8 +1985,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.page-indicator:active .page-indicator-icon,
-.page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
+.page-indicator:active .page-indicator-icon, .page-indicator:checked .page-indicator-icon, .page-indicator:checked:active {
   border: none;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.75);
@@ -2050,7 +2044,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .notification-banner {
-  font-size: 9pt;
+  font-size: 9ptpt;
   width: 34em;
   margin: 5px;
   border-radius: 6px;
@@ -2540,8 +2534,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding-left: 2px;
 }
 
-.login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
-.login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
+.login-dialog-not-listed-button:focus .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
   color: #eeeeec;
 }
 
@@ -2907,8 +2900,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-right-width: 0;
 }
 
-#dashtodockContainer.top.transparent #dash,
-#dashtodockContainer.top.opaque #dash {
+#dashtodockContainer.top.transparent #dash, #dashtodockContainer.top.opaque #dash {
   border: 1px solid rgba(0, 0, 0, 0.22);
   background-clip: border-box;
 }
@@ -2939,8 +2931,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-right-width: 0;
 }
 
-#dashtodockContainer.bottom.transparent #dash,
-#dashtodockContainer.bottom.opaque #dash {
+#dashtodockContainer.bottom.transparent #dash, #dashtodockContainer.bottom.opaque #dash {
   border: 1px solid rgba(0, 0, 0, 0.22);
   background-clip: border-box;
 }
@@ -2972,8 +2963,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#dashtodockContainer.left.transparent #dash,
-#dashtodockContainer.left.opaque #dash {
+#dashtodockContainer.left.transparent #dash, #dashtodockContainer.left.opaque #dash {
   border: 1px solid rgba(0, 0, 0, 0.22);
   background-clip: border-box;
 }
@@ -3004,8 +2994,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: none;
 }
 
-#dashtodockContainer.right.transparent #dash,
-#dashtodockContainer.right.opaque #dash {
+#dashtodockContainer.right.transparent #dash, #dashtodockContainer.right.opaque #dash {
   border: 1px solid rgba(0, 0, 0, 0.22);
   background-clip: border-box;
 }
@@ -3102,14 +3091,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
 }
 
-#panel.dashtopanelMainPanel .show-apps:hover .show-apps-icon,
-#panel.dashtopanelMainPanel .show-apps:active .show-apps-icon,
-#panel.dashtopanelMainPanel .show-apps:checked .show-apps-icon {
+#panel.dashtopanelMainPanel .show-apps:hover .show-apps-icon, #panel.dashtopanelMainPanel .show-apps:active .show-apps-icon, #panel.dashtopanelMainPanel .show-apps:checked .show-apps-icon {
   color: #282828;
 }
 
-#panel.dashtopanelMainPanel .show-apps:hover .overview-icon,
-#panel.dashtopanelMainPanel .show-apps:active .overview-icon,
-#panel.dashtopanelMainPanel .show-apps:checked .overview-icon {
+#panel.dashtopanelMainPanel .show-apps:hover .overview-icon, #panel.dashtopanelMainPanel .show-apps:active .overview-icon, #panel.dashtopanelMainPanel .show-apps:checked .overview-icon {
   background-color: transparent;
 }

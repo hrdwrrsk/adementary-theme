@@ -11,7 +11,7 @@ SASSC_OPT=('-M' '-t' 'expanded')
 _COLOR_VARIANTS=('' '-dark' '-light')
 _SIZE_VARIANTS=('' '-compact')
 
-GS_VERSIONS=('3.22' '3.24' '3.26' '3.28' '3.30' '3.32' '3.34')
+GS_VERSIONS=('3.22' '3.24' '3.26' '3.28' '3.30' '3.32' '3.34' '3.36')
 
 
 if [[ ! -z "${COLOR_VARIANTS:-}" ]]; then

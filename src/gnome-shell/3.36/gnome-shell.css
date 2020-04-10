@@ -19,8 +19,7 @@
  */
 /* GLOBALS */
 stage {
-  font-family: Noto Sans, Cantarell, Sans-Serif;
-  font-size: 9pt;
+  font-size: 100%;
   color: #282828;
 }
 
@@ -296,7 +295,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog .modal-dialog-content-box {
-  padding: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .modal-dialog .run-dialog-entry {
@@ -318,6 +320,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: bold;
   color: #0f0f0f;
   padding-bottom: .4em;
+}
+
+.modal-dialog .run-dialog-description {
+  font-size: 90%;
+  color: #282828;
 }
 
 .mount-dialog-subject,
@@ -343,6 +350,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message-dialog-title {
   font-weight: bold;
+  font-size: 125%;
 }
 
 .message-dialog-subtitle {
@@ -525,6 +533,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: black;
 }
 
+.prompt-dialog .modal-dialog-content-box {
+  margin-bottom: 0;
+}
+
 .prompt-dialog-description:rtl {
   text-align: right;
 }
@@ -652,7 +664,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Popovers/Menus */
 .popup-menu {
   min-width: 200px;
+  color: #282828;
   border-image: url("assets/mpb-background.svg") 9;
+}
+
+.popup-menu .popup-menu-arrow, .popup-menu .popup-menu-icon {
+  icon-size: 16px;
 }
 
 .popup-menu .popup-sub-menu {
@@ -661,8 +678,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-color: transparent;
 }
 
+.popup-menu .popup-menu-content {
+  padding: 1em 0em;
+}
+
 .popup-menu .popup-menu-item {
-  spacing: 8px;
+  spacing: 0px;
+  padding: 0px;
 }
 
 .popup-menu .popup-menu-item:ltr {
@@ -729,12 +751,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-separator-menu-item {
+  padding: 0;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
   height: 1px;
   margin: 6px 64px;
-  background-color: transparent;
-  border-color: #d4d4d4;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  background-color: #d4d4d4;
+}
+
+.popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
+  margin: 0 64px 0 32px;
 }
 
 .background-menu {
@@ -1051,6 +1078,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar {
   margin-bottom: 0;
+  background-color: #f3f3f3;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
 }
 
 .calendar,
@@ -1062,6 +1093,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .datemenu-calendar-column {
   spacing: 8px;
+  padding: 0;
+}
+
+.datemenu-calendar-column:ltr, .datemenu-calendar-column:rtl {
+  margin: 0;
 }
 
 .datemenu-displays-section {
@@ -1098,6 +1134,17 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message-list-section-list:rtl {
   padding-right: 0;
+}
+
+.datemenu-today-button,
+.world-clocks-button,
+.weather-button,
+.events-section-title {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+  color: #282828;
 }
 
 .datemenu-today-button:hover, .datemenu-today-button:focus,
@@ -1164,7 +1211,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #1b1b1b;
   font-weight: bold;
   margin: 2px;
-  padding: 6px 16px;
+  padding: 6px 0;
 }
 
 .pager-button {
@@ -1203,8 +1250,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-align: center;
   width: 26px;
   height: 26px;
-  padding: 0px;
+  padding: 1px 0;
   margin: 2px;
+  color: #282828;
   font-feature-settings: "tnum";
   border-radius: 100px;
 }
@@ -1294,10 +1342,22 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Message list */
 .message-list {
   width: 31.5em;
+  padding: 0;
+}
+
+.message-list-placeholder {
+  spacing: 0;
+}
+
+.message-list-controls {
+  margin: 0 8px;
+  spacing: 8px;
 }
 
 .message-list-clear-button.button {
   margin: 8px 8px 0;
+  padding: 2px 16px;
+  margin: 0px 8px 0;
 }
 
 .message-list-clear-button.button:insensitive {
@@ -1314,6 +1374,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message {
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
@@ -1363,6 +1424,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message-content {
   color: black;
   padding: 10px;
+}
+
+.message-close-button {
+  color: #282828;
 }
 
 .message-media-control {
@@ -1802,7 +1867,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .app-view-control {
-  padding: 6px 24px;
+  margin: 0;
+  padding: 2px 24px;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1845,6 +1911,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .list-search-result:hover {
   background-color: rgba(238, 238, 236, 0.1);
   transition-duration: 200ms;
+}
+
+.app-well-app:drop .overview-icon,
+.app-well-app.app-folder:drop .overview-icon,
+.show-apps:drop .overview-icon,
+.grid-search-result:drop .overview-icon {
+  background-color: #3EA1F0;
 }
 
 .app-well-app:active .overview-icon, .app-well-app:checked .overview-icon,
@@ -1904,6 +1977,14 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   transition-duration: 100ms;
 }
 
+.rename-folder-popup .popup-menu-item:ltr {
+  padding: 0 16px 0 14px;
+}
+
+.rename-folder-popup .popup-menu-item:rtl {
+  padding: 0 14px 0 16px;
+}
+
 .app-folder-popup {
   -arrow-border-radius: 0;
   -arrow-background-color: transparent;
@@ -1934,6 +2015,61 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 5px;
   spacing-rows: 5px;
   spacing-columns: 5px;
+}
+
+.app-folder-dialog {
+  border-image: url("assets/mpb-background.svg") 9;
+  background-color: transparent;
+  border: 0;
+  spacing: 6px;
+  padding: 6px;
+}
+
+.app-folder-dialog-container {
+  padding: 8px;
+  width: 600px;
+  height: 400px;
+}
+
+.app-folder-dialog .overview-icon {
+  color: #282828;
+}
+
+.app-folder-dialog .app-well-app:hover .overview-icon {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.app-folder-dialog .folder-name-container {
+  padding: 8px 8px 0;
+  spacing: 8px;
+}
+
+.app-folder-dialog .folder-name-container .folder-name-label {
+  color: #282828;
+}
+
+.app-folder-dialog .folder-name-container .folder-name-label, .app-folder-dialog .folder-name-container .folder-name-entry {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+.app-folder-dialog .edit-folder-button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #282828;
+  padding: 2px 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.app-folder-dialog .edit-folder-button:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.app-folder-dialog .edit-folder-button:active, .app-folder-dialog .edit-folder-button:selected {
+  border-color: #bbbbbb;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background-color: #e9e9e9;
 }
 
 .page-indicator {
@@ -2051,6 +2187,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
   padding-top: 2px;
   spacing: 1px;
+  border: 0;
 }
 
 .notification-banner .notification-button {
@@ -2061,6 +2198,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 6px 6px 7px;
   margin: 6px;
   margin-top: 0;
+  color: #282828;
+  min-height: 0;
   border-image: url("assets/buttons/button-default.svg") 4;
 }
 
