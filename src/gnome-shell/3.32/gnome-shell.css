@@ -218,7 +218,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 10px;
-  -barlevel-height: 4px;
+  -barlevel-height: 3px;
   -barlevel-background-color: rgba(0, 0, 0, 0.05);
   -barlevel-border-color: rgba(0, 0, 0, 0.3);
   -barlevel-active-background-color: rgba(0, 0, 0, 0.45);
@@ -227,6 +227,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -barlevel-overdrive-border-color: #681418;
   -barlevel-overdrive-separator-width: 1px;
   -barlevel-border-width: 1px;
+  -slider-height: 3px;
+  -slider-background-color: rgba(0, 0, 0, 0.05);
+  -slider-border-color: rgba(0, 0, 0, 0.3);
+  -slider-active-background-color: rgba(0, 0, 0, 0.45);
+  -slider-active-border-color: rgba(0, 0, 0, 0.45);
+  -slider-border-width: 1px;
   -slider-handle-radius: 6px;
 }
 
@@ -992,7 +998,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button StLabel {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 #panel .panel-button:hover {
@@ -1316,6 +1322,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  text-shadow: none;
 }
 
 .message:hover, .message:focus {
@@ -2018,6 +2025,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #282828;
   background-color: transparent;
   border: 0;
+  text-shadow: none;
   box-shadow: none;
 }
 

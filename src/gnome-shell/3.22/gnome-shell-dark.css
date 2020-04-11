@@ -218,7 +218,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Slider */
 .slider {
   height: 10px;
-  -slider-height: 4px;
+  -slider-height: 3px;
   -slider-background-color: rgba(0, 0, 0, 0.05);
   -slider-border-color: rgba(0, 0, 0, 0.3);
   -slider-active-background-color: #7e8087;
@@ -1005,7 +1005,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button StLabel {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 #panel .panel-button:hover {
@@ -1328,6 +1328,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .message {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  text-shadow: none;
 }
 
 .message:hover, .message:focus {
@@ -2021,6 +2022,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #eeeeee;
   background-color: transparent;
   border: 0;
+  text-shadow: none;
   box-shadow: none;
 }
 
