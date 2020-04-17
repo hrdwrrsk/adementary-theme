@@ -1,0 +1,12 @@
+# Ignore compiled CSS files
+src/gnome-shell/3.22/*.css
+src/gnome-shell/3.24/*.css
+src/gnome-shell/3.26/*.css
+src/gnome-shell/3.28/*.css
+src/gnome-shell/3.30/*.css
+src/gnome-shell/3.32/*.css
+src/gnome-shell/3.34/*.css
+src/gnome-shell/3.36/*.css
+
+src/gtk-3.0/3.22/*.css
+src/gtk-3.0/3.24/*.css
