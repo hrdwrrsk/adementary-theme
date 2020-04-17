@@ -138,8 +138,9 @@ stage {
 
 /* Entries */
 StEntry {
+  min-height: 24px;
   border-radius: 3px;
-  padding: 4px;
+  padding: 0 4px;
   border-width: 1px;
   color: $fg_color;
   @include entry(normal);
@@ -148,11 +149,32 @@ StEntry {
   &:insensitive { @include entry(insensitive);}
   selection-background-color: $accent_primary;
   selected-color: $selected_fg_color;
-  StIcon.capslock-warning {
-    icon-size: 16px;
-    warning-color: $warning_color;
-    padding: 0 4px;
+  StIcon {
+    &.capslock-warning {
+			icon-size: 16px;
+			warning-color: $warning_color;
+			padding: 0 4px;
+		}
+		@if $version > 3.35 {
+			&.peek-password {
+				icon-size: 16px;
+				padding: 0 4px;
+			}
+		}
   }
+  @if $version > 3.35 {
+  	StLabel.hint-text {
+  		color: rgba($fg_color, 0.7);
+  	}
+  }
+}
+
+@if $version > 3.35 {
+	.capslock-warning-label {
+		color: $warning_color;
+		font-size: 90%;
+		text-align: center;
+	}
 }
 
 
@@ -265,7 +287,7 @@ StScrollBar {
 /* Modal Dialogs */
 
 .headline {
-  font-size: 100%;
+  font-size: 120%;
 }
 
 .lightbox { background-color: black; }
@@ -289,66 +311,112 @@ StScrollBar {
   @else { 
   	.modal-dialog-content-box {
     	padding: 24px;
-  	} 
+  	}
+  	
+  	.mount-dialog-subject,
+  	.end-session-dialog-subject { //this should be a generic header class
+    	font-size: 120%;
+  	}
   }
-  .run-dialog-entry { width: 20em; margin-bottom: 6px; }
-  .run-dialog-error-box {
-    padding-top: 16px;
-    spacing: 6px;
-  }
-  .run-dialog-button-box { padding-top: 1em; }
-  .run-dialog-label {
-    font-size: 125%;
-    font-weight: bold;
-    color: darken($fg_color,10%);
-    padding-bottom: .4em;
-  }
-  @if $version >  3.35 {
-  	.run-dialog-description {
-  		font-size: 90%;
-  		color: $fg_color;
+  @if $version < 3.35 {
+  	.run-dialog-entry { width: 20em; margin-bottom: 6px; }
+  	.run-dialog-error-box {
+   		padding-top: 16px;
+    	spacing: 6px;
+  	}
+  	.run-dialog-button-box { padding-top: 1em; }
+  	.run-dialog-label {
+    	font-size: 120%;
+    	font-weight: bold;
+    	color: darken($fg_color,10%);
+    	padding-bottom: .4em;
   	}
   }
 }
 
-  .mount-dialog-subject,
-  .end-session-dialog-subject { //this should be a generic header class
-    font-size: 125%;
-  }
+@if $version > 3.35 {
+	/* Run Dialog */
+	.run-dialog {
+		.modal-dialog-content-box {
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+		.run-dialog-entry {
+			width: 16em;
+		}
+		.run-dialog-description {
+			font-size: 90%;
+			text-align: center;
+			color: $fg_color;
+		}
+	}
+	
+	/* Dialog List */
+	// I dont know what something used this widget, so need your testing and feedback
+	.dialog-list {
+		spacing: 14px;
+		.dialog-list-title {
+			text-align: center;
+			font-weight: bold;
+		}
+		.dialog-list-scrollview { max-height: 200px; }
+		.dialog-list-box {
+    	spacing: 1em;
+
+    	.dialog-list-item {
+      	spacing: 1em;
+
+      	.dialog-list-item-title { font-weight: bold; }
+      	.dialog-list-item-description {
+        	color: $fg_color;
+        	font-size: 90%;
+      	}
+    	}
+  	}
+	}
+}
 
 /* Message Dialog */
+@if $version < 3.35 { 
   .message-dialog-main-layout {
-    padding: 12px 20px 0;
+   	padding: 12px 20px 0;
     spacing: 12px;
   }
-
-  .message-dialog-content {
-    max-width: 28em;
-    spacing: 20px;
-  }
-
   .message-dialog-icon {
     min-width: 48px;
     icon-size: 48px;
   }
-
-  .message-dialog-title {
-    font-weight: bold;
-    @if $version > 3.35 {
-    	font-size: 125%;
-    }
-  }
-
   .message-dialog-subtitle {
     color: darken($fg_color,40%);
     font-weight: bold;
   }
+  .message-dialog-content {
+    max-width: 28em;
+  }
+  .message-dialog-title {
+    font-weight: bold;
+  }
+}
+@else {
+	.message-dialog-content {
+    spacing: 18px;
+  }
+  .message-dialog-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 120%;
+    
+    &.leightweight { font-size: 110% }
+  }
+  .message-dialog-description { text-align: center; }
+}
 
 /* End Session Dialog */
-.end-session-dialog {
-  spacing: 42px;
-  border: 1px solid $borders_color;
-}
+@if $version < 3.35 {	
+	.end-session-dialog {
+  	spacing: 42px;
+  	border: 1px solid $borders_color;
+	}
 
   .end-session-dialog-list {
       padding-top: 20px;
@@ -421,9 +489,21 @@ StScrollBar {
     color: darken($fg_color,5%);
     font-size: 10pt;
   }
+}
+@else {
+	.end-session-dialog {
+  	width: 28em;
 
-/* ShellMountOperation Dialogs */
-.shell-mount-operation-icon { icon-size: 48px; }
+  	.end-session-dialog-battery-warning,
+  	.dialog-list-title {
+    	color: $warning_color;
+  	}
+	}
+}
+
+@if $version < 3.35 {
+	/* ShellMountOperation Dialogs */
+	.shell-mount-operation-icon { icon-size: 48px; }
 
   .mount-dialog {
     spacing: 24px;
@@ -478,23 +558,28 @@ StScrollBar {
   .mount-dialog-app-list-item-name {
     font-size: 10pt;
   }
+}
 
 
 /* Password or Authentication Dialog */
 
 .prompt-dialog {
   //this is the width of the entire modal popup
-  width: 34em;
   border: 1px solid $borders_color;
-
-  .message-dialog-main-layout { spacing: 24px; padding: 10px; }
-  .message-dialog-content { spacing: 16px; }
-  .message-dialog-title { color: darken($fg_color,25%); }
-  @if $version > 3.35 { 
-  	.modal-dialog-content-box { margin-bottom: 0; } 
+  @if $version < 3.35 { 
+  	width: 34em;
+  	
+  	.message-dialog-main-layout { spacing: 24px; padding: 10px; }
+  	.message-dialog-content { spacing: 16px; }
+  	.message-dialog-title { color: darken($fg_color,25%); }
   }
+  @else { 
+  	width: 26em;
+  	.modal-dialog-content-box { margin-bottom: 0; }
+	}
 }
 
+@if $version < 3.35 {
   .prompt-dialog-description:rtl {
     text-align: right;
   }
@@ -523,18 +608,49 @@ StScrollBar {
     font-size: 10pt;
     padding-bottom: 8px;
   }
+}
+@else {
+	// needs testing, perhaps
+	.prompt-dialog-password-grid {
+		spacing-rows: 4px;
+  	spacing-columns: 4px;
+
+  	.prompt-dialog-password-entry {
+    	width: auto;
+
+    	&:ltr { margin-left: 10px; }
+    	&:rtl { margin-right: 10px; }
+  	}
+	}
+	.prompt-dialog-password-layout {
+  	spacing: 4px;
+	}
+	.prompt-dialog-password-entry {
+  	width: 16em;
+	}
+	.prompt-dialog-error-label,
+	.prompt-dialog-info-label,
+	.prompt-dialog-null-label {
+  	text-align: center;
+  	font-size: 90%;
+	}
+	.prompt-dialog-error-label {
+	  color: $warning_color;
+	}
+}
 
 
 /* Polkit Dialog */
 
-.polkit-dialog-user-layout {
-  padding-left: 10px;
-  spacing: 10px;
-  &:rtl {
-    padding-left: 0px;
-    padding-right: 10px;
-  }
-}
+@if $version < 3.35 {
+	.polkit-dialog-user-layout {
+  	padding-left: 10px;
+  	spacing: 10px;
+  	&:rtl {
+   		padding-left: 0px;
+    	padding-right: 10px;
+  	}
+	}
 
   .polkit-dialog-user-root-label {
     color: $warning_color;
@@ -546,6 +662,19 @@ StScrollBar {
     width: 48px;
     height: 48px;
   }
+}
+@else {
+	.polkit-dialog-user-layout {
+		text-align: center;
+		spacing: 8px;
+		margin-bottom: 0;
+	}
+	.polkit-dialog-user-icon {
+    border-radius: 99px;
+    background-size: contain;
+  }
+  .polkit-dialog-user-root-label { color: $warning_color; }
+}
 
 /* Audio selection dialog */
 .audio-device-selection-dialog {
@@ -581,37 +710,39 @@ StScrollBar {
     icon-size: 64px;
   }
 
-/* Access Dialog */
-.access-dialog {
-  spacing: 30px;
-}
+@if $version < 3.35 {
+	/* Access Dialog */
+	.access-dialog {
+  	spacing: 30px;
+	}
 
-/* Geolocation Dialog */
-.geolocation-dialog {
-  spacing: 30px;
-}
+	/* Geolocation Dialog */
+	.geolocation-dialog {
+  	spacing: 30px;
+	}
 
-/* Extension Dialog */
-.extension-dialog {
-  .message-dialog-main-layout { spacing: 24px; padding: 10px; }
-  .message-dialog-title { color: darken($fg_color,25%); }
-}
+	/* Extension Dialog */
+	.extension-dialog {
+  	.message-dialog-main-layout { spacing: 24px; padding: 10px; }
+  	.message-dialog-title { color: darken($fg_color,25%); }
+	}
 
-/* Inhibit-Shortcuts Dialog */
-.inhibit-shortcuts-dialog {
-  spacing: 30px;
-}
+	/* Inhibit-Shortcuts Dialog */
+	.inhibit-shortcuts-dialog {
+  	spacing: 30px;
+	}
 
-/* Network Agent Dialog */
+	/* Network Agent Dialog */
 
-.network-dialog-secret-table {
-  spacing-rows: 15px;
-  spacing-columns: 1em;
-}
+	.network-dialog-secret-table {
+  	spacing-rows: 15px;
+  	spacing-columns: 1em;
+	}
 
-.keyring-dialog-control-table {
-  spacing-rows: 15px;
-  spacing-columns: 1em;
+	.keyring-dialog-control-table {
+  	spacing-rows: 15px;
+  	spacing-columns: 1em;
+	}
 }
 
 /* Popovers/Menus */
@@ -635,24 +766,36 @@ StScrollBar {
     background-color: darken($bg_color,2%);
     box-shadow: inset 0 -1px 0px lighten($borders_color,5%);
     border-color: transparent;
+		@if $version > 3.35 {
+			border-width: 0;
+			
+			.popup-menu-item {
+				&:ltr { padding-left: 4px; }
+				&:rtl { padding-right: 4px; }
+			}
+		}
   }
 
-  @if $version < 3.31 {
-    .popup-menu-content { padding: 1em 0em; }
-  }
- 	@if $version > 3.35 {
+ 	@if $version < 3.35 {
  		.popup-menu-content { padding: 1em 0em; }
  	}
 
   .popup-menu-item {
     @if $version > 3.35 {
-    	spacing: 0px;
+    	spacing: 8px;
     	padding: 0px; 
     }
     @else { spacing: 8px; }
 
-    &:ltr { padding: 0.4em 24px 0.4em 0; }
-    &:rtl { padding: 0.4em 0 0.4em 24px; }
+		@if $version < 3.35 {
+			&:ltr { padding: 0.4em 24px 0.4em 0; }
+			&:rtl { padding: 0.4em 0 0.4em 24px; }
+		}
+		@else {
+			&:ltr { padding: 0.4em (24px + 6) 0.4em 0; }
+			&:rtl { padding: 0.4em 0 0.4em (24px + 6); }
+		}
+		
     &:checked {
       background-color: darken($bg_color,2%);
       box-shadow: inset 0 1px 0px lighten($borders_color,5%);
@@ -708,9 +851,6 @@ StScrollBar {
     		background-color: lighten($borders_color,10%);
     		.popup-sub-menu & { //submenu separators
       		margin: 0 64px 0 32px;
-      		@if $variant == 'dark' {
-        		background-color: lighten($bg_color,10%);
-      		}
     		}
     	}
   	}
@@ -1117,6 +1257,7 @@ StScrollBar {
     	border: 0;
     	box-shadow: none;
     	margin: 0;
+			padding: 0;
     }
   }
 
@@ -1184,7 +1325,7 @@ StScrollBar {
     }
 
     .datemenu-today-button .day-label {
-    	font-size: 125%
+    	font-size: 120%
     }
 
     .datemenu-today-button .date-label {
@@ -1367,19 +1508,20 @@ StScrollBar {
           //&:hover,&:focus { @include button(hover); }
           //&:active { @include button(active); }
 
-          margin: 8px 8px 0;
-          @if $version > 3.33 { padding: 2px 16px; }
-          @if $version > 3.35 { margin: 0px 8px 0; }
+					@if $version > 3.33 { padding: 2px 16px; }
+          @if $version > 3.35 { margin: 0; }
+          @else { margin: 8px 8px 0; }
+          
           &:insensitive { color: $insensitive_fg_color; }
         }
 
         .message-list-sections {
-          spacing: 1em;
+          spacing: 2px
         }
 
         .message-list-section,
         .message-list-section-list {
-          spacing: 0.4em;
+          spacing: 2px;
         }
 
         .message {
@@ -1652,13 +1794,14 @@ StScrollBar {
   //search entry
   .search-entry {
     width: 320px;
-    padding: 6px 8px;
+    padding: 2px 8px;
     border-radius: 4px;
     @include entry(normal);
     border-color: if($variant == 'light', rgba(black, 0.30), $borders_color);
+    color: rgba($fg_color, 0.7);
 
     &:focus {
-      padding: 6px 8px;
+      color: $fg_color;
       border-width: 1px;
       border-color: $accent_primary;
     }
@@ -1958,7 +2101,7 @@ StScrollBar {
   			& .folder-name-label { color: $fg_color; }
   			& .folder-name-label,
     		& .folder-name-entry {
-      		font-size: 125%;
+      		font-size: 120%;
       		font-weight: bold;
     		}
   		}
@@ -2114,6 +2257,8 @@ StScrollBar {
         margin-left: 6px;
         margin-right: 0;
         margin-top: 0;
+        
+        @if $version > 3.35 { border: 0; }
 
         border-image: url("assets/buttons/button-linked-first.svg") 4;
         &:hover { border-image: url("assets/buttons/button-linked-first-hover.svg") 4; }
@@ -2128,6 +2273,8 @@ StScrollBar {
         margin-left: 0;
         margin-right: 6px;
         margin-top: 0;
+        
+        @if $version > 3.35 { border: 0; }
 
         border-image: url("assets/buttons/button-linked-last.svg") 4;
         &:hover { border-image: url("assets/buttons/button-linked-last-hover.svg") 4; }
@@ -2142,6 +2289,8 @@ StScrollBar {
         margin-left: 6px;
         margin-right: 6px;
         margin-top: 0;
+        
+        @if $version > 3.35 { border: 0; }
 
         border-image: url("assets/buttons/button-default.svg") 4;
         &:hover { border-image: url("assets/buttons/button-default-hover.svg") 4; }
