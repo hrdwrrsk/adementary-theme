@@ -10,7 +10,7 @@ THEME_NAME="Adementary"
 COLOR_VARIANTS=('' '-dark' '-light')
 
 GTK_VERSIONS=('3.22' '3.24')
-GS_VERSIONS=('3.20' '3.22' '3.24' '3.26' '3.28' '3.30' '3.32' '3.34' '3.36')
+GS_VERSIONS=('3.28' '3.30' '3.32' '3.34' '3.36')
 LATEST_GS_VERSION="${GS_VERSIONS[-1]}"
 
 # Set a proper gnome-shell theme version

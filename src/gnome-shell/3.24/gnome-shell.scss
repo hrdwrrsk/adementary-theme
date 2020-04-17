@@ -1,8 +1,0 @@
-$version: 3.24;
-$variant: 'light';
-$light-panel: 'false';
-
-@import "../../gtk-3.0/sass/_colors"; //use gtk colors
-@import "../../gnome-shell/sass/_drawing";
-@import "../../gnome-shell/sass/_common";
-@import "../../gnome-shell/sass/_extensions";
