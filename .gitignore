@@ -1,4 +1,6 @@
 # Ignore compiled CSS files
+src/cinnamon/*.css
+
 src/gnome-shell/3.22/*.css
 src/gnome-shell/3.24/*.css
 src/gnome-shell/3.26/*.css
