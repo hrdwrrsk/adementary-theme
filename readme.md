@@ -53,7 +53,7 @@ Then run this command:
 ```
 git clone https://github.com/hrdwrrsk/adementary-theme.git
 cd adementary-theme
-
+sh parse-sass.sh
 # System-wide install
 sudo ./install.sh
 
